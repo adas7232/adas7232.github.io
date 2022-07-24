@@ -7,7 +7,7 @@ description: >-
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua.
 image: >-
-  <img src="https://chi01pap001files.storage.live.com/y4muFdylVUM3VgnHwy9OpVDjysFuJJKZPc2SPCRYeUzL6nB42sXz7qTUkWjnh1lN4-ALdJiIkYbdonu-XT8uj6JSws0-glYOurb8dE6CtdFf-qhGRngiMetV4n7WF2BkbpXf88hknau48FR5S3AuOhYvuEuEkXs9vYdHVH3atuwEwIOsLfOQDFunSFHnLR8HBNZ?width=1024&height=768&cropmode=none" width="1024" height="768" />
+  https://scikit-learn.org/stable/_static/ml_map.png
 
 optimized_image: >-
   <!-- https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821647/theme6_qeeojf.jpg -->
