@@ -1,5 +1,5 @@
 # Site Settings
-name: Jekflix
+name: myflicks
 title: Jekflix | A blog theme for Jekyll
 description: Jekflix is a template for Jekyll inspired by Netflix and made by
   Thiago Rossener.
@@ -15,11 +15,15 @@ menu:
     url: /
   - title: About
     url: /about
+  - title: Publications
+    url: /publications
+  - title: Awards
+    url: /awards
   - title: Contact
     url: /contact
   - title: Feed
     url: /feed.xml
-email: youremail@test.com
+email: abhijit.das@ieee.org
 # See: https://disqus.com/
 disqus_username: disqus_username
 # Contact Form Setting
