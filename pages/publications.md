@@ -1,7 +1,7 @@
 layout: page
-title: About
+title: Publications
 description: Some description.
-permalink: /about/
+permalink: /publications/
 ---
 
 <img class="img-rounded" src="/assets/img/uploads/profile.png" alt="Thiago Rossener" width="200">
