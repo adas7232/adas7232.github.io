@@ -5,7 +5,7 @@ description: List of all publications
 permalink: /publications/
 ---
 
-# About
+# Publications
 
 **A. Das** and S. Mukhopadhyay. *Nonlinear Autopilot Design for Aerospace Vehicles: Nonlinear Design of 3-Axes Autopilot for Short RangeSkid-To-Turn Homing Missiles.* VDM Verlag, 2010.
 
