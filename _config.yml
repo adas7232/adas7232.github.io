@@ -14,7 +14,7 @@ menu:
   - title: Home
     url: /
   - title: About
-    url: /about.md
+    url: /Pages/about.md
   - title: Publications
     url: /Pages/publications
   - title: Awards
