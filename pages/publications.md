@@ -10,4 +10,4 @@ permalink: /publications/
 **A. Das** and S. Mukhopadhyay. *Nonlinear Autopilot Design for Aerospace Vehicles: Nonlinear Design of 3-Axes Autopilot for Short RangeSkid-To-Turn Homing Missiles.* VDM Verlag, 2010.
 
 F.L. Lewis, H. Zhang, K. Hengster-Movric and **A. Das**. *Cooperative control of multi-agent systems: optimal and adaptive design approaches*. Spring-Verlag, 2014.
-![image1](https://imgur.com/DYRxGQS)
+![image1](https://res.cloudinary.com/dpyphqdhn/image/upload/v1659399371/17Xe.5db9e977e8827_f8xf9s.png)
