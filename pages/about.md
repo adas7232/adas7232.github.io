@@ -5,7 +5,7 @@ description: Some description.
 permalink: /about/
 ---
 
-<img class="img-rounded" src="/assets/img/uploads/profile.png" alt="Thiago Rossener" width="200">
+<img src="https://chi01pap001files.storage.live.com/y4mZd7O1wdYSwq-ccqGM4e3TVSp9-qFtblpto-g2LSOXjrFze-C6SXcX9BvOGx7gYLVaIZYsitKhsJzGFa5t7tL2-djUIEk6bV7khTdjzJh-t5Afp3VVwgxDluSUWDjPgyBagE1LX9IYfle720cJeRTdd9X5M6iLJiDMsFtE30HLQUQ7aWC-ClrTRNvqeDGpdiX?width=1024&height=768&cropmode=none" width="1024" height="768" />
 
 # About
 
