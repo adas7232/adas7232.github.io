@@ -1,11 +1,10 @@
 ---
 date: July 24, 2022
 layout: post
-title: Welcome to the world of chaos
-subtitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+title: The colors of our life
+subtitle: 'Why there are so many colors in the sky during sunrise and sunset?'
 description: >-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.
+  Remembering a short story
 image: >-
   /assets/img/Homepage/Homepage.jpg
 
@@ -15,7 +14,7 @@ category: blog
 tags:
   - welcome
   - blog
-author: thiagorossener
+author: abhijitdas
 paginate: true
 ---
 Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
