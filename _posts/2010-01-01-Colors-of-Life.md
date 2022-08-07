@@ -2,7 +2,7 @@
 date: July 24, 2022
 layout: post
 title: The colors of life
-subtitle: 'Why the sky is so colorful during sunrise and sunset?'
+subtitle: 'Why the sky is so colorful?'
 description: >-
   Remembering a short story
 image: >-
@@ -17,7 +17,7 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-
+I remember a short story written by bengali writer Bonoful (Balaichand Mukhopadhyay) named 'Dadur Uttor' (My grandfather's response). One day a small kid got curious after seeing a colorful sunset and asked his grandfather the reason behind all these colors. The grandfather replied, the sun being very generous, spread all these colors every morning on our planet and collect them back during sunset. One can find these colors everywhere including in the mother's love, in the caring of a father, in the smile of a sibling, etc. I guess everybody know that that's the right technical answer but it still relevant in my mind. 
 
 <img src="https://chi01pap001files.storage.live.com/y4mBUvnqdCXs1BmZh-ya4NVaGVAA7YYymc4Wjs9lNulIX8DA34-FYxbd92kljrdUYwd-ukUY3kOy5q8Nr21MhHPdybHlmuhy7jX-GLUPk4x9sKJR0_UCH-0ywIfNHFOqnw84_qvGcNSX51L9mSyWrIaYS4Sez2kEVcC3ZAcpHqfitL5gT_B4U1mLHLuk9DRKO6N?width=1024&height=768&cropmode=none" width="1024" height="768" />
 
