@@ -6,7 +6,7 @@ subtitle: 'Why the sky is so colorful during sunrise and sunset?'
 description: >-
   Remembering a short story
 image: >-
-  <img src="https://chi01pap001files.storage.live.com/y4mIfoDNNVJJ21L2V748xk_V7JsltjeA6es6cgS-7XZKqpwEG7Wx1EIPt_OyZ6KATbZkdmIJoeJA-DoRNG1VanrN0Bs2JRPEsUGGgw01g96V431JxhkwNV1xtva0LfBlitAI_2apmddpWy_QBzCn7W4eFXMpihPstrgYK0vkSXLg8MQGjOXgdiq-LbhuoPlR0wL?width=4032&height=3024&cropmode=none" width="4032" height="3024" />
+  /assets/img/Homepage/sunset_0.jpg
 
 optimized_image: >-
   <!-- https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821647/theme6_qeeojf.jpg -->
