@@ -242,7 +242,7 @@ collections:
             name: "disqus_username"
             widget: "string"
             hint: "Leave it blank if you don't want comments in posts"
-            required: false
+            required: true
       - label: "Social"
         name: "social"
         file: "src/yml/social.yml"
@@ -511,5 +511,3 @@ collections:
             name: "sent_message_url"
             hint: "URL where the user will be redirected for after submit the contact form. Ex: /contact/message-sent/"
             required: false
-
-
