@@ -13,125 +13,22 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-
-Cas sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
-
-> Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.
-
-Etiam porta **sem malesuada magna** mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-
-<!--page-->
-
-## Inline HTML elements
-
-HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
-
-- **To bold text**, use `<strong>`.
-- *To italicize text*, use `<em>`.
-- Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use `<abbr>`, with an optional `title` attribute for the full phrase.
-- Citations, like <cite>&mdash; Thiago Rossener</cite>, should use `<cite>`.
-- <del>Deleted</del> text should use `<del>` and <ins>inserted</ins> text should use `<ins>`.
-- Superscript <sup>text</sup> uses `<sup>` and subscript <sub>text</sub> uses `<sub>`.
-
-Most of these elements are styled by browsers with few modifications on our part.
-
-<!--page-->
-
-# Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-## Code
-
-Cum sociis natoque penatibus et magnis dis `code element` montes, nascetur ridiculus mus.
-
-```js
-// Example can be run directly in your JavaScript console
-
-// Create a function that takes two arguments and returns the sum of those arguments
-var adder = new Function("a", "b", "return a + b");
-
-// Call the function
-adder(2, 6);
-// > 8
-```
-
-<!--page-->
-
-Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.
-
-## Lists
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-* Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-* Donec id elit non mi porta gravida at eget metus.
-* Nulla vitae elit libero, a pharetra augue.
-
-Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
-
-1. Vestibulum id ligula porta felis euismod semper.
-2. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-3. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-<!--page-->
-
-Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
-
-Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.
-
-## Images
-
-Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.
-
-![placeholder](https://placehold.it/800x400 "Large example image")
-![placeholder](https://placehold.it/400x200 "Medium example image")
-![placeholder](https://placehold.it/200x200 "Small example image")
-
-## Tables
-
-Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Upvotes</th>
-      <th>Downvotes</th>
-    </tr>
-  </thead>
-  <tfoot>
-    <tr>
-      <td>Totals</td>
-      <td>21</td>
-      <td>23</td>
-    </tr>
-  </tfoot>
-  <tbody>
-    <tr>
-      <td>Alice</td>
-      <td>10</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>Bob</td>
-      <td>4</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>Charlie</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-  </tbody>
-</table>
-
-<!--page-->
-
-Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
+I always told and also thought that the vegetarian diet is best for health. I have no reason to doubt as I didnt find anyone who express any different opinion. 
+I am a cancer survivor and lost my parents due to cancer. I also lost some of my close family members (mother's side) to cancer as well. Since then I am told (by my doctors) that I am in a high-risk zone. I do agree with that assessment as well. But is there anything I can do to confront that risk? When I lost my father due to lung cancer in 2019, I started thinking about it. Then during the same year, after a routine colonoscopy, pre-cancerous polyps are found. I started thinking more on the topic and then I looked into my lifestyle throughout the years up to that point. I realized the following –
+1.	I always had stomach issues and had indigestion
+2.	I had constipation but I didn’t look for a specific reason behind it
+3.	I did not experiment with my food habit much even though my body had negative reactions to some of the foods that I eat regularly.
+4.	I was not doing exercise in a way that suits my body
+So, I decided to confront all the above in a drastic move in late 2019. I became vegetarian and started intermittent fasting. Being a non-vegetarian throughout my life, it was a hard decision especially when my family members are not. I do remember that for the first week, my body reacted a little differently and then I get used to it. My craving for meat and other non-veg items like eggs etc started coming down with time. Even though I didn’t reduce my food intake, I started losing weight. Within 6 months or so, my weight reduces from 168lb to 135lb. I was happy that my food habit got simplified and I don’t need to worry about what kind of non-veg food is being cooked at home. I did this experiment until late 2021, i.e. almost 2 years. During this time, in addition to being vegetarian, I also minimize my sugar consumption including any kind of soft drinks. I also focused on home-cooked food rather than eating outside. Here are some of the benefits that I felt –
+•	My stomach issues are gone mostly except for some occasional gas issues.
+•	As I lost weight, I can run more miles before I get exhausted.
+•	I felt more energetic (difficult to quantify, but I explained it later)
+•	Some of the food that I had difficulties digesting, now I can take those regularly without any issues.
+•	My HDL level improved slightly.
+In contrast, here are some of the things that didn’t go as per my expectations –
+1.	My total cholesterol (and LDL) didn’t improve (I have high cholesterol) at all.
+2.	I got several vitamin deficiencies – such as D, B12, Calcium, etc.
+After two years of a vegetarian diet, I started non-veg diets gradually even though I do not plan to consume any types of red meat in immediate future. The idea behind this is to make my food more complete to consume all types of nutrition naturally instead of having vitamin medications. As of now, I weigh 130lb and I feel great. I am planning to do another colonoscopy later this year and hoping that there will be no polyps. I guess we have to wait to see if that’s the case. In the next section, I will explain some of my takeaways from the last three years.
+Takeaways
+Our body is an immensely complex machine that we haven’t yet figured out it’s working. The same food may react differently on two different bodies. I will breakdown some of the elements based on my finding –
+Sugar – Based on the reference **, this is probably the most common reason for many human diseases including cancer.
