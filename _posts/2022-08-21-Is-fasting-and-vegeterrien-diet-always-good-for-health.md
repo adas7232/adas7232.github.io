@@ -4,7 +4,7 @@ layout: post
 title: Is fasting and vegetarian diet all good?
 subtitle: A tale from my own experience and experiment
 description: I tried 2 years of strict vegetarian diet and intermittent fasting and this is what I learned.
-image: https://res.cloudinary.com/dm7h7e8xj/image/upload/v1559822138/theme9_v273a9.jpg
+image: <img src="https://chi01pap001files.storage.live.com/y4mTK0UrG1opuJG86VFyk47oXjFdc0SurhpV9eLGqp0JCFrpIkJjyZBg-gMc-9JgLnRjGkxIfqZl6WhC44TDx_sHLAwWltqYwdhX_joCvWQNrTgDX83VHBWTTPvw1gPfyI3PguTZmsF1U7p2wYis4Xqsh9mbDs4m9Sck6fm00mxIH8dTEw6jyg3-liuTIZO2A4W?width=1024&height=683&cropmode=none" width="1024" height="683" />
 optimized_image: https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559822138/theme9_v273a9.jpg
 category: life
 tags:
