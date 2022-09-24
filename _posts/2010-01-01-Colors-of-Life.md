@@ -6,7 +6,7 @@ subtitle: 'Why the sky is so colorful?'
 description: >-
   Remembering a short story
 image: >-
-  /assets/img/Homepage/sunset_0.jpg
+  /assets/img/Homepage/HomePage2.jpg
 
 optimized_image: >-
   <!-- https://res.cloudinary.com/dm7h7e8xj/image/upload/c_scale,w_380/v1559821647/theme6_qeeojf.jpg -->
