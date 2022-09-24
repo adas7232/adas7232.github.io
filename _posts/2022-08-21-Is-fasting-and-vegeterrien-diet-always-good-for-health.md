@@ -13,7 +13,7 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-I always told and also thought that the vegetarian diet is best for health. I have no reason to doubt as I didnt find anyone who express any different opinion. 
+I always told and also thought that the vegetarian diet is best for health. I have no reason to doubt as I didn't find anyone who express any different opinion. Being a non-vegetarian
 I am a cancer survivor and lost my parents due to cancer. I also lost some of my close family members (mother's side) to cancer as well. Since then I am told (by my doctors) that I am in a high-risk zone. I do agree with that assessment as well. But is there anything I can do to confront that risk? When I lost my father due to lung cancer in 2019, I started thinking about it. Then during the same year, after a routine colonoscopy, pre-cancerous polyps are found. I started thinking more on the topic and then I looked into my lifestyle throughout the years up to that point. I realized the following –
 1.	I always had stomach issues and had indigestion
 2.	I had constipation but I didn’t look for a specific reason behind it
