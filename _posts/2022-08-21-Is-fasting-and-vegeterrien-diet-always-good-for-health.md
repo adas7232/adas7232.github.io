@@ -29,7 +29,11 @@ So, I decided to confront all the above in a drastic move in late 2019. I became
 In contrast, here are some of the things that didn’t go as per my expectations –
 1.	My total cholesterol (and LDL) didn’t improve (I have high cholesterol) at all.
 2.	I got several vitamin deficiencies – such as D, B12, Calcium, etc.
+
 After two years of a vegetarian diet, I started non-veg diets gradually even though I do not plan to consume any types of red meat in immediate future. The idea behind this is to make my food more complete to consume all types of nutrition naturally instead of having vitamin medications. As of now, I weigh 130lb and I feel great. I am planning to do another colonoscopy later this year and hoping that there will be no polyps. I guess we have to wait to see if that’s the case. In the next section, I will explain some of my takeaways from the last three years.
 Takeaways
-Our body is an immensely complex machine that we haven’t yet figured out it’s working. The same food may react differently on two different bodies. I will breakdown some of the elements based on my finding –
-Sugar – Based on the reference **, this is probably the most common reason for many human diseases including cancer.
+Our body is an immensely complex machine that we haven’t yet figured out how it works. The same food may react differently on two different bodies. I will breakdown some of my findings –
+Sugar – Most lucrative but also most harmful to human body especially deep sugary foods like ice creams, donuts, soft drinks, etc.
+Fasting - Good for the overall health for everyone especially human over 35 years of age. Help clean the body as well. The benefit of fasting such intermittent, 24hrs, 48hrs, etc. varies human to human. So, try different fasting methods to see how it suits your body.
+Vegetarian diet - again good for the body but if you are trying it for the fast time, take it easy at first so that the body get used to with it gradually. Otherwise, you may experience the similar deficiencies that I confronted.
+Exercise - this is a must and you may start your day with yoga. Yoga helps your body to remain flexible over time so that you may not experience age related stiffness.
