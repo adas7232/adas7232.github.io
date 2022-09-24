@@ -19,6 +19,7 @@ I am a cancer survivor and lost my parents due to cancer. I also lost some of my
 2.	I had constipation but I didn’t look for a specific reason behind it
 3.	I did not experiment with my food habit much even though my body had negative reactions to some of the foods that I eat regularly.
 4.	I was not doing exercise in a way that suits my body
+
 So, I decided to confront all the above in a drastic move in late 2019. I became vegetarian and started intermittent fasting. Being a non-vegetarian throughout my life, it was a hard decision especially when my family members are not. I do remember that for the first week, my body reacted a little differently and then I get used to it. My craving for meat and other non-veg items like eggs etc started coming down with time. Even though I didn’t reduce my food intake, I started losing weight. Within 6 months or so, my weight reduces from 168lb to 135lb. I was happy that my food habit got simplified and I don’t need to worry about what kind of non-veg food is being cooked at home. I did this experiment until late 2021, i.e. almost 2 years. During this time, in addition to being vegetarian, I also minimize my sugar consumption including any kind of soft drinks. I also focused on home-cooked food rather than eating outside. Here are some of the benefits that I felt –
 •	My stomach issues are gone mostly except for some occasional gas issues.
 •	As I lost weight, I can run more miles before I get exhausted.
