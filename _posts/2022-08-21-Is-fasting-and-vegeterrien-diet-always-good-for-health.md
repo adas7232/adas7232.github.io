@@ -14,33 +14,16 @@ author: abhijitdas
 paginate: true
 ---
 I always told and also thought that the vegetarian diet is the best for maintaining good health. I have no reason to doubt as I didn't find anyone who express any other opinion. Being a non-vegetarian for life, I know that it would be pretty hard for me to maintain it for long. Then in late 2019, I decided to give it a try. It was purely an experimental study on my body. At the beginning, as expected, it was hard. But then within a few weeks or so, I got used to with it. I did continue the vegetarian streak for 2 years. I did all the routine check-ups as I usually do. I noticed the following -
- I realized the following –
 
- | Before Vegetarian Diet    | After Vegetarian Diet for 2 years |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
-1.	I always had stomach issues and had indigestion
-2.	I had constipation but I didn’t look for a specific reason behind it
-3.	I did not experiment with my food habit much even though my body had negative reactions to some of the foods that I eat regularly.
-4.	I was not doing exercise in a way that suits my body
+1.	I always had stomach issues and had indigestion since school days and had to take Omeprazole course once in every month. With vegetarian diet I didn't need to do that and I still rarely take any medications for stomach issues.
+2.	I had constipation but I didn’t look for a specific reason behind it. While experimenting with my food especially with veg diet, I found that only specific food contributes to my constipation and then subsequent indigestion. I removed those foods for example milk, lentil etc. from the list and I solved that issue.
+3.	I lost about 35 pounds in two years even with the similar quantity of food intake.
+4.	I was able to do regular exercise as I did before starting the vegetarian diet.
+5. The blood work shows deficiency in some vitamins probably because I didn't diversify my food enough.
+6. I always had high LDL and that didn't change at all (neither decreased or increased) during the 2 years of vegetarian diet. This was kind of surprising for me after seeing some of the documentaries on the Netflix claiming vegetarian diet greatly improves LDL level.
 
-So, I decided to confront all the above in a drastic move in late 2019. I became vegetarian and started intermittent fasting. Being a non-vegetarian throughout my life, it was a hard decision especially when my family members are not. I do remember that for the first week, my body reacted a little differently and then I get used to it. My craving for meat and other non-veg items like eggs etc started coming down with time. Even though I didn’t reduce my food intake, I started losing weight. Within 6 months or so, my weight reduces from 168lb to 135lb. I was happy that my food habit got simplified and I don’t need to worry about what kind of non-veg food is being cooked at home. I did this experiment until late 2021, i.e. almost 2 years. During this time, in addition to being vegetarian, I also minimize my sugar consumption including any kind of soft drinks. I also focused on home-cooked food rather than eating outside. Here are some of the benefits that I felt –
+Since late 2021, I started non-veg diets gradually even though I do not plan to consume any types of red meat in immediate future. The idea behind this is to make my food more complete by consuming required nutrition naturally without taking supplements. As of now, I feel great.
 
-•	My stomach issues are gone mostly except for some occasional gas issues.
-•	As I lost weight, I can run more miles before I get exhausted.
-•	I felt more energetic (difficult to quantify, but I explained it later)
-•	Some of the food that I had difficulties digesting, now I can take those regularly without any issues.
-•	My HDL level improved (probably because of regular exercise).
+Our body is an immensely complex machine that we haven’t yet figured out how it works. On top of that, every human body is a little different and needs some tuning to make it a perfectly running machine. And that's why same food doesn't suit or provide nutrition in the same way to all. Experimenting with food will provide the opportunity to fine tune the optimal food habits. Removing foods that causes issues will certainly help reduce the need for medications. One can only see it by experimenting.
 
-In contrast, here are some of the things that didn’t go as per my expectations –
-1.	My total cholesterol (and LDL) didn’t improve (I have high cholesterol) at all.
-2.	I got several vitamin deficiencies – such as D, B12, Calcium, etc.
-
-After two years of a vegetarian diet, I started non-veg diets gradually even though I do not plan to consume any types of red meat in immediate future. The idea behind this is to make my food more complete to consume all types of nutrition naturally instead of having vitamin medications. As of now, I weigh 130lb and I feel great. I am planning to do another colonoscopy later this year and hoping that there will be no polyps. I guess we have to wait to see if that’s the case. In the next section, I will explain some of my takeaways from the last three years.
-Takeaways
-Our body is an immensely complex machine that we haven’t yet figured out how it works. The same food may react differently on two different bodies. I will breakdown some of my findings –
-Sugar – Most lucrative but also most harmful to human body especially deep sugary foods like ice creams, donuts, soft drinks, etc.
-Fasting - Good for the overall health for everyone especially human over 35 years of age. Help clean the body as well. The benefit of fasting such intermittent, 24hrs, 48hrs, etc. varies human to human. So, try different fasting methods to see how it suits your body.
-Vegetarian diet - again good for the body but if you are trying it for the fast time, take it easy at first so that the body get used to with it gradually. Otherwise, you may experience the similar deficiencies that I confronted.
-Exercise - this is a must and you may start your day with yoga. Yoga helps your body to remain flexible over time so that you may not experience age related stiffness.
+There is a huge impact of doing fasting or intermittent fasting for good health. I will talk about it in the next blog. 
