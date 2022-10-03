@@ -13,8 +13,13 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-I always told and also thought that the vegetarian diet is best for health. I have no reason to doubt as I didn't find anyone who express any different opinion. Being a non-vegetarian
-I am a cancer survivor and lost my parents due to cancer. I also lost some of my close family members (mother's side) to cancer as well. Since then I am told (by my doctors) that I am in a high-risk zone. I do agree with that assessment as well. But is there anything I can do to confront that risk? When I lost my father due to lung cancer in 2019, I started thinking about it. Then during the same year, after a routine colonoscopy, pre-cancerous polyps are found. I started thinking more on the topic and then I looked into my lifestyle throughout the years up to that point. I realized the following –
+I always told and also thought that the vegetarian diet is the best for maintaining good health. I have no reason to doubt as I didn't find anyone who express any other opinion. Being a non-vegetarian for life, I know that it would be pretty hard for me to maintain it for long. Then in late 2019, I decided to give it a try. It was purely an experimental study on my body. At the beginning, as expected, it was hard. But then within a few weeks or so, I got used to with it. I did continue the vegetarian streak for 2 years. I did all the routine check-ups as I usually do. I noticed the following -
+ I realized the following –
+
+ | Before Vegetarian Diet    | After Vegetarian Diet for 2 years |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
 1.	I always had stomach issues and had indigestion
 2.	I had constipation but I didn’t look for a specific reason behind it
 3.	I did not experiment with my food habit much even though my body had negative reactions to some of the foods that I eat regularly.
