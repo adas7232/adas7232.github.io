@@ -22,7 +22,7 @@ I always told and also thought that the vegetarian diet is the best for maintain
 5. The blood work shows deficiency in some vitamins probably because I didn't diversify my food enough.
 6. I always had high LDL and that didn't change at all (neither decreased or increased) during the 2 years of vegetarian diet. This was kind of surprising for me after seeing some of the documentaries on the Netflix claiming vegetarian diet greatly improves LDL level.
 
-Since late 2021, I started non-veg diets gradually even though I do not plan to consume any types of red meat in immediate future. The idea behind this is to make my food more complete by consuming required nutrition naturally without taking supplements. As of now, I feel great.
+Since late 2021, I started non-veg diets gradually even though I do not plan to consume any types of red meat in the immediate future. The idea behind this is to make my food more complete by consuming required nutrition naturally without taking supplements. As of now, I feel great.
 
 Our body is an immensely complex machine that we haven’t yet figured out how it works. On top of that, every human body is a little different and needs some tuning to transform it a perfectly running machine. And that's why same food doesn't suit or provide nutrition in the same way to all. Experimenting with food will provide the opportunity to fine tune the optimal food habits. Removing foods that causes issues will certainly help reduce the need for medications. One can only see or feel it by experimenting.
 
