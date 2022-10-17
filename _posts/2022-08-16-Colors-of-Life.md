@@ -9,7 +9,7 @@ image: >-
   /assets/img/Homepage/HomePage2.jpg
 
 optimized_image: >-
-  <!-- /assets/img/Homepage/HomePage2.jpg -->
+  <!-- /assets/img/Homepage/colors_of_life_optimized_1.png -->
 category: blog
 tags:
   - welcome
