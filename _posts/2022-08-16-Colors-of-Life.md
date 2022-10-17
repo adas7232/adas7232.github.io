@@ -4,8 +4,10 @@ layout: post
 title: The colors of life
 subtitle: 'Why the sky is so colorful?'
 description: >-  Remembering a short story
-image: >-/assets/img/Homepage/HomePage2.jpg
-optimized_image: >-  <!-- /assets/img/Homepage/colors_of_life_optimized_1.png -->
+image: >-
+/assets/img/Homepage/HomePage2.jpg
+optimized_image: >-  
+<!-- /assets/img/Homepage/colors_of_life_optimized_1.png -->
 category: blog
 tags:
   - welcome
