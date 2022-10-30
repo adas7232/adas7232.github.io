@@ -1,5 +1,5 @@
 ---
-date: 2018-11-22 12:26:40
+date: Aug 21, 2022
 layout: post
 title: Is fasting and vegetarian diet all good?
 subtitle: A tale from my own experience and experiment
