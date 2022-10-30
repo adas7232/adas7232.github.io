@@ -2,7 +2,7 @@
 date: July 24, 2022
 layout: post
 title: The colors of life
-subtitle: 'Why the sky is so colorful?'
+subtitle: 'Why does life is so colorful?'
 description: >-
   Remembering a short story
 image: >-
