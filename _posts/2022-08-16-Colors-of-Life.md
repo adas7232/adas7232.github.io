@@ -35,3 +35,9 @@ When I go through my archive of these memories, I also find that not two memorie
 <img src="https://chi01pap001files.storage.live.com/y4mXJf4iPnmJ4DLKYlHu_5RlGdl1NvCZsGCZGQccLTZ9ZJvszyI0fD1lg2uCReL0zXRIIi4Zc0PMScnx2d-a_HCuj5PUfrg6NEVaL-gLP0q09OBxW3XyZWBqNOgEBrrkfOohxf1yOWNwT5GooXYH-80jhw2OKjTMyEvQ21oa2fUh_HIE_FDKvKsJlv0aPxI1h4y?width=768&height=1024&cropmode=none" width="768" height="1024" />
 
 <img src="https://chi01pap001files.storage.live.com/y4mX76186tZPSksUSm_YdqJFk4ZJOZDkW5NU-7Qzy2zg6wVFkEEPMKSg0PawlkHCeNu6LS_i6sbDE3qU_f4Pjy3Ulx1K4kcXNFdkq6jD1FUMrsSkQvh3GWuELXWkddPp8dU3ESrOwvxKWe4W5l_ocQws1YQ4rP9yu-LIhCGjkuw5YkY9Qo1jQ-ZgnHN2u-v8eJ2?width=1024&height=768&cropmode=none" width="1024" height="768" />
+
+![Sunset on our way to Peoria from Iowa](\assets\img\Homepage\sunset_at_road.jpg)
+
+![Captured while we are at Florida](\assets\img\Homepage\sunset_at_sea.jpg)
+
+![Windmills in the backdrop of beautiful sunset](\assets\img\Homepage\sunset_with_windpower.jpg)
