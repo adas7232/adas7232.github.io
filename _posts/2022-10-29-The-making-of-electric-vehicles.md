@@ -5,7 +5,7 @@ title: What is in an electric vehicle?
 subtitle: A few simplified steps
 description: For someone who would like to build a production level electric vehicle
 image: /assets/img/ElectricVehSteps/ev_batt.jpg
-optimized_image: /assets/img/ElectricVehSteps/ev_batt.jpg
+optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
 category: Tech
 tags:
   - Tech
