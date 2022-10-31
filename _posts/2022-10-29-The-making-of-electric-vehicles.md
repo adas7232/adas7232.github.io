@@ -16,4 +16,7 @@ author: abhijitdas
 paginate: true
 ---
 Still in progress....
+
+Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also trucks or tractors, forklifts, boat and construction and agricultural machines. Based on the recent success rate of the EV start-ups, it's evident that building an one of prototype car is not the same as developing and building a process to produce hundreds of cars pr month. The reason can be summarized in a few words - experience and appropriate investment strategies.  Let's review the steps that are important to reach pre-production level maturity.
+
 ![An electric battery pack on display at ACTExpo 2022](\assets\img\ElectricVehSteps\ev_batt.jpg)
