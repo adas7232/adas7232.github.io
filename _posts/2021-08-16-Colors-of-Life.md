@@ -9,7 +9,7 @@ image: >-
   /assets/img/Homepage/HomePage3.jpg
 
 optimized_image: >-
-  <!-- /assets/img/Homepage/Homepage_Optimized.jpg -->
+   /assets/img/Homepage/Homepage_Optimized.jpg
 category: blog
 tags:
   - welcome
