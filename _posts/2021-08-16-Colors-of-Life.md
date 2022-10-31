@@ -6,10 +6,10 @@ subtitle: 'Why does life is so colorful?'
 description: >-
   Remembering a short story
 image: >-
-  /assets/img/Homepage/HomePage2.jpg
+  /assets/img/Homepage/HomePage3.jpg
 
 optimized_image: >-
-  <!-- /assets/img/Homepage/colors_of_life_optimized_1.png -->
+  <!-- /assets\img\Homepage\Homepage_Optimized.jpg -->
 category: blog
 tags:
   - welcome
