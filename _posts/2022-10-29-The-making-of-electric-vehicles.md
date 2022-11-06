@@ -21,7 +21,7 @@ Electrics Vehicles especially cars are becoming common in recent times. Inspired
 
 **Traction Voltage System**
 
-![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch.png)
+![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch2.png)
 
 **Low Voltage System**
 
