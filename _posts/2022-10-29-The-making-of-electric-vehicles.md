@@ -23,5 +23,8 @@ Electrics Vehicles especially cars are becoming common in recent times. Inspired
 
 ![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch.png)
 
+**Low Voltage System**
+
+![An example of a LV Topology](\assets\img\ElectricVehSteps\LV_Arch.png)
 
 ![An electric battery pack on display at ACTExpo 2022](\assets\img\ElectricVehSteps\ev_batt.jpg)
