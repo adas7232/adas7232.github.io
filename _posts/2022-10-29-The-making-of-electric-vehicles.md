@@ -20,7 +20,13 @@ Still in progress....
 Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also trucks or tractors, forklifts, boat and construction and agricultural machines. Based on the recent success of the EV start-ups, it's evident that building an one of prototype car is not the same as developing and building a process to produce hundreds of cars per month. Because the adaptation to traction voltage system hasn't matured yet, it's still a complicated process overall to build a production quality EV while taking into account energy efficiency, charging performance, various regulations, cyber security, safety of traction voltage related components and cables, grounding etc. Here are some of the aspects that I think would be important to mention.
 
 **Traction Voltage System**
-
+In most cases TVS is floating system on top of the vehicle chassis where all high voltage components are individually grounded to chassis as shown in the figure below. In practical, designing a TVS for a EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
+1. Size of the cables
+2. Length and routing of the cables
+3. Choice of connectors and its HVIL compatibility
+4. Size of Ground cables and their length
+5. Total Y-cap value for the whole vehicle (how about X-cap value?)
+Separate blogs for each of the above items will follow. 
 ![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch2.png)
 
 **Low Voltage System**
