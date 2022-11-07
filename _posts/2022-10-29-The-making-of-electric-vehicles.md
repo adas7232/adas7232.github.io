@@ -26,11 +26,11 @@ In most cases TVS is floating system on top of the vehicle chassis where all hig
 3. Choice of connectors and its HVIL compatibility
 4. Size of Ground cables and their length
 5. Total Y-cap value for the whole vehicle (how about X-cap value?)
-Separate blogs for each of the above items will follow. 
+Separate blogs for each of the above items will follow.
 ![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch2.png)
 
 **Low Voltage System**
-
+This part of the system is common between ICE vehicles and EV. Its getting common to have 24V or even 48V as low voltage (LV) system instead of widely used 12V system. Even though its possible to have a hybrid system where a few 12V system can co-exist if needed. We may consider CAN, ethernet and LIN nodes are part of LV topology. From the diagram below, I have also included a High Performance Unit/ECU (HPU) for computations like image processing and introducing adaptive Autosar architecture. A separate blog will follow on Adataptive Autosar at a later stage.   
 ![An example of a LV Topology](\assets\img\ElectricVehSteps\LV_Arch.png)
 
 ![An electric battery pack on display at ACTExpo 2022](\assets\img\ElectricVehSteps\ev_batt.jpg)
