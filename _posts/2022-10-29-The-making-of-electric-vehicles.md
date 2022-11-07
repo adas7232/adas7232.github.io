@@ -26,6 +26,7 @@ In most cases TVS is floating system on top of the vehicle chassis where all hig
 3. Choice of connectors and its HVIL compatibility
 4. Size of Ground cables and their length
 5. Total Y-cap value for the whole vehicle (how about X-cap value?)
+
 Separate blogs for each of the above items will follow.
 ![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch2.png)
 
