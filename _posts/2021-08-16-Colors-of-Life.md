@@ -36,8 +36,8 @@ When I go through my archive of these memories, I also find that not two memorie
 
 <img src="https://chi01pap001files.storage.live.com/y4mX76186tZPSksUSm_YdqJFk4ZJOZDkW5NU-7Qzy2zg6wVFkEEPMKSg0PawlkHCeNu6LS_i6sbDE3qU_f4Pjy3Ulx1K4kcXNFdkq6jD1FUMrsSkQvh3GWuELXWkddPp8dU3ESrOwvxKWe4W5l_ocQws1YQ4rP9yu-LIhCGjkuw5YkY9Qo1jQ-ZgnHN2u-v8eJ2?width=1024&height=768&cropmode=none" width="1024" height="768" />
 
-![Sunset on our way to Peoria from Iowa](\assets\img\Homepage\sunset_at_road.jpg)
+![Sunset on our way to Peoria from Iowa](\assets\img\Homepage\sunset_at_road.jpg "Sunset on our way to Peoria from Iowa")
 
-![Captured while we are at Florida](\assets\img\Homepage\sunset_at_sea.jpg)
+![Captured while we are at Florida](\assets\img\Homepage\sunset_at_sea.jpg "Captured while we are at Florida")
 
-![Windmills in the backdrop of beautiful sunset](\assets\img\Homepage\sunset_with_windpower.jpg)
+![Windmills in the backdrop of beautiful sunset](\assets\img\Homepage\sunset_with_windpower.jpg "Windmills in the backdrop of beautiful sunset")
