@@ -26,7 +26,7 @@ I remember the story even after 25 years and may be because this explanation mad
 
 When I go through my archive of these memories, I also find that not two memories are similar just like us the human. I guess, it showcases the beauty of randomness. It teaches us that without it, our life would be boring. For me it definitely mood changer in a positive way. I try to find these colors in my wife' smile, in my daughter's joyful eyes, in my son's naughty face. I also try to find those colors within myself. It helps me to confront a bad day and teaches me the generosity on a better day and often inspire me to help those who are not lucky enough like me.
 
-<img src="https://chi01pap001files.storage.live.com/y4mjRFn5kZlosxQmSxQbthenkAE6JKNIcgQ26MVDnYkzDSZM58W7NS2PYxl7NHhHbfVbplvmSkeH6-rSe7E19TAYWRiOvCWVdDjLvlPM_Hm3EJHgfvoWM8lbMohFGxxXhsTK6A7kXQw3ltwBD07LfiLUOLWxggMIMwllTjxBhotcMgz0ODQ6BTiUOsLvDvH1qU8?width=1024&height=768&cropmode=none" width="1024" height="768" />
+<img src="https://chi01pap001files.storage.live.com/y4mjRFn5kZlosxQmSxQbthenkAE6JKNIcgQ26MVDnYkzDSZM58W7NS2PYxl7NHhHbfVbplvmSkeH6-rSe7E19TAYWRiOvCWVdDjLvlPM_Hm3EJHgfvoWM8lbMohFGxxXhsTK6A7kXQw3ltwBD07LfiLUOLWxggMIMwllTjxBhotcMgz0ODQ6BTiUOsLvDvH1qU8?width=1024&height=768&cropmode=none" width="1024" height="768" title="A wonderful sunset taken while playing badminton at our neighborhood"/>
 
 <img src="https://chi01pap001files.storage.live.com/y4mlh64eTZQoLS4Iik9V5-4OGrU-qipIq4eJgxWsG87gHxfJxtQW4pB3Q3yyQhCulFKh82UhFdkrYpTX3H5JyQS_qU_PmohmhefKJSuGLqAnBq7xy5Q2jChmBvIsbd14O_uPkQ6gC1lwvmxYcNNVFHm6vR8RLdlbpzU4YriOXgesiaNJm_H9JTqtc0434zoOn8m?width=1024&height=768&cropmode=none" width="1024" height="768" />
 
