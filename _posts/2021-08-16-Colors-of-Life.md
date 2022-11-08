@@ -26,7 +26,7 @@ I remember the story even after 25 years and may be because this explanation mad
 
 When I go through my archive of these memories, I also find that not two memories are similar just like us the human. I guess, it showcases the beauty of randomness. It teaches us that without it, our life would be boring. For me it definitely mood changer in a positive way. I try to find these colors in my wife' smile, in my daughter's joyful eyes, in my son's naughty face. I also try to find those colors within myself. It helps me to confront a bad day and teaches me the generosity on a better day and often inspire me to help those who are not lucky enough like me.
 
-| ![Random Sunset.jpg](<img src="\assets\img\Homepage\sunset_at_road.jpg" width="1024" height="768"/>) |
+| ![RandomSunset.jpg](<img src="\assets\img\Homepage\sunset_at_road.jpg" width="1024" height="768"/>) |
 |:--:|
 | *A random sunset at North Carolina* |
 
