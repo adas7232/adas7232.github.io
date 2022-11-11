@@ -1,7 +1,7 @@
 ---
 date: May 01, 2022
 layout: post
-title: What is in an electric vehicle?
+title: This is about EV architecture
 subtitle: A few simplified steps
 description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/ev_bus.jpg
@@ -39,6 +39,9 @@ This part of the system is common between ICE vehicles and EV. Its getting commo
 | ![EV1](\assets\img\ElectricVehSteps\LV_Arch.png) |
 |:--:|
 | *An example of a low voltage topology* |
+
+**Physical Layout**
+Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. 
 
 | ![EV1](\assets\img\ElectricVehSteps\ev_batt.jpg) |
 |:--:|
