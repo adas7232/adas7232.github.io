@@ -1,7 +1,7 @@
 ---
 date: May 01, 2022
 layout: post
-title: What is in an electric vehicle?
+title: This is about EV architecture
 subtitle: A few simplified steps
 description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/ev_bus.jpg
@@ -28,10 +28,21 @@ In most cases TVS is floating system on top of the vehicle chassis where all hig
 5. Total Y-cap value for the whole vehicle (how about X-cap value?)
 
 Separate blogs for each of the above items will follow.
-![An example of a TVS Topology](\assets\img\ElectricVehSteps\TVS_Arch2.png "An example of a TVS Topology")
+
+| ![EV1](\assets\img\ElectricVehSteps\TVS_Arch2.png) |
+|:--:|
+| *This how a typical traction voltage topology would look like* |
 
 **Low Voltage System**
-This part of the system is common between ICE vehicles and EV. Its getting common to have 24V or even 48V as low voltage (LV) system instead of widely used 12V system. Even though its possible to have a hybrid system where a few 12V system can co-exist if needed. We may consider CAN, ethernet and LIN nodes are part of LV topology. From the diagram below, I have also included a High Performance Unit/ECU (HPU) for computations like image processing and introducing adaptive Autosar architecture. A separate blog will follow on Adataptive Autosar at a later stage.   
-![An example of a LV Topology](\assets\img\ElectricVehSteps\LV_Arch.png)
+This part of the system is common between ICE vehicles and EV. Its getting common to have 24V or even 48V as low voltage (LV) system instead of widely used 12V system. Even though its possible to have a hybrid system where a few 12V system can co-exist if needed. We may consider CAN, ethernet and LIN nodes are part of LV topology. From the diagram below, I have also included a High Performance Unit/ECU (HPU) for computations like image processing and introducing adaptive Autosar architecture. A separate blog will follow on Adataptive Autosar at a later stage.
 
-![An electric battery pack on display at ACTExpo 2022](\assets\img\ElectricVehSteps\ev_batt.jpg "An electric battery pack on display at ACTExpo 2022")
+| ![EV1](\assets\img\ElectricVehSteps\LV_Arch.png) |
+|:--:|
+| *An example of a low voltage topology* |
+
+**Physical Layout**
+Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. 
+
+| ![EV1](\assets\img\ElectricVehSteps\ev_batt.jpg) |
+|:--:|
+| *An electric battery pack on display at ACTExpo 2022* |
