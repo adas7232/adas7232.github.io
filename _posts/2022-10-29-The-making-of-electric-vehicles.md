@@ -14,6 +14,7 @@ tags:
   - Electrification
 author: abhijitdas
 paginate: true
+usemathjax: true
 ---
 Still in progress....
 
@@ -21,11 +22,11 @@ Electrics Vehicles especially cars are becoming common in recent times. Inspired
 
 **Traction Voltage System**
 In most cases TVS is floating system on top of the vehicle chassis where all high voltage components are individually grounded to chassis as shown in the figure below. In practical, designing a TVS for a EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
-1. Size of the cables
-2. Length and routing of the cables
-3. Choice of connectors and its HVIL compatibility
-4. Size of Ground cables and their length
-5. Total Y-cap value for the whole vehicle (how about X-cap value?)
+- Size of the cables
+- Length and routing of the cables
+- Choice of connectors and its HVIL compatibility
+- Size of Ground cables and their length
+- Total Y-cap value for the whole vehicle (how about X-cap value?)
 
 Separate blogs for each of the above items will follow.
 
@@ -41,7 +42,7 @@ This part of the system is common between ICE vehicles and EV. Its getting commo
 | *An example of a low voltage topology* |
 
 **Physical Layout**
-Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. For example, J1939-11 specifies a shielded twisted pair of wires with a maximum backbone length of 40 meters. It uses a three pin connector and allows for up to $30$ nodes. It has a bit time of $4.00 \mu s$ with a tolerance of 0.05%.Some of the relevant links are given below -
+Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. For example, $J1939-11$ specifies a shielded twisted pair of wires with a maximum backbone length of $40$ meters. It uses a three pin connector and allows for up to $30$ nodes. It has a bit time of $4.00 \mu s$ with a tolerance of $0.05\%$.Some of the relevant links are given below -
 
 [Overall EV related](https://www.motorvehicleregs.com/the_vehicle_reg_blog/electric-vehicles/)
 
