@@ -41,7 +41,14 @@ This part of the system is common between ICE vehicles and EV. Its getting commo
 | *An example of a low voltage topology* |
 
 **Physical Layout**
-Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. 
+Physical layout of high voltage and low voltage harness are as important as topology to manage packaging constraints as well as communication standards. For example, J1939-11 specifies a shielded twisted pair of wires with a maximum backbone length of 40 meters. It uses a three pin connector and allows for up to $30$ nodes. It has a bit time of $4.00 \mu s$ with a tolerance of 0.05%.Some of the relevant links are given below -
+
+[Overall EV related](https://www.motorvehicleregs.com/the_vehicle_reg_blog/electric-vehicles/)
+
+[FMVSS standard](https://www.govinfo.gov/content/pkg/CFR-2017-title49-vol6/xml/CFR-2017-title49-vol6-part571.xml)
+
+[j1939 physical layer](https://www.sae.org/standards/content/j1939/14_202204/)
+
 
 | ![EV1](\assets\img\ElectricVehSteps\ev_batt.jpg) |
 |:--:|
