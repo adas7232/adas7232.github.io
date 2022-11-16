@@ -1,5 +1,5 @@
 ---
-date: Nov 16, 2022
+date: June 16, 2022
 layout: post
 title: Observation of mind
 subtitle: Why we are rather happy with a busy mind
