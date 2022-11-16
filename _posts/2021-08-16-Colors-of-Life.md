@@ -1,5 +1,5 @@
 ---
-date: Nov 24, 2022
+date: Oct 24, 2022
 layout: post
 title: The colors of life
 subtitle: 'Why does life is so colorful?'
