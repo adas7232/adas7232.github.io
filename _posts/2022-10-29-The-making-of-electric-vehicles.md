@@ -1,12 +1,12 @@
 ---
 date: May 01, 2022
 layout: post
-title: This is about EV architecture
-subtitle: A few simplified steps
+title: The Making of Energy Optimized EV  
+subtitle: A $360 \degfree$ approach
 description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/ev_bus.jpg
 optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
-category: Tech
+category: Tech, EV
 tags:
   - Tech
   - Engineering
