@@ -2,7 +2,7 @@
 date: May 01, 2022
 layout: post
 title: The Making of Energy Optimized EV  
-subtitle: A $360 \degree$ approach
+subtitle: A $360^\circ$ approach
 description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/ev_bus.jpg
 optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
