@@ -6,7 +6,7 @@ subtitle: 'Why does life is so colorful?'
 description: >-
   Remembering a short story
 image: >-
-  /assets/img/Homepage/HomePage4.png
+  /assets/img/Homepage/Homepage4.png
 
 optimized_image: >-
    /assets/img/Homepage/Homepage_Optimized.jpg
