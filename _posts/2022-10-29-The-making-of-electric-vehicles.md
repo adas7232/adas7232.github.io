@@ -3,8 +3,8 @@ date: May 01, 2022
 layout: post
 title: The Making of Energy Optimized EV  
 subtitle: A $360^\circ$ approach
-description: Why electric vehicles are not less complicated than ICE ones.
-image: /assets/img/ElectricVehSteps/ev_bus.jpg
+description: Areas where energy efficiency can be improved or optimized
+image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
 optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
 category: Tech, EV
 tags:
