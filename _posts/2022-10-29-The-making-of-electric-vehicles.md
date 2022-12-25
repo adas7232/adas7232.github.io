@@ -2,7 +2,7 @@
 date: May 01, 2022
 layout: post
 title: Energy Optimization for Battery Electric Heavy Duty Trucks  
-subtitle: A $360^\circ$ approach
+subtitle: Areas where energy efficiency can be improved or optimized
 description: Areas where energy efficiency can be improved or optimized
 image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
 optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
