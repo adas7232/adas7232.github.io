@@ -1,11 +1,11 @@
 ---
 date: May 01, 2022
 layout: post
-title: The Making of Energy Optimized EV  
+title: The Making of Energy Optimized Battery Electric Heavy Duty Trucks  
 subtitle: A $360^\circ$ approach
 description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/ev_bus.jpg
-optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
+optimized_image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
 category: Tech, EV
 tags:
   - Tech
