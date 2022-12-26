@@ -32,14 +32,36 @@ In most cases TVS is floating system on top of the vehicle chassis where all hig
 
 Separate blogs for each of the above items will follow.
 
-| ![EV1](\assets\img\ElectricVehSteps\TVS_Arch2.png) |
+| ![EV1](\assets\img\ElectricVehSteps\TVS_Arch3.png) |
 |:--:|
 | *This how a typical traction voltage topology would look like* |
+
+| ![EV2](\assets\img\ElectricVehSteps\Stemco-contributions-to-semi-aero-drag.png) |
+|:--:|
+| *Distribution of aerodag between tractor and trailer (STEMCO)* |
+
+| ![EV3](\assets\img\ElectricVehSteps\Sinha_deturbulator.jpg) |
+|:--:|
+| *The deturbulator by Sinhatech could contribute to redeuce loss due to aero drag* |
+
+| ![EV4](\assets\img\ElectricVehSteps\Yasa_Axial_Flux_Motor.jpg) |
+|:--:|
+| *A comparision study between axial and radial flux motors (Yasa)* |
+
+| ![EV5](\assets\img\ElectricVehSteps\Brake_Resistor.jpg) |
+|:--:|
+| *A typical Brake sistor used for braking (REPLLC))* |
+
+| ![EV6](\assets\img\ElectricVehSteps\Tire_truck.jpg) |
+|:--:|
+| *Tires play an important role to energy efficiency* |
+
+
 
 **Low Voltage System**
 This part of the system is common between ICE vehicles and EV. Its getting common to have 24V or even 48V as low voltage (LV) system instead of widely used 12V system. Even though its possible to have a hybrid system where a few 12V system can co-exist if needed. We may consider CAN, ethernet and LIN nodes are part of LV topology. From the diagram below, I have also included a High Performance Unit/ECU (HPU) for computations like image processing and introducing adaptive Autosar architecture. A separate blog will follow on Adataptive Autosar at a later stage.
 
-| ![EV1](\assets\img\ElectricVehSteps\LV_Arch.png) |
+| ![EV3](\assets\img\ElectricVehSteps\LV_Arch.png) |
 |:--:|
 | *An example of a low voltage topology* |
 
