@@ -20,7 +20,17 @@ paginate: true
 usemathjax: true
 ---
 In Progress ---
-Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also trucks or tractors, forklifts, boat and construction and agricultural machines. Based on the recent success of the EV start-ups, it's evident that building an one of prototype car is not the same as developing and building a process to produce hundreds of cars per month. Because the adaptation to traction voltage system hasn't matured yet, it's still a complicated process overall to build a production quality EV while taking into account energy efficiency, charging performance, various regulations, cyber security, safety of traction voltage related components and cables, grounding etc. Here are some of the aspects that I think would be important to mention.
+
+Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also heavy duty trucks, material handling, boat and construction and agricultural machines. Although the range anxiety is still quite visible among the OEMs. One of the main reason for the persisting range anxiety lies on the fact that in the last few yars the battery technology doesn't have any path breaking innovation to provide a significant range improvement given a fixed size of battery pack. Therefore, finding a way to improve energy efficiency instead could be the way to improve existing range. This is probably more important for heavy duty battery electric trucks. 
+
+**Aerodynamics**
+
+**Axial flux motors**
+
+**Recuperation of braking energy**
+
+**Tires**
+
 
 **Traction Voltage System**
 In most cases TVS is floating system on top of the vehicle chassis where all high voltage components are individually grounded to chassis as shown in the figure below. In practical, designing a TVS for a EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
