@@ -21,16 +21,57 @@ usemathjax: true
 ---
 In Progress ---
 
-Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also heavy duty trucks, material handling, boat and construction and agricultural machines. Although the range anxiety is still quite visible among the OEMs. One of the main reason for the persisting range anxiety lies on the fact that in the last few yars the battery technology doesn't have any path breaking innovation to provide a significant range improvement given a fixed size of battery pack. Therefore, finding a way to improve energy efficiency instead could be the way to improve existing range. This is probably more important for heavy duty battery electric trucks. 
+Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also heavy-duty trucks, material handling, boat and construction and agricultural machines. Although the range anxiety is still quite visible among the OEMs. One of the main reasons for the persisting range anxiety lies in the fact that in the last few years the battery technology doesn't have any path-breaking innovation to provide a significant range improvement given the fixed size of the battery pack. Therefore, finding a way to improve energy efficiency instead could be the way to improve the existing range. This is probably more important for heavy-duty battery electric trucks. 
 
-**Aerodynamics**
+### Aerodynamics
+Aerodynamics plays an important role for energy consumption due to drag. The figure below by STEMCO shows how the combination of tractor and trailer contributes to the overall energy efficiency of a heavy-duty truck. 
 
-**Axial flux motors**
+| ![EV2](\assets\img\ElectricVehSteps\Stemco-contributions-to-semi-aero-drag.png) |
+|:--:|
+| *Distribution of aerodag between tractor and trailer (STEMCO)* |
 
-**Recuperation of braking energy**
+There are ongoing efforts to minimize the effect of drag on trucks by redesigning external long nosy cabs into something that a Tesla Semi is offering. See below a report published by [Airshaper](https://airshaper.com/cases/tesla-semi-truck-aerodynamics-analyzed) which shows that Tesla's semi design may be benefitting from reduced air drag in comparison to its competitors. 
 
-**Tires**
+| ![EV3](\assets\img\ElectricVehSteps\tesla_semi_aero.png) |
+|:--:|
+| *Tesla Semi vs Conventional Truck (Airshaper)* |
 
+In addition, DOE funded super truck project also unvails the effort by OEMs like Volvo, etc. to overcome the so-called drag difficulties. A [report](https://lynceans.org/tag/truck-aerodynamics/) published by Lyncean Group of San Diego nicely summarized this effort. 
+
+The technologies like [Sinha Deturbulator](http://sinhatech.com/Sinhadeturb/deturbulator.asp) would also be worth the mention. 
+
+| ![EV4](\assets\img\ElectricVehSteps\Sinha_deturbulator.jpg) |
+|:--:|
+| *The deturbulator by Sinhatech could contribute to redeuce loss due to aero drag* |
+
+### Axial flux motors
+Axial flux motors are still not visible to many. Electric motors or machines especially permanent magnet synchronous motors (PMSM) are highly efficient when controlled properly. Axial flux motors are a type of PMSM motor that offer even more efficiency and packaging benefits compared to radial flux motors. Auxiliaries that run all the time irrespective of the movement of the truck itself, would certainly benefit from using axial flux technology. Yasa, an axial flux motor manufacturer, demonstrated the benefits below - 
+
+| ![EV5](\assets\img\ElectricVehSteps\Yasa_Axial_Flux_Motor.jpg) |
+|:--:|
+| *A comparision study between axial and radial flux motors (Yasa)* |
+
+### Recuperation of braking energy 
+
+This is the most important aspect of energy optimization that has a good scope for improvement. Today, the braking energy must go wasted if not going back to the energy storage system (ESS). If we analyze the US highway overall topography for usual truck routes, it is evident that in some cases the truck has to go downhill continuously for more than hundreds of miles (based on the [map](https://www.reddit.com/r/Truckers/comments/kafeg1/elevation_map_of_the_us_interstate_system/) shared by a Reddit user). For battery electric trucks, ESS would not be able to take all the braking energy back in those routes and must find another way to recuperate. 
+
+| ![EV6](\assets\img\ElectricVehSteps\US_interstate_elevation.jpeg) |
+|:--:|
+| *Elevation map of the US interstate system ([Source](https://i.imgur.com/72ziOLR.jpg))* |
+
+As of today, OEMs are mostly using brake resistor to discard the extra braking energy as heat. Note that, even after careful sizing, a brake resistor often needs an elaborate cooling system which sometimes causes a packaging nightmare. In addition, brake resistor may expand the lifespan of the service brakes but does not contribute to the energy efficiency. 
+
+| ![EV7](\assets\img\ElectricVehSteps\Brake_Resistor.jpg) |
+|:--:|
+| *A typical Brake sistor used for braking (REPLLC))* |
+
+## Tires
+
+Simialr to aerodynamics, rolling resistance is also a contributing factor to efficiency. This [article](https://www.fleetequipmentmag.com/fuel-efficiency-heavy-duty-truck-tires/) nicely summarizes the effect of tires on efficiency. 
+
+| ![EV6](\assets\img\ElectricVehSteps\Tire_truck.jpg) |
+|:--:|
+| *Tires play an important role to energy efficiency* |
 
 **Traction Voltage System**
 In most cases TVS is floating system on top of the vehicle chassis where all high voltage components are individually grounded to chassis as shown in the figure below. In practical, designing a TVS for a EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
@@ -46,25 +87,14 @@ Separate blogs for each of the above items will follow.
 |:--:|
 | *This how a typical traction voltage topology would look like* |
 
-| ![EV2](\assets\img\ElectricVehSteps\Stemco-contributions-to-semi-aero-drag.png) |
-|:--:|
-| *Distribution of aerodag between tractor and trailer (STEMCO)* |
 
-| ![EV3](\assets\img\ElectricVehSteps\Sinha_deturbulator.jpg) |
-|:--:|
-| *The deturbulator by Sinhatech could contribute to redeuce loss due to aero drag* |
 
-| ![EV4](\assets\img\ElectricVehSteps\Yasa_Axial_Flux_Motor.jpg) |
-|:--:|
-| *A comparision study between axial and radial flux motors (Yasa)* |
 
-| ![EV5](\assets\img\ElectricVehSteps\Brake_Resistor.jpg) |
-|:--:|
-| *A typical Brake sistor used for braking (REPLLC))* |
 
-| ![EV6](\assets\img\ElectricVehSteps\Tire_truck.jpg) |
-|:--:|
-| *Tires play an important role to energy efficiency* |
+
+
+
+
 
 
 
