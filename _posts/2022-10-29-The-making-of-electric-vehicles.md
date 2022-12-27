@@ -53,6 +53,8 @@ Axial flux motors are still not visible to many. Electric motors or machines esp
 
 Yasa is now owned by Marcedes-Benz and will do serial production of axial flux motors for its products [Ref](https://www.greencarcongress.com/2021/11/20211119-yasa.html). The other notable axial flux motor manufacturer is [Omni Powertrain Technologies](https://www.omnipowertrain.com/). Omni claims to have axial flux motors ranging from 3.0kW to 192kW (dual motors) in its portfolio [Ref](https://www.omnipowertrain.com/wp-content/uploads/2022/02/Magelec-Propulsion-Brochure.pdf).
 
+As mentioned earlier, axial flux technology isn't able to earn trust globally yet, but based on the fact available from early adopters and manufacturers, it could play an important role in EV's overall energy efficiency, especially for heavy-duty trucks where there are several auxiliaries are used. 
+
 ### Recuperation of braking energy 
 
 This is the most important aspect of energy optimization that has a good scope for improvement. Today, the braking energy must go wasted if not going back to the energy storage system (ESS). If we analyze the US highway overall topography for usual truck routes, it is evident that in some cases the truck has to go downhill continuously for more than hundreds of miles (based on the [map](https://www.reddit.com/r/Truckers/comments/kafeg1/elevation_map_of_the_us_interstate_system/) shared by a Reddit user). For battery electric trucks, ESS would not be able to take all the braking energy back in those routes and must find another way to recuperate. 
