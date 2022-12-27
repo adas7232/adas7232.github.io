@@ -4,11 +4,7 @@ layout: post
 title: The Meaning of Y-cap in Battery Electric Vehicles  
 subtitle: Why Y-Cap is an important design factor?
 description: Why Y-Cap is an important design factor?
-image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
-optimized_image: /assets/img/ElectricVehSteps/ev_optimized.jpg
-description: Why electric vehicles are not less complicated than ICE ones.
-image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
-optimized_image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
+image: /assets/img/Y_cap/Capacitors.jpg
 category: Tech, EV
 tags:
   - Tech
@@ -19,9 +15,9 @@ author: abhijitdas
 paginate: true
 usemathjax: true
 ---
-
+Y-capacitors and X-capacitors are common in the high voltage or traction voltage components of a battery electric vehicle (BEV). They are also present in the charging equipment. To understand why Y-cap and X-cap are needed, an understanding of different types noises is also needed. [Here](https://techweb.rohm.com/knowledge/emc/s-emc/01-s-emc/6899#:~:text=Common%20mode%20noise%20is%20noise,to%20the%20power%20supply%20line.) is a good article describing normal mode and common mode noises in a high-voltage system. A good overview of a traction voltage system (TVS), low voltage system (LVS), signal system (SS) normally present in any BEV are given below. 
 ### Traction Voltage System
-In most cases TVS is floating system on top of the vehicle chassis where all high voltage components are individually grounded to chassis as shown in the figure below. In practical, designing a TVS for a EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
+In most cases, traction voltage system (TVS) is a floating system on top of the vehicle chassis where all high-voltage components are individually grounded to the chassis as shown in the figure below. In practice, designing a TVS for an EV is a little more complicated than what is seen in the figure. The following considerations are almost mandatory for safety, compatibility, packaging constraints, UN or local regulations.
 - Size of the cables
 - Length and routing of the cables
 - Choice of connectors and its HVIL compatibility
