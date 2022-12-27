@@ -21,7 +21,7 @@ Y-capacitors and X-capacitors are common in the high voltage or traction voltage
 |:--:|
 | *Capacitance limit vs Voltage. The blue line corresponds to the 0.2 Joules limit imposed by several standards. The range of applicability of the Fq based limit starts at 240 V (Source: Sendyne)* |
 
-Therefore, Y-cap value not on;y depends on the number of high voltage components on-board, but also the traction voltage value. In general, the Y-cap value can be obtained from the supplier through technical documentation. Then, based on the connection of that component to the rest of the system like series or parallel, an overall value for Y-cap can be obtained for the overall system. 
+Therefore, Y-cap value not only depends on the number of high voltage components on-board, but also the traction voltage value. In general, the Y-cap value can be obtained from the supplier through technical documentation. Then, based on the connection of that component to the rest of the system like series or parallel, an overall value for Y-cap can be obtained for the overall system. 
 
 | ![EV2](\assets\img\Y_cap\ycap_voltage_limits_regulation.png) |
 |:--:|
