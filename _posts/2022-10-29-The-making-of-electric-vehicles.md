@@ -53,7 +53,7 @@ Axial flux motors are still not visible to many. Electric motors or machines esp
 
 Yasa is now owned by Marcedes-Benz and will do serial production of axial flux motors for its products [Ref](https://www.greencarcongress.com/2021/11/20211119-yasa.html). The other notable axial flux motor manufacturer is [Omni Powertrain Technologies](https://www.omnipowertrain.com/). Omni claims to have axial flux motors ranging from 3.0kW to 192kW (dual motors) in its portfolio [Ref](https://www.omnipowertrain.com/wp-content/uploads/2022/02/Magelec-Propulsion-Brochure.pdf).
 
-As mentioned earlier, axial flux technology isn't able to earn trust globally yet, but based on the fact available from early adopters and manufacturers, it could play an important role in EV's overall energy efficiency, especially for heavy-duty trucks where there are several auxiliaries are used. 
+As mentioned earlier, axial flux technology is yet to earn trust globally, but based on the fact available from early adopters and manufacturers, it could play an important role in EV's overall energy efficiency, especially for heavy-duty trucks where there are several auxiliaries are used. 
 
 ### Recuperation of braking energy 
 
