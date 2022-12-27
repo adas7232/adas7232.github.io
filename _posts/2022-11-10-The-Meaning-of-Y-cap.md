@@ -26,6 +26,7 @@ Therefore, Y-cap value not only depends on the number of high voltage components
 | ![EV2](\assets\img\Y_cap\ycap_voltage_limits_regulation.png) |
 |:--:|
 | *Capacitance limit also depends on voltage. All revenat regulations related to Y-cap for EV* | 
+
 As shown in the TVS topology (next stection), high voltage components in EV are supplied through a single traction voltage power distribution system (TVPDC) so, the Y-caps for those components are always stay in parralel and thus contribute directly to the increase of the overall Y-cap rise of the system. 
 
 | ![EV2](\assets\img\Y_cap\Capacitor_in_parallel.png) |
