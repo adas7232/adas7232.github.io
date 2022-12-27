@@ -49,6 +49,8 @@ Axial flux motors are still not visible to many. Electric motors or machines esp
 |:--:|
 | *A comparision study between axial and radial flux motors (Yasa)* |
 
+[Here](https://web.mit.edu/kirtley/binlustuff/literature/electric%20machine/designOfAxialFluxPMM.pdf) is a good PhD theis if you would like to know more about axial flux motor design. If you dont want to get into too much technical details, [this](https://spectrum.ieee.org/axial-flux-motor#toggle-gdpr) article would be for you (Requires IEEE membership to view). 
+
 Yasa is now owned by Marcedes-Benz and will do serial production of axial flux motors for its products [Ref](https://www.greencarcongress.com/2021/11/20211119-yasa.html). The other notable axial flux motor manufacturer is [Omni Powertrain Technologies](https://www.omnipowertrain.com/). Omni claims to have axial flux motors ranging from 3.0kW to 192kW (dual motors) in its portfolio [Ref](https://www.omnipowertrain.com/wp-content/uploads/2022/02/Magelec-Propulsion-Brochure.pdf).
 
 ### Recuperation of braking energy 
