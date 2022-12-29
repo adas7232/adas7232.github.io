@@ -23,3 +23,5 @@ For the last few weeks, I am trying to practice meditation. After reading quite 
 As I don't consider myself an expert, I can only write about my perception and experience that I gathered so far. 
 #### What is meditation? 
 The textbook definition of Meditation says it's a process of looking inward. The primary goal is to make the mind void of any thoughts and be able to maintain that state indefinitely or as needed. It's rather difficult to realize the textbook definition for a beginner. Instead, it may be explained through a tightly-knit string.
+
+**In progress** 
