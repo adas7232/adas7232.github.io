@@ -37,4 +37,13 @@ It's astonishing to see how the mind travels through various topics from past an
 |:--:|
 | *There are a lot of similarities between water and mind, didn't realize it until now* | 
 
-As stated in one of the stories of Buddha, at the beginning there is not much of a difference between the mind and muddy water. Gradually, the water gets cleaner while the mud settles in the bottom. Likewise, the mind will prepare itself for acquiring ['samadhi'](https://en.wikipedia.org/wiki/Samadhi). Although I am far from it, I will keep this blog updated with my journey, so stay tuned. 
+As stated in one of the stories of Buddha, at the beginning there is not much of a difference between an occupied mind and the muddy water. Gradually, the water gets cleaner while the mud settles in the bottom. Likewise, gradually the mind will prepare itself for acquiring ['samadhi'](https://en.wikipedia.org/wiki/Samadhi) if patience and practice prevail. There are more than one way of doing meditation and one could try alternate methods to see which one is the best fit. Here are some of the methods that I am aware of - 
+1. Concentrating between the eyes
+2. Concentrating on the breathing (i.e. concentrating on the present)
+3. Playing a suitable background music and then concentrating on it
+4. Choosing a suitable venue like in the middle of the raw nature and try to concentrate on nothing while appreciating the sound of the nature. 
+5. Observing thoughts that occur in mind while not concentrating on any of them. Gradually thoughts will disappear or settles down like the mud from the water. 
+
+The last method is a common practice in Buddhist tradition and is quite interesting. Being brain as central processing unit of the human body and not able to do any multitasking, by observing thoughts means observing the past thoughts at the present. Observing a distracted mind also means it's a closed loop feedback system.  So, this is probably the most systematic way of doing meditation if guided meditation isn't available. 
+
+Although I am far from the goal, I will keep this blog updated with my journey, so stay tuned. 
