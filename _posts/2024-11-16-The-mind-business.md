@@ -31,7 +31,13 @@ I was thinking what would be the best way to summarize my first few weeks of exp
 |:--:|
 | *Like slacklining, meditation requires a quite a bit of practice to master* | 
 
-It's astonishing to see how the mind travels through various topics from past and future (not sure about the present) and sometimes made me ponder over them for a few minutes which felt like ages. It's just like water on my palm and I am trying to capture it by making a fist. Surprisingly, when I close my eyes and let my thoughts travel through my mind, I feel exhausted within a few minutes. Gradually, I could sit for 10-20 minutes at a time 2-3 times a day. 
+It's astonishing to see how the mind travels through various topics from past and future (not sure about the present) and sometimes made me ponder over them for a few minutes which felt like ages. It's just like water on my palm and I am trying to capture it by making a fist. Surprisingly, when I close my eyes and let my thoughts travel through my mind, I feel exhausted within a few minutes. It's surprising that the uneasiness happens quite fast when we close our eyes. Gradually though, I could sit for 10-20 minutes at a time 2-3 times a day. 
+
+| ![mind2](\assets\img\mind\water_fist.jpg) |
+|:--:|
+| *There are a lot of similarities between water and mind, didn't realize it until now* | 
+
+If 
 
 | ![mind2](\assets\img\mind\water_fist.jpg) |
 |:--:|
