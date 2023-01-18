@@ -19,3 +19,9 @@ You might be wondering so far this is not an ideal 'about me' example and you ar
 | ![EV1](\assets\img\About\with_Renault_truck.jpg) |
 |:--:|
 | *While visiting Volvo Renault Truck location at Lyon, France* |
+
+The world is run by numbers. Anything we see, touch and hear are connected with numbers. When I look down my number connection, I found it's all about one number as shown below. I am curious if the trend will continue in the future. 
+
+| ![EV1](\assets\img\About\all_about_numbers.png) |
+|:--:|
+| *The number 10 is quite popular in sports, I have yet to find it's implication on me* |
