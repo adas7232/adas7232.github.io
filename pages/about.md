@@ -14,7 +14,7 @@ It's been quite a journey for a small town boy who dreamed about beyond ordinary
 |:--:|
 | *On a hiking trip with family* |
 
-You might be wondering so far this is not an ideal 'about me' example and you are probably right. Unfortunately in terms of current social media standard it's no different than ordinary. I am thankful to my family that they condone me for who I am . I generally feel most parties are a waste of time, often like to debate politics among like-minded friends for hours, like to cook and eat at home and, like to stay far from the busy, noisy, bright and apparently happy city streets. Every morning, I enjoy a cup of Darjeeling tea. I guess, if you really would like to know about me, my blog posts would be a better place to start. But, please don't hesitate to drop me a line if you have any queries or would like to give feedback.
+You might be wondering so far this is not an ideal 'about me' example and you are probably right. Unfortunately in terms of current social media standard it's no different than ordinary. I am thankful to my family that they condone me for who I am. I generally feel most parties are a waste of time, often like to debate politics among like-minded friends for hours, like to cook and eat at home and, like to stay far from the busy, noisy, bright and apparently happy city streets. Every morning, I enjoy a cup of Darjeeling tea. I guess, if you really would like to know about me, my blog posts would be a better place to start. But, please don't hesitate to drop me a line if you have any queries or would like to give feedback.
 
 | ![EV1](\assets\img\About\with_Renault_truck.jpg) |
 |:--:|
@@ -24,4 +24,4 @@ The world is run by numbers. Anything we see, touch and hear are connected with 
 
 | ![EV1](\assets\img\About\all_about_numbers.png) |
 |:--:|
-| *The number 10 is quite popular in sports, I have yet to find it's implication on me* |
+| *The number 10 is quite popular in sports, I have yet to find its implication on me* |
