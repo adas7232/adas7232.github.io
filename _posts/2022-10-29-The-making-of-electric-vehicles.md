@@ -77,13 +77,13 @@ Simialr to aerodynamics, rolling resistance is also a contributing factor to eff
 |:--:|
 | *Tires play an important role to energy efficiency* |
 
-| ![EV6](\assets\img\ElectricVehSteps\michelin_tire.png) |
+| ![EV7](\assets\img\ElectricVehSteps\michelin_tire.png) |
 |:--:|
 | *Division of energy losses around trucks and trailers* |
 
 ### Conclusion
 Although there is work in progress for improving aerodynamics and rolling resistance, there are a lot of attention is needed for other contributors like recuperation of braking energy and using axial flux motor technologies. Here is another fun fact based on Tesla Semi's 500-mile run in late 2022. As shown in the image below, it recovered about 16% battery energy to come back to an elevation of 1000 ft from 4136 ft where it utilized 28% of battery energy to climb the same height. Yes, there are some assumptions in these numbers, but there might be an opportunity hiding to improve the recuperation beyond 16%. 
 
-| ![EV7](assets\img\ElectricVehSteps\Tesla_semi_batt_discharge_graph.png) |
+| ![EV8](\assets\img\ElectricVehSteps\Tesla_semi_batt_discharge_graph.png) |
 |:--:|
 | *Potential opportunity for range improvement* |
