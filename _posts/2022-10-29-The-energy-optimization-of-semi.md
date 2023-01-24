@@ -82,8 +82,33 @@ Simialr to aerodynamics, rolling resistance is also a contributing factor to eff
 | *Division of energy losses around trucks and trailers* |
 
 ### Conclusion
-Although there is work in progress for improving aerodynamics and rolling resistance, there are a lot of attention is needed for other contributors like recuperation of braking energy and using axial flux motor technologies. Here is another fun fact based on Tesla Semi's 500-mile run in late 2022. As shown in the image below, it recovered about 16% battery energy to come back to an elevation of 1000 ft from 4136 ft where it utilized 28% of battery energy to climb the same height. Yes, there are some assumptions in these numbers, but there might be an opportunity hiding to improve the recuperation beyond 16%. 
+Although there is work in progress for improving aerodynamics and rolling resistance, there are a lot of attention is needed for other contributors like recuperation of braking energy and using axial flux motor technologies. Here is another fun fact based on Tesla Semi's 500-mile run in late 2022. As shown in the image below, it recovered about 16% battery energy to come back to an elevation of 1000 ft from 4136 ft where it utilized 28% of battery energy to climb the same height. Yes, there are some assumptions in these numbers, but there might be an opportunity hiding to improve the recuperation beyond 16%. In addition, based on my calculation below (table), only 49% of the total potential energy were recovered.  
 
 | ![EV8](\assets\img\ElectricVehSteps\Tesla_semi_batt_discharge_graph.png) |
 |:--:|
 | *Potential opportunity for range improvement* |
+
+| Based on the Graph right hand side | Positions Miles | SOC   | % Change | Absolute change |
+| ---------------------------------- | --------------- | ----- | -------- | --------------- |
+| Pt A                               | 267.99          | 46.29 |          |                 |
+| Pt B                               | 280.90          | 33.12 | \-28%    | \-13.2          |
+| Pt C                               | 311.35          | 38.43 | 16%      | 5.3             |
+
+
+| Parameter/Variable                       | Value     | Unit  |
+| ---------------------------------------- | --------- | ----- |
+| Mass                                     | 37200     | kg    |
+| g                                        | 9.81      | m/s^2 |
+| Elevation                                | 955       | Meter |
+|                                          |           |       |
+| Batt Capacity                            | 990       | kwhr  |
+| Batt Capacity                            | 3564      | MJ    |
+|                                          |           |       |
+| Max Potential Energy in Joule            | 348510060 | J     |
+| Max Potential Energy in MJ               | 348.5     | MJ    |
+| Energy used to cover 955 meter elevation | 470.448   | MJ    |
+|                                          |           |       |
+| DOD at the highest point                 | 2387.88   | MJ    |
+| Energy recovered                         | 178.2     | MJ    |
+|                                          |           |       |
+| Energy Recuperation Efficiency           | 49%       |       |
