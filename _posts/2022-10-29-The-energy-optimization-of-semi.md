@@ -90,7 +90,7 @@ Although there is work in progress for improving aerodynamics and rolling resist
 
 | Based on the Graph right hand side | Positions Miles | SOC   | % Change | Absolute change |
 | ---------------------------------- | --------------- | ----- | -------- | --------------- |
-| Pt A                               | 267.99          | 46.29 |          |                 |
+| Pt A                               | 267.99          | 46.29 |     ~    |     ~           |
 | Pt B                               | 280.90          | 33.12 | \-28%    | \-13.2          |
 | Pt C                               | 311.35          | 38.43 | 16%      | 5.3             |
 
@@ -100,15 +100,15 @@ Although there is work in progress for improving aerodynamics and rolling resist
 | Mass                                     | 37200     | kg    |
 | g                                        | 9.81      | m/s^2 |
 | Elevation                                | 955       | Meter |
-|                                          |           |       |
+| ---------------------------------------- | --------- | ----- |
 | Batt Capacity                            | 990       | kwhr  |
 | Batt Capacity                            | 3564      | MJ    |
-|                                          |           |       |
+| ---------------------------------------- | --------- | ----- |
 | Max Potential Energy in Joule            | 348510060 | J     |
 | Max Potential Energy in MJ               | 348.5     | MJ    |
 | Energy used to cover 955 meter elevation | 470.448   | MJ    |
-|                                          |           |       |
+| ---------------------------------------- | --------- | ----- |
 | DOD at the highest point                 | 2387.88   | MJ    |
 | Energy recovered                         | 178.2     | MJ    |
-|                                          |           |       |
-| Energy Recuperation Efficiency           | 49%       |       |
+| ---------------------------------------- | --------- | ----- |
+| Energy Recuperation Efficiency           | 49%       |  %    |
