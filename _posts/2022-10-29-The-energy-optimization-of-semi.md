@@ -112,3 +112,7 @@ Although there is work in progress for improving aerodynamics and rolling resist
 | Energy recovered                         | 178.2     | MJ    |
 | ---------------------------------------- | --------- | ----- |
 | Energy Recuperation Efficiency           | 49%       |  %    |
+
+| ![EV9](\assets\img\ElectricVehSteps\Braking_calc.png) |
+|:--:|
+| *The Conservation of Energy for braking* |
