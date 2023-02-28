@@ -116,3 +116,57 @@ Although there is work in progress for improving aerodynamics and rolling resist
 | ![EV9](\assets\img\ElectricVehSteps\Braking_calc.png) |
 |:--:|
 | *The Conservation of Energy for braking* |
+
+The code for the calculation is given below - 
+
+``` 
+from math import sin, cos, tan
+from sympy import symbols, solve
+batt_cap = 3564 # MJ
+m = 37200 # kg
+g = 9.81 # m/s^2
+# At Pt A
+h1 = 955 # meter
+v1 = 0 # m/s
+########################################################################################################################
+# At pt B
+v2 = 26.67 #m/s
+theta = 0.02 # rad
+cd = 0.36
+A = 9.87 # m^2
+crr = 0.005
+eta = 0.95
+rho = 1.2 # kg/m^3
+h2 = symbols('h2')
+l1 = symbols('l1')
+########################################################################################################################
+expr1 = m*g*l1*sin(theta) - 0.5*m*v2**2 - crr*m*g*cos(theta)*l1 - 0.5*cd*rho*A*v2**2*l1
+l1 = solve(expr1)
+l1 = l1[0]
+print('l1 = ', round(l1, 2))
+expr2 = h1 - h2 - l1*sin(theta)
+h2 = solve(expr2)
+h2=h2[0]
+print('h2 = ', round(h2, 2)) 
+l = (311 - 280)*1609 # meter
+l2 = l - l1 # meter
+h2 = 888.14 # meter
+W_fr_l2 = crr*m*g*cos(theta)*l2 # work done to compensate friction to cover the distacne l2
+W_aero_l2 = 0.5*cd*rho*A*v2**2*l2 # work done to compensate aero resistance to cover the distacne l2 assming a constant speed of 60 miles/hr
+E_pe_h2 = m*g*h2 # Potential energy at point B
+E_tot_loss = W_fr_l2 + W_aero_l2 # total loss for travelling l2 distance
+E_braking = E_pe_h2 - E_tot_loss # Energy that needs to go to Battery to maintian constat speed of 60 mph
+E_battery_remaining = 0.35*batt_cap - E_braking/1e6 # Remaining batt capacity
+########################################################################################################################
+print('Max allowed speed = ', v2, 'm/s')
+print('Max elevation = ', h1, 'meter')
+print('Total travelled distance = ', l, 'meter')
+print('The elevation at which the speed will reach 60mph = ', round(h2, 2), 'meter')
+print('The distance at which the speed will reach 60mph = ', round(l1,2), 'meter')
+print('Work done to compensate friction to cover the distacne l2 = ', round(W_fr_l2,2), 'joules or =', round(W_fr_l2/1e6, 2), 'MJ')
+print('Work done to compensate aero resistance to cover the distacne l2 assming a constant speed of 60 miles/hr = ', round(W_aero_l2, 2), 'joules or =', round(W_aero_l2/1e6,2), 'MJ')
+print('Total energy loss due to travelling l2 distance =', round(E_tot_loss, 2), 'joules or =', round(E_tot_loss/1e6,2), 'MJ')
+print('Potential energy at point B = ', round(E_pe_h2,2), 'joules or =', round(E_pe_h2/1e6,2), 'MJ')
+print('Energy that needs to go to Battery to maintian constat speed of 60 mph = ', round(E_retarder,2), 'joules or =', round(E_retarder/1e6,2), 'MJ')
+print('Remianing Batt Energy = ', round(E_battery_remaining,2), 'MJ')
+```
