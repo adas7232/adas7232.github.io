@@ -117,6 +117,7 @@ Although there is work in progress for improving aerodynamics and rolling resist
 |:--:|
 | *The Conservation of Energy for braking* |
 Based on the calculation below shown in the table, the average speed with which the semi descended from point B to point c is in between 50-60 miles/hr. Fortunately battery was able to accept most of the braking energy. If battery is not available, then the same amount of energy has to be dissipated through service brakes which could be a potential safety issue. Therefore, availability of brake resistor or some kind of brake energy dissipator is recommended for all heavy duty electric trucks in NA roads. 
+
 | ![EV10](\assets\img\ElectricVehSteps\brake_energy_table.jpg) |
 |:--:|
 | ** |
