@@ -119,10 +119,6 @@ Although there is work in progress for improving aerodynamics and rolling resist
 
 The code for the calculation is given below - 
 ```python
-fun test_me():
-    print('yes, backticks work!')
-```
-```python
 from math import sin, cos, tan
 from sympy import symbols, solve
 batt_cap = 3564 # MJ
