@@ -121,4 +121,4 @@ Based on the calculation below shown in the table, the average speed with which 
 
 | ![EV10](\assets\img\ElectricVehSteps\brake_energy_table.jpg) |
 |:--:|
-| ** |
+| *Brake energy calculations for descending from point B to C* |
