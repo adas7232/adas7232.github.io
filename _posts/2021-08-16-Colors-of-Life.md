@@ -9,7 +9,7 @@ image: >-
   /assets/img/Homepage/Homepage4.jpg
 
 optimized_image: >-
-   /assets/img/Homepage/machupicchu_1_LR.jpg
+   /assets/img/Homepage/machupicchu_1_E_LR.jpg
 category: blog
 tags:
   - welcome
