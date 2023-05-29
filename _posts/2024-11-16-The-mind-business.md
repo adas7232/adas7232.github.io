@@ -15,8 +15,6 @@ paginate: true
 usemathjax: true
 ---
 
- 
-
 #### How to start?
 As I haven't reached the destination yet, I can't write something like "how to do?" instead I am sharing my own experience. As stated almost everywhere, there are some recommended [postures](https://www.thewayofmeditation.com.au/meditation-posture) for doing meditation. I use [Vajraasana](https://www.healthifyme.com/blog/vajrasana-pose/) as I felt it to be most suited for me. And, that's it. Just to be seated with patience and waiting, hoping for nothing. The first couple of weeks were the most difficult for me. This is where I started to observe my mind probably for the first time in my life. 
 
