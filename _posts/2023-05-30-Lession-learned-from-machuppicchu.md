@@ -2,7 +2,7 @@
 date: May 25, 2023
 layout: post
 title: Lession Learned from Salakantey & Machu Picchu Trekking
-subtitle: Why getting a right gear is utmost important for multi-day hiking
+subtitle: Why getting a right hiking gear is utmost important for trekking
 description: Why getting a right gear is utmost important for multi-day hiking
 image: /assets/img/Machu_Picchu/Machu_Picchu_1.jpg
 optimized_image: /assets/img/Machu_Picchu/Machu_Picchu_1_LR.jpg
