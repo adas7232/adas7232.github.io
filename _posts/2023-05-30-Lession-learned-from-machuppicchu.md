@@ -38,9 +38,9 @@ Correct gears are one of the most important elements for painless trekking and c
 
 While talking about temperature changes, choosing the right jacket is another obvious element. For this trekking, I carried two different jackets (fleece and down) and I had to frequently change them among them and no jackets throughout the day depending on elevation and whimsical weather of the Andes. But none of them provide ventilation and therefore caused significant suffocation of the body. It's quite important to get jackets that allow air ventilation but provide adequate warmth. 
 
-| ![MP1](\assets\img\Machu_Picchu\Mchupicchu_5e.jpg) |
+| ![MP1](\assets\img\Machu_Picchu\Mchupicchu_9e.jpg) |
 |:--:|
-| *Towards Machu Picchu through Inka Trail* |
+| *During the trek, temperature changes abrupty with elevation, wind speed and direction. So adequate layers are needed to be ready at all time* |
 
 Hiking poles are provided by the tour operators and I opted for that. That was one of the biggest mistakes. The first poles that were given to me were damaged after a few days. Then luckily I received a second pair (apparently a better one). These cheaply made pole sticks are needed to adjust their size regularly as they get shorter after a few hours of use. Also, as they are not collapsable, it's rather painful to stack them outside of the backpack when they are not needed and bring them back to use as needed. It would be ideal to have them collapsable so that they can be stored in the side pocket. 
 
