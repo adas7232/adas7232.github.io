@@ -30,7 +30,7 @@ I always wanted to see Machu Picchu and an opportunity arrived in the first mont
 |:--:|
 | *On the way to Inka Chiriaska Pass* |
 
-Correct gears are one of the most important elements for painless trekking and camping. Day hikes of a few hours long, won't give us the perspective of trekking 10-12 hours/day for multiple days with rapid elevation changes. Specifically for this trip, I bought a Gregory day pack with a 3-liter integrated water container. Although the reviews are great for this product, I found that Osprey is a better choice due to its versatility and better back support. As I had to carry 5-8 kg in my day pack (as horses and porters can carry a total of 5 kg/person without a sleeping bag), I felt some pressure on my back after a few days of continuous hiking. I tried Osprey and felt that my backs are a little happier. As the weather and temperature change rapidly along with elevation, it's also convenient to carry multiple jackets in the Osprey backpack. There may be other good backpacks, but this is just my personal experience.
+Correct gears are one of the most important elements for painless trekking and camping. Day hikes of a few hours long, won't give us the perspective of trekking 10-12 hours/day for multiple days with rapid elevation changes. For these kind of trips, 22-25 liter day pack is considered ideal (as porters/horses are used to carry upto 7 kgs). ...
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_5e.jpg) |
 |:--:|
