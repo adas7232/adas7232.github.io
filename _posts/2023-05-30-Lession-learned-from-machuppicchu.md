@@ -48,13 +48,15 @@ Sometimes, hiking poles are provided by the tour operators and I opted for that.
 |:--:|
 | *Broken hiking pole in the middle of the trek* |
 
-It's needless to say, due to significant exposure to UV at high altitudes, the whole body should be covered by UPF50+ clothing at all times (pants, long sleeve shirt, neck gaiter, hat).
+It's needless to say, due to significant exposure to UV at high altitudes, the whole body should be covered by UPF50+ clothing at all times (pants, long sleeve shirt, neck gaiter, hat) in addition to applying sun-blocker as needed.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_7e.jpg) |
 |:--:|
 | *At high altitude, UV index is high. The reflection in ice, makes it even higher* |
 
-At the end of the day, during overnight camping, a comfortable sleeping bag, air mattress pad, and a good headlamp are must be needed apart from other usual items like toiletries. Although sleeping bags were provided by the tour operators, I used mine. But I used the air mattress provided by them. 
+At the end of the day, during overnight camping, a comfortable sleeping bag, air mattress pad, and a good headlamp are must be needed apart from other usual items like toiletries. Although sleeping bags were provided by the tour operators, I used mine. But I used the air mattress provided by them. Again, it was ok but next time I would take something like [this](https://www.amazon.com/Tame-Lands-Camping-Sleeping-Pad/dp/B08KFQN25X/ref=sr_1_5?keywords=packable+sleeping+pad&qid=1685553029&sr=8-5) with me. 
+
+
 
 
 
