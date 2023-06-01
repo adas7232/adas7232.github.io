@@ -56,7 +56,7 @@ It's needless to say, due to significant exposure to UV at high altitudes, the w
 
 At the end of the day, during overnight camping, a comfortable sleeping bag, air mattress pad, and a good headlamp are must be needed apart from other usual items like toiletries. Although sleeping bags were provided by the tour operators, I used mine. But I used the air mattress provided by them. Again, it was ok but next time I would take something like [this](https://www.amazon.com/Tame-Lands-Camping-Sleeping-Pad/dp/B08KFQN25X/ref=sr_1_5?keywords=packable+sleeping+pad&qid=1685553029&sr=8-5) with me. 
 
-
+Overall, even though there are some gaps in my preparation for the trek, I found this place to be one of the most beautiful places on earth. Thanks to Peruvian government as well as the love and respect of the local people, mother nature can coexist here in her pristine form. If you don't believe it yet, check out these [photos]](https://www.amazon.com/photos/shared/1CjQLNc3SE-_QhSXKA64Pw.F_r2vUnl07Nx2-9Syj-pao). 
 
 
 
