@@ -59,7 +59,7 @@ At the end of the day, during overnight camping, a comfortable sleeping bag, air
 Overall, in spite of some gaps in my preparation for the trek, I found this place to be one of the most beautiful places on earth. Thanks to Peruvian government as well as the love and respect of the local people, mother nature can coexist here in her pristine form. Check out these [photos](https://www.amazon.com/photos/shared/1CjQLNc3SE-_QhSXKA64Pw.F_r2vUnl07Nx2-9Syj-pao) to get some idea about what I was trying say. 
 
 
-
+Overall, even though there are some gaps in my preparation for the trek, I found this place to be one of the most beautiful places on earth. Thanks to Peruvian government as well as the love and respect of the local people, mother nature can coexist here in her pristine form. If you don't believe it yet, check out these [photos](https://www.amazon.com/photos/shared/1CjQLNc3SE-_QhSXKA64Pw.F_r2vUnl07Nx2-9Syj-pao). 
 
 
 
