@@ -50,4 +50,6 @@ As stated in one of the stories of Buddha, at the beginning there is not much of
 
 The last method is a common practice in Buddhist tradition and is quite interesting. Being brain as central processing unit of the human body and not able to do any multitasking, by observing thoughts means observing the past thoughts at the present. Observing a distracted mind also means it's a closed loop feedback system.  So, this is probably the most systematic way of doing meditation if guided meditation isn't available. 
 
+If we look carefully, our mind doesn't like to stay at present, instead love to stay either ahead of reality or stay in past. For example, when we would like to achieve something good, our mind races ahead of reality and imagine ourselves in a state of achieving that goal. It creates a delta or an error between the state of mind and the reality or sometimes between mind and the physical body. We dont like the presence of these deltas and hence unhappyness starts to raise in proportinal to the magnitude of the delta. So the aim of meditation is to keep the mind and body sync in time. 
+
 Although I am far from the goal, I will keep this blog updated with my journey, so stay tuned. 
