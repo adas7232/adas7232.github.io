@@ -10,6 +10,7 @@ description: Why electric vehicles are not less complicated than ICE ones.
 image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
 optimized_image: /assets/img/ElectricVehSteps/Volvo_eVNR_homepage_3.png
 category: Tech, EV
+highlight: true
 tags:
   - Tech
   - Engineering
