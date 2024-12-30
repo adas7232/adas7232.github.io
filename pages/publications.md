@@ -49,9 +49,10 @@ permalink: /publications/
 
 ### Patents
 
-1. **A. Das**. *Variable Load Sense Spring Setting for Axial Piston Open Circuit Pump*, US patent 9,879,667. January 2018.
-2. **A. Das**, Luke Wadsley, Richard Hitchcock, and Jeffery Sipila.
-*Load Dependent Electronic Valve Actuator Regulation and Pressure Compensation*, Patent pending.
+1. **A. Das** (2018) Variable Load Sense Spring Setting for Axial Piston Open Circuit Pump, US patent 9,879,667
+2. **A. Das**, et al. (2019) Load Dependent Electronic Valve Actuator Regulation and Pressure Compensation, US patent 9879667B2, 2019
+3. Nimish patel, **A. Das**, et al. (2024) Thermo‑electric generator pyro‑fuse for heater application, Patent pending through Volvo Trucks, NA
+4. Nimish patel, **A. Das** (2024) One action smart switch for safe electric vehicle maintenance, Patent pending through Volvo Trucks, NA
 
 ### Thesis
 
