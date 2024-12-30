@@ -7,6 +7,7 @@ description: I tried 2 years of strict vegetarian diet and intermittent fasting 
 image: /assets/img/VegDiet/Veg_Diet_1.jpg
 optimized_image: /assets/img/VegDiet/Veg_diet_optimized_2.jpg
 category: life
+highlight: true
 tags:
   - Health
   - Food
