@@ -10,7 +10,8 @@ image: >-
 
 optimized_image: >-
    /assets/img/Homepage/machupicchu_1_E.jpg
-category: blog
+category: Life
+highlight: true
 tags:
   - welcome
   - blog
