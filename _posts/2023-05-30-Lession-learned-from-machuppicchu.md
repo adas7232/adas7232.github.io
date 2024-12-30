@@ -4,6 +4,7 @@ layout: post
 title: Lesson Learned from Salakantey & Machu Picchu Trekking
 subtitle: Why getting a right hiking gear is utmost important for trekking
 description: Why getting a right gear is utmost important for multi-day hiking
+featured: true
 image: /assets/img/Machu_Picchu/Mchupicchu_2_E.jpg
 optimized_image: /assets/img/Machu_Picchu/Machu_Picchu_1_LR.jpg
 category: Travel
