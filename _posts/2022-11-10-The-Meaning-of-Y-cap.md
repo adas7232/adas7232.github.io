@@ -6,6 +6,7 @@ subtitle: Why Y-Cap is an important design factor?
 description: Why Y-Cap is an important design factor?
 image: /assets/img/Y_cap/Capacitors.jpg
 category: Tech, EV
+highlight: true
 tags:
   - Tech
   - Engineering
