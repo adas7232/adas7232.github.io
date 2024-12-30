@@ -40,6 +40,35 @@ layout: main
             </div>
         </section>
     {% endif %}
+<!-- Highlighted Posts -->
+{% assign highlighted_posts = posts | where: "highlight", true %}
+{% if highlighted_posts.size > 0 %}
+<section id="highlighted-posts" class="row flex-grid">
+    <h2>Highlighted Posts</h2>
+    {% for post in highlighted_posts %}
+        <article class="highlighted box-item">
+            <span class="category">
+                <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
+                    <span>{{ post.category }}</span>
+                </a>
+            </span>
+            <div class="box-body">
+                <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
+                    {% if post.image %}
+                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                    {% else %}
+                        <img src="/assets/img/placeholder.png" alt="Placeholder">
+                    {% endif %}
+                </a>
+                <div class="box-info">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <p>{{ post.description }}</p>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+</section>
+{% endif %}
     <!-- Posts -->
     <section id="grid" class="row flex-grid">
         {% for post in posts offset: offset %}
