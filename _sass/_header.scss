@@ -17,33 +17,29 @@ body {
   }
 
   .nav-menu {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
+  display: flex; /* Make the menu visible and horizontal */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+  gap: 15px; /* Add spacing between menu items */
+}
 
-    @include media(">=sm") {
-      display: flex;
-    }
+.nav-menu li {
+  margin: 0;
+}
 
-    li {
-      margin: 0 rem(15px);
-    }
+.nav-menu a {
+  text-decoration: none;
+  color: $accentDark; /* Use your theme's color variable */
+  font-weight: bold;
+  transition: color 0.3s ease;
 
-    a {
-      text-decoration: none;
-      color: $accentDark;
-      font-weight: bold;
-      font-size: rem(14px);
-      transition: color 0.3s;
-
-      &:hover {
-        color: $themeColor;
-      }
-    }
+  &:hover {
+    color: $primaryDark; /* Change color on hover */
   }
 }
+
 
   .logo {
     display: inline-block;
