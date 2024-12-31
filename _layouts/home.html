@@ -15,23 +15,18 @@ layout: main
 {% endif %}
 
 <main class="home {% if site.show_hero and paginator == nil or paginator.page == 1 %}no-padding{% endif %}" role="main">
+
+    <!-- Hero Section for Featured Post -->
     {% if site.show_hero and paginator == nil or paginator.page == 1 %}
-        <!-- Hero -->
         {% assign featured = posts | where: "highlight", true | first %}
         {% if featured %}
-        <section class="hero" style="background-image: url({{ featured.image }})">
+        <section class="hero" style="background-image: url({{ featured.image | default: '/assets/img/placeholder.png' }})">
             <div class="pixels"></div>
             <div class="gradient"></div>
             <div class="content">
-                <time datetime="{{ featured.date | date_to_xmlschema }}" class="date">
-                    {% if site.date_format == nil %}
-                        {{ featured.date | date: "%m.%d.%Y" }}
-                    {% else %}
-                        {{ featured.date | date: site.date_format }}
-                    {% endif %}
-                </time>
+                <time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%B %d, %Y" }}</time>
                 <h1 class="title">{{ featured.title }}</h1>
-                <p class="description">{{ featured.subtitle }}</p>
+                <p class="description">{{ featured.subtitle | default: "No description available." }}</p>
                 <div class="buttons">
                     <a href="{{ featured.url | prepend: site.baseurl }}" role="button" class="button">
                         <svg><use xlink:href="#icon-read"></use></svg>
@@ -40,6 +35,8 @@ layout: main
                 </div>
             </div>
         </section>
+        {% else %}
+        <p>No featured post found. Please set `highlight: true` in your front matter for one post.</p>
         {% endif %}
     {% endif %}
 
@@ -47,7 +44,7 @@ layout: main
     <section id="highlighted-posts" class="row flex-grid">
         {% assign highlighted_posts = posts | where: "highlight", true %}
         {% if highlighted_posts.size > 0 %}
-        {% for post in highlighted_posts limit: 4 %}
+            {% for post in highlighted_posts limit: 4 %}
             <article class="box-item">
                 <span class="category">
                     <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
@@ -69,10 +66,11 @@ layout: main
                         <a href="{{ post.url | prepend: site.baseurl }}">
                             <h2>{{ post.title }}</h2>
                         </a>
+                        <p>{{ post.description | default: "No description available." }}</p>
                     </div>
                 </div>
             </article>
-        {% endfor %}
+            {% endfor %}
         {% else %}
             <p>No highlighted posts found.</p>
         {% endif %}
@@ -82,7 +80,7 @@ layout: main
     <section id="regular-posts" class="row flex-grid">
         {% assign regular_posts = posts | where_exp: "post", "post.highlight != true" %}
         {% if regular_posts.size > 0 %}
-        {% for post in regular_posts limit: 4 %}
+            {% for post in regular_posts limit: 4 %}
             <article class="box-item">
                 <span class="category">
                     <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
@@ -104,10 +102,11 @@ layout: main
                         <a href="{{ post.url | prepend: site.baseurl }}">
                             <h2>{{ post.title }}</h2>
                         </a>
+                        <p>{{ post.description | default: "No description available." }}</p>
                     </div>
                 </div>
             </article>
-        {% endfor %}
+            {% endfor %}
         {% else %}
             <p>No regular posts found.</p>
         {% endif %}
