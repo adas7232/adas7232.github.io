@@ -41,12 +41,10 @@ layout: main
         </section>
     {% endif %}
 <!-- Highlighted Posts -->
-{% assign highlighted_posts = posts | where: "highlight", true %}
-{% if highlighted_posts.size > 0 %}
-<section id="highlighted-posts" class="row flex-grid">
-    <h2>Highlighted Posts</h2>
-    {% for post in highlighted_posts %}
-        <article class="highlighted box-item">
+<section id="grid" class="row flex-grid">
+    {% assign highlighted_posts = posts | where: "highlight", true %}
+    {% for post in highlighted_posts limit: 4 %}
+        <article class="box-item">
             <span class="category">
                 <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
                     <span>{{ post.category }}</span>
@@ -54,21 +52,45 @@ layout: main
             </span>
             <div class="box-body">
                 <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
-                    {% if post.image %}
-                        <img src="{{ post.image }}" alt="{{ post.title }}">
+                    {% if post.optimized_image %}
+                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                        <noscript>
+                            <img src="{{ post.optimized_image }}" width="100%">
+                        </noscript>
+                    {% elsif post.image %}
+                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                        <noscript>
+                            <img src="{{ post.image }}" width="100%">
+                        </noscript>
                     {% else %}
-                        <img src="/assets/img/placeholder.png" alt="Placeholder">
+                        <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
+                        <noscript>
+                            <img src="/assets/img/off.jpg" width="100%">
+                        </noscript>
                     {% endif %}
                 </a>
                 <div class="box-info">
-                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                    <p>{{ post.description }}</p>
+                    <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                        {% include date.html date=post.date %}
+                    </time>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <h2 class="post-title">{{ post.title }}</h2>
+                    </a>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        <p class="description">{{ post.description }}</p>
+                    </a>
+                    <div class="tags">
+                        {% for tag in post.tags %}
+                            {% if tag != "" %}
+                                <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </article>
     {% endfor %}
 </section>
-{% endif %}
     <!-- Posts -->
     <section id="grid" class="row flex-grid">
         {% for post in posts offset: offset %}
