@@ -18,40 +18,46 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-I remember a short story written by a notable Bengali writer Bonoful (Balaichand Mukhopadhyay) named 'Dadur Uttor' (My grandfather's response). If I may summarize the main context of the tale for those who don't know the story. One day a small kid got curious and enthralled after seeing a colorful sunset at the bank of the river Ganga. He returned home thinking 'why there are so many colors in the sky? Later that evening, his grandfather overheard a conversation between the kid and his private tutor about the same topic and later decided to explain it differently. The grandfather explained, that the sun being very generous, gives away innumerable colors all the time. An image of that generosity reflects every morning and evening in the sky for a short period of time and then they gradually spread everywhere. One can find them in the mother's love, in the face of a father, in the smile of a sibling, in the flowers, fruits, birds, and so on. The kid liked the answer a lot better than what he got from his private tutor earlier. The story ends with the fact that the kid is now grown-up and understood the real science behind the colorful sunrise and sunsets. But he still believes in the explanation that his grandfather told him once.
+I remember a beautiful short story by the Bengali writer Bonoful (Balaichand Mukhopadhyay) called *Dadur Uttor* (*My Grandfather’s Answer*). Here’s a quick summary for those who haven’t read it:
+
+One evening, a little boy stood by the river Ganga, mesmerized by the colorful sunset. Filled with curiosity, he returned home wondering, *"Why is the sky so full of colors?"* That night, his grandfather overheard the boy asking his tutor the same question. Later, the grandfather offered his own explanation:  
+
+“The sun is incredibly generous and shares its colors with the world. Every morning and evening, we see a glimpse of that generosity in the sky. These colors then spread all around us – in a mother’s love, a father’s face, a sibling’s smile, the flowers, the fruits, the birds, and so much more.”
+
+The boy loved this answer far more than the scientific explanation he’d heard earlier. Years later, as an adult, he understood the science behind sunsets. Yet, he still cherished his grandfather’s words.
 
 | ![RandomSunset1](\assets\img\Homepage\Sunset_3.jpg) |
 |:--:|
-| *Just like mind, water is also a true reflector of colors* |
+| *Just like the mind, water reflects colors beautifully.* |
 
-I remember the story even after 25 years and may be because this explanation made a sustainable impact on mind since I first read this story. Similar to the kind, I too get spellbound almost every time when I am viewing a sunset. As a late riser, I only get to see sunset more often than sunrise. Sometimes, if I have my phone with me, I can't help myself to capture these moments with my phone.
+Even after 25 years, this story stays with me. Maybe it’s because it left a lasting impression on me when I first read it. Like that boy, I’m still captivated by sunsets. As someone who rarely catches a sunrise, sunsets are my special moments. Whenever I can, I snap photos of these magical sights with my phone.
 
 | ![RandomSunset2](\assets\img\Homepage\Sunset_7.jpg) |
 |:--:|
-| *When sky melt down on top of the Appalachian* |
+| *When the sky melts over the Appalachians.* |
 
-When I go through my archive of these memories, I also find that not two memories are similar just like us the human. I guess, it showcases the beauty of randomness. It teaches us that without it, our life would be boring. For me it definitely mood changer in a positive way. I try to find these colors in my wife' smile, in my daughter's joyful eyes, in my son's naughty face. I also try to find those colors within myself. It helps me to confront a bad day and teaches me the generosity on a better day and often inspire me to help those who are not lucky enough like me.
+Looking back at my collection of sunset photos, I realize no two sunsets are the same, just like people. This randomness is what makes them so special. It reminds me that life would be dull without variety. Sunsets always lift my spirits, even on tough days. I find these colors in my wife’s smile, my daughter’s bright eyes, and my son’s playful face. And sometimes, I look for those colors in myself – they remind me to appreciate the good days and be generous on the bad ones. They inspire me to help those who aren’t as fortunate.
 
 | ![RandomSunset3](\assets\img\Homepage\Sunset_10.jpg) |
 |:--:|
-| *Sky-Fall-Water - the combination that never disappoints* |
+| *Sky, water, and light – a combination that never disappoints.* |
 
 | ![RandomSunset4](\assets\img\Homepage\Sunset_4.jpg) |
 |:--:|
-| *When Orange turns black in no time* |
+| *When orange fades to black in an instant.* |
 
 | ![RandomSunset5](\assets\img\Homepage\Sunset_5.jpg) |
 |:--:|
-| *Is the color spread really random?* |
+| *Is the spread of color truly random?* |
 
 | ![RandomSunset6](\assets\img\Homepage\Sunset_8.jpg) |
 |:--:|
-| *The endless color of transition* |
+| *The endless beauty of transitions.* |
 
 | ![RandomSunset7](\assets\img\Homepage\Sunset_9.jpg) |
 |:--:|
-| *A slight opening is enough to make a difference between day and night* |
+| *A small opening can make all the difference between day and night.* |
 
-| ![Random8](\assets\img\Homepage\LebauerPark_night.png)
+| ![Random8](\assets\img\Homepage\LebauerPark_night.png) |
 |:--:|
-| *The direction of light can change the perspective of anything* |
+| *The angle of light changes everything.* |

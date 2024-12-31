@@ -14,17 +14,31 @@ tags:
 author: abhijitdas
 paginate: true
 ---
-I always told and also thought that the vegetarian diet is the best for maintaining good health. I have no reason to doubt as I didn't find anyone who express any other opinion. Being a non-vegetarian for life, I know that it would be pretty hard for me to maintain it for long. Then in late 2019, I decided to give it a try. It was purely an experimental study on my body. At the beginning, as expected, it was hard. But then within a few weeks or so, I got used to with it. I did continue the vegetarian streak for 2 years. I did all the routine check-ups as I usually do. I noticed the following -
+I’ve always believed, and been told, that a vegetarian diet is the best way to maintain good health. I never had a reason to doubt this since no one around me expressed a different opinion. However, as someone who’s been a non-vegetarian my whole life, I knew it wouldn’t be easy for me to stick to a vegetarian diet.  
 
-1.	I always had stomach issues and had indigestion since school days and had to undertake Omeprazole course once in every few months. With vegetarian diet I rarely took any medications for stomach issues or indigestions.
-2.	I had constipation but I didn’t look for a specific reason behind it. While experimenting with my food especially with veg diet, I found that only specific food contributes to my constipation and then subsequent indigestion. I removed those foods for example milk, lentil etc. from the list and I solved that issue.
-3.	I lost about 35 pounds in two years even with the similar quantity of food intake.
-4.	I was able to do regular exercise as I did before starting the vegetarian diet.
-5. The blood work shows deficiency in some vitamins probably because I didn't diversify my food enough.
-6. I always had high LDL and that didn't change at all (neither decreased or increased) during the 2 years of vegetarian diet. This was kind of surprising for me after seeing some of the documentaries on the Netflix claiming vegetarian diet greatly improves LDL level.
+In late 2019, I decided to give it a try. It was purely an experiment to see how my body would respond. As expected, it was tough at first. But after a few weeks, I got used to it. I stuck to the vegetarian diet for two years and continued with my regular health check-ups. Here’s what I observed during this period:  
 
-Since late 2021, I started non-veg diets gradually even though I do not plan to consume any types of red meat in the immediate future. The idea behind this is to make my food more complete by consuming required nutrition naturally without taking supplements. As of now, I feel great.
+1. **Stomach Issues Improved**:  
+   I’ve had stomach issues and indigestion since my school days, often needing to take Omeprazole every few months. On a vegetarian diet, I rarely needed medication for these problems.  
 
-Our body is an immensely complex machine that we haven’t yet figured out how it works. On top of that, every human body is a little different and needs some tuning to transform it a perfectly running machine. And that's why same food doesn't suit or provide nutrition in the same way to all. Experimenting with food will provide the opportunity to fine tune the optimal food habits. Removing foods that causes issues will certainly help reduce the need for medications. One can only see or feel it by experimenting.
+2. **Constipation Resolved**:  
+   I also dealt with constipation but never looked into the specific causes. During this experiment, I found that certain foods, like milk and lentils, triggered my constipation and indigestion. Once I removed these foods, the problem disappeared.  
 
-There is a huge impact of doing fasting or intermittent fasting for good health. I will talk about it in the next blog.
+3. **Weight Loss**:  
+   Over two years, I lost about 35 pounds, even though I ate a similar quantity of food.  
+
+4. **Exercise Routine Unchanged**:  
+   I continued to exercise regularly without any changes in my routine.  
+
+5. **Vitamin Deficiency**:  
+   My blood work showed some vitamin deficiencies, likely because I didn’t diversify my vegetarian diet enough.  
+
+6. **No Change in LDL**:  
+   I’ve always had high LDL cholesterol, and it stayed the same during the two years of being vegetarian. This surprised me, especially after seeing Netflix documentaries claiming that a vegetarian diet improves LDL levels.  
+
+In late 2021, I slowly started eating non-vegetarian food again, though I plan to avoid red meat for now. My goal is to create a balanced diet and get all the necessary nutrients naturally, without relying on supplements. As of now, I feel great.  
+
+Our bodies are incredibly complex, and each one works a little differently. What works for one person may not work for another. That’s why experimenting with food is so important. It allows us to discover what suits us best and helps fine-tune our eating habits. By removing foods that cause problems, we can reduce the need for medication and feel healthier.  
+
+I also believe fasting or intermittent fasting plays a big role in maintaining good health. I’ll share my thoughts on this in the next blog.  
+

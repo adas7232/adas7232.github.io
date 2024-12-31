@@ -17,53 +17,66 @@ paginate: true
 usemathjax: true
 ---
 
-**In progress** 
-
-I always wanted to see Machu Picchu and an opportunity arrived in the first month of 2023 when one of my friends invited me to join a 7-day long trek to Salakantay and Machu Picchu from Cusco. I had no reason to ignore the invitation.
+I’ve always wanted to see Machu Picchu, and in January 2023, I got the chance when a friend invited me on a 7-day trek to Salkantay and Machu Picchu starting from Cusco. I couldn’t say no to the invitation.
 
 | ![MP1](\assets\img\Machu_Picchu\MP_Summary.png) |
 |:--:|
 | *Elevation reference for the Salkantay and Inka Trail to Machu Picchu* |
 
- After moving to North Carolina, I have gradually found hiking attractive not only for my mental hygiene but also because it's a good way to remain physically fit. Most of my hiking activities in the last few months are confined around the Appalachian trails including, pilot mountains, grand Father Mountain, Chimney Rock, Hanging Rock, etc. Pilot Mountain and hanging rock state park are the nearest of all to my home and I prepared myself for the Machu Picchu trip using various trails in these parks. The maximum elevation of these parks is less than 4000 ft. So, I couldn't able to simulate and train myself with the odds that were waiting for me in the Andes mountains. I opted for Diamox through my primary physician to confront any lack of oxygen-related sickness. This was my first major multiday hiking adventure and even though I knew I didn't prepare enough, I was excited to see what was waiting for me behind the cloud-covered Andes. Providing day-to-day details on this 8-day trip is not the purpose of this blog. There are tons of blogs and vlogs available on the same topic. During this trip, I found how under prepared I was even though I took several days to pack my bags. Several items were provided by the tour operator and I choose to opt for them and maybe this is where I can start sharing my lesson learned topic.
+Since moving to North Carolina, I’ve found hiking to be a great way to stay fit and clear my mind. Most of my hiking trips have been around the Appalachian trails, including Pilot Mountain, Grandfather Mountain, Chimney Rock, and Hanging Rock. Pilot Mountain and Hanging Rock are the closest to my home, and I used these trails to prepare for Machu Picchu. However, their maximum elevation is under 4,000 feet, so I couldn’t fully train for the challenges of the Andes. To prepare for the high altitudes, I got a prescription for Diamox from my doctor to help prevent altitude sickness.
+
+This was my first multi-day hiking adventure. While I knew I wasn’t fully prepared, I was excited to see what lay ahead in the Andes. Instead of sharing day-by-day details (there are plenty of blogs and vlogs about this), I’ll focus on what I learned during this trip.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_3_E.jpg) |
 |:--:|
 | *On the way to Inka Chiriaska Pass* |
 
-Correct gears are one of the most important elements for painless trekking and camping. Day hikes of a few hours long, won't give us the perspective of trekking 10-12 hours/day for multiple days with rapid elevation changes. For these kind of trips, 22-25 liter day pack is considered ideal (as porters/horses are used to carry up to 7 kgs). One of the useful feature to have for backpack is adequate ventilation (such as external breathable back frame pad). The backpack that I took didn't have that feature and I found my back is always sweaty during the hike. A good example would be [Gregory Citro 24](https://www.gregorypacks.com/packs-bags/hydration-packs/citro-24-h2o-126894XXXX.html?dwvar_126894XXXX_color=Spark%20Orange&cgidmaster=packs-day-packs) or  [Osprey Stratos 24](https://www.osprey.com/us/en/product/stratos-24-STRATOS24S22.html). In addition, cushioned straps would help significantly of applied pressure on the shoulder. Hip and chest straps/belts are also helpful for long haul. No need to mention the importance of having an integrated hydration pack to remain hydrated all the way. I had a 3-liter pack and found it to be adequate for my need. Having a water bottle (preferably a thermos) is needed to keep the warm/hot water in chilly weather. It is also needed in the tent for hydration. 
+### Lessons Learned
+
+#### Choosing the Right Gear
+Good gear makes a big difference on a long trek. Unlike short day hikes, where you only hike for a few hours, trekking for 10-12 hours a day with constant elevation changes is a different experience. A 22-25 liter daypack is ideal for these trips since porters or horses carry most of the weight. However, the backpack I used didn’t have proper ventilation, leaving my back sweaty. Backpacks like the [Gregory Citro 24](https://www.gregorypacks.com/packs-bags/hydration-packs/citro-24-h2o-126894XXXX.html) or [Osprey Stratos 24](https://www.osprey.com/us/en/product/stratos-24-STRATOS24S22.html) would have been better. Cushioned straps, hip belts, and chest straps also help reduce pressure. 
+
+A 3-liter hydration pack worked well for me, but having a thermos for hot water is also useful, especially in cold weather. It’s helpful to keep warm water in the tent at night.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_5e.jpg) |
 |:--:|
-| *Towards Machu Picchu through Inka Trail* |
+| *Towards Machu Picchu through the Inka Trail* |
 
-While talking about temperature changes, choosing the right jacket is another obvious element. For this trekking, I carried two different jackets (fleece and down) and I had to frequently change them among them and no jackets throughout the day depending on elevation and whimsical weather of the Andes. But none of them provide ventilation and therefore caused significant suffocation of the body. It's quite important to get jackets that allow air ventilation but provide adequate warmth when needed. Other relevant feature to consider is to be packable and somewhat water-resistant. One example could be [arcteryx](https://www.rei.com/product/185627/arcteryx-atom-sl-insulated-hoodie-mens). Although it's an expensive choice but normally last for long enough to justify the initial hefty investment. It may be little difficult to get all these features in one. So, in general, rain ponchos are carried separately. 
+#### Jackets and Clothing
+The weather in the Andes changes quickly, so layering is important. I carried a fleece and a down jacket but found them lacking in ventilation, which made me uncomfortable. Jackets that allow airflow while providing warmth are essential, like this one from [Arc'teryx](https://www.rei.com/product/185627/arcteryx-atom-sl-insulated-hoodie-mens). Rain ponchos are also necessary since it’s hard to find a single jacket that covers all needs.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_9e.jpg) |
 |:--:|
-| *During the trek, temperature changes abrupty with elevation, wind speed and direction. So adequate layers are needed to be ready at all time* |
+| *The weather changes quickly, so proper layers are essential.* |
 
-Sometimes, hiking poles are provided by the tour operators and I opted for that. That was one of the biggest mistakes. The first poles that were given to me were damaged after a few days. Then luckily I received a second pair (apparently a better one). These cheaply made pole sticks are needed to adjust their size regularly as they get shorter after a few hours of use. Also, as they are not collapsable, it's rather painful to stack them outside of the backpack when they are not needed and bring them back to use as needed. It would be ideal to have them collapsable so that they can be stored in the side pocket ([example](https://www.rei.com/product/202396/black-diamond-distance-z-trekking-poles-pair)). 
+#### Trekking Poles
+I made a mistake by using the trekking poles provided by the tour operator. The first pair broke after a few days, and the replacement was only slightly better. Adjustable, collapsible poles like [these](https://www.rei.com/product/202396/black-diamond-distance-z-trekking-poles-pair) are much better since they can be stored in a backpack when not in use.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_6.jpg) |
 |:--:|
-| *Broken hiking pole in the middle of the trek* |
+| *A broken trekking pole during the hike* |
 
-It's needless to say, due to significant exposure to UV at high altitudes, the whole body should be covered by UPF50+ clothing at all times (pants, long sleeve shirt, neck gaiter, hat) in addition to applying sun-blocker as needed.
+#### Protection from UV
+At high altitudes, UV exposure is intense, especially with sunlight reflecting off the ice. Wearing UPF50+ clothing (pants, long sleeves, neck gaiters, hats) and applying sunscreen is crucial.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_7e.jpg) |
 |:--:|
-| *At high altitude, UV index is high. The reflection in ice, makes it even higher* |
+| *High UV levels at altitude make full-body protection a must.* |
 
-At the end of the day, during overnight camping, a comfortable sleeping bag, air mattress pad, and a good headlamp are must be needed apart from other usual items like toiletries. During this trip, I found that a handheld flash light is not a good alternative for a headlamp. Sleeping bags are generally provided by the tour operators, but I used mine but I used the air mattress provided by them. Again, it was ok but next time I would probably take something like [this](https://www.amazon.com/Tame-Lands-Camping-Sleeping-Pad/dp/B08KFQN25X/ref=sr_1_5?keywords=packable+sleeping+pad&qid=1685553029&sr=8-5) with me. 
+#### Camping Gear
+For overnight camping, a comfortable sleeping bag, air mattress, and a headlamp are essential. A handheld flashlight isn’t a good alternative to a headlamp. I used the air mattress provided by the tour operator, but I’d bring my own next time, like [this one](https://www.amazon.com/Tame-Lands-Camping-Sleeping-Pad/dp/B08KFQN25X/ref=sr_1_5).
 
-During this trip, especially during the second phase of the trek through the Inca Trail, there are times when I had to descend stairs for hours. At that time, I felt that a pair of knee guard would have been very helpful. I definitely keep it in my backpack next time. 
+Descending steep stairs for hours on the Inca Trail made me realize the importance of knee guards. I’ll definitely bring them next time.
 
 | ![MP1](\assets\img\Machu_Picchu\Mchupicchu_10.jpg) |
 |:--:|
-| *The surrounding was beautiful, but the 'Inca' stairs were brutal for knees* |
+| *The beautiful surroundings made the tough ‘Inca stairs’ worthwhile.* |
 
-Overall, in spite of some gaps in my preparation for the trek, I found this place to be one of the most beautiful places on earth. Thanks to Peruvian government as well as the love and respect of the local people, mother nature can coexist here in her pristine form. Check out these [***photos***](https://www.amazon.com/photos/shared/1CjQLNc3SE-_QhSXKA64Pw.F_r2vUnl07Nx2-9Syj-pao) to get some idea about what I was trying say. During this trek, I came to know how to push my body to its limit in terms of physical activities. At certain times, I felt completely out of breath even though I was breathing in with my mouth wide open. It was momentarily scary but lasted for a few seconds. I stopped for a quick rest for a few seconds as soon as I experienced it and then started moving again. My friend Amit correctly mentioned to me that it's more of a mental challenge than a physical one. Even though we are passing through one of the most beautiful places on earth, it was difficult to appreciate the surroundings unless we stopped hiking and take a moment to observe it. Otherwise, we all are looking down hiking one step at a time. We remained out of the grid for a few days without a cell tower or Internet. I never missed it but felt rather peaceful, and maybe I am thinking to put myself in that scenario a few days every year. Due to lack of proper rest, on the seventh day of the trek, my body battery was completely drained. In addition, Machu Picchu was quite hot during the day and that was our last point of the hike. Overall, the trek wasn't easy, but the memory that I gathered and the life lessons that I learned during this trip, I am now looking forward to my next one (I don't know what that yet). 
+### Final Thoughts
+Despite some gaps in my preparation, this trek was unforgettable. Thanks to the Peruvian government and the care of local people, nature remains pristine here. Check out these [***photos***](https://www.amazon.com/photos/shared/1CjQLNc3SE-_QhSXKA64Pw.F_r2vUnl07Nx2-9Syj-pao) to see the beauty I experienced.
+
+This trek pushed my physical and mental limits. There were moments when I felt completely out of breath, which was scary but temporary. As my friend Amit said, it’s more of a mental challenge than a physical one. Although the journey was tough, the memories and life lessons I gained are priceless. Now, I’m excited for my next adventure (even though I don’t know what it will be yet).
+
 
 
 

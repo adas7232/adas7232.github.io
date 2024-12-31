@@ -44,7 +44,7 @@ layout: main
     <!-- Highlighted Posts Section -->
     <section id="grid" class="row flex-grid">
         {% assign highlighted_posts = posts | where: "highlight", true %}
-        {% for post in highlighted_posts limit: 4 %}
+        {% for post in highlighted_posts limit %}
             <article class="box-item">
                 <span class="category">
                     <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">

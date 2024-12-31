@@ -20,106 +20,97 @@ author: abhijitdas
 paginate: true
 usemathjax: true
 ---
-Electrics Vehicles especially cars are becoming common in recent times. Inspired by Tesla's success, a lot of new start-ups are coming up everywhere. It's just not the cars, but also heavy-duty trucks, material handling, boat and construction and agricultural machines. Although the range anxiety is still quite visible among the OEMs. One of the main reasons for the persisting range anxiety lies in the fact that in the last few years the battery technology doesn't have any path-breaking innovation to provide a significant range improvement given the fixed size of the battery pack. Therefore, finding a way to improve energy efficiency instead could be the way to improve the existing range for BEV trucks. Some of the elements behind improving energy efficiency for BEV trucks are the same as Diesel trucks but some of them are unique. Here are some relevant contributors - 
+Electric vehicles, especially cars, have become more common recently. Inspired by Tesla’s success, many new startups are emerging. It’s not just cars—there are also heavy-duty trucks, material handling equipment, boats, construction, and agricultural machines. However, range anxiety is still a concern for many OEMs.
+
+One reason for this anxiety is that battery technology hasn’t seen any major breakthroughs recently. This limits significant range improvements with the current battery sizes. Instead, improving energy efficiency could be the key to extending the range of BEV trucks. Some factors for improving energy efficiency are similar to those in diesel trucks, but others are unique to electric vehicles. Here are some key contributors:
 
 ### Aerodynamics
-Aerodynamics plays an important role in energy consumption due to drag. The figure below by STEMCO shows how the combination of tractor and trailer contributes to the overall energy efficiency of a heavy-duty truck. 
+
+Aerodynamics plays a big role in energy consumption because of drag. The diagram below from STEMCO shows how the tractor and trailer contribute to the overall drag of a heavy-duty truck.
 
 | ![EV2](\assets\img\ElectricVehSteps\Stemco-contributions-to-semi-aero-drag.png) |
 |:--:|
-| *Distribution of aerodag between tractor and trailer (STEMCO)* |
+| *Distribution of aerodynamic drag between tractor and trailer (STEMCO)* |
 
-There are ongoing efforts to minimize the effect of drag on trucks by redesigning external long nosy cabs into something that a Tesla Semi is offering. See below a report published by [Airshaper](https://airshaper.com/cases/tesla-semi-truck-aerodynamics-analyzed) which shows that Tesla's semi design may be benefitting from reduced air drag in comparison to its competitors. 
+Efforts are ongoing to reduce drag by redesigning trucks. For example, Tesla’s Semi has a sleek design that may reduce air drag compared to conventional trucks. The report from [Airshaper](https://airshaper.com/cases/tesla-semi-truck-aerodynamics-analyzed) below shows this comparison.
 
 | ![EV3](\assets\img\ElectricVehSteps\tesla_semi_aero.png) |
 |:--:|
-| *Tesla Semi vs Conventional Truck (Airshaper)* |
+| *Tesla Semi vs. conventional truck (Airshaper)* |
 
-In addition, DOE funded super truck project also unvails the effort by OEMs like Volvo, etc. to overcome the so-called drag difficulties. A [report](https://lynceans.org/tag/truck-aerodynamics/) published by Lyncean Group of San Diego nicely summarized this effort. 
-
-The technologies like [Sinha Deturbulator](http://sinhatech.com/Sinhadeturb/deturbulator.asp) would also be worth the mention. 
+Projects like the DOE-funded SuperTruck also focus on reducing drag. A [report](https://lynceans.org/tag/truck-aerodynamics/) by the Lyncean Group of San Diego highlights these efforts. Additionally, technologies like the [Sinha Deturbulator](http://sinhatech.com/Sinhadeturb/deturbulator.asp) are worth mentioning.
 
 | ![EV4](\assets\img\ElectricVehSteps\Sinha_deturbulator.jpg) |
 |:--:|
-| *The deturbulator by Sinhatech could contribute to redeuce loss due to aero drag* |
+| *The deturbulator by Sinhatech could reduce aerodynamic drag losses* |
 
-### Axial flux motors
-Axial flux motors are still not visible to many. Electric motors or machines especially permanent magnet synchronous motors (PMSM) are highly efficient when controlled properly. Axial flux motors are a type of PMSM motor that offer even more efficiency and packaging benefits compared to radial flux motors. Auxiliaries that run all the time irrespective of the movement of the truck itself, would certainly benefit from using axial flux technology. Yasa, an axial flux motor manufacturer, demonstrated the benefits below - 
+### Axial Flux Motors
+
+Axial flux motors are less common but highly efficient. These motors, a type of permanent magnet synchronous motor (PMSM), offer better efficiency and space-saving benefits than radial flux motors. They’re especially useful for auxiliary systems that run continuously in trucks. Below is a comparison shared by Yasa, a leading axial flux motor manufacturer.
 
 | ![EV5](\assets\img\ElectricVehSteps\Yasa_Axial_Flux_Motor.jpg) |
 |:--:|
-| *A comparision study between axial and radial flux motors (Yasa)* |
+| *Comparison of axial and radial flux motors (Yasa)* |
 
-[Here](https://web.mit.edu/kirtley/binlustuff/literature/electric%20machine/designOfAxialFluxPMM.pdf) is a good PhD theis if you would like to know more about axial flux motor design. If you dont want to get into too much technical details, [this](https://spectrum.ieee.org/axial-flux-motor#toggle-gdpr) article would be for you (Requires IEEE membership to view). 
+For more on axial flux motors, you can read this [PhD thesis](https://web.mit.edu/kirtley/binlustuff/literature/electric%20machine/designOfAxialFluxPMM.pdf) or this simpler [article](https://spectrum.ieee.org/axial-flux-motor#toggle-gdpr) (requires IEEE membership).
 
-Yasa is now owned by Marcedes-Benz and will do serial production of axial flux motors for its products [Ref](https://www.greencarcongress.com/2021/11/20211119-yasa.html). The other notable axial flux motor manufacturer is [Omni Powertrain Technologies](https://www.omnipowertrain.com/). Omni claims to have axial flux motors ranging from 3.0kW to 192kW (dual motors) in its portfolio [Ref](https://www.omnipowertrain.com/wp-content/uploads/2022/02/Magelec-Propulsion-Brochure.pdf).
+Yasa, now owned by Mercedes-Benz, is set to produce axial flux motors for its products ([source](https://www.greencarcongress.com/2021/11/20211119-yasa.html)). Another manufacturer, [Omni Powertrain Technologies](https://www.omnipowertrain.com/), offers motors ranging from 3 kW to 192 kW ([brochure](https://www.omnipowertrain.com/wp-content/uploads/2022/02/Magelec-Propulsion-Brochure.pdf)).
 
-As mentioned earlier, axial flux technology is yet to earn trust globally, but based on the fact available from early adopters and manufacturers, it could play an important role in EV's overall energy efficiency, especially for heavy-duty trucks where there are several auxiliaries are used. 
+Though not yet widely adopted, axial flux motors show promise for improving efficiency in heavy-duty trucks.
 
-### Recuperation of braking energy 
+### Recuperation of Braking Energy
 
-This is the most important aspect of energy optimization that has a good scope for improvement. Today, the braking energy must go wasted if not going back to the energy storage system (ESS). If we analyze the US highway overall topography for usual truck routes, it is evident that in some cases the truck has to go downhill continuously for more than hundreds of miles (based on the [map](https://www.reddit.com/r/Truckers/comments/kafeg1/elevation_map_of_the_us_interstate_system/) shared by a Reddit user). For battery electric trucks, ESS would not be able to take all the braking energy back in those routes and must find another way to recuperate. 
+Braking energy recovery is crucial for improving efficiency. On certain US highways, trucks may descend continuously for hundreds of miles ([elevation map](https://www.reddit.com/r/Truckers/comments/kafeg1/elevation_map_of_the_us_interstate_system/)).
 
 | ![EV6](\assets\img\ElectricVehSteps\US_interstate_elevation.jpeg) |
 |:--:|
-| *Elevation map of the US interstate system ([Source](https://i.imgur.com/72ziOLR.jpg))* |
+| *Elevation map of US interstate system ([source](https://i.imgur.com/72ziOLR.jpg))* |
 
-As of today, OEMs are mostly using brake resistor to discard the extra braking energy as heat. Note that, even after careful sizing, a brake resistor often needs an elaborate cooling system which sometimes causes a packaging nightmare. In addition, brake resistor may expand the lifespan of the service brakes but does not contribute to the energy efficiency. 
+Currently, OEMs use brake resistors to dissipate excess braking energy as heat. While this reduces wear on service brakes, it doesn’t improve efficiency.
 
 | ![EV7](\assets\img\ElectricVehSteps\Brake_Resistor.jpg) |
 |:--:|
-| *A typical Brake sistor used for braking (REPLLC))* |
+| *Typical brake resistor used for braking (REPLLC)* |
 
 ### Tires
 
-Simialr to aerodynamics, rolling resistance is also a contributing factor to efficiency. This [article](https://www.fleetequipmentmag.com/fuel-efficiency-heavy-duty-truck-tires/) nicely summarizes the effect of tires on efficiency. Tire manufacturers like [Michelin](https://business.michelinman.com/fuelsaver) already have products like *X One* that claims to reduce rolling resistance for trucks and trailers. 
+Like aerodynamics, rolling resistance also affects efficiency. This [article](https://www.fleetequipmentmag.com/fuel-efficiency-heavy-duty-truck-tires/) explains how tires impact performance. Michelin’s *X One* tires, for example, claim to reduce rolling resistance.
 
 | ![EV6](\assets\img\ElectricVehSteps\Tire_truck.jpg) |
 |:--:|
-| *Tires play an important role to energy efficiency* |
+| *Tires play a crucial role in energy efficiency* |
 
 | ![EV7](\assets\img\ElectricVehSteps\michelin_tire.png) |
 |:--:|
-| *Division of energy losses around trucks and trailers* |
+| *Energy loss distribution around trucks and trailers* |
 
-### Conclusion and Tesla Semi example
-Although there is work in progress for improving aerodynamics and rolling resistance, there are a lot of attention is needed for other contributors like recuperation of braking energy and using axial flux motor technologies. Here is another fun fact based on Tesla Semi's 500-mile run in late 2022. As shown in the image below, it recovered about 16% battery energy to come back to an elevation of 1000 ft from 4136 ft where it utilized 28% of battery energy to climb the same height. Yes, there are some assumptions in these numbers, but there might be an opportunity hiding to improve the recuperation beyond 16%. In addition, based on my calculation below (table), only 49% of the total potential energy were recovered.  
+### Conclusion and Tesla Semi Example
+
+While aerodynamics and rolling resistance are being addressed, there’s still room to improve braking energy recovery and adopt axial flux motors. For instance, during Tesla Semi’s 500-mile test in late 2022, it recovered 16% of the battery energy while descending from 4136 ft to 1000 ft after using 28% of energy to climb the same elevation.
 
 | ![EV8](\assets\img\ElectricVehSteps\Tesla_semi_batt_discharge_graph.png) |
 |:--:|
-| *Potential opportunity for range improvement* |
+| *Potential for improving energy recovery* |
 
-| Based on the Graph right hand side | Positions Miles | SOC   | % Change | Absolute change |
-| ---------------------------------- | --------------- | ----- | -------- | --------------- |
-| Pt A                               | 267.99          | 46.29 |     ~    |     ~           |
-| Pt B                               | 280.90          | 33.12 | \-28%    | \-13.2          |
-| Pt C                               | 311.35          | 38.43 | 16%      | 5.3             |
-
+Below are calculations showing only 49% of the potential energy was recovered during the descent.
 
 | Parameter/Variable                       | Value     | Unit  |
 | ---------------------------------------- | --------- | ----- |
 | Mass                                     | 37200     | kg    |
 | g                                        | 9.81      | m/s^2 |
 | Elevation                                | 955       | Meter |
-| ---------------------------------------- | --------- | ----- |
-| Batt Capacity                            | 990       | kwhr  |
-| Batt Capacity                            | 3564      | MJ    |
-| ---------------------------------------- | --------- | ----- |
-| Max Potential Energy in Joule            | 348510060 | J     |
-| Max Potential Energy in MJ               | 348.5     | MJ    |
-| Energy used to cover 955 meter elevation | 470.448   | MJ    |
-| ---------------------------------------- | --------- | ----- |
-| DOD at the highest point                 | 2387.88   | MJ    |
-| Energy recovered                         | 178.2     | MJ    |
-| ---------------------------------------- | --------- | ----- |
-| Energy Recuperation Efficiency           | 49%       |  %    |
+| Batt Capacity                            | 990       | kWh   |
+| Max Potential Energy                     | 348.5     | MJ    |
+| Energy Recovered                         | 178.2     | MJ    |
+| Recuperation Efficiency                  | 49%       | %     |
 
 | ![EV9](\assets\img\ElectricVehSteps\Braking_calc.png) |
 |:--:|
-| *The Conservation of Energy for braking* |
+| *Energy conservation in braking* |
 
-Based on the calculation below shown in the table, the average speed with which the semi descended from point B to point c is in between 50-60 miles/hr. Fortunately battery was able to accept most of the braking energy. If battery is not available, then the same amount of energy has to be dissipated through service brakes which could be a potential safety issue. Therefore, availability of brake resistor or some kind of brake energy dissipator is recommended for all heavy duty electric trucks in NA roads. 
+Based on these numbers, brake resistors or other energy dissipators remain essential for safety, especially on steep descents. They help manage braking energy when the battery system cannot store it.
 
 | ![EV10](\assets\img\ElectricVehSteps\brake_energy_table.jpg) |
 |:--:|
-| *Brake energy calculations for descending from point B to C* |
+| *Brake energy calculations for the descent* |
+
