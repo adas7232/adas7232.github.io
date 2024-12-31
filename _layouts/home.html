@@ -17,7 +17,7 @@ layout: main
 <main class="home {% if site.show_hero and paginator == nil or paginator.page == 1 %}no-padding{% endif %}" role="main">
     {% if site.show_hero and paginator == nil or paginator.page == 1 %}
         <!-- Hero -->
-        {% assign featured = posts | where: "featured", true | first %}
+        {% assign featured = posts | where: "highlight", true | first %}
         <section class="hero" style="background-image: url({{ featured.image }})">
             <div class="pixels"></div>
             <div class="gradient"></div>
@@ -42,108 +42,111 @@ layout: main
     {% endif %}
 
     <!-- Highlighted Posts Section -->
-<section id="highlighted-posts" class="row flex-grid">
-    {% assign highlighted_posts = posts | where: "highlight", true %}
-    {% for post in highlighted_posts limit: 4 %}
-        <article class="box-item">
-            <span class="category">
-                <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
-                    <span>{{ post.category }}</span>
-                </a>
-            </span>
-            <div class="box-body">
-                <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
-                    {% if post.optimized_image %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
-                        <noscript>
-                            <img src="{{ post.optimized_image }}" width="100%">
-                        </noscript>
-                    {% elsif post.image %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
-                        <noscript>
-                            <img src="{{ post.image }}" width="100%">
-                        </noscript>
-                    {% else %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
-                        <noscript>
-                            <img src="/assets/img/off.jpg" width="100%">
-                        </noscript>
-                    {% endif %}
-                </a>
-                <div class="box-info">
-                    <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-                        {% include date.html date=post.date %}
-                    </time>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <h2 class="post-title">{{ post.title }}</h2>
+    <section id="highlighted-posts" class="row flex-grid">
+        {% assign highlighted_posts = posts | where: "highlight", true %}
+        {% for post in highlighted_posts limit: 4 %}
+            <article class="box-item">
+                <span class="category">
+                    <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
+                        <span>{{ post.category }}</span>
                     </a>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <p class="description">{{ post.description }}</p>
+                </span>
+                <div class="box-body">
+                    <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
+                        {% if post.optimized_image %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                            <noscript>
+                                <img src="{{ post.optimized_image }}" width="100%">
+                            </noscript>
+                        {% elsif post.image %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                            <noscript>
+                                <img src="{{ post.image }}" width="100%">
+                            </noscript>
+                        {% else %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
+                            <noscript>
+                                <img src="/assets/img/off.jpg" width="100%">
+                            </noscript>
+                        {% endif %}
                     </a>
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            {% if tag != "" %}
-                                <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
-                            {% endif %}
-                        {% endfor %}
+                    <div class="box-info">
+                        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                            {% include date.html date=post.date %}
+                        </time>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            <h2 class="post-title">{{ post.title }}</h2>
+                        </a>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            <p class="description">{{ post.description }}</p>
+                        </a>
+                        <div class="tags">
+                            {% for tag in post.tags %}
+                                {% if tag != "" %}
+                                    <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    {% endfor %}
-</section>
+            </article>
+        {% endfor %}
+    </section>
 
- <!-- Regular Posts Section -->
-<section id="regular-posts" class="row flex-grid">
-    {% assign regular_posts = posts | where_exp: "post", "post.highlight != true" %}
-    {% for post in regular_posts limit: 4 %}
-        <article class="box-item">
-            <span class="category">
-                <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
-                    <span>{{ post.category }}</span>
-                </a>
-            </span>
-            <div class="box-body">
-                <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
-                    {% if post.optimized_image %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
-                        <noscript>
-                            <img src="{{ post.optimized_image }}" width="100%">
-                        </noscript>
-                    {% elsif post.image %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
-                        <noscript>
-                            <img src="{{ post.image }}" width="100%">
-                        </noscript>
-                    {% else %}
-                        <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
-                        <noscript>
-                            <img src="/assets/img/off.jpg" width="100%">
-                        </noscript>
-                    {% endif %}
-                </a>
-                <div class="box-info">
-                    <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
-                        {% include date.html date=post.date %}
-                    </time>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <h2 class="post-title">{{ post.title }}</h2>
+    <!-- Regular Posts Section -->
+    <section id="regular-posts" class="row flex-grid">
+        {% assign regular_posts = posts | where_exp: "post", "post.highlight != true" %}
+        {% for post in regular_posts limit: 4 %}
+            <article class="box-item">
+                <span class="category">
+                    <a href="{{ site.baseurl }}/{{ site.categories_folder | default: 'category' }}/{{ post.category }}">
+                        <span>{{ post.category }}</span>
                     </a>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-                        <p class="description">{{ post.description }}</p>
+                </span>
+                <div class="box-body">
+                    <a class="cover" href="{{ post.url | prepend: site.baseurl }}">
+                        {% include loader.html %}
+                        {% if post.optimized_image %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.optimized_image }}" class="preload">
+                            <noscript>
+                                <img src="{{ post.optimized_image }}" width="100%">
+                            </noscript>
+                        {% elsif post.image %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="{{ post.image }}" class="preload">
+                            <noscript>
+                                <img src="{{ post.image }}" width="100%">
+                            </noscript>
+                        {% else %}
+                            <img src="/assets/img/placeholder.png" width="100%" data-url="/assets/img/off.jpg" class="preload">
+                            <noscript>
+                                <img src="/assets/img/off.jpg" width="100%">
+                            </noscript>
+                        {% endif %}
+                        {% include new-post-tag.html date=post.date %}
+                        {% include read-icon.html %}
                     </a>
-                    <div class="tags">
-                        {% for tag in post.tags %}
-                            {% if tag != "" %}
-                                <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
-                            {% endif %}
-                        {% endfor %}
+                    <div class="box-info">
+                        <time datetime="{{ post.date | date_to_xmlschema }}" class="date">
+                            {% include date.html date=post.date %}
+                        </time>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            <h2 class="post-title">{{ post.title }}</h2>
+                        </a>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            <p class="description">{{ post.description }}</p>
+                        </a>
+                        <div class="tags">
+                            {% for tag in post.tags %}
+                                {% if tag != "" %}
+                                    <a href="{{ site.baseurl }}/tags/#{{ tag | slugify }}">#{{ tag }}</a>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-    {% endfor %}
-</section>
+            </article>
+        {% endfor %}
+    </section>
 
     <!-- Pagination -->
     {% if site.paginate %}
