@@ -11,10 +11,39 @@ body {
   width: 100%;
   z-index: 10;
   transition: top 0.5s, left 0.3s ease, background-color 0.5s, box-shadow 0.5s;
-  
+
   @include media(">=sm") {
     padding: rem(15px) rem(0px);
   }
+
+  .nav-menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+
+    @include media(">=sm") {
+      display: flex;
+    }
+
+    li {
+      margin: 0 rem(15px);
+    }
+
+    a {
+      text-decoration: none;
+      color: $accentDark;
+      font-weight: bold;
+      font-size: rem(14px);
+      transition: color 0.3s;
+
+      &:hover {
+        color: $themeColor;
+      }
+    }
+  }
+}
 
   .logo {
     display: inline-block;
