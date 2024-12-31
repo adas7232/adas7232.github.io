@@ -42,7 +42,7 @@ layout: main
     {% endif %}
 
     <!-- Highlighted Posts Section -->
-    <section id="grid" class="row flex-grid">
+    <section id="grid1" class="row flex-grid">
         {% assign highlighted_posts = posts | where: "highlight", true %}
         {% for post in highlighted_posts limit: 4 %}
             <article class="box-item">
@@ -94,7 +94,7 @@ layout: main
     </section>
 
     <!-- Regular Posts Section -->
-    <section id="grid" class="row flex-grid">
+    <section id="grid2" class="row flex-grid">
         {% assign regular_posts = posts | where_exp: "post", "post.highlight != true" %}
         {% for post in regular_posts limit: 4 %}
             <article class="box-item">
