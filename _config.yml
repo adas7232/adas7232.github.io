@@ -56,6 +56,10 @@ sent_message_url: "/contact/message-sent/"
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
 highlighter: rouge
 permalink: /:title/
 collections:

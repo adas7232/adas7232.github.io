@@ -1,3 +1,22 @@
 .img-rounded {
   border-radius: 50%;
 }
+
+table {
+  margin: 0.5em 0; // Compact spacing for tables
+  padding: 0;
+}
+
+section {
+  padding: 1em 0; // Adjust section padding
+  margin: 0;
+}
+
+p {
+  margin: 0.5em 0; // Compact paragraph spacing
+}
+
+p + table, table + p {
+  margin-top: 0; // Remove unnecessary space between paragraphs and tables
+  margin-bottom: 0;
+}

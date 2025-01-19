@@ -1,7 +1,89 @@
+/* Links */
 a {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Prevent highlighting on touch devices */
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
 }
 
-h1, h2, h3, h4 {
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
   @include mainFont();
+  margin: 0 0 0.5em; /* Reduce bottom margin */
+  line-height: 1.2; /* Compact spacing for headings */
+}
+
+/* Paragraphs */
+p {
+  margin: 0.5em 0; /* Compact spacing between paragraphs */
+  line-height: 1.4; /* Improve readability */
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.5em 0; /* Reduce vertical spacing around lists */
+  padding-left: 1.5em; /* Adjust list indentation */
+}
+
+li {
+  margin-bottom: 0.3em; /* Reduce spacing between list items */
+}
+
+/* Tables */
+table {
+  margin: 0.5em 0; /* Compact spacing above and below tables */
+  padding: 0; /* Ensure no internal padding */
+  border-collapse: collapse; /* Remove spacing between table cells */
+  width: 100%; /* Ensure table spans available width */
+}
+
+table th, table td {
+  padding: 0.5em; /* Adjust padding inside table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #ddd; /* Optional: Add border for visibility */
+}
+
+table + p, p + table, table + table {
+  margin-top: 0; /* Remove unnecessary space between tables and adjacent elements */
+}
+
+/* Inline Elements */
+strong, em {
+  font-weight: bold;
+  font-style: italic;
+}
+
+code {
+  font-family: monospace;
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Blockquote */
+blockquote {
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  border-left: 4px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+/* Line Break */
+hr {
+  margin: 1em 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* Utility Classes for Specific Adjustments */
+.compact {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
 }
