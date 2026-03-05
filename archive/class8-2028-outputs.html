@@ -313,14 +313,242 @@ If you want, I can turn this into a **clean one-page executive memo** or a **sli
     <details>
       <summary>Gemini output</summary>
       <pre>
-PASTE GEMINI OUTPUT HERE
+As the head of the battery-electric truck division, my goal for our 2028 Class 8 Long-Haul BEV is to move past the "compliance vehicle" phase and into a "profit-positive" era. To compete with a $200k diesel truck that has 1,200 miles of range, we cannot simply pack in more batteries. Instead, we must optimize for **mid-haul "slip-seat" operations** where the TCO flips fastest.
+
+The following design, the **Volvo "Aegis" 450**, focuses on high-utilization routes (400–450 miles per day) utilizing a "Buffered Mid-Range" strategy.
+
+---
+
+## Spec Sheet: Volvo Aegis 450 (2028 Model)
+
+| Feature | Specification |
+| --- | --- |
+| **Target Driving Range** | 450 Miles (Loaded @ 65 mph) |
+| **Energy Efficiency** | 1.8 kWh/mi (Targeted Aero + Gen-3 E-Axle) |
+| **Battery Capacity** | 850 kWh Gross / 810 kWh Usable (95% DoD) |
+| **Battery Chemistry** | **LMFP (Lithium Manganese Iron Phosphate)** |
+| **Charging Architecture** | **Hybrid:** Dual CCS1 + Single MCS Port |
+| **Peak Charging Power** | 1.2 MW (MCS) / 350 kW (CCS1) |
+| **Target Tractor Curb Weight** | 24,500 lbs (Approx. 6,000 lbs over Diesel) |
+| **Target MSRP** | **$385,000** |
+
+---
+
+## Design Reasoning
+
+### 1. Battery Cost vs. Payload (The LMFP Sweet Spot)
+
+We have bypassed NMC ($225/kWh) and standard LFP ($190/kWh) in favor of **LMFP**. At an estimated $185/kWh in 2028, it offers 15–20% higher energy density than LFP without the volatility and cost of NMC. This allows us to keep the battery pack under 14,000 lbs, preserving a competitive payload for most dry-van freight, especially when utilizing the 2,000 lb federal weight allowance for ZE-trucks.
+
+### 2. Range vs. Charging Time
+
+A 450-mile range covers roughly 7–8 hours of driving. By 2028, MCS (Megawatt Charging) will be in early deployment. Our design focuses on a **30-minute "splash" charge** during the mandatory driver break, adding 250 miles of range. This allows the truck to perform 600+ mile days in a slip-seat operation, which is critical for TCO.
+
+### 3. Chemistry Choice vs. Cycle Life
+
+LMFP provides the 3,000+ cycle life necessary to meet the **1-million-mile warranty**. NMC struggles with the daily 100% Depth of Discharge (DoD) required for long-haul, whereas LMFP thrives in high-utilization environments with minimal degradation.
+
+### 4. OEM Profitability
+
+At an MSRP of $385k and a battery cost of ~$157k (850kWh @ $185), the Bill of Materials (BOM) allows for a **15–18% gross margin**. This is achieved by using a high degree of parts commonality with our global FH/VNL platforms, specifically in the cab and chassis rails.
+
+---
+
+## Top 5 Engineering Tradeoffs
+
+1. **Aerodynamics vs. Serviceability:** To hit 1.8 kWh/mi, we’ve used full-chassis fairings and an elongated "sloped" nose. This improves efficiency by 8% but increases minor repair costs and slightly complicates engine-bay (inverter/thermal) access.
+2. **Dual Charging Standards:** Including both CCS1 and MCS adds roughly $4,000 in hardware and cabling costs but is a "must-have" for 2028 to ensure the truck isn't stranded as MCS infrastructure rolls out.
+3. **Battery Weight vs. Structural Rigidity:** We opted for a "Battery as Structural Member" design. It saves 800 lbs in frame weight but makes battery pack replacement a major structural overhaul rather than a simple swap.
+4. **Single vs. Multi-Speed Transmission:** We chose a **4-speed automated manual (AMT)** paired with dual e-motors. This adds complexity compared to a direct-drive e-axle but is necessary to maintain 65 mph cruise efficiency while handling 80,000 lb startability on 6% grades.
+5. **Thermal Management:** We are using an active refrigerant-to-coolant system to support 1.2 MW charging. This draws more parasitic power during charging but is the only way to meet the 10-year warranty under MCS heat loads.
+
+---
+
+## Go-To-Market Strategy
+
+### Target Fleets
+
+Large "For-Hire" and "Private" carriers (e.g., Walmart, PepsiCo, Schneider) that operate high-volume regional hubs. We are looking for fleets that run **"Point-to-Point"** routes rather than "Random OTR" (Over the Road).
+
+### Duty Cycles
+
+* **Regional Haul:** 350-mile loops (100% depot charging).
+* **Relay Long-Haul:** 600+ mile days with one MCS mid-day charge and overnight depot charging.
+
+### Charging Strategy
+
+We will bundle the truck with a **"Depot-First"** consulting service. 80% of energy will come from $0.15/kWh overnight depot charging. The MCS port is for "extending" the day, not for primary fueling, to keep blended energy costs low.
+
+---
+
+## TCO and Profitability Justification
+
+### Why Fleets Buy (The 5-Year TCO Win)
+
+* **Fuel Savings:** A diesel truck costs ~$67,000/year in fuel (110k miles @ 6.5mpg @ $4.00). The Aegis 450 costs ~$29,700/year in electricity (110k miles @ 1.8 kWh/mi @ $0.15).
+* **Annual Savings:** ~$37,000 in fuel + ~$5,000 in reduced maintenance (no DEF, oil changes, or brake wear due to regen).
+* **Payback:** The $185,000 price premium over diesel is recouped in **4.4 years**. For a fleet keeping a truck for 6–8 years, this is a massive bottom-line win.
+
+### Why the OEM Wins
+
+By hitting an 18% gross margin at launch, we move away from R&D-heavy "pilot programs" to a self-sustaining business unit. The 10-year battery warranty is de-risked by the LMFP chemistry, which we have tested to 4,000 cycles (double our warranty requirement), ensuring we don't face a massive "accrual" hit for battery replacements in 2032.
+
+Would you like me to generate a detailed **Power BI dashboard mockup** showing the year-by-year TCO breakdown for a 50-truck fleet comparison?
       </pre>
     </details>
 
     <details>
       <summary>Claude output</summary>
       <pre>
-PASTE CLAUDE OUTPUT HERE
+# 2028 Class 8 Long-Haul BEV — Profit-Constrained Design
+**OEM Division Head Program Document | Platform Codename: STRATUM**
+
+---
+
+## SPEC SHEET
+
+**Target Driving Range:** 300 miles (loaded, 80,000 lb GVW, 65 mph cruise, flat terrain, ambient 70°F)
+
+**Energy Efficiency:** 1.95 kWh/mi (loaded, real-world estimate; 1.72 kWh/mi unloaded)
+
+**Battery Capacity:**
+- Gross: 680 kWh
+- Usable: 591 kWh (87% depth of discharge, 8%–95% SoC operating window)
+
+**Battery Chemistry:** LMFP (Lithium Manganese Iron Phosphate)
+
+**Charging Architecture:** Dual-standard — MCS (primary) + CCS1 (fallback/depot)
+- MCS peak input: 1,000 kW
+- CCS1 peak input: 350 kW
+- Charge time 10–80% SoC via MCS: approximately 26 minutes
+- Charge time 10–80% SoC via CCS1: approximately 72 minutes
+- Onboard DC-DC accepts both standards; no AC charging included (weight/cost elimination)
+
+**Peak Motor Power:** 600 kW continuous / 730 kW peak (dual rear e-axle configuration, 2× 300 kW motors)
+
+**Tractor Curb Weight:** 24,200 lbs
+
+**Gross Vehicle Weight Rating:** 80,000 lbs (federal Class 8 limit)
+
+**Available Payload (with standard 53' dry van trailer at 15,000 lbs):** approximately 40,800 lbs cargo
+
+**Target MSRP:** $325,000
+
+**Fleet Net Price (after standard 5% fleet volume discount):** $308,750
+
+---
+
+## DESIGN REASONING
+
+**Battery Cost vs. Payload**
+
+The 680 kWh gross pack is the central cost driver and the central weight driver simultaneously, and these two forces pull in exactly opposite directions. A larger pack extends range and improves fleet utilization, but at $183/kWh (blended LMFP estimate, 2028 North American supply) a 680 kWh pack costs approximately $124,440 in raw cell and module cost before pack integration. That number alone consumes roughly 46% of the truck's total bill of materials. Every 50 kWh added to the pack adds roughly $9,150 in battery cost and approximately 715 lbs of mass, which comes directly out of payload capacity.
+
+The 300-mile range target was selected as the minimum viable range to support the target duty cycles described in the go-to-market section, not as an attempt to match diesel's 1,200-mile range, which is economically impossible at 2028 battery costs. Attempting a 500-mile range pack would require approximately 975 kWh gross, costing $178,575 in battery alone — more than the entire diesel truck — and would produce a curb weight approaching 30,000 lbs with fewer than 35,000 lbs of available payload. That truck cannot be profitably priced within fleet TCO tolerance, and it cannot be warranted for 1 million miles on current LMFP cycle life data.
+
+At 680 kWh and 24,200 lbs curb weight, STRATUM carries approximately 5,500 lbs less cargo than a diesel equivalent at GVW. This is a real penalty. It is accepted because the majority of Class 8 loads in the target duty cycles are cube-limited, not weight-limited. Dry goods, packaged food, retail merchandise, and e-commerce fulfillment loads regularly run at 40,000–43,000 lbs of cargo even in diesel trucks, meaning STRATUM's constraint is not operationally significant for the target customer base. Refrigerated and heavy industrial freight is explicitly excluded from the launch go-to-market strategy.
+
+**Range vs. Charging Time**
+
+The 300-mile range was chosen to allow a single MCS charge event per driving shift. A standard HOS-compliant driving shift allows 11 hours of drive time with a mandatory 30-minute break after 8 hours. At 65 mph average, a driver covers approximately 500–600 miles per shift but is legally required to take a break. The MCS 26-minute charge at that break point restores approximately 260–270 miles of range, enabling a second driving segment. This design does not require corridor MCS infrastructure at every truck stop — it requires MCS availability at the 10–15 primary interchange hub locations serving the target lanes, which is economically realistic by 2028 given current MCS rollout trajectories in the I-10, I-80, and I-90 corridors.
+
+Overnight depot charging via CCS1 at 350 kW is the primary daily recharge event. A full recharge from 10% to 95% SoC takes approximately 90 minutes at 350 kW, well within overnight dwell time. This keeps depot infrastructure investment to approximately $85,000–$120,000 per charger installed, versus $180,000–$250,000 for a full MCS depot installation. The dual-standard architecture allows fleets to start with CCS1 depot infrastructure on day one and add MCS chargers at high-utilization terminals as fleet size justifies the investment.
+
+**Chemistry Choice vs. Cycle Life**
+
+LMFP was selected over standard LFP and over NMC for three specific reasons.
+
+First, energy density. LMFP achieves approximately 190–210 Wh/kg at the cell level and 150–160 Wh/kg at the integrated pack level, compared to 140–150 Wh/kg for standard LFP. This roughly 7–10% density advantage reduces pack weight by approximately 600–900 lbs for the same usable energy, directly recovering payload.
+
+Second, cycle life. LMFP cells demonstrate 3,500–4,500 full equivalent cycles to 80% capacity retention under controlled conditions, and 3,000–3,500 cycles under commercial fast-charging conditions at operating temperature. At one full cycle per 300 miles of range, 3,200 cycles delivers 960,000 miles — within tolerance of the 1,000,000-mile warranty target with appropriate battery management software limiting depth of discharge conservatively in years 8–10.
+
+Third, cost. At $180–200/kWh for LFP/LMFP (per program constraints), LMFP at the $183–188 range delivers better performance per dollar than standard LFP and costs approximately $25–55/kWh less than NMC at $210–240/kWh. An NMC pack of equivalent capacity would cost $142,800–$163,200 — an increase of $18,000–$38,700 over the LMFP baseline, which eliminates profitability at the target MSRP without meaningful range benefit that changes fleet duty cycle economics.
+
+NMC was evaluated specifically for its thermal performance advantage in cold climates. The decision was made to address cold-weather energy loss (estimated 15–20% range reduction below 20°F) through active thermal management rather than chemistry change, preserving the cost and cycle life advantages of LMFP.
+
+**Infrastructure Limitations**
+
+The MCS network reality in 2028 means corridor MCS cannot be assumed to be available at all fuel stop equivalents. The program explicitly does not depend on that. STRATUM's primary energy recovery mechanism is overnight depot charging. MCS is the range extender for shift-turnaround and long-haul corridor operations, not the baseline. Fleets deploying STRATUM on routes longer than 300 miles must have either a confirmed MCS site at the midpoint or an operating model that accepts the driver break for charge time. This constraint narrows the addressable market but concentrates it on the highest-utilization, highest-margin operators who are also the most economically motivated adopters.
+
+**OEM Profitability**
+
+The gross margin is modest at launch but structurally sound and designed to improve over the program lifecycle. Direct bill of materials totals approximately $252,000, and variable manufacturing overhead adds approximately $19,000, for a total cost of goods sold of approximately $271,000. At a fleet net price of $308,750, gross profit is approximately $37,750, representing a 12.2% gross margin. This is below the 15–18% gross margin typical of profitable diesel truck programs at scale, but it is positive at launch, does not depend on subsidies, and is protected by pricing discipline against the TCO ceiling described below.
+
+As battery prices decline toward $160/kWh within 2–3 years of launch (consistent with observed LFP learning curve trajectories), gross margin expands to approximately 17–19% on the same MSRP, without requiring platform redesign.
+
+---
+
+## TOP 5 ENGINEERING AND BUSINESS TRADEOFFS
+
+**1. Pack Size vs. Gross Margin: The $183,000 Ceiling Problem**
+
+Every additional kWh of battery capacity simultaneously improves fleet appeal (more range, better utilization) and destroys OEM profitability (higher COGS, lower margin). At $183/kWh, the battery is not a commodity input — it is the single largest cost item on the truck, outweighing the entire cab, chassis, frame, suspension, and drivetrain combined. The fundamental tradeoff is that fleets want more range and OEMs need lower battery spend. These are directly in conflict. The resolution chosen here is to design to the minimum range that makes fleet economics work on the target duty cycles rather than designing to the maximum range that could theoretically be warranted. Anything above 700 kWh gross at 2028 pricing makes profitable Class 8 long-haul BEV economically untenable without subsidies.
+
+**2. Payload Penalty vs. Market Addressability**
+
+The 5,500 lb payload disadvantage versus diesel is real and cannot be engineered away without either accepting a smaller battery (less range) or waiting for better energy density (beyond 2028). This tradeoff directly limits market addressability. Bulk agricultural, heavy construction, steel coil, and dense chemical loads regularly run at or near 44,000–46,000 lbs of payload, where STRATUM's 40,800 lb ceiling becomes a disqualifying constraint. The program's go-to-market strategy explicitly excludes these segments at launch. This is the right commercial decision, not an engineering failure — trying to serve all segments with one platform at launch would require compromises in range, cost, or weight that make the core product uncompetitive in any segment.
+
+**3. MCS Charging Dependency vs. Infrastructure Reality**
+
+Designing around MCS peak charging at 1,000 kW gives STRATUM 26-minute partial recharge capability that is operationally transformative for long-haul utilization. But it creates a hardware dependency on infrastructure that is not universally available in 2028. The truck carries MCS hardware — including the MCS inlet, high-voltage cabling rated for 1,500V DC, and thermal management capacity for 1 MW input — that adds approximately $6,000–$8,000 to the bill of materials and serves no function on routes without MCS access. The alternative is a CCS1-only design that reduces cost and complexity but limits charge power to 350 kW and extends the charge-break window to approximately 72 minutes, reducing the truck's competitive appeal for operators in MCS-equipped corridors. The hybrid approach was chosen because it preserves optionality for fleet operators and positions STRATUM to benefit from MCS infrastructure buildout over the program's lifetime without requiring a platform redesign.
+
+**4. Battery Warranty vs. Chemistry Risk**
+
+The 10-year / 1,000,000-mile warranty is a major financial commitment. LMFP cells demonstrate the cycle life and calendar life to support this warranty based on current accelerated aging data, but 2028 production LMFP cells from non-Chinese suppliers will have limited field history at the time of program launch. The warranty reserve must be sized conservatively — estimated at $8,000–$12,000 per truck — which reduces net realized margin from the gross 12.2% to approximately 9–10% effective gross margin. Warranty reserve accuracy will improve significantly after the first 24–36 months of field data. Managing warranty reserve risk is one of the two largest financial risks in the program, alongside battery cost forecasting.
+
+**5. MSRP Discipline vs. Fleet Adoption Rate**
+
+At $325,000 MSRP, STRATUM delivers a compelling 5-year TCO advantage over diesel (approximately 2.9-year payback period under baseline assumptions). This means the truck can theoretically support a higher price. However, pricing above $340,000–$350,000 introduces fleet budget approval friction — most regional fleet operators have capital authorization thresholds below $350,000 per asset, above which corporate-level approval is required. Pricing at $325,000 keeps the purchase decision at the operations and fleet management level. Pricing above that threshold slows the sales cycle by 4–8 months per unit in the target customer segment. The tradeoff is leaving potential margin on the table in exchange for faster adoption velocity, which matters because manufacturing overhead absorption and warranty reserve accuracy both require volume.
+
+---
+
+## GO-TO-MARKET STRATEGY
+
+**Target Fleets**
+
+The primary launch customer segment is large private fleets operating dedicated lanes between distribution centers — specifically food and beverage distributors, large retailers with private trucking operations, and e-commerce fulfillment networks. These operators share four characteristics that make them ideal launch customers: they operate predictable, repeatable routes with known start and end points; they control their own depot infrastructure and can fund CCS1 or MCS installation without depending on public charging networks; their loads are primarily volume-constrained rather than weight-constrained; and they have finance teams sophisticated enough to evaluate 5-year TCO arguments rather than purchasing on sticker price alone.
+
+Secondary targets are asset-based less-than-truckload carriers operating regional line-haul segments in the 150–300 mile range, where single-charge operations from depot to terminal and back are achievable within driver HOS constraints without requiring any public charging infrastructure.
+
+Third-party for-hire truckload carriers are a secondary consideration for launch. Their business model depends on driver-hour efficiency and flexible routing that does not favor fixed charging windows. They are not excluded from STRATUM's addressable market, but they are not the customer the program is designed to serve at launch.
+
+**Typical Routes and Duty Cycles**
+
+The optimal duty cycle for STRATUM is a distribution center-to-distribution center run of 250–310 miles, departing fully charged from a depot, delivering and possibly recharging at destination (CCS1 or MCS), and returning. Round trips of 500–600 miles are achievable within a single HOS period using one MCS charge event at the far terminal. Specific corridors that represent high-density opportunity include Los Angeles to Las Vegas (270 miles), Chicago to Indianapolis (180 miles), Atlanta to Charlotte (245 miles), Dallas to Houston (240 miles), and the Boston–New York–Philadelphia corridor. These are among the highest-volume freight lanes in North America and are also lanes where MCS infrastructure investment by charging networks is commercially justified by traffic density.
+
+STRATUM is not suitable at launch for transcontinental operations, team-driver over-the-road trucking, or any route that requires more than one MCS charge event per shift without guaranteed corridor MCS availability. Fleets attempting to use STRATUM on 700-mile single-day runs without confirmed MCS infrastructure will have a poor experience, and this use case must be explicitly excluded from fleet sales conversations to protect brand reputation in the critical early adoption period.
+
+**Charging Strategy**
+
+The charging strategy follows a tiered model. Tier one is overnight depot charging via CCS1 at 350 kW, which is the default daily recharge for 80–90% of operations. Fleet depot infrastructure investment is approximately $85,000–$120,000 per dual-head charger stall installed, with a typical 10-truck fleet requiring 4–6 charging positions for staggered overnight charging. This is an investment the fleet finances, not the OEM, but the OEM sales team must be equipped to help fleets model the infrastructure ROI as part of the TCO conversation.
+
+Tier two is midday opportunity charging via MCS at destination terminals or fleet-partner terminals, adding 200–250 miles of range in 20–25 minutes. This tier is operationally optional for routes under 300 miles and operationally required for routes in the 300–600 mile round-trip range. The OEM should develop preferred-partner relationships with two or three MCS network operators to ensure STRATUM customers have priority access and network reliability guarantees at key interchange points.
+
+Tier three is emergency CCS1 recovery at public or commercial truck stop infrastructure when a vehicle falls below planned SoC due to weather, traffic, or payload variation. CCS1 at 350 kW provides approximately 70–80 miles of range per 15-minute charge, which is sufficient to reach the next planned charge point. This tier is the safety net, not the operating model.
+
+---
+
+## PROFITABILITY AND TCO JUSTIFICATION
+
+**Fleet TCO Case**
+
+Under the stated program assumptions, the annual operating cost of a STRATUM truck at 110,000 miles per year is as follows. Energy cost is 110,000 miles × 1.95 kWh/mi × $0.15/kWh, equaling $32,175 per year. Maintenance cost, reflecting the significant reduction in fluid services, no exhaust system, no diesel particulate filter, regenerative braking extending brake life, and simplified transmission, is estimated at $0.07 per mile or $7,700 per year. Total annual operating cost excluding driver wages is approximately $39,875 per year.
+
+The diesel baseline under the same conditions is 110,000 miles / 6.5 mpg × $4.00/gallon for fuel, equaling $67,692 per year, plus maintenance at $0.15/mile or $16,500 per year. Total annual operating cost is $84,192 per year.
+
+Annual savings of STRATUM over diesel is therefore $44,317. Over five years the cumulative operating savings is $221,585. The price premium of STRATUM over a $195,000 diesel tractor is $130,000. Dividing the premium by the annual savings yields a payback period of 2.93 years — comfortably within the 5-year TCO requirement the program constraint specifies, and with significant headroom to absorb adverse fuel price moves or higher-than-expected electricity costs while remaining TCO-positive.
+
+Full 5-year total cost of ownership comparison: diesel at $195,000 purchase plus $420,960 in operating costs equals $615,960. STRATUM at $308,750 fleet net plus $199,375 in operating costs equals $508,125. The fleet saves $107,835 over five years after accounting for the price premium, which is a compelling financial argument that does not depend on any government incentive.
+
+**OEM Profitability Case**
+
+The bill of materials for STRATUM at launch-year volumes (target 2,500–3,000 units in year one) is estimated as follows. The LMFP battery pack at 680 kWh and $183/kWh costs $124,440. The dual rear e-axle electric drivetrain including two 300 kW permanent magnet motors, gear reduction units, and half-shafts costs approximately $32,000. Power electronics including inverters, DC-DC converters, and HV distribution costs approximately $13,000. The dual-standard onboard charging system supporting MCS and CCS1 costs approximately $13,500. Active thermal management for battery and motor systems costs approximately $9,000. Cab assembly and interior costs approximately $21,000. Frame, chassis, suspension, braking, and axle components cost approximately $19,000. Battery management system, vehicle control software, and telematics cost approximately $8,500. HVAC and accessory systems cost approximately $5,000. Remaining miscellaneous components, fasteners, and wiring cost approximately $6,500. Total direct bill of materials is approximately $252,000.
+
+Variable manufacturing labor and direct overhead adds approximately $19,000, bringing total cost of goods sold to approximately $271,000. At a fleet net price of $308,750, the gross profit is approximately $37,750, representing a 12.2% gross margin before fixed overhead, R&D amortization, warranty reserve, and SG&A.
+
+After warranty reserve provisioning at $10,000 per unit and fixed overhead allocation at approximately $8,000 per unit at target volume, adjusted operating margin is approximately 6.4% — narrow but positive, and sustainable as a platform launch margin in a new powertrain category. The program reaches its internal target gross margin of 15% when battery costs decline to approximately $155/kWh, which industry learning curve projections suggest is achievable by 2030–2031 on current LMFP production trajectories. The platform is therefore not designed to be highly profitable at launch — it is designed to be profitable at launch and increasingly profitable over the product lifecycle without requiring architectural changes.
+
+The core commercial logic of STRATUM is that it is the only Class 8 BEV program structured to be profitable on day one without subsidy, competitive on TCO within three years without optimistic assumptions, and warranted for one million miles without relying on chemistry that has not demonstrated that durability in field conditions. Every other design decision flows from the intersection of those three constraints.
       </pre>
     </details>
   </div>
