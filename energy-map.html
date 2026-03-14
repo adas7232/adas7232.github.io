@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U.S. Energy Ecosystem — Value Chain Map | Abhijit Das</title>
+  <meta name="description" content="Interactive map of the U.S. electricity value chain — showing all players from generation to customers, ownership types, and where Grid Enhancing Technologies and Virtual Transmission create value.">
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #012169;
+      --teal:   #0891B2;
+      --amber:  #B45309;
+      --white:  #FFFFFF;
+      --bg:     #F7F9FF;
+      --body:   #1E293B;
+      --sub:    #64748B;
+      --border: #CBD5E1;
+
+      /* ownership colors */
+      --priv-bg:  #E6F1FB; --priv-bd: #85B7EB; --priv-tx: #042C53; --priv-hd: #0C447C;
+      --nfp-bg:   #EAF3DE; --nfp-bd:  #97C459; --nfp-tx:  #173404; --nfp-hd:  #27500A;
+      --gov-bg:   #FAEEDA; --gov-bd:  #EF9F27; --gov-tx:  #412402; --gov-hd:  #633806;
+      --mun-bg:   #FCEBEB; --mun-bd:  #F09595; --mun-tx:  #501313; --mun-hd:  #791F1F;
+      --iso-bg:   #E1F5EE; --iso-bd:  #5DCAA5; --iso-tx:  #04342C; --iso-hd:  #085041;
+      --cust-bg:  #F1EFE8; --cust-bd: #B4B2A9; --cust-tx: #2C2C2A;
+
+      /* value highlight colors */
+      --get-bg:   #EEEDFE; --get-bd:  #7F77DD; --get-tx:  #3C3489;
+      --vt-bg:    #FAECE7; --vt-bd:   #D85A30; --vt-tx:   #993C1D;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--body);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── Page header ── */
+    .page-header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 28px 32px 24px;
+      border-bottom: 4px solid var(--teal);
+    }
+    .page-header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+    .page-header p {
+      font-size: 14px;
+      color: #93C5FD;
+      max-width: 720px;
+    }
+    .page-header .meta {
+      font-size: 12px;
+      color: #93C5FD;
+      margin-top: 10px;
+      opacity: .8;
+    }
+    .page-header a {
+      color: #93C5FD;
+      text-decoration: underline;
+    }
+
+    /* ── Content wrapper ── */
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+
+    /* ── Section titles ── */
+    .sec-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--sub);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Legend ── */
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--sub);
+    }
+    .ld {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ── Toggle buttons ── */
+    .toggle-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .toggle-label {
+      font-size: 12px;
+      color: var(--sub);
+    }
+    .tbtn {
+      font-size: 12px;
+      padding: 6px 13px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      color: var(--sub);
+      transition: all .15s;
+      font-weight: 500;
+    }
+    .tbtn:hover { background: #F1F5F9; }
+    .tbtn.on-get { background: var(--get-bg); border-color: var(--get-bd); color: var(--get-tx); }
+    .tbtn.on-vt  { background: var(--vt-bg);  border-color: var(--vt-bd);  color: var(--vt-tx); }
+    .tbtn.on-off { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+    /* ── Regulatory band ── */
+    .band {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+    }
+    .band-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+    .badge {
+      display: inline-flex;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 3px 9px;
+      border-radius: 4px;
+      border: 1px solid;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+    .badge:hover { opacity: .75; }
+    .badge-gov  { background: var(--gov-bg);  border-color: var(--gov-bd);  color: var(--gov-hd); }
+    .badge-mun  { background: var(--mun-bg);  border-color: var(--mun-bd);  color: var(--mun-hd); }
+    .badge-nfp  { background: var(--nfp-bg);  border-color: var(--nfp-bd);  color: var(--nfp-hd); }
+
+    /* ── Main flow ── */
+    .flow {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+    }
+    .stage {
+      display: flex;
+      flex-direction: column;
+      min-width: 160px;
+      flex: 1;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      overflow: hidden;
+    }
+    .stage-hd {
+      background: var(--navy);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .05em;
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .stage-sub {
+      font-size: 10px;
+      color: var(--sub);
+      padding: 5px 8px 0;
+      font-style: italic;
+      line-height: 1.4;
+    }
+    .stage-body {
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+    }
+
+    /* ── Arrow ── */
+    .arr-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 4px;
+      min-width: 28px;
+      flex-shrink: 0;
+      color: var(--teal);
+      font-size: 22px;
+      padding-top: 20px;
+    }
+
+    /* ── Player cards ── */
+    .pl {
+      border: 1px solid;
+      border-radius: 6px;
+      padding: 8px 10px;
+      cursor: pointer;
+      transition: transform .1s, box-shadow .1s;
+      text-decoration: none;
+      display: block;
+    }
+    .pl:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    }
+    .pl.priv  { background: var(--priv-bg); border-color: var(--priv-bd); }
+    .pl.nfp   { background: var(--nfp-bg);  border-color: var(--nfp-bd);  }
+    .pl.gov   { background: var(--gov-bg);  border-color: var(--gov-bd);  }
+    .pl.mun   { background: var(--mun-bg);  border-color: var(--mun-bd);  }
+    .pl.iso   { background: var(--iso-bg);  border-color: var(--iso-bd);  }
+    .pl.cust  { background: var(--cust-bg); border-color: var(--cust-bd); }
+
+    .pl-name {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    .priv  .pl-name { color: var(--priv-hd); }
+    .nfp   .pl-name { color: var(--nfp-hd);  }
+    .gov   .pl-name { color: var(--gov-hd);  }
+    .mun   .pl-name { color: var(--mun-hd);  }
+    .iso   .pl-name { color: var(--iso-hd);  }
+    .cust  .pl-name { color: var(--body);    }
+
+    .pl-desc {
+      font-size: 11px;
+      color: var(--sub);
+      line-height: 1.4;
+      margin-bottom: 3px;
+    }
+    .pl-eg {
+      font-size: 10px;
+      color: var(--sub);
+      font-style: italic;
+      opacity: .8;
+    }
+    .own-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 600;
+      padding: 1px 5px;
+      border-radius: 3px;
+      margin-bottom: 4px;
+      letter-spacing: .03em;
+    }
+    .tag-priv { background: var(--priv-bg); color: var(--priv-hd); border: 1px solid var(--priv-bd); }
+    .tag-nfp  { background: var(--nfp-bg);  color: var(--nfp-hd);  border: 1px solid var(--nfp-bd); }
+    .tag-gov  { background: var(--gov-bg);  color: var(--gov-hd);  border: 1px solid var(--gov-bd); }
+    .tag-mun  { background: var(--mun-bg);  color: var(--mun-hd);  border: 1px solid var(--mun-bd); }
+
+    /* ── Value highlight states ── */
+    .pl.val-get {
+      border-width: 2px;
+      border-color: var(--get-bd);
+      background: var(--get-bg);
+      position: relative;
+    }
+    .pl.val-get .pl-name { color: var(--get-tx); }
+    .pl.val-get::after {
+      content: "★ GET";
+      position: absolute;
+      top: -9px; right: 6px;
+      font-size: 9px; font-weight: 700;
+      background: var(--get-bd); color: #fff;
+      padding: 1px 5px; border-radius: 3px;
+    }
+    .pl.val-vt {
+      border-width: 2px;
+      border-color: var(--vt-bd);
+      background: var(--vt-bg);
+      position: relative;
+    }
+    .pl.val-vt .pl-name { color: var(--vt-tx); }
+    .pl.val-vt::after {
+      content: "★ VT";
+      position: absolute;
+      top: -9px; right: 6px;
+      font-size: 9px; font-weight: 700;
+      background: var(--vt-bd); color: #fff;
+      padding: 1px 5px; border-radius: 3px;
+    }
+
+    /* ── Markets band ── */
+    .badge-priv { background: var(--priv-bg); border-color: var(--priv-bd); color: var(--priv-hd); }
+    .badge-nfp2 { background: var(--nfp-bg);  border-color: var(--nfp-bd);  color: var(--nfp-hd); }
+
+    /* ── Value callout boxes ── */
+    .val-callouts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    @media (max-width: 700px) { .val-callouts { grid-template-columns: 1fr; } }
+    .vcall {
+      border-radius: 8px;
+      padding: 14px 16px;
+      border: 2px solid;
+    }
+    .vcall-get { background: var(--get-bg); border-color: var(--get-bd); }
+    .vcall-vt  { background: var(--vt-bg);  border-color: var(--vt-bd);  }
+    .vcall h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+    .vcall-get h3 { color: var(--get-tx); }
+    .vcall-vt  h3 { color: var(--vt-tx);  }
+    .vcall p {
+      font-size: 12px;
+      color: var(--sub);
+      line-height: 1.6;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      background: var(--navy);
+      color: #93C5FD;
+      font-size: 12px;
+      padding: 16px 32px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .page-footer a { color: #93C5FD; }
+
+    /* ── Tooltip ── */
+    [title] { cursor: help; }
+  </style>
+</head>
+<body>
+
+<!-- PAGE HEADER -->
+<header class="page-header">
+  <h1>U.S. Electricity Value Chain — Full Ecosystem Map</h1>
+  <p>Every player in the U.S. energy system, from generation to the end customer. Color-coded by ownership type. Toggle the value creation highlights to see where Grid Enhancing Technologies (GET) and Virtual Transmission (flexible demand coordination) create system-level value.</p>
+  <p class="meta">
+    Abhijit Das, Ph.D. &nbsp;·&nbsp;
+    Duke Fuqua School of Business, EMBA 2026 &nbsp;·&nbsp;
+    Lead System Strategist, Volvo Trucks North America &nbsp;·&nbsp;
+    Co-chair, SAE Heavy Duty Charging Consortium &nbsp;·&nbsp;
+    <a href="https://abhijitdas.info">abhijitdas.info</a>
+  </p>
+</header>
+
+<div class="content">
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="li"><div class="ld" style="background:var(--priv-bg);border:1px solid var(--priv-bd)"></div>Private / for-profit</div>
+    <div class="li"><div class="ld" style="background:var(--nfp-bg);border:1px solid var(--nfp-bd)"></div>Non-profit / member-owned</div>
+    <div class="li"><div class="ld" style="background:var(--gov-bg);border:1px solid var(--gov-bd)"></div>Federal government</div>
+    <div class="li"><div class="ld" style="background:var(--mun-bg);border:1px solid var(--mun-bd)"></div>Municipal / state govt</div>
+    <div class="li"><div class="ld" style="background:var(--iso-bg);border:1px solid var(--iso-bd)"></div>ISO / RTO (grid operator)</div>
+    <div class="li"><div class="ld" style="background:var(--cust-bg);border:1px solid var(--cust-bd)"></div>End customer</div>
+    <div class="li"><div class="ld" style="background:var(--get-bg);border:1px solid var(--get-bd)"></div>★ GET creates value here</div>
+    <div class="li"><div class="ld" style="background:var(--vt-bg);border:1px solid var(--vt-bd)"></div>★ Virtual Transmission creates value here</div>
+  </div>
+
+  <!-- TOGGLES -->
+  <div class="toggle-row">
+    <span class="toggle-label">Highlight value creation:</span>
+    <button class="tbtn on-get" id="btn-get" onclick="toggle('get')">Grid Enhancing Technologies (GET)</button>
+    <button class="tbtn on-vt"  id="btn-vt"  onclick="toggle('vt')">Virtual Transmission (compute shifting)</button>
+    <button class="tbtn"        id="btn-off" onclick="toggleOff()">Show base map only</button>
+  </div>
+
+  <!-- REGULATORY BAND -->
+  <div class="band">
+    <div class="sec-title">Regulatory &amp; Oversight Layer</div>
+    <div class="band-inner">
+      <span class="badge badge-gov" title="Independent federal agency. Regulates wholesale electricity markets, interstate transmission, and gas pipelines. Key orders: 888 (open access), 1000 (transmission planning), 881 (dynamic line ratings), 1920 (long-range planning), 2222 (DER market access).">FERC — wholesale markets &amp; interstate transmission</span>
+      <span class="badge badge-mun" title="50 separate state commissions. Regulate retail electricity rates, distribution network investment, and IOU earnings. Each state has its own PUC — no national standard. Major gatekeeper for utility spending.">State PUCs / PSCs — retail rates, local grid</span>
+      <span class="badge badge-nfp" title="FERC-certified non-profit. Sets and enforces mandatory reliability and cybersecurity (CIP) standards across North America. Can levy significant fines on violators.">NERC — reliability standards &amp; cybersecurity (CIP)</span>
+      <span class="badge badge-gov" title="Sets national energy policy. Funds R&D through national labs (NREL, LBNL, Argonne, INL). Runs Loan Programs Office for large energy projects. Does NOT regulate markets — that is FERC's job.">DOE — policy, R&amp;D, loan programs</span>
+      <span class="badge badge-gov" title="Sets air and water standards that determine which power plants can operate and at what cost. Clean Air Act rules have directly shaped the U.S. generation mix over decades.">EPA — emissions rules &amp; air standards</span>
+    </div>
+  </div>
+
+  <!-- MAIN VALUE CHAIN FLOW -->
+  <div class="flow">
+
+    <!-- 1. GENERATION -->
+    <div class="stage">
+      <div class="stage-hd">⚡ Generation</div>
+      <div class="stage-body">
+        <div class="pl priv" onclick="alert('Investor-Owned Utilities (IOUs): Own large generation fleets — coal, gas, nuclear, and growing renewables. Regulated monopoly in most states. Shareholders own equity. Earn state-approved returns. Examples: Duke Energy, NextEra Energy, Southern Company, Dominion Energy.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">Investor-Owned Utilities (IOUs)</div>
+          <div class="pl-desc">Own large generation fleets. Regulated monopoly. Earn allowed return on rate base.</div>
+          <div class="pl-eg">Duke, NextEra, Southern Co., Dominion</div>
+        </div>
+        <div class="pl priv" onclick="alert('Independent Power Producers (IPPs): Build and own generation plants. Sell power wholesale into ISO markets or directly via PPAs. Dominate new renewable (solar, wind) development. No distribution customers. Examples: Invenergy, AES, Orsted, Lightsource BP, NRG.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">Independent Power Producers (IPPs)</div>
+          <div class="pl-desc">Build and own plants. Sell power wholesale. Dominate new renewable buildout.</div>
+          <div class="pl-eg">Invenergy, AES, Orsted, NRG, Lightsource BP</div>
+        </div>
+        <div class="pl gov" onclick="alert('Federal Power Agencies: Federally-owned generation (mostly large hydro dams) and transmission. Sell power at cost — not for profit. Originally built for rural electrification, flood control, and navigation. Examples: TVA (Tennessee Valley Authority, Southeast), BPA (Bonneville Power Administration, Pacific NW), WAPA (Western Area Power Administration), SWPA (Southwestern Power Administration).')">
+          <span class="own-tag tag-gov">Federal govt</span>
+          <div class="pl-name">Federal power agencies</div>
+          <div class="pl-desc">Federally-owned hydro + generation. Sell at cost. Rural electrification origin.</div>
+          <div class="pl-eg">TVA, BPA, WAPA, SWPA</div>
+        </div>
+        <div class="pl nfp" onclick="alert('Generation & Transmission Cooperatives: Member-owned non-profits. Generate and transmit wholesale power for their distribution cooperative members. Rural electric backbone — exist because IOUs historically did not serve rural areas. Examples: Tri-State G&T (CO, NE, NM, WY), Basin Electric Power Cooperative (ND, SD, NE, WY, MT).')">
+          <span class="own-tag tag-nfp">Non-profit</span>
+          <div class="pl-name">G&amp;T cooperatives</div>
+          <div class="pl-desc">Member-owned. Generate and transmit wholesale for distribution co-ops.</div>
+          <div class="pl-eg">Tri-State G&amp;T, Basin Electric</div>
+        </div>
+        <div class="pl mun" onclick="alert('Municipal Utilities as Generators: City or county owned. Not-for-profit model. Accountable to elected officials rather than a state PUC regulator. Examples: LADWP (Los Angeles), SMUD (Sacramento), Austin Energy, NYPA (New York Power Authority).')">
+          <span class="own-tag tag-mun">Municipal govt</span>
+          <div class="pl-name">Municipal utilities (munis)</div>
+          <div class="pl-desc">City or county owned. Not-for-profit. Accountable to elected officials.</div>
+          <div class="pl-eg">LADWP, SMUD, Austin Energy, NYPA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr-col">→</div>
+
+    <!-- 2. TRANSMISSION -->
+    <div class="stage">
+      <div class="stage-hd">🔌 Transmission</div>
+      <div class="stage-body">
+        <div class="pl priv val-get" onclick="alert('IOU Transmission Owners: Own most high-voltage interstate transmission lines. Subject to FERC rate regulation — not state PUCs. Earn FERC-approved return on transmission investment (typically ~10% ROE). This incentive to earn returns on capital is a key reason they prefer building new lines over deploying cheaper GET solutions.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">IOU transmission owners</div>
+          <div class="pl-desc">Own most high-voltage interstate lines. FERC-regulated rates. Earn allowed ROE on investment.</div>
+          <div class="pl-eg">AEP, Duke, Eversource, PG&amp;E, Exelon</div>
+        </div>
+        <div class="pl gov val-get" onclick="alert('Federal Transmission Owners: Federally-built, federally-owned high-voltage transmission lines. Provide open access at cost — not for profit. Critical in the western US where federal hydroelectric dams are the anchor. BPA serves the Pacific Northwest; WAPA serves the western and southwestern US.')">
+          <span class="own-tag tag-gov">Federal govt</span>
+          <div class="pl-name">Federal transmission owners</div>
+          <div class="pl-desc">Federally-built, open-access lines at cost. Critical in western US near federal hydro dams.</div>
+          <div class="pl-eg">BPA (Pacific NW), WAPA (west/SW)</div>
+        </div>
+        <div class="pl priv val-get" onclick="alert('Independent Transmission Companies: Standalone companies focused solely on owning and developing transmission infrastructure. Not affiliated with a generation utility. Growing as energy transition requires massive new transmission investment. Examples: ITC Holdings (largest independent in the US), Transource, GridLiance.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">Independent transmission cos.</div>
+          <div class="pl-desc">Standalone transmission-only companies. Growing with energy transition investment needs.</div>
+          <div class="pl-eg">ITC Holdings, Transource, GridLiance</div>
+        </div>
+        <div class="pl priv val-get" onclick="alert('GET Vendors — where this research creates value: Grid Enhancing Technologies deploy Power Flow Control (PFC), Dynamic Line Rating (DLR), and Topology Optimization (TO) on EXISTING transmission lines. Instead of building new lines (10-20 years, $2-4M/mile), GET can increase effective capacity by 10-25% within months. Key vendors: Smart Wires (modular PFC), LineVision (DLR sensors), Gridco Systems, ABB FACTS devices.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name" style="color:var(--get-tx)">GET vendors ★ research value</div>
+          <div class="pl-desc">Deploy PFC, DLR, and topology optimization on existing lines. Unlock capacity without new construction.</div>
+          <div class="pl-eg">Smart Wires, LineVision, Gridco, ABB FACTS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr-col">→</div>
+
+    <!-- 3. GRID OPERATIONS -->
+    <div class="stage">
+      <div class="stage-hd">🗂 Grid Operations (ISO/RTO)</div>
+      <div class="stage-body">
+        <div class="stage-sub">ISOs/RTOs don't own the wires. They operate the grid in real time, dispatch generators, manage congestion, and run wholesale markets.</div>
+        <div class="pl iso val-get" onclick="alert('CAISO — California ISO: Manages most of California grid. Highest solar curtailment in the US — 3.4 million MWh wasted in 2024, a 29% increase vs 2023. Core problem: solar generation concentrated in southern California, major demand centers in the north. Transmission congestion prevents delivery. This is the primary region used in the research illustrative scenario.')">
+          <div class="pl-name">CAISO (California)</div>
+          <div class="pl-desc">Highest curtailment in US. 3.4M MWh wasted in 2024. North-south congestion is the core problem.</div>
+        </div>
+        <div class="pl iso val-get" onclick="alert('ERCOT — Electric Reliability Council of Texas: Manages almost all of Texas grid. UNIQUE: electrically isolated from the rest of the US — does not synchronously connect to neighboring grids. This gives Texas regulatory independence from FERC but means it cannot easily import power during stress events (reason 2021 winter storm was so severe). Heavy wind generation with rising curtailment.')">
+          <div class="pl-name">ERCOT (Texas)</div>
+          <div class="pl-desc">Texas only. Electrically isolated from US grid. Heavy wind. Rising curtailment. FERC-independent.</div>
+        </div>
+        <div class="pl iso val-get" onclick="alert('PJM Interconnection: Largest ISO in the US by load — serves 65 million people across 13 states and DC (mid-Atlantic and midwest). Runs an influential capacity market called the Reliability Pricing Model (RPM). Major congestion issues on east-west corridors as wind from midwest tries to reach eastern load centers.')">
+          <div class="pl-name">PJM (Mid-Atlantic + Midwest)</div>
+          <div class="pl-desc">Largest ISO by load. 65M people, 13 states. Influential capacity market (RPM).</div>
+        </div>
+        <div class="pl iso val-get" onclick="alert('MISO — Midcontinent ISO: Covers midwest and parts of the south. Large wind generation territory. Operates a multi-value transmission planning framework that has been a model for other ISOs. Rising curtailment as wind capacity grows faster than transmission.')">
+          <div class="pl-name">MISO (Midwest + South)</div>
+          <div class="pl-desc">Large wind territory. Multi-value transmission planning model. Midwest + parts of south.</div>
+        </div>
+        <div class="pl iso val-get" onclick="alert('SPP — Southwest Power Pool: Covers 14 states in the central US plains — Kansas, Oklahoma, parts of midwest and south. Extremely high wind generation territory. Curtailment rising fast as wind capacity is being built far faster than transmission can be expanded. One of the fastest-growing curtailment regions in the country.')">
+          <div class="pl-name">SPP (Central plains)</div>
+          <div class="pl-desc">Highest wind curtailment growth. Central US plains, 14 states. Wind outpacing transmission badly.</div>
+        </div>
+        <div class="pl iso" onclick="alert('NYISO and ISO-NE: NYISO serves New York State; ISO-NE serves the six New England states. Both are smaller, heavily import-dependent ISOs. Older infrastructure, high electricity prices, and strong decarbonization policy ambitions (NY Climate Leadership Act, Massachusetts clean energy targets). Limited land for new generation — offshore wind is a major focus.')">
+          <div class="pl-name">NYISO / ISO-NE (Northeast)</div>
+          <div class="pl-desc">New York and New England. Smaller, import-dependent. High decarbonization ambition. Offshore wind focus.</div>
+        </div>
+        <div class="pl nfp" onclick="alert('Non-ISO/RTO Regions: About one-third of US electricity load is served by regions with no independent ISO or RTO. Utilities self-dispatch — they schedule their own generation without a competitive market. No competitive wholesale market pricing. Primarily the Southeast (dominated by Southern Company, Duke, and others who have resisted RTO membership) and parts of the Northwest.')">
+          <div class="pl-name">Non-ISO regions</div>
+          <div class="pl-desc">~⅓ of US load. Utilities self-dispatch. No competitive wholesale market. Mostly Southeast and parts of NW.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr-col">→</div>
+
+    <!-- 4. DISTRIBUTION -->
+    <div class="stage">
+      <div class="stage-hd">🏘 Distribution</div>
+      <div class="stage-body">
+        <div class="pl priv" onclick="alert('IOU Distribution Utilities: Own the local wires, transformers, substations, and meters that deliver power to homes and businesses. Regulated monopoly — only one utility per territory. Earn a state PUC-approved return on rate base (typically 9-11% ROE). Their incentive to earn returns on capital investment creates resistance to operational solutions like demand response that reduce infrastructure spending. Serve approximately 70% of US electricity customers.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">IOU distribution utilities</div>
+          <div class="pl-desc">Own local wires, transformers, meters. Regulated monopoly. Earn PUC-approved ROE on rate base.</div>
+          <div class="pl-eg">Duke, PG&amp;E, Eversource, ComEd, Xcel Energy</div>
+        </div>
+        <div class="pl mun" onclick="alert('Municipal Distribution Utilities: City or county owned local electricity grid. About 2,000 municipal utilities exist in the US. In most states they are NOT subject to state PUC regulation — they are accountable to the city council instead. Not-for-profit. Prioritize local goals and community needs. Examples: LADWP (Los Angeles), JEA (Jacksonville FL), MLGW (Memphis TN), Tacoma Power.')">
+          <span class="own-tag tag-mun">Municipal</span>
+          <div class="pl-name">Municipal distribution utilities</div>
+          <div class="pl-desc">City-owned local grid. ~2,000 in US. Accountable to city council, not state PUC. Not-for-profit.</div>
+          <div class="pl-eg">LADWP, JEA (Jacksonville), MLGW (Memphis)</div>
+        </div>
+        <div class="pl nfp" onclick="alert('Distribution Cooperatives: About 900 electric distribution cooperatives serve approximately 56% of US land area — mostly rural and suburban. Member-owned and board-governed. ~20 million customer accounts. Not-for-profit model, but still subject to state PUC regulation in most states. Buy wholesale power from G&T cooperatives or directly from markets. NRECA is their national association.')">
+          <span class="own-tag tag-nfp">Non-profit</span>
+          <div class="pl-name">Distribution cooperatives</div>
+          <div class="pl-desc">~900 co-ops. 56% of US land area, mostly rural. Member-owned, board-governed. ~20M accounts.</div>
+          <div class="pl-eg">NRECA members. Mostly midwest and south.</div>
+        </div>
+        <div class="pl priv" onclick="alert('Retail Electric Providers (REPs): In states with retail electricity deregulation, REPs compete to sell electricity to customers. They do NOT own wires — they buy power wholesale and sell retail. Customer can choose their REP. Texas (ERCOT market) is the largest deregulated retail market. Also active in parts of PJM (PA, NJ, OH, IL, MD). Examples: Reliant Energy, TXU Energy, Constellation Energy, Direct Energy.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">Retail electric providers (REPs)</div>
+          <div class="pl-desc">In deregulated markets — buy wholesale, sell retail. Compete for customers. Don't own wires.</div>
+          <div class="pl-eg">Texas, parts of PJM. Reliant, TXU, Constellation</div>
+        </div>
+        <div class="pl priv" onclick="alert('Demand Response Aggregators: Bundle flexible customer load — industrial processes, commercial HVAC, EV fleets, data centers — and offer it as a curtailable resource in ISO wholesale markets. Act as the bridge between end customers and grid operators. FERC Order 2222 (2020) was landmark — it mandated that ISOs must allow aggregated distributed energy resources including demand response to participate in wholesale markets. This is a critical enabler for the Virtual Transmission concept. Examples: Voltus, Enel X (formerly EnerNOC), AutoGrid, OhmConnect.')">
+          <span class="own-tag tag-priv">Private</span>
+          <div class="pl-name">Demand response aggregators</div>
+          <div class="pl-desc">Bundle flexible load, offer it in ISO wholesale markets. FERC Order 2222 opened this. Key enabler for Virtual Transmission.</div>
+          <div class="pl-eg">Voltus, Enel X, AutoGrid, OhmConnect</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arr-col">→</div>
+
+    <!-- 5. CUSTOMERS -->
+    <div class="stage">
+      <div class="stage-hd">🏭 End Customers</div>
+      <div class="stage-body">
+        <div class="pl cust" onclick="alert('Residential Customers: About 37% of US electricity consumption. Growing rapidly with EV adoption and home electrification (heat pumps, induction cooking). Typical demand peak is 5-9pm — which coincides with grid stress and is the same window EV charging adds load. Price signals are blunt (flat rates in most states) so flexibility is underutilized. Time-of-use rates are spreading but adoption is slow.')">
+          <div class="pl-name">Residential</div>
+          <div class="pl-desc">~37% of US consumption. Growing with EVs and heat pumps. Evening demand peak. Price-sensitive.</div>
+          <div class="pl-eg">~130 million households</div>
+        </div>
+        <div class="pl cust" onclick="alert('Commercial Customers: Offices, retail, hospitals, universities, hotels. About 35% of US consumption. Larger buyers can negotiate Power Purchase Agreements (PPAs) directly with generators, bypassing the utility for supply. Many have corporate sustainability commitments driving clean energy procurement — Scope 2 emissions reduction targets. Growing energy management sophistication.')">
+          <div class="pl-name">Commercial</div>
+          <div class="pl-desc">Offices, hospitals, universities. ~35% of US consumption. Larger buyers negotiate PPAs. Scope 2 targets drive clean energy.</div>
+        </div>
+        <div class="pl cust val-vt" onclick="alert('Hyperscalers / AI Data Centers — KEY research subject: Fastest-growing electricity load in the US. Projected to grow from ~176 TWh (2025) to ~450 TWh (2030) — representing a jump from 4.4% to ~9% of total US electricity consumption. CRITICAL TENSION: These same companies have made public pledges — Google 24/7 CFE by 2030, Microsoft carbon negative by 2030, Apple carbon neutral by 2030, Meta net-zero. Their own AI infrastructure growth is making those pledges harder to keep. The Virtual Transmission concept proposes shifting flexible AI training workloads (not real-time inference) to times and locations where renewable energy is available.')">
+          <div class="pl-name" style="color:var(--vt-tx)">Hyperscalers / AI data centers ★</div>
+          <div class="pl-desc">Fastest-growing load. 176→450 TWh by 2030. 24/7 CFE pledges now colliding with own AI demand growth.</div>
+          <div class="pl-eg">Google, Microsoft, AWS, Meta, Apple</div>
+        </div>
+        <div class="pl cust" onclick="alert('Industrial Customers: Steel mills, chemical plants, semiconductor fabs, refineries, paper mills. About 28% of US consumption. Extremely energy-intensive — energy cost is a major competitive factor. Many locate facilities near cheap, reliable power. Larger industrials often negotiate special rate contracts directly with utilities. Increasingly pursuing clean energy for Scope 2 reduction. Some are exploring direct renewable PPAs.')">
+          <div class="pl-name">Industrial</div>
+          <div class="pl-desc">~28% of US consumption. Energy-intensive: steel, chemicals, fabs. Often locate near cheap power.</div>
+        </div>
+        <div class="pl cust val-vt" onclick="alert('EV Fleets & Heavy Trucks — KEY research subject: Transportation electrification is creating predictable, large new electricity loads. Heavy-duty trucks (Volvo, Daimler, Freightliner) and last-mile delivery fleets charge after daily routes — typically 5-7pm, exactly the grid stress window. This is the Boundary Problem from the research: the product (truck) was designed independently from the charging infrastructure and the grid capacity that needs to support it. Smart charging protocols can shift this load to overnight wind peaks or midday solar surplus, reducing 5-7pm grid stress while providing drivers with lower-cost power.')">
+          <div class="pl-name" style="color:var(--vt-tx)">EV fleets &amp; heavy trucks ★</div>
+          <div class="pl-desc">Charge after routes — 5-7pm peak stress window. Smart charging shifts load to overnight wind or midday solar.</div>
+          <div class="pl-eg">Volvo, Daimler trucks · ChargePoint, EVgo, Tesla networks</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .flow -->
+
+  <!-- MARKETS BAND -->
+  <div class="band">
+    <div class="sec-title">Markets, Finance &amp; Standards Layer</div>
+    <div class="band-inner">
+      <span class="badge badge-priv" title="Day-ahead and real-time energy markets, capacity markets, and ancillary service markets — all run by ISOs. Prices set by Locational Marginal Pricing (LMP). Congestion is visible as a price spread between zones — the price in a constrained zone is higher than the zone where generation is located.">Wholesale markets — energy, capacity, ancillary services (run by ISOs)</span>
+      <span class="badge badge-priv" title="Power Purchase Agreements: bilateral long-term contracts between a generator and a buyer (utility or large corporate). Physical PPAs deliver actual power. Virtual PPAs (vPPAs) are financial contracts that settle against market prices — the buyer receives RECs without taking physical delivery. Most corporate clean energy procurement today is via vPPAs.">Physical PPAs &amp; virtual PPAs — bilateral long-term contracts</span>
+      <span class="badge badge-priv" title="Renewable Energy Certificates: 1 REC = 1 MWh of renewable generation. Separate from the physical electricity. Corporations buy RECs to claim renewable energy use. Annual REC matching is the most common approach, but 24/7 hourly matching (Google's standard) is more demanding and requires clean power every hour, not just annually.">RECs &amp; 24/7 hourly CFE matching platforms</span>
+      <span class="badge badge-nfp2" title="IEEE 1547: Standard for interconnecting distributed energy resources (solar, batteries, EVs) to the grid. SAE J1772: North American EV charging connector standard. SAE J3068: Heavy-duty vehicle charging (trucks, buses). SAE Heavy Duty Charging Consortium (co-chaired by Abhijit Das) works on standards for commercial vehicle charging.">IEEE 1547 (DER interconnection) · SAE J1772, CCS, J3068 (EV/truck charging)</span>
+      <span class="badge badge-priv" title="DOE Loan Programs Office provides debt financing for large energy projects that cannot easily access private capital. IRA (Inflation Reduction Act 2022) Investment Tax Credit (ITC) and Production Tax Credit (PTC) provide massive subsidies for renewable generation and storage. State green banks provide low-cost capital for smaller projects.">DOE Loan Programs · IRA tax credits (ITC, PTC) · State green banks</span>
+      <span class="badge badge-priv" title="FERC Order 2222 (2020) required ISOs to open their wholesale markets to aggregated distributed energy resources including demand response, batteries, rooftop solar, and EV chargers. This is the regulatory hook that makes the Virtual Transmission concept legally feasible — it means flexible data center and EV loads can participate in wholesale markets as grid resources.">FERC Order 2222 — DER aggregation in wholesale markets (key enabler)</span>
+    </div>
+  </div>
+
+  <!-- VALUE CREATION CALLOUTS -->
+  <div class="val-callouts">
+    <div class="vcall vcall-get">
+      <h3>★ Where GET creates value — Transmission + Grid Operations</h3>
+      <p>Power Flow Control, Dynamic Line Rating, and Topology Optimization act directly on the transmission network managed by ISOs. They increase effective transfer capability on congested corridors — enabling renewable energy already being curtailed at CAISO, ERCOT, and SPP to reach demand centers. No new lines required. An illustrative scenario using CAISO 2024 data shows that 20% data center flexibility combined with GET deployment could absorb ~44% of regional curtailment (1,880 GWh of the 3,400 GWh baseline). Benefit flows to generators (less curtailment loss), ISOs (less congestion cost), and customers (lower prices).</p>
+    </div>
+    <div class="vcall vcall-vt">
+      <h3>★ Where Virtual Transmission creates value — Customer layer</h3>
+      <p>AI data centers and EV/truck fleets are flexible loads. By coordinating when and where they consume power — shifting AI training workloads to overnight wind peaks or midday solar surplus, shifting truck charging away from the 5–7pm grid stress window — they reduce stress on exactly the corridors where GET is working. Computation moves across fiber; electrons stay local. 20% flexibility of the projected 450 TWh data center demand by 2030 = 90 TWh that can be aligned with renewable peaks. That is larger than total 2024 U.S. curtailment. The two layers act together as a coordinated system.</p>
+    </div>
+  </div>
+
+</div><!-- end .content -->
+
+<footer class="page-footer">
+  <p>Abhijit Das, Ph.D. &nbsp;·&nbsp; Duke Fuqua School of Business, EMBA 2026 &nbsp;·&nbsp; Lead System Strategist, Volvo Trucks North America &nbsp;·&nbsp; Co-chair, SAE Heavy Duty Charging Consortium</p>
+  <p style="margin-top:6px">Research paper: <em>Accelerating Renewable Integration Through Grid Enhancing Technologies and Renewable-Aware Load Migration</em> · Energy Markets and Innovation · Duke Fuqua</p>
+  <p style="margin-top:6px"><a href="https://abhijitdas.info">abhijitdas.info</a> &nbsp;·&nbsp; <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a></p>
+</footer>
+
+<script>
+  let getOn = true, vtOn = true;
+
+  function toggle(which) {
+    if (which === 'get') {
+      getOn = !getOn;
+      document.getElementById('btn-get').className = getOn ? 'tbtn on-get' : 'tbtn';
+      document.querySelectorAll('.val-get').forEach(el => {
+        el.style.opacity = getOn ? '1' : '0.3';
+        el.style.filter  = getOn ? '' : 'grayscale(1)';
+      });
+    } else {
+      vtOn = !vtOn;
+      document.getElementById('btn-vt').className = vtOn ? 'tbtn on-vt' : 'tbtn';
+      document.querySelectorAll('.val-vt').forEach(el => {
+        el.style.opacity = vtOn ? '1' : '0.3';
+        el.style.filter  = vtOn ? '' : 'grayscale(1)';
+      });
+    }
+    document.getElementById('btn-off').className = 'tbtn';
+  }
+
+  function toggleOff() {
+    getOn = false; vtOn = false;
+    document.getElementById('btn-get').className = 'tbtn';
+    document.getElementById('btn-vt').className  = 'tbtn';
+    document.getElementById('btn-off').className = 'tbtn on-off';
+    document.querySelectorAll('.val-get, .val-vt').forEach(el => {
+      el.style.opacity = '1';
+      el.style.filter  = '';
+    });
+  }
+</script>
+</body>
+</html>
