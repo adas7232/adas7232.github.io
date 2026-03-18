@@ -1,493 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhijit Das | Energy Systems Leader</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Abhijit Das — Energy systems leader focused on electrification and grid strategy. Leadership case studies, publications, writing, and contact." />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijit Das</title>
+  <meta name="description" content="Engineering leader at the intersection of electrification, functional safety, and systems thinking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg1:#ffffff;
-      --bg2:#f6f7fb;
-      --text:#0b1220;
-      --muted:rgba(11,18,32,.70);
-      --muted2:rgba(11,18,32,.55);
-      --card:rgba(255,255,255,.92);
-      --card2:#ffffff;
-      --line:rgba(11,18,32,.10);
-      --accent:#0ea5e9;
-      --shadow: 0 16px 50px rgba(15, 23, 42, .10);
-      --radius: 18px;
-      --max: 980px;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafaf8;
+      --text-primary: #1a1a18;
+      --text-secondary: #6b6b65;
+      --text-tertiary: #a0a09a;
+      --border: rgba(26,26,24,0.12);
     }
-
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(900px 500px at 20% 10%, rgba(14,165,233,.10), transparent 60%),
-        radial-gradient(700px 400px at 80% 30%, rgba(99,102,241,.08), transparent 55%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
-      letter-spacing: 0.2px;
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
     }
-
-    a{ color:var(--accent); text-decoration:none; }
-    a:hover{ text-decoration:underline; }
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 42px 22px 70px;
+    .topnav {
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.75rem;
+      border-bottom: 0.5px solid var(--border);
     }
-
-    .top{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      padding: 8px 0 22px;
-    }
-
-    .brand{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      line-height:1.1;
-    }
-    .brand .name{
-      font-size: 28px;
-      font-weight: 760;
-      letter-spacing: .3px;
-    }
-    .brand .tag{
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    .nav{
-      display:flex;
-      flex-wrap:nowrap;
-      gap:10px;
-      justify-content:flex-end;
-    }
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding: 10px 10px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,.03);
-      color: var(--text);
-      font-size: 12px;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-    .pill:hover{
-      background: rgba(255,255,255,.06);
-      text-decoration:none;
-    }
-
-    .pillActive{
-  background: rgba(14,165,233,.12);
-  border-color: rgba(14,165,233,.40);
-  color: var(--accent);
-  font-weight: 600;
-    }
-
-    .hero{
-      margin-top: 10px;
-      padding: 50px 40px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--card), rgba(255,255,255,.03));
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .hero h1{
-      margin: 0 0 10px;
-      font-size: 46px;
-      letter-spacing: .2px;
-      line-height: 1.05;
-    }
-    .hero p{
-      margin: 0 0 18px;
-      font-size: 16px;
-      color: var(--muted);
-      max-width: 760px;
-      line-height: 1.5;
-    }
-
-    .ctaRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      margin-top: 18px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      text-decoration:none;
-      font-weight: 600;
-      font-size: 14px;
-    }
-    .btn:hover{ background: rgba(255,255,255,.07); text-decoration:none; }
-    .btnPrimary{
-      background: rgba(56,189,248,.14);
-      border-color: rgba(56,189,248,.35);
-    }
-    .btnPrimary:hover{ background: rgba(56,189,248,.20); }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 16px;
-      margin-top: 16px;
-    }
-
-    .card{
-      padding: 18px 18px 16px;
-      border-radius: var(--radius);
-      background: linear-gradient(180deg, var(--card2), rgba(255,255,255,.03));
-      border: 1px solid var(--line);
-    }
-    .card h2{
-      margin: 0 0 10px;
-      font-size: 15px;
-      letter-spacing:.2px;
+    .topnav a {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
     }
-    .card .big{
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.55;
-      color: var(--text);
+    .topnav a:hover { color: var(--text-primary); }
+    .wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem 6rem;
     }
-
-    .list{
-      margin: 10px 0 0;
-      padding: 0;
-      list-style: none;
-      display:flex;
-      flex-direction:column;
-      gap: 10px;
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(44px, 8vw, 64px);
+      font-weight: 300;
+      letter-spacing: -0.5px;
+      line-height: 1.05;
+      margin-bottom: 0.65rem;
     }
-
-    .item{
-      padding: 12px 12px;
-      border-radius: 14px;
-      background: rgba(11,18,32,.03);
-      border: 1px solid rgba(11,18,32,.10);
-      display:flex;
-      flex-direction:column;
-      gap:6px;
+    .tagline {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 460px;
+      margin-bottom: 2rem;
     }
-    .itemTitle{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      align-items:baseline;
-      font-weight: 700;
-      font-size: 14px;
+    .creds {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 3.5rem;
     }
-    .itemMeta{
-      font-size: 13px;
-      color: var(--muted2);
-      line-height: 1.4;
+    .cred {
+      font-size: 10.5px;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      border: 0.5px solid var(--border);
+      border-radius: 4px;
+      padding: 5px 11px;
     }
-
-    /* Case study specific helpers */
-    .tagRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-      margin-top: 6px;
+    hr {
+      border: none;
+      border-top: 0.5px solid var(--border);
+      margin-bottom: 2.5rem;
     }
-    .miniTag{
-      display:inline-flex;
-      align-items:center;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(11,18,32,.10);
-      background: rgba(255,255,255,.55);
-      font-size: 12px;
-      color: var(--muted2);
-      white-space: nowrap;
+    .nav-links { list-style: none; }
+    .nav-links li:first-child a { border-top: 0.5px solid var(--border); }
+    .nav-links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.1rem 0;
+      border-bottom: 0.5px solid var(--border);
+      text-decoration: none;
+      gap: 1rem;
+      transition: opacity 0.15s;
     }
-    .caseLabel{
-      font-weight: 700;
-      color: var(--text);
+    .nav-links a:hover { opacity: 0.5; }
+    .link-left { display: flex; flex-direction: column; gap: 3px; }
+    .link-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.1;
     }
-
-    .footer{
-      margin-top: 22px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.10);
-      color: var(--muted2);
-      font-size: 13px;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px;
-      justify-content:space-between;
-      align-items:center;
-    }
-
-    .kicker{
-      font-size: 13px;
-      color: var(--muted2);
-      margin-top: 10px;
-    }
-
-    @media (max-width: 860px){
-      .grid{ grid-template-columns: 1fr; }
-      .hero h1{ font-size: 38px; }
-      .top{ flex-direction:column; align-items:flex-start; }
-      .nav{ justify-content:flex-start; }
+    .link-desc { font-size: 12.5px; font-weight: 300; color: var(--text-tertiary); }
+    .link-arrow { font-size: 15px; color: var(--text-tertiary); flex-shrink: 0; }
+    @media (max-width: 480px) {
+      .topnav { padding: 1rem 1.25rem; gap: 1.25rem; }
+      .wrap { padding: 3.5rem 1.25rem 4rem; }
     }
   </style>
 </head>
-
 <body>
+  <nav class="topnav">
+    <a href="https://www.linkedin.com/in/abhijit-das-phd/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="/resume.html">Resume</a>
+    <a href="/publications.html">Publications</a>
+    <a href="mailto:hello@abhijitdas.info">Contact</a>
+  </nav>
   <div class="wrap">
-
-    <!-- Top bar -->
-    <div class="top">
-      <div class="brand">
-        <div class="name">Abhijit Das</div>
-        <div class="tag">Energy Systems Leader · Electrification · Grid Strategy</div>
-      </div>
-
-      <div class="nav">
-        <a class="pill" href="https://www.linkedin.com/in/adas7232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="pill" href="https://soundsofmind.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-        <a class="pill" href="publications.html">Publications</a>
-        <a class="pill" href="resume.html">Resume</a>
-        <a class="pill pillActive" href="energy/">Energy</a>
-        <a class="pill" href="mailto:abhijit.d80@gmail.com">Email</a>
-      </div>
+    <h1>Abhijit Das</h1>
+    <p class="tagline">Engineering leader at the intersection of electrification, functional safety, and systems thinking.</p>
+    <div class="creds">
+      <span class="cred">PhD</span>
+      <span class="cred">Duke EMBA · 2024–26</span>
+      <span class="cred">Volvo</span>
+      <span class="cred">Halliburton</span>
     </div>
-
-    <!-- Hero -->
-    <div class="hero">
-      <h1>Energy & Electrification Systems Leader</h1>
-      <p>
-        Engineering leader building scalable electrification systems aligned with real-world grid constraints.
-        Interested in roles spanning engineering leadership, program leadership, and energy transition strategy.
-      </p>
-
-      <div class="kicker">
-        Based in the U.S. · Open to senior engineering / program / product leadership roles in energy and electrification.
-      </div>
-
-      <div class="tagRow">
-        <span class="miniTag">$10M+ capital efficiency opportunity (simulation-based testing)</span>
-        <span class="miniTag">$1M+ deal + patent (cost-down electrohydraulics)</span>
-        <span class="miniTag">160+ system concepts led (first BEV program)</span>
-        <span class="miniTag">50+ stakeholders aligned (global wiring delivery)</span>
-      </div>
-    </div>
-
-    <!-- Content grid -->
-    <div class="grid">
-
-      <!-- About -->
-      <div class="card">
-        <h2>About</h2>
-        <p class="big">
-          Abhijit leads cross-functional work at the intersection of vehicle electrification and energy infrastructure.
-          His focus is building practical systems that scale—process, architecture, and delivery—while keeping an
-          executive view of risk, cost, and timelines.
-        </p>
-
-        <ul class="list" style="margin-top:14px;">
-          <li class="item">
-            <div class="itemTitle">
-              <span>Core themes</span><span style="color:var(--muted2);font-weight:600;">Now</span>
-            </div>
-            <div class="itemMeta">
-              Electrification programs · Grid integration constraints · Systems architecture · Execution governance
-            </div>
-          </li>
-          <li class="item">
-            <div class="itemTitle">
-              <span>Strength</span><span style="color:var(--muted2);font-weight:600;">Style</span>
-            </div>
-            <div class="itemMeta">
-              Simplifying complex problems into concrete plans, crisp interfaces, and clear execution paths.
-            </div>
-          </li>
-          <li class="item">
-            <div class="itemTitle">
-              <span>Duke EMBA focus</span><span style="color:var(--muted2);font-weight:600;">2024–2026</span>
-            </div>
-            <div class="itemMeta">
-              Finance (capital allocation) · Energy markets & innovation · Value chain strategy
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Featured -->
-      <div class="card">
-        <h2>Featured</h2>
-        <ul class="list">
-          <li class="item">
-            <div class="itemTitle">
-              <span>Selected writing</span>
-              <a href="https://soundsofmind.substack.com/" target="_blank" rel="noopener noreferrer">Open →</a>
-            </div>
-            <div class="itemMeta">Energy markets, grid constraints, and electrification strategy.</div>
-          </li>
-
-          <li class="item">
-            <div class="itemTitle">
-              <span>Publications</span>
-              <a href="publications.html">View →</a>
-            </div>
-            <div class="itemMeta">Books, journal papers, patents, theses, and technical reports.</div>
-          </li>
-
-          <li class="item">
-            <div class="itemTitle">
-              <span>Resume</span>
-              <a href="resume.html">Open →</a>
-            </div>
-            <div class="itemMeta">Executive summary and experience highlights (HTML + PDF).</div>
-          </li>
-          
-          <li class="item">
-            <div class="itemTitle">
-              <span>Energy Research</span>
-              <a href="energy/">View →</a>
-            </div>
-            <div class="itemMeta">
-            Grid strategy, Virtual Transmission, and the U.S. electricity value chain. CERAWeek 2026.
-        </div>
-        </li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Leadership Case Studies -->
-    <div class="card" style="margin-top:16px;">
-      <h2>Leadership Case Studies</h2>
-      <p class="big" style="color:var(--muted); margin-top:0;">
-        A few examples that support the numbers and claims in the resume. Structured as short executive briefs.
-      </p>
-
-      <ul class="list" style="margin-top:14px;">
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Volvo — First BEV Truck Program (End-to-End System Leadership)</span>
-            <span style="color:var(--muted2);font-weight:600;">160+ concepts</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> First-generation battery electric truck program with new battery systems, charging tech, and safety-critical functions; high ambiguity and new organizational ways of working.<br>
-            <span class="caseLabel">Action:</span> Led electrical system architecture across hardware + software and drove 160+ system concepts from early definition through build and factory execution readiness.<br>
-            <span class="caseLabel">Impact:</span> Enabled transition from concept to production execution and created repeatable system integration discipline for electrification programs.<br>
-            <span class="caseLabel">Leadership signal:</span> First-of-kind program leadership under uncertainty.
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Volvo — Program Governance Transformation (Concept Visibility)</span>
-            <span style="color:var(--muted2);font-weight:600;">Adopted model</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> Limited unified visibility across concepts, ECUs, maturity, and dependencies slowed decision cycles and increased execution risk.<br>
-            <span class="caseLabel">Action:</span> Designed and deployed a program governance framework (Power BI-based concept tracking) to align milestones, dependencies, and stakeholder ownership.<br>
-            <span class="caseLabel">Impact:</span> Improved decision clarity and execution alignment; approach became a reference model adopted across other projects.<br>
-            <span class="caseLabel">Leadership signal:</span> Systems-level governance and execution discipline.
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Volvo — Wiring Diagram Delivery Process (Global Execution)</span>
-            <span style="color:var(--muted2);font-weight:600;">50+ people</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> No clear end-to-end process across tools and global teams (Visio → server functional diagram → full wiring diagram → third-party bundle diagram). High risk due to many handoffs across ~50 stakeholders and ~40 subsystems.<br>
-            <span class="caseLabel">Action:</span> Built a streamlined delivery process across Greensboro, Bangalore, and Gothenburg; clarified steps, owners, timing, and interfaces; presented to management and executed.<br>
-            <span class="caseLabel">Impact:</span> Improved delivery reliability and reduced coordination friction; saved months by preventing rework and schedule delays.<br>
-            <span class="caseLabel">Leadership signal:</span> Cross-functional execution and operational process leadership.
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Halliburton — Simulation-Based Testing Platform (Capital Efficiency)</span>
-            <span style="color:var(--muted2);font-weight:600;">$10M+ opportunity</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> Surface equipment upgrades required expensive physical testing; large assets were kept offline and test infrastructure costs were very high.<br>
-            <span class="caseLabel">Action:</span> Hired to lead a hardware-in-the-loop simulation program using NI hardware; built real-time plant models (Simulink + LabVIEW) as a scalable PLC testbed and demonstrated feasibility.<br>
-            <span class="caseLabel">Impact:</span> Established a credible path to replace capital-intensive testing cycles; identified potential savings of $10M+ (project paused due to COVID).<br>
-            <span class="caseLabel">Leadership signal:</span> Capital allocation discipline and strategic engineering innovation.
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Omni Powertrain — Built U.S. Electrical Team + Lab (Electromobility Growth)</span>
-            <span style="color:var(--muted2);font-weight:600;">50+ projects</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> Company expanding from gearboxes into axial-flux motors and e-axles; needed U.S. electrical capability, lab infrastructure, and system integration leadership.<br>
-            <span class="caseLabel">Action:</span> Joined as first electrical leader; hired 3 engineers + 1 technician; built a systems engineering lab and led execution across 50–60 active projects.<br>
-            <span class="caseLabel">Impact:</span> Enabled U.S. electromobility execution capacity and contributed to securing a major commercial vehicle program (Workhorse e-axle).<br>
-            <span class="caseLabel">Leadership signal:</span> Zero-to-one team building and early-stage business growth.
-          </div>
-        </li>
-
-        <li class="item">
-          <div class="itemTitle">
-            <span>Danfoss — $1M+ Win + Patent (Cost-Down Electrohydraulics)</span>
-            <span style="color:var(--muted2);font-weight:600;">3 months</span>
-          </div>
-          <div class="itemMeta">
-            <span class="caseLabel">Situation:</span> Competitive 3-month customer challenge (Danfoss + competitors) to deliver electrohydraulic steering and work functions; existing architecture was too expensive for the customer.<br>
-            <span class="caseLabel">Action:</span> Led rapid system execution and invented a software approach that mimicked expensive hardware behavior at a fraction of cost; filed a patent based on the innovation.<br>
-            <span class="caseLabel">Impact:</span> Won the customer program and secured $1M+ business; delivered a lower-cost architecture without compromising performance.<br>
-            <span class="caseLabel">Leadership signal:</span> Technical-commercial leadership under time pressure with IP creation.
-          </div>
-        </li>
-
-      </ul>
-    </div>
-
-    <!-- Footer -->
-    <div class="footer">
-      <div>© <span id="year"></span> Abhijit Das</div>
-      <div>
-        <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a>
-        <span style="opacity:.6;"> · </span>
-        <a href="https://www.linkedin.com/in/adas7232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <span style="opacity:.6;"> · </span>
-        <a href="https://soundsofmind.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-      </div>
-    </div>
-
+    <hr>
+    <ul class="nav-links">
+      <li>
+        <a href="/portfolio/">
+          <span class="link-left">
+            <span class="link-title">Portfolio</span>
+            <span class="link-desc">Leadership case studies</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="/energy/">
+          <span class="link-left">
+            <span class="link-title">Energy Research</span>
+            <span class="link-desc">Grid strategy and electrification systems</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://substack.com/@abhijitdas" target="_blank" rel="noopener">
+          <span class="link-left">
+            <span class="link-title">Writing</span>
+            <span class="link-desc">Essays and analysis on Substack</span>
+          </span>
+          <span class="link-arrow">↗</span>
+        </a>
+      </li>
+    </ul>
   </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
