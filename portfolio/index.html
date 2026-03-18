@@ -1,1 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Abhijit Das</title>
+  <meta name="description" content="Leadership case studies from Abhijit Das — electrification, systems, and program governance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #fafaf8;
+      --text-primary: #1a1a18;
+      --text-secondary: #6b6b65;
+      --text-tertiary: #a0a09a;
+      --border: rgba(26,26,24,0.12);
+    }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+    .topnav {
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .topnav-back {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .topnav-back:hover { color: var(--text-primary); }
+    .topnav-right { display: flex; gap: 1.75rem; }
+    .topnav-right a {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .topnav-right a:hover { color: var(--text-primary); }
+    .wrap {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 6rem;
+    }
+    .page-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 300;
+      letter-spacing: -0.3px;
+      line-height: 1.05;
+      margin-bottom: 0.6rem;
+    }
+    .intro {
+      font-size: 14.5px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 520px;
+      margin-bottom: 3.5rem;
+    }
+    hr {
+      border: none;
+      border-top: 0.5px solid var(--border);
+      margin-bottom: 2.5rem;
+    }
+    .case-study {
+      padding: 1.75rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .case-study:first-of-type { border-top: 0.5px solid var(--border); }
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 0.85rem;
+    }
+    .case-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .case-metric {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .case-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 4px 12px;
+      margin-bottom: 5px;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+    .case-row:last-child { margin-bottom: 0; }
+    .row-label {
+      font-weight: 400;
+      color: var(--text-tertiary);
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding-top: 2px;
+    }
+    .row-value { color: var(--text-secondary); font-weight: 300; }
+    .row-value strong { font-weight: 400; color: var(--text-primary); }
+    @media (max-width: 480px) {
+      .topnav { padding: 1rem 1.25rem; }
+      .wrap { padding: 3rem 1.25rem 4rem; }
+      .case-header { flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-back" href="/">← Abhijit Das</a>
+    <div class="topnav-right">
+      <a href="/resume.html">Resume</a>
+      <a href="/publications.html">Publications</a>
+    </div>
+  </nav>
 
+  <div class="wrap">
+    <p class="page-label">Portfolio</p>
+    <h1>Leadership Case Studies</h1>
+    <p class="intro">A few examples that support the numbers and claims in the resume. Structured as short executive briefs.</p>
+
+    <hr>
+
+    <div class="case-study">
+      <div class="case-header">
+        <span class="case-title">Volvo — First BEV Truck Program (End-to-End System Leadership)</span>
+        <span class="case-metric">160+ concepts</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Situation</span>
+        <span class="row-value">First-generation battery electric truck program with new battery systems, charging tech, and safety-critical functions; high ambiguity and new organizational ways of working.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Action</span>
+        <span class="row-value">Led electrical system architecture across hardware and software and drove 160+ system concepts from early definition through build and factory execution readiness.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Impact</span>
+        <span class="row-value">Enabled transition from concept to production execution and created repeatable system integration discipline for electrification programs.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Signal</span>
+        <span class="row-value"><strong>First-of-kind program leadership under uncertainty.</strong></span>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div class="case-header">
+        <span class="case-title">Volvo — Program Governance Transformation (Concept Visibility)</span>
+        <span class="case-metric">Adopted model</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Situation</span>
+        <span class="row-value">Limited unified visibility across concepts, ECUs, maturity, and dependencies slowed decision cycles and increased execution risk.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Action</span>
+        <span class="row-value">Designed and deployed a program governance framework (Power BI-based concept tracking) to align milestones, dependencies, and stakeholder ownership.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Impact</span>
+        <span class="row-value">Improved decision clarity and execution alignment; approach became a reference model adopted across other projects.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Signal</span>
+        <span class="row-value"><strong>Systems-level governance and execution discipline.</strong></span>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div class="case-header">
+        <span class="case-title">Volvo — Wiring Diagram Delivery Process (Global Execution)</span>
+        <span class="case-metric">50+ people</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Situation</span>
+        <span class="row-value">No clear end-to-end process across tools and global teams (Visio → server functional diagram → full wiring diagram → third-party bundle diagram). High risk due to many handoffs across ~50 subsystems.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Action</span>
+        <span class="row-value">Built a streamlined delivery process across Greensboro, Bangalore, and Gothenburg; clarified steps, owners, timing, and interfaces; presented to management and executed.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Impact</span>
+        <span class="row-value">Improved delivery reliability and reduced coordination friction; saved months by preventing rework and schedule delays.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Signal</span>
+        <span class="row-value"><strong>Cross-functional execution and operational process leadership.</strong></span>
+      </div>
+    </div>
+
+    <div class="case-study">
+      <div class="case-header">
+        <span class="case-title">Halliburton — Simulation-Based Testing Platform (Capital Efficiency)</span>
+        <span class="case-metric">$10M+ opportunity</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Situation</span>
+        <span class="row-value">Surface equipment upgrades required expensive physical testing; large assets were kept offline and test infrastructure costs were very high.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Action</span>
+        <span class="row-value">Proposed and developed a simulation-based testing platform to replace physical test cycles and reduce capital spend.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Impact</span>
+        <span class="row-value">Identified $10M+ in capital efficiency opportunity; reduced reliance on physical asset downtime for validation.</span>
+      </div>
+      <div class="case-row">
+        <span class="row-label">Signal</span>
+        <span class="row-value"><strong>Innovation-driven cost reduction in capital-intensive environments.</strong></span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
