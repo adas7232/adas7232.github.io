@@ -17,40 +17,40 @@
       --text-muted: #666661;
       --border: rgba(13,13,12,0.15);
     }
-    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; min-height: 100vh; }
+    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px; min-height: 100vh; }
     .topnav { padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
-    .topnav-back { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-back { font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
     .topnav-back:hover { color: var(--text-primary); }
     .topnav-right { display: flex; gap: 2.5rem; }
-    .topnav-right a { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-right a { font-size: 14px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
     .topnav-right a:hover { color: var(--text-primary); }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 8rem; }
-    .page-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
-    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.5rem; }
-    .resume-meta { font-size: 14.5px; font-weight: 400; color: var(--text-muted); margin-bottom: 1.75rem; line-height: 1.6; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 6rem 4rem 8rem; }
+    .page-label { font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(56px, 7vw, 84px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .resume-meta { font-size: 17px; font-weight: 400; color: var(--text-muted); margin-bottom: 1.75rem; line-height: 1.6; }
     .resume-meta a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
-    .tagline { font-size: 17px; font-weight: 400; color: var(--text-secondary); line-height: 1.75; max-width: 740px; margin-bottom: 2rem; }
-    .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border: 1px solid rgba(13,13,12,0.22); border-radius: 4px; padding: 8px 18px; text-decoration: none; transition: color 0.15s, border-color 0.15s; margin-bottom: 4rem; }
+    .tagline { font-size: 20px; font-weight: 400; color: var(--text-secondary); line-height: 1.75; max-width: 860px; margin-bottom: 2rem; }
+    .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border: 1px solid rgba(13,13,12,0.22); border-radius: 4px; padding: 10px 22px; text-decoration: none; transition: color 0.15s, border-color 0.15s; margin-bottom: 4rem; }
     .pdf-link:hover { color: var(--text-primary); border-color: rgba(13,13,12,0.4); }
     hr { border: none; border-top: 1px solid var(--border); }
-    .section-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 2.75rem 0 1.5rem; }
-    .exp-item { padding: 1.75rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 6px 2.5rem; }
+    .section-label { font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 3rem 0 1.5rem; }
+    .exp-item { padding: 2rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 8px 2.5rem; }
     .exp-item:first-child { border-top: 1px solid var(--border); }
-    .exp-role { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: var(--text-primary); margin-bottom: 2px; line-height: 1.2; }
-    .exp-org { font-size: 14.5px; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; }
-    .exp-meta { font-size: 13px; font-weight: 400; color: var(--text-muted); white-space: nowrap; text-align: right; line-height: 1.7; padding-top: 3px; }
-    .bullets { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; grid-column: 1; }
-    .bullets li { font-size: 15px; font-weight: 400; color: var(--text-secondary); line-height: 1.65; padding-left: 1.1rem; position: relative; }
-    .bullets li::before { content: "—"; position: absolute; left: 0; color: var(--text-muted); font-size: 13px; top: 2px; }
-    .highlights { margin-top: 10px; grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; }
-    .highlight { font-size: 11.5px; font-weight: 400; color: var(--text-muted); border: 1px solid var(--border); border-radius: 20px; padding: 3px 12px; }
+    .exp-role { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 400; color: var(--text-primary); margin-bottom: 4px; line-height: 1.2; }
+    .exp-org { font-size: 17px; font-weight: 500; color: var(--text-secondary); margin-bottom: 14px; }
+    .exp-meta { font-size: 15px; font-weight: 400; color: var(--text-muted); white-space: nowrap; text-align: right; line-height: 1.7; padding-top: 4px; }
+    .bullets { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; grid-column: 1; }
+    .bullets li { font-size: 18px; font-weight: 400; color: var(--text-secondary); line-height: 1.7; padding-left: 1.4rem; position: relative; }
+    .bullets li::before { content: "—"; position: absolute; left: 0; color: var(--text-muted); font-size: 15px; top: 3px; }
+    .highlights { margin-top: 14px; grid-column: 1; display: flex; flex-wrap: wrap; gap: 8px; }
+    .highlight { font-size: 13px; font-weight: 400; color: var(--text-muted); border: 1px solid var(--border); border-radius: 20px; padding: 4px 14px; }
     .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
-    .skill-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); padding-right: 2rem; }
+    .skill-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border); padding-right: 2.5rem; }
     .skill-item:nth-child(odd) { border-right: 1px solid var(--border); }
     .skill-item:first-child, .skill-item:nth-child(2) { border-top: 1px solid var(--border); }
-    .skill-label { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 5px; }
-    .skill-body { font-size: 14px; font-weight: 400; color: var(--text-secondary); line-height: 1.6; }
-    .skill-item:nth-child(even) { padding-left: 2rem; padding-right: 0; }
+    .skill-item:nth-child(even) { padding-left: 2.5rem; padding-right: 0; }
+    .skill-label { font-size: 16px; font-weight: 500; color: var(--text-primary); margin-bottom: 6px; }
+    .skill-body { font-size: 16px; font-weight: 400; color: var(--text-secondary); line-height: 1.65; }
     @media (max-width: 768px) {
       .topnav { padding: 1.1rem 1.5rem; }
       .wrap { padding: 3.5rem 1.5rem 5rem; }
@@ -81,7 +81,6 @@
 
     <hr>
 
-    <!-- Education -->
     <p class="section-label">Education</p>
     <div class="exp-item">
       <div>
@@ -108,7 +107,6 @@
       <div class="exp-meta">Arlington, TX<br>2006–2010</div>
     </div>
 
-    <!-- Core Expertise -->
     <p class="section-label">Core Expertise</p>
     <div class="skills-grid">
       <div class="skill-item">
@@ -129,7 +127,6 @@
       </div>
     </div>
 
-    <!-- Experience -->
     <p class="section-label">Professional Experience</p>
 
     <div class="exp-item">
@@ -193,7 +190,6 @@
       <div class="exp-meta">USA<br>2010 — 2019</div>
     </div>
 
-    <!-- Strategic Engagements -->
     <p class="section-label">Strategic Engagements &amp; Research</p>
 
     <div class="exp-item">
@@ -218,7 +214,6 @@
       <div class="exp-meta">Jan–Jun 2025</div>
     </div>
 
-    <!-- Awards -->
     <p class="section-label">Awards &amp; Recognition</p>
     <div class="exp-item">
       <div>
@@ -231,7 +226,6 @@
       </div>
     </div>
 
-    <!-- Affiliations -->
     <p class="section-label">Affiliations</p>
     <div class="exp-item">
       <div>
