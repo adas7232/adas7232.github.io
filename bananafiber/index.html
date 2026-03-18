@@ -7,115 +7,126 @@
   <meta name="description" content="Sustainable banana fiber product venture by Abhijit Das.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #fafaf8;
-      --text-primary: #1a1a18;
-      --text-secondary: #6b6b65;
-      --text-tertiary: #a0a09a;
-      --border: rgba(26,26,24,0.12);
+      --bg: #f9f9f7;
+      --text-primary: #0d0d0c;
+      --text-secondary: #3a3a37;
+      --text-muted: #666661;
+      --border: rgba(13,13,12,0.15);
     }
     body {
       background: var(--bg);
       color: var(--text-primary);
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-weight: 300;
+      font-size: 16px;
       min-height: 100vh;
     }
     .topnav {
-      padding: 1.25rem 2rem;
+      padding: 1.5rem 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 0.5px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .topnav-back {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.09em;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.15s;
     }
     .topnav-back:hover { color: var(--text-primary); }
     .wrap {
-      max-width: 640px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 5rem 1.5rem 6rem;
+      padding: 6rem 4rem 8rem;
     }
     .page-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-muted);
       margin-bottom: 1rem;
     }
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(36px, 6vw, 52px);
-      font-weight: 300;
-      letter-spacing: -0.3px;
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 400;
+      letter-spacing: -1px;
       line-height: 1.05;
-      margin-bottom: 0.65rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
     }
     .tagline {
-      font-size: 15px;
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: 400;
       color: var(--text-secondary);
-      line-height: 1.65;
-      max-width: 440px;
-      margin-bottom: 3rem;
+      line-height: 1.7;
+      max-width: 580px;
+      margin-bottom: 4rem;
     }
     hr {
       border: none;
-      border-top: 0.5px solid var(--border);
+      border-top: 1px solid var(--border);
       margin-bottom: 2.5rem;
     }
-    .status-block {
+    .status {
       display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 2rem;
+      gap: 1.25rem;
+      align-items: flex-start;
+      margin-bottom: 3rem;
     }
     .status-dot {
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: var(--text-tertiary);
+      background: var(--text-muted);
       flex-shrink: 0;
-      margin-top: 6px;
+      margin-top: 8px;
     }
     .status-text {
-      font-size: 13.5px;
-      font-weight: 300;
+      font-size: 17px;
+      font-weight: 400;
       color: var(--text-secondary);
-      line-height: 1.65;
+      line-height: 1.7;
     }
-    .detail-rows { margin-top: 2rem; }
+    .detail-rows { display: flex; flex-direction: column; }
     .detail-row {
       display: grid;
-      grid-template-columns: 110px 1fr;
+      grid-template-columns: 130px 1fr;
       gap: 8px;
-      padding: 0.75rem 0;
-      border-bottom: 0.5px solid var(--border);
-      font-size: 13.5px;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--border);
     }
-    .detail-row:first-child { border-top: 0.5px solid var(--border); }
+    .detail-row:first-child { border-top: 1px solid var(--border); }
     .detail-label {
-      font-size: 10.5px;
-      font-weight: 400;
+      font-size: 11.5px;
+      font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
-      padding-top: 1px;
+      color: var(--text-muted);
+      padding-top: 2px;
     }
-    .detail-value { font-weight: 300; color: var(--text-secondary); }
-    @media (max-width: 480px) {
-      .topnav { padding: 1rem 1.25rem; }
-      .wrap { padding: 3rem 1.25rem 4rem; }
+    .detail-value {
+      font-size: 15.5px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .detail-value a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    @media (max-width: 768px) {
+      .topnav { padding: 1.1rem 1.5rem; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
     }
   </style>
 </head>
@@ -131,9 +142,9 @@
 
     <hr>
 
-    <div class="status-block">
+    <div class="status">
       <div class="status-dot"></div>
-      <p class="status-text">This venture is in early development. Evaluating product-market fit, sourcing, and sample production before moving forward.</p>
+      <p class="status-text">This venture is in early development. Evaluating product-market fit, sourcing, and sample production before committing further.</p>
     </div>
 
     <div class="detail-rows">
@@ -151,7 +162,11 @@
       </div>
       <div class="detail-row">
         <span class="detail-label">Updates</span>
-        <span class="detail-value">Check back here or follow on <a href="https://substack.com/@abhijitdas" target="_blank" rel="noopener" style="color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px;">Substack</a></span>
+        <span class="detail-value">Check back here or follow on <a href="https://soundsofmind.substack.com/?no_cover=true" target="_blank" rel="noopener">Substack</a></span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Contact</span>
+        <span class="detail-value"><a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a></span>
       </div>
     </div>
   </div>
