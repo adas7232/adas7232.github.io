@@ -83,7 +83,8 @@
       border-top: 0.5px solid var(--border);
       margin-bottom: 2.5rem;
     }
-    .nav-links { list-style: none; }
+    /* Nav links */
+    .nav-links { list-style: none; margin-bottom: 4rem; }
     .nav-links li:first-child a { border-top: 0.5px solid var(--border); }
     .nav-links a {
       display: flex;
@@ -106,6 +107,56 @@
     }
     .link-desc { font-size: 12.5px; font-weight: 300; color: var(--text-tertiary); }
     .link-arrow { font-size: 15px; color: var(--text-tertiary); flex-shrink: 0; }
+    /* About section */
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 1.25rem;
+    }
+    .about-text {
+      font-size: 14.5px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    .about-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .about-card {
+      padding: 1rem 0;
+      border-bottom: 0.5px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 1rem;
+    }
+    .about-card:first-child { border-top: 0.5px solid var(--border); }
+    .card-title {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+    }
+    .card-body {
+      font-size: 12.5px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      line-height: 1.55;
+      grid-column: 1;
+    }
+    .card-meta {
+      font-size: 11px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
     @media (max-width: 480px) {
       .topnav { padding: 1rem 1.25rem; gap: 1.25rem; }
       .wrap { padding: 3.5rem 1.25rem 4rem; }
@@ -119,6 +170,7 @@
     <a href="/publications.html">Publications</a>
     <a href="mailto:hello@abhijitdas.info">Contact</a>
   </nav>
+
   <div class="wrap">
     <h1>Abhijit Das</h1>
     <p class="tagline">Engineering leader at the intersection of electrification, functional safety, and systems thinking.</p>
@@ -128,7 +180,9 @@
       <span class="cred">Volvo</span>
       <span class="cred">Halliburton</span>
     </div>
+
     <hr>
+
     <ul class="nav-links">
       <li>
         <a href="/portfolio/">
@@ -149,7 +203,7 @@
         </a>
       </li>
       <li>
-        <a href="https://substack.com/@abhijitdas" target="_blank" rel="noopener">
+        <a href="https://soundsofmind.substack.com/?no_cover=true" target="_blank" rel="noopener">
           <span class="link-left">
             <span class="link-title">Writing</span>
             <span class="link-desc">Essays and analysis on Substack</span>
@@ -158,6 +212,28 @@
         </a>
       </li>
     </ul>
+
+    <p class="section-label">About</p>
+    <p class="about-text">Abhijit leads cross-functional work at the intersection of vehicle electrification and energy infrastructure. His focus is building practical systems that scale — process, architecture, and delivery — while keeping an executive view of risk, cost, and timelines.</p>
+
+    <div class="about-cards">
+      <div class="about-card">
+        <span class="card-title">Core themes</span>
+        <span class="card-meta">Now</span>
+        <span class="card-body">Electrification programs · Grid integration constraints · Systems architecture · Execution governance</span>
+      </div>
+      <div class="about-card">
+        <span class="card-title">Strength</span>
+        <span class="card-meta">Style</span>
+        <span class="card-body">Simplifying complex problems into concrete plans, crisp interfaces, and clear execution paths.</span>
+      </div>
+      <div class="about-card">
+        <span class="card-title">Duke EMBA focus</span>
+        <span class="card-meta">2024–2026</span>
+        <span class="card-body">Finance (capital allocation) · Energy markets &amp; innovation · Value chain strategy</span>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
