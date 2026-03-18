@@ -3,162 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications | Abhijit Das</title>
-  <meta name="description" content="Research publications, strategy papers, patents, and technical reports by Abhijit Das.">
-  <link rel="stylesheet" href="style.css">
+  <title>Publications — Abhijit Das</title>
+  <meta name="description" content="Research publications, patents, and technical reports by Abhijit Das.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f9f7;
+      --text-primary: #0d0d0c;
+      --text-secondary: #3a3a37;
+      --text-muted: #666661;
+      --border: rgba(13,13,12,0.15);
+    }
+    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; min-height: 100vh; }
+    .topnav { padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+    .topnav-back { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-back:hover { color: var(--text-primary); }
+    .topnav-right { display: flex; gap: 2.5rem; }
+    .topnav-right a { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-right a:hover { color: var(--text-primary); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 8rem; }
+    .page-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .intro { font-size: 18px; font-weight: 400; color: var(--text-secondary); line-height: 1.7; max-width: 640px; margin-bottom: 4rem; }
+    hr { border: none; border-top: 1px solid var(--border); }
+    .section-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 2.75rem 0 0; }
+    /* Pub items */
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item { padding: 1.5rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 5px 2.5rem; }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    .pub-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 21px; font-weight: 400; color: var(--text-primary); line-height: 1.25; margin-bottom: 4px; }
+    .pub-title em { font-style: italic; }
+    .pub-venue { font-size: 14.5px; font-weight: 400; color: var(--text-secondary); margin-bottom: 4px; }
+    .pub-desc { font-size: 14px; font-weight: 400; color: var(--text-muted); line-height: 1.6; grid-column: 1; }
+    .pub-meta { font-size: 13px; font-weight: 400; color: var(--text-muted); white-space: nowrap; text-align: right; line-height: 1.6; padding-top: 3px; }
+    .pub-tag { display: inline-block; font-size: 10.5px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border); border-radius: 3px; padding: 2px 8px; margin-left: 8px; vertical-align: middle; }
+    .footer-note { font-size: 14.5px; font-weight: 400; color: var(--text-muted); margin-top: 3rem; line-height: 1.6; }
+    @media (max-width: 768px) {
+      .topnav { padding: 1.1rem 1.5rem; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
+      .pub-item { grid-template-columns: 1fr; }
+      .pub-meta { text-align: left; }
+    }
+  </style>
 </head>
-
 <body>
+  <nav class="topnav">
+    <a class="topnav-back" href="/">← Abhijit Das</a>
+    <div class="topnav-right">
+      <a href="/resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/adas7232/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:abhijit.d80@gmail.com">Contact</a>
+    </div>
+  </nav>
 
-  <div class="nav">
-    <a class="pill" href="index.html">Home</a>
-    <a class="pill" href="publications.html">Publications</a>
-    <a class="pill" href="resume.html">Resume</a>
-    <a class="pill" href="https://www.linkedin.com/in/adas7232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a class="pill" href="https://soundsofmind.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-    <a class="pill" href="mailto:abhijit.d80L@gmail.com">Email</a>
-  </div>
-
-  <main class="container">
-
+  <div class="wrap">
+    <p class="page-label">Publications</p>
     <h1>Publications</h1>
-    <p class="muted">
-      Research, strategy papers, patents, and technical contributions spanning control systems,
-      distributed networks, electrification, and energy systems.
-    </p>
+    <p class="intro">Research, strategy papers, patents, and technical contributions spanning control systems, distributed networks, electrification, and energy systems.</p>
 
     <hr>
 
-    <!-- ================= FEATURED ================= -->
+    <!-- Featured -->
+    <p class="section-label">Featured Research &amp; Strategy Papers</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Grid Enhancing Technologies &amp; Flexible Compute for Renewable Optimization <span class="pub-tag">Paper</span></div>
+          <div class="pub-venue">Duke University — Energy Markets &amp; Innovation</div>
+          <div class="pub-desc">System-level framework integrating power flow control, geographic load shifting, and renewable alignment strategies.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Bell 429 Grip Forging Value Chain Risk Analysis <span class="pub-tag">Paper</span></div>
+          <div class="pub-venue">Duke Fuqua — Value Chain Innovation</div>
+          <div class="pub-desc">Upstream sourcing analysis of aerospace aluminum supply chains, including geopolitical and capacity constraints.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">U.S. Heavy-Duty EV Industrial Competitiveness <span class="pub-tag">Paper</span></div>
+          <div class="pub-venue">Independent Research / Duke EMBA</div>
+          <div class="pub-desc">Comparative battery chemistry, policy, and manufacturing ecosystem analysis across U.S., China, and EU.</div>
+        </div>
+        <div class="pub-meta">2025</div>
+      </div>
+    </div>
 
-    <h2>Featured Research & Strategy Papers</h2>
+    <!-- Books -->
+    <p class="section-label">Books</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Cooperative Control of Multi-Agent Systems: Optimal and Adaptive Design Approaches</em></div>
+          <div class="pub-venue">Springer-Verlag</div>
+          <div class="pub-desc">F.L. Lewis, H. Zhang, K. Hengster-Movric and A. Das.</div>
+        </div>
+        <div class="pub-meta">2014</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Nonlinear Autopilot Design for Aerospace Vehicles</em></div>
+          <div class="pub-venue">VDM Verlag</div>
+          <div class="pub-desc">A. Das and S. Mukhopadhyay. Nonlinear design of 3-axes autopilot for short range skid-to-turn homing missiles.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+    </div>
 
-    <ol class="pub-list">
+    <!-- Journal Articles -->
+    <p class="section-label">Journal Articles</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Optimal Design for Synchronization of Cooperative Systems</div>
+          <div class="pub-venue"><em>IEEE Transactions on Automatic Control</em>, 56.8</div>
+          <div class="pub-desc">H. Zhang, A. Das, and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2011</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Distributed Adaptive Control for Synchronization of Unknown Nonlinear Networked Systems</div>
+          <div class="pub-venue"><em>Automatica</em>, 46.12</div>
+          <div class="pub-desc">A. Das and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Distributed Adaptive Control for Synchronization of Second Order Systems with Unknown Nonlinearities</div>
+          <div class="pub-venue"><em>International Journal of Robust and Nonlinear Control</em>, 21.3</div>
+          <div class="pub-desc">A. Das and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Dynamic Inversion with Zero-Dynamics Stabilization for Quadrotor Control</div>
+          <div class="pub-venue"><em>IET Control Theory &amp; Applications</em>, 3.3, pp. 303–314</div>
+          <div class="pub-desc">A. Das, S. Subbarao, and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2009</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Backstepping Approach for Controlling a Quadrotor using Neural Network</div>
+          <div class="pub-venue"><em>Journal of Intelligent and Robotics Systems</em>, 56.1, p. 127</div>
+          <div class="pub-desc">A. Das, F. Lewis, and S. Subbarao.</div>
+        </div>
+        <div class="pub-meta">2009</div>
+      </div>
+    </div>
 
-      <li>
-        <strong>Grid Enhancing Technologies & Flexible Compute for Renewable Optimization</strong><br>
-        Duke University – Energy Markets & Innovation (2026)<br>
-        System-level framework integrating power flow control, geographic load shifting,
-        and renewable alignment strategies.
-      </li>
+    <!-- Patents -->
+    <p class="section-label">Patents</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Thermo-electric Generator Pyro-Fuse for Heater Application <span class="pub-tag">Pending</span></div>
+          <div class="pub-venue">Volvo Trucks</div>
+          <div class="pub-desc">N. Patel, A. Das et al.</div>
+        </div>
+        <div class="pub-meta">2024</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">One Action Smart Switch for Safe Electric Vehicle Maintenance <span class="pub-tag">Pending</span></div>
+          <div class="pub-venue">Volvo Trucks</div>
+          <div class="pub-desc">N. Patel, A. Das.</div>
+        </div>
+        <div class="pub-meta">2024</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Load Dependent Electronic Valve Actuator Regulation and Pressure Compensation</div>
+          <div class="pub-venue">US Patent 9879667B2</div>
+          <div class="pub-desc">A. Das et al.</div>
+        </div>
+        <div class="pub-meta">2019</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Variable Load Sense Spring Setting for Axial Piston Open Circuit Pump</div>
+          <div class="pub-venue">US Patent 9,879,667</div>
+          <div class="pub-desc">A. Das.</div>
+        </div>
+        <div class="pub-meta">2018</div>
+      </div>
+    </div>
 
-      <li>
-        <strong>Bell 429 Grip Forging Value Chain Risk Analysis</strong><br>
-        Duke Fuqua – Value Chain Innovation (2026)<br>
-        Upstream sourcing analysis of aerospace aluminum supply chains,
-        including geopolitical and capacity constraints.
-      </li>
+    <!-- Theses -->
+    <p class="section-label">Theses</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Neuro Adaptive Control for Aerospace and Distributed Systems</em></div>
+          <div class="pub-venue">PhD Thesis — University of Texas at Arlington</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Nonlinear Design of 3-Axes Autopilot for Short Range Skid-to-Turn Homing Missiles</em></div>
+          <div class="pub-venue">MS Thesis — IIT Kharagpur</div>
+        </div>
+        <div class="pub-meta">2006</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Fuzzy Logic Control of Inverted Pendulum</em></div>
+          <div class="pub-venue">BE Thesis — Bengal Engineering College</div>
+        </div>
+        <div class="pub-meta">2003</div>
+      </div>
+    </div>
 
-      <li>
-        <strong>U.S. Heavy-Duty EV Industrial Competitiveness</strong><br>
-        Independent Research / Duke EMBA<br>
-        Comparative battery chemistry, policy, and manufacturing ecosystem analysis
-        across U.S., China, and EU.
-      </li>
+    <p class="footer-note">Full conference paper list available upon request &nbsp;·&nbsp; <a href="mailto:abhijit.d80@gmail.com" style="color:var(--text-muted);text-decoration:underline;text-underline-offset:3px;">abhijit.d80@gmail.com</a></p>
 
-    </ol>
-
-    <hr>
-
-    <!-- ================= ACADEMIC ================= -->
-
-    <h2>Academic Publications (2004–2014)</h2>
-
-    <h3>Books</h3>
-    <ol class="pub-list">
-      <li>
-        A. Das and S. Mukhopadhyay.
-        <em>Nonlinear Autopilot Design for Aerospace Vehicles:
-        Nonlinear Design of 3-Axes Autopilot for Short Range Skid-To-Turn Homing Missiles.</em>
-        VDM Verlag, 2010.
-      </li>
-      <li>
-        F.L. Lewis, H. Zhang, K. Hengster-Movric and A. Das.
-        <em>Cooperative Control of Multi-Agent Systems: Optimal and Adaptive Design Approaches.</em>
-        Springer-Verlag, 2014.
-      </li>
-    </ol>
-
-    <h3>Journal Articles</h3>
-    <ol class="pub-list">
-      <li>
-        A. Das, F. Lewis, and S. Subbarao.
-        Backstepping Approach for Controlling a Quadrotor using Neural Network.
-        <em>Journal of Intelligent and Robotics Systems</em>, 56.1 (2009), p.127.
-      </li>
-      <li>
-        A. Das, S. Subbarao, and F. Lewis.
-        Dynamic Inversion with Zero-Dynamics Stabilization for Quadrotor Control.
-        <em>IET Control Theory & Applications</em>, 3.3 (2009), pp.303–314.
-      </li>
-      <li>
-        A. Das and F. Lewis.
-        Distributed Adaptive Control for Synchronization of Second Order Systems
-        with Unknown Nonlinearities.
-        <em>International Journal of Robust and Nonlinear Control</em>, 21.3 (2010).
-      </li>
-      <li>
-        A. Das and F. Lewis.
-        Distributed Adaptive Control for Synchronization of Unknown Nonlinear Networked Systems.
-        <em>Automatica</em>, 46.12 (2010).
-      </li>
-      <li>
-        H. Zhang, A. Das, and F. Lewis.
-        Optimal Design for Synchronization of Cooperative Systems.
-        <em>IEEE Transactions on Automatic Control</em>, 56.8 (2011).
-      </li>
-    </ol>
-
-    <h3>Patents</h3>
-    <ol class="pub-list">
-      <li>
-        A. Das (2018).
-        Variable Load Sense Spring Setting for Axial Piston Open Circuit Pump.
-        US Patent 9,879,667.
-      </li>
-      <li>
-        A. Das et al. (2019).
-        Load Dependent Electronic Valve Actuator Regulation and Pressure Compensation.
-        US Patent 9879667B2.
-      </li>
-      <li>
-        N. Patel, A. Das et al. (2024).
-        Thermo-electric Generator Pyro-Fuse for Heater Application.
-        Patent pending (Volvo Trucks).
-      </li>
-      <li>
-        N. Patel, A. Das (2024).
-        One Action Smart Switch for Safe Electric Vehicle Maintenance.
-        Patent pending (Volvo Trucks).
-      </li>
-    </ol>
-
-    <h3>Theses</h3>
-    <ol class="pub-list">
-      <li>
-        Abhijit Das.
-        <em>Neuro Adaptive Control for Aerospace and Distributed Systems.</em>
-        PhD Thesis, University of Texas at Arlington, 2010.
-      </li>
-      <li>
-        Abhijit Das.
-        <em>Nonlinear Design of 3-Axes Autopilot for Short Range Skid-to-Turn Homing Missiles.</em>
-        MS Thesis, IIT Kharagpur, 2006.
-      </li>
-      <li>
-        Abhijit Das.
-        <em>Fuzzy Logic Control of Inverted Pendulum.</em>
-        BE Thesis, Bengal Engineering College, 2003.
-      </li>
-    </ol>
-
-    <hr>
-
-    <p class="muted">
-      Full conference paper list available upon request.
-    </p>
-
-  </main>
-
+  </div>
 </body>
 </html>
