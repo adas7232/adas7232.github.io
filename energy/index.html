@@ -7,197 +7,198 @@
   <meta name="description" content="Energy research at the intersection of transportation electrification, grid infrastructure, and energy markets.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg: #fafaf8;
-      --text-primary: #1a1a18;
-      --text-secondary: #6b6b65;
-      --text-tertiary: #a0a09a;
-      --border: rgba(26,26,24,0.12);
+      --bg: #f9f9f7;
+      --text-primary: #0d0d0c;
+      --text-secondary: #3a3a37;
+      --text-muted: #666661;
+      --border: rgba(13,13,12,0.15);
     }
     body {
       background: var(--bg);
       color: var(--text-primary);
       font-family: 'DM Sans', system-ui, sans-serif;
-      font-weight: 300;
+      font-size: 16px;
       min-height: 100vh;
     }
-    /* Nav */
     .topnav {
-      padding: 1.25rem 2rem;
+      padding: 1.5rem 4rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 0.5px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
     .topnav-back {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.09em;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.15s;
     }
     .topnav-back:hover { color: var(--text-primary); }
-    .topnav-right { display: flex; gap: 1.75rem; }
+    .topnav-right { display: flex; gap: 2.5rem; }
     .topnav-right a {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.09em;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-secondary);
       text-decoration: none;
       transition: color 0.15s;
     }
     .topnav-right a:hover { color: var(--text-primary); }
-    /* Layout */
     .wrap {
-      max-width: 680px;
+      max-width: 960px;
       margin: 0 auto;
-      padding: 4.5rem 1.5rem 6rem;
+      padding: 6rem 4rem 8rem;
     }
     .page-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-muted);
       margin-bottom: 1rem;
     }
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(36px, 6vw, 52px);
-      font-weight: 300;
-      letter-spacing: -0.3px;
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 400;
+      letter-spacing: -1px;
       line-height: 1.05;
-      margin-bottom: 0.65rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
     }
     .intro {
-      font-size: 14.5px;
-      font-weight: 300;
+      font-size: 18px;
+      font-weight: 400;
       color: var(--text-secondary);
       line-height: 1.7;
-      max-width: 540px;
+      max-width: 680px;
       margin-bottom: 2rem;
     }
-    /* Quick links */
     .quick-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 1.5rem;
+      gap: 10px;
+      margin-bottom: 1.75rem;
     }
     .quick-link {
-      font-size: 11px;
-      font-weight: 400;
-      letter-spacing: 0.07em;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--text-secondary);
-      border: 0.5px solid var(--border);
+      border: 1px solid rgba(13,13,12,0.22);
       border-radius: 4px;
-      padding: 6px 12px;
+      padding: 7px 16px;
       text-decoration: none;
       transition: color 0.15s, border-color 0.15s;
     }
-    .quick-link:hover { color: var(--text-primary); border-color: rgba(26,26,24,0.3); }
-    /* Topics */
+    .quick-link:hover { color: var(--text-primary); border-color: rgba(13,13,12,0.4); }
     .topics {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 3.5rem;
+      gap: 8px;
+      margin-bottom: 4rem;
     }
     .topic {
-      font-size: 11px;
-      font-weight: 300;
-      color: var(--text-tertiary);
-      border: 0.5px solid var(--border);
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 4px 10px;
+      padding: 5px 13px;
     }
     hr {
       border: none;
-      border-top: 0.5px solid var(--border);
-      margin-bottom: 2.5rem;
+      border-top: 1px solid var(--border);
+      margin-bottom: 0;
     }
-    /* Thesis block */
     .thesis {
-      border-left: 1.5px solid var(--border);
-      padding-left: 1.25rem;
-      margin-bottom: 3.5rem;
+      border-left: 2px solid var(--border);
+      padding: 0.25rem 0 0.25rem 1.75rem;
+      margin: 2.5rem 0 4rem;
     }
     .thesis-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
-      margin-bottom: 0.85rem;
-    }
-    .thesis-text {
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--text-secondary);
-      line-height: 1.75;
-    }
-    .thesis-text strong { font-weight: 400; color: var(--text-primary); }
-    /* Work section */
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-tertiary);
+      color: var(--text-muted);
       margin-bottom: 1rem;
     }
+    .thesis-text {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 680px;
+    }
+    .thesis-text strong { font-weight: 500; color: var(--text-primary); }
+    .section-label {
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0;
+    }
     .work-list { list-style: none; }
-    .work-list li:first-child a { border-top: 0.5px solid var(--border); }
+    .work-list li:first-child .work-item { border-top: 1px solid var(--border); }
     .work-item {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
-      padding: 1.1rem 0;
-      border-bottom: 0.5px solid var(--border);
+      padding: 1.6rem 0;
+      border-bottom: 1px solid var(--border);
       text-decoration: none;
-      gap: 1rem;
+      gap: 1.5rem;
       transition: opacity 0.15s;
     }
-    .work-item:hover { opacity: 0.55; }
-    .work-left { display: flex; flex-direction: column; gap: 5px; flex: 1; }
-    .work-title-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .work-item:hover { opacity: 0.45; }
+    .work-left { display: flex; flex-direction: column; gap: 7px; flex: 1; }
+    .work-title-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .work-title {
-      font-size: 14px;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
       font-weight: 400;
       color: var(--text-primary);
       line-height: 1.2;
     }
     .work-tag {
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 0.06em;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      color: var(--text-tertiary);
-      border: 0.5px solid var(--border);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
       border-radius: 3px;
-      padding: 2px 7px;
+      padding: 3px 9px;
     }
     .work-desc {
-      font-size: 12.5px;
-      font-weight: 300;
-      color: var(--text-tertiary);
-      line-height: 1.55;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 680px;
     }
     .work-meta {
-      font-size: 12px;
-      font-weight: 300;
-      color: var(--text-tertiary);
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-muted);
       white-space: nowrap;
       flex-shrink: 0;
-      padding-top: 2px;
+      padding-top: 4px;
     }
-    @media (max-width: 480px) {
-      .topnav { padding: 1rem 1.25rem; }
-      .wrap { padding: 3rem 1.25rem 4rem; }
+    @media (max-width: 768px) {
+      .topnav { padding: 1.1rem 1.5rem; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
       .work-meta { display: none; }
     }
   </style>
@@ -208,6 +209,7 @@
     <div class="topnav-right">
       <a href="https://soundsofmind.substack.com/?no_cover=true" target="_blank" rel="noopener">Writing</a>
       <a href="/publications.html">Publications</a>
+      <a href="mailto:abhijit.d80@gmail.com">Contact</a>
     </div>
   </nav>
 
@@ -249,7 +251,7 @@
               <span class="work-title">U.S. Energy Ecosystem — Value Chain Map</span>
               <span class="work-tag">Interactive</span>
             </span>
-            <span class="work-desc">Every player in the U.S. electricity system from generation to the end customer. Color-coded by ownership type — private, non-profit, federal, municipal. Toggle highlights to see where Grid Enhancing Technologies and Virtual Transmission create value.</span>
+            <span class="work-desc">Every player in the U.S. electricity system from generation to the end customer. Color-coded by ownership type. Toggle highlights to see where Grid Enhancing Technologies and Virtual Transmission create value.</span>
           </span>
           <span class="work-meta">View →</span>
         </a>
