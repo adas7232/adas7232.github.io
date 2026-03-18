@@ -12,10 +12,10 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #fafaf8;
-      --text-primary: #1a1a18;
-      --text-secondary: #6b6b65;
-      --text-tertiary: #a0a09a;
-      --border: rgba(26,26,24,0.12);
+      --text-primary: #111110;
+      --text-secondary: #4a4a46;
+      --text-tertiary: #8a8a84;
+      --border: rgba(17,17,16,0.14);
     }
     body {
       background: var(--bg);
@@ -24,15 +24,17 @@
       font-weight: 300;
       min-height: 100vh;
     }
+
+    /* --- Top nav --- */
     .topnav {
-      padding: 1.25rem 2rem;
+      padding: 1.25rem 2.5rem;
       display: flex;
       justify-content: flex-end;
-      gap: 1.75rem;
+      gap: 2rem;
       border-bottom: 0.5px solid var(--border);
     }
     .topnav a {
-      font-size: 11px;
+      font-size: 11.5px;
       font-weight: 400;
       letter-spacing: 0.09em;
       text-transform: uppercase;
@@ -41,95 +43,110 @@
       transition: color 0.15s;
     }
     .topnav a:hover { color: var(--text-primary); }
+
+    /* --- Main wrap --- */
     .wrap {
-      max-width: 640px;
+      max-width: 660px;
       margin: 0 auto;
-      padding: 5rem 1.5rem 6rem;
+      padding: 5.5rem 2rem 7rem;
     }
+
+    /* --- Hero --- */
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(44px, 8vw, 64px);
+      font-size: clamp(52px, 9vw, 72px);
       font-weight: 300;
       letter-spacing: -0.5px;
       line-height: 1.05;
-      margin-bottom: 0.65rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
     }
     .tagline {
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.65;
-      max-width: 460px;
-      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-bottom: 2.25rem;
     }
+
+    /* --- Credentials --- */
     .creds {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
     .cred {
-      font-size: 10.5px;
+      font-size: 11px;
       font-weight: 400;
       letter-spacing: 0.09em;
       text-transform: uppercase;
       color: var(--text-secondary);
       border: 0.5px solid var(--border);
       border-radius: 4px;
-      padding: 5px 11px;
+      padding: 6px 13px;
     }
+
+    /* --- Divider --- */
     hr {
       border: none;
       border-top: 0.5px solid var(--border);
-      margin-bottom: 2.5rem;
+      margin-bottom: 2.75rem;
     }
-    /* Nav links */
-    .nav-links { list-style: none; margin-bottom: 4rem; }
+
+    /* --- Nav links --- */
+    .nav-links { list-style: none; margin-bottom: 4.5rem; }
     .nav-links li:first-child a { border-top: 0.5px solid var(--border); }
     .nav-links a {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.1rem 0;
+      padding: 1.25rem 0;
       border-bottom: 0.5px solid var(--border);
       text-decoration: none;
       gap: 1rem;
       transition: opacity 0.15s;
     }
     .nav-links a:hover { opacity: 0.5; }
-    .link-left { display: flex; flex-direction: column; gap: 3px; }
+    .link-left { display: flex; flex-direction: column; gap: 4px; }
     .link-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 400;
       color: var(--text-primary);
       line-height: 1.1;
     }
-    .link-desc { font-size: 12.5px; font-weight: 300; color: var(--text-tertiary); }
-    .link-arrow { font-size: 15px; color: var(--text-tertiary); flex-shrink: 0; }
-    /* About section */
+    .link-desc {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-tertiary);
+    }
+    .link-arrow {
+      font-size: 16px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+    }
+
+    /* --- About section --- */
     .section-label {
-      font-size: 10px;
+      font-size: 10.5px;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--text-tertiary);
       margin-bottom: 1.25rem;
     }
     .about-text {
-      font-size: 14.5px;
+      font-size: 16px;
       font-weight: 300;
       color: var(--text-secondary);
       line-height: 1.75;
-      max-width: 520px;
-      margin-bottom: 2rem;
+      max-width: 540px;
+      margin-bottom: 2.25rem;
     }
-    .about-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
+    .about-cards { display: flex; flex-direction: column; }
     .about-card {
-      padding: 1rem 0;
+      padding: 1.1rem 0;
       border-bottom: 0.5px solid var(--border);
       display: grid;
       grid-template-columns: 1fr auto;
@@ -137,33 +154,35 @@
     }
     .about-card:first-child { border-top: 0.5px solid var(--border); }
     .card-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 400;
       color: var(--text-primary);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
     .card-body {
-      font-size: 12.5px;
+      font-size: 13.5px;
       font-weight: 300;
-      color: var(--text-tertiary);
-      line-height: 1.55;
+      color: var(--text-secondary);
+      line-height: 1.6;
       grid-column: 1;
     }
     .card-meta {
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 300;
       color: var(--text-tertiary);
       letter-spacing: 0.04em;
       white-space: nowrap;
       padding-top: 2px;
     }
+
     @media (max-width: 480px) {
-      .topnav { padding: 1rem 1.25rem; gap: 1.25rem; }
-      .wrap { padding: 3.5rem 1.25rem 4rem; }
+      .topnav { padding: 1rem 1.25rem; gap: 1.5rem; }
+      .wrap { padding: 3.5rem 1.25rem 5rem; }
     }
   </style>
 </head>
 <body>
+
   <nav class="topnav">
     <a href="https://www.linkedin.com/in/abhijit-das-phd/" target="_blank" rel="noopener">LinkedIn</a>
     <a href="/resume.html">Resume</a>
@@ -172,8 +191,10 @@
   </nav>
 
   <div class="wrap">
+
     <h1>Abhijit Das</h1>
     <p class="tagline">Engineering leader at the intersection of electrification, functional safety, and systems thinking.</p>
+
     <div class="creds">
       <span class="cred">PhD</span>
       <span class="cred">Duke EMBA · 2024–26</span>
