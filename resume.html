@@ -1,183 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Abhijit Das</title>
-  <meta name="description" content="Resume of Abhijit Das — Engineering and Energy Systems Leader." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Abhijit Das</title>
+  <meta name="description" content="Resume of Abhijit Das — Engineering and Energy Systems Leader.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
-    /* Small page-specific tweaks (safe even if you keep everything in style.css) */
-    .resume-top { margin-top: 10px; }
-    .resume-header h1 { margin: 0 0 6px 0; }
-    .resume-meta { margin: 0; }
-    .resume-meta a { text-decoration: none; }
-    .section { margin-top: 26px; }
-    .section h2 { margin: 0 0 10px 0; }
-    .role { margin: 14px 0 6px 0; font-weight: 600; }
-    .role-line { margin: 0; }
-    .bullets { margin: 8px 0 0 0; padding-left: 18px; }
-    .bullets li { margin: 8px 0; }
-    .tagline { margin-top: 6px; }
-    .btn-row { margin: 16px 0 6px 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f9f7;
+      --text-primary: #0d0d0c;
+      --text-secondary: #3a3a37;
+      --text-muted: #666661;
+      --border: rgba(13,13,12,0.15);
+    }
+    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 16px; min-height: 100vh; }
+    .topnav { padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+    .topnav-back { font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-back:hover { color: var(--text-primary); }
+    .topnav-right { display: flex; gap: 2.5rem; }
+    .topnav-right a { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-right a:hover { color: var(--text-primary); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 8rem; }
+    .page-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(48px, 6vw, 72px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .resume-meta { font-size: 14.5px; font-weight: 400; color: var(--text-muted); margin-bottom: 1.75rem; line-height: 1.6; }
+    .resume-meta a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+    .tagline { font-size: 17px; font-weight: 400; color: var(--text-secondary); line-height: 1.75; max-width: 740px; margin-bottom: 2rem; }
+    .pdf-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); border: 1px solid rgba(13,13,12,0.22); border-radius: 4px; padding: 8px 18px; text-decoration: none; transition: color 0.15s, border-color 0.15s; margin-bottom: 4rem; }
+    .pdf-link:hover { color: var(--text-primary); border-color: rgba(13,13,12,0.4); }
+    hr { border: none; border-top: 1px solid var(--border); }
+    .section-label { font-size: 11.5px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 2.75rem 0 1.5rem; }
+    .exp-item { padding: 1.75rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 6px 2.5rem; }
+    .exp-item:first-child { border-top: 1px solid var(--border); }
+    .exp-role { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 400; color: var(--text-primary); margin-bottom: 2px; line-height: 1.2; }
+    .exp-org { font-size: 14.5px; font-weight: 500; color: var(--text-secondary); margin-bottom: 10px; }
+    .exp-meta { font-size: 13px; font-weight: 400; color: var(--text-muted); white-space: nowrap; text-align: right; line-height: 1.7; padding-top: 3px; }
+    .bullets { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; grid-column: 1; }
+    .bullets li { font-size: 15px; font-weight: 400; color: var(--text-secondary); line-height: 1.65; padding-left: 1.1rem; position: relative; }
+    .bullets li::before { content: "—"; position: absolute; left: 0; color: var(--text-muted); font-size: 13px; top: 2px; }
+    .highlights { margin-top: 10px; grid-column: 1; display: flex; flex-wrap: wrap; gap: 6px; }
+    .highlight { font-size: 11.5px; font-weight: 400; color: var(--text-muted); border: 1px solid var(--border); border-radius: 20px; padding: 3px 12px; }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    .skill-item { padding: 1.25rem 0; border-bottom: 1px solid var(--border); padding-right: 2rem; }
+    .skill-item:nth-child(odd) { border-right: 1px solid var(--border); }
+    .skill-item:first-child, .skill-item:nth-child(2) { border-top: 1px solid var(--border); }
+    .skill-label { font-size: 13px; font-weight: 500; color: var(--text-primary); margin-bottom: 5px; }
+    .skill-body { font-size: 14px; font-weight: 400; color: var(--text-secondary); line-height: 1.6; }
+    .skill-item:nth-child(even) { padding-left: 2rem; padding-right: 0; }
+    @media (max-width: 768px) {
+      .topnav { padding: 1.1rem 1.5rem; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
+      .exp-item { grid-template-columns: 1fr; }
+      .exp-meta { text-align: left; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-item:nth-child(odd) { border-right: none; }
+      .skill-item:nth-child(even) { padding-left: 0; }
+    }
   </style>
 </head>
-
 <body>
-
-  <div class="nav">
-    <a class="pill" href="index.html">Home</a>
-    <a class="pill" href="publications.html">Publications</a>
-    <a class="pill" href="resume.html">Resume</a>
-    <a class="pill" href="https://www.linkedin.com/in/adas7232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    <a class="pill" href="https://soundsofmind.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
-    <a class="pill" href="mailto:abhijit.d80@gmail.com">Email</a>
-  </div>
-
-  <main class="container resume-top">
-
-    <!-- Header -->
-    <div class="resume-header">
-      <h1>Abhijit Das, Ph.D.</h1>
-      <p class="resume-meta muted">
-        Greensboro, NC · (+1) 817-521-0584 ·
-        <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/adas7232" target="_blank" rel="noopener noreferrer">LinkedIn: adas7232</a> ·
-        <span>U.S. Citizen</span>
-      </p>
-
-      <div class="btn-row">
-        <a class="pill" href="Das_Abhijit_Resume_Energy.pdf" target="_blank" rel="noopener noreferrer">
-          Download PDF Resume
-        </a>
-      </div>
-
-      <p class="tagline">
-        <strong>Engineering and Energy Systems Leader</strong> with 15+ years of experience delivering complex electrification
-        programs in regulated and infrastructure-constrained environments. PhD in Electrical Engineering (4,000+ citations)
-        and Duke Executive MBA candidate. Proven record of $10M+ cost savings, cross-functional leadership, and structured
-        decision-making across high-stakes programs.
-      </p>
+  <nav class="topnav">
+    <a class="topnav-back" href="/">← Abhijit Das</a>
+    <div class="topnav-right">
+      <a href="/publications.html">Publications</a>
+      <a href="https://www.linkedin.com/in/adas7232/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:abhijit.d80@gmail.com">Contact</a>
     </div>
+  </nav>
 
-    <hr />
+  <div class="wrap">
+    <p class="page-label">Resume</p>
+    <h1>Abhijit Das, Ph.D.</h1>
+    <p class="resume-meta">Greensboro, NC &nbsp;·&nbsp; <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/adas7232/" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; U.S. Citizen</p>
+    <p class="tagline">Engineering and Energy Systems Leader with 15+ years of experience delivering complex electrification programs in regulated and infrastructure-constrained environments. PhD in Electrical Engineering (4,000+ citations) and Duke Executive MBA candidate. Proven record of $10M+ cost savings, cross-functional leadership, and structured decision-making across high-stakes programs.</p>
+    <a class="pdf-link" href="/Das_Abhijit_Resume_Energy.pdf" target="_blank" rel="noopener">Download PDF ↗</a>
+
+    <hr>
 
     <!-- Education -->
-    <section class="section">
-      <h2>Education</h2>
-
-      <p class="role-line"><strong>Duke University, Fuqua School of Business</strong> — Executive MBA (Expected 2026) · Durham, NC</p>
-      <ul class="bullets">
-        <li>Executive focus on capital allocation and financial decision-making (NPV, IRR, WACC) for technology-driven organizations.</li>
-        <li>Applied strategy and value chain analysis to complex industrial and infrastructure systems.</li>
-        <li>Coursework in organizational leadership, competitive strategy, and market-driven decision frameworks.</li>
-      </ul>
-
-      <p class="role-line" style="margin-top:14px;"><strong>University of Texas at Arlington</strong> — Ph.D. in Electrical Engineering (2006–2010) · Arlington, TX</p>
-      <ul class="bullets">
-        <li>Focus: Nonlinear and Adaptive Control Systems.</li>
-        <li>Recipient of Dean Dissertation Fellowship and STEM Doctoral Fellowship.</li>
-      </ul>
-    </section>
+    <p class="section-label">Education</p>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Executive MBA</div>
+        <div class="exp-org">Duke University — Fuqua School of Business</div>
+        <ul class="bullets">
+          <li>Executive focus on capital allocation and financial decision-making (NPV, IRR, WACC) for technology-driven organizations.</li>
+          <li>Applied strategy and value chain analysis to complex industrial and infrastructure systems.</li>
+          <li>Coursework in organizational leadership, competitive strategy, and market-driven decision frameworks.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">Durham, NC<br>Expected 2026</div>
+    </div>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Ph.D. — Electrical Engineering</div>
+        <div class="exp-org">University of Texas at Arlington</div>
+        <ul class="bullets">
+          <li>Focus: Nonlinear and Adaptive Control Systems.</li>
+          <li>Recipient of Dean Dissertation Fellowship and STEM Doctoral Fellowship.</li>
+          <li>4,000+ academic citations across control systems and multi-agent coordination research.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">Arlington, TX<br>2006–2010</div>
+    </div>
 
     <!-- Core Expertise -->
-    <section class="section">
-      <h2>Core Expertise</h2>
-      <ul class="bullets">
-        <li><strong>Energy Systems Strategy:</strong> Grid-Constrained Electrification, Transmission Congestion Awareness, Load Growth Planning, Zero-Emission Pathways, V2G Infrastructure Alignment.</li>
-        <li><strong>Leadership &amp; Governance:</strong> Cross-functional Program Leadership, Executive Decision Reviews, Agile/DevOps Integration, Regulatory Compliance, Mentorship.</li>
-        <li><strong>Financial &amp; Strategic Analysis:</strong> Capital Allocation (IRR/WACC/NPV), Energy Market Signals (LMP/ISO Awareness), Risk Management under Infrastructure Constraints.</li>
-        <li><strong>Technical Foundation:</strong> Systems Engineering, Control Systems, Vehicle Architecture, Heavy-Duty Electrification.</li>
-      </ul>
-    </section>
+    <p class="section-label">Core Expertise</p>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <div class="skill-label">Energy Systems Strategy</div>
+        <div class="skill-body">Grid-constrained electrification · Transmission congestion awareness · Load growth planning · Zero-emission pathways · V2G infrastructure alignment</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Leadership &amp; Governance</div>
+        <div class="skill-body">Cross-functional program leadership · Executive decision reviews · Agile / DevOps integration · Regulatory compliance · Mentorship</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Financial &amp; Strategic Analysis</div>
+        <div class="skill-body">Capital allocation (IRR / WACC / NPV) · Energy market signals (LMP / ISO awareness) · Risk management under infrastructure constraints</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-label">Technical Foundation</div>
+        <div class="skill-body">Systems engineering · Control systems · Vehicle architecture · Heavy-duty electrification · Functional safety</div>
+      </div>
+    </div>
 
-    <!-- Professional Experience -->
-    <section class="section">
-      <h2>Professional Experience</h2>
+    <!-- Experience -->
+    <p class="section-label">Professional Experience</p>
 
-      <p class="role">Volvo Trucks North America (2021–Present)</p>
-      <p class="role-line muted">Lead System Strategist – Battery Electric &amp; ICE Trucks · Greensboro, NC</p>
-      <ul class="bullets">
-        <li>Provide system-level leadership for 5 concurrent BEV and ICE vehicle programs, aligning electrification roadmaps with regulatory milestones, charging readiness, and heavy-duty grid capacity constraints.</li>
-        <li>Direct coordination across engineering, validation, purchasing, and compliance organizations; own prioritization, trade-offs, and delivery sequencing for major platform commitments.</li>
-        <li>Co-chair, SAE Heavy Duty Charging Consortium; influence international standards for vehicle-to-grid interfaces and large-load electrification integration.</li>
-        <li>Replaced legacy decision processes with structured governance workflows, improving transparency, review readiness, and executive decision velocity.</li>
-      </ul>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Lead System Strategist — Battery Electric &amp; ICE Trucks</div>
+        <div class="exp-org">Volvo Trucks North America</div>
+        <ul class="bullets">
+          <li>Provide system-level leadership for 5 concurrent BEV and ICE vehicle programs, aligning electrification roadmaps with regulatory milestones, charging readiness, and heavy-duty grid capacity constraints.</li>
+          <li>Direct coordination across engineering, validation, purchasing, and compliance organizations; own prioritization, trade-offs, and delivery sequencing for major platform commitments.</li>
+          <li>Co-chair, SAE Heavy Duty Charging Consortium; influence international standards for vehicle-to-grid interfaces and large-load electrification integration.</li>
+          <li>Replaced legacy decision processes with structured governance workflows, improving transparency, review readiness, and executive decision velocity.</li>
+        </ul>
+        <div class="highlights">
+          <span class="highlight">160+ system concepts</span>
+          <span class="highlight">First BEV truck program</span>
+          <span class="highlight">50+ stakeholders aligned</span>
+          <span class="highlight">SAE co-chair</span>
+        </div>
+      </div>
+      <div class="exp-meta">Greensboro, NC<br>2021 — Present</div>
+    </div>
 
-      <p class="role">Omni Powertrain Technologies (2020–2021)</p>
-      <p class="role-line muted">Engineering Manager – Electrical · Houston, TX</p>
-      <ul class="bullets">
-        <li>Established and led the North American eMobility engineering function, scaling capability to support fully electric and hybrid vehicle programs.</li>
-        <li>Improved project success metrics by 60% and organizational efficiency by 30% through disciplined Agile and Azure DevOps implementation.</li>
-        <li>Directed cross-regional technical execution to meet customer, regulatory, and maintainability requirements.</li>
-      </ul>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Engineering Manager — Electrical</div>
+        <div class="exp-org">Omni Powertrain Technologies</div>
+        <ul class="bullets">
+          <li>Established and led the North American eMobility engineering function, scaling capability to support fully electric and hybrid vehicle programs.</li>
+          <li>Improved project success metrics by 60% and organizational efficiency by 30% through disciplined Agile and Azure DevOps implementation.</li>
+          <li>Directed cross-regional technical execution to meet customer, regulatory, and maintainability requirements.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">Houston, TX<br>2020 — 2021</div>
+    </div>
 
-      <p class="role">Halliburton (2019–2020)</p>
-      <p class="role-line muted">Principal R&amp;D Engineer · Houston, TX</p>
-      <ul class="bullets">
-        <li>Delivered $10M+ in cost savings by developing predictive modeling and simulation frameworks that reduced physical testing and capital expenditure.</li>
-        <li>Introduced Agile and version control discipline across global R&amp;D teams, accelerating time-to-market and improving cross-team collaboration.</li>
-      </ul>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Principal R&amp;D Engineer</div>
+        <div class="exp-org">Halliburton</div>
+        <ul class="bullets">
+          <li>Delivered $10M+ in cost savings by developing predictive modeling and simulation frameworks that reduced physical testing and capital expenditure.</li>
+          <li>Introduced Agile and version control discipline across global R&amp;D teams, accelerating time-to-market and improving cross-team collaboration.</li>
+        </ul>
+        <div class="highlights">
+          <span class="highlight">$10M+ cost savings</span>
+          <span class="highlight">$1M+ deal + patent</span>
+        </div>
+      </div>
+      <div class="exp-meta">Houston, TX<br>2019 — 2020</div>
+    </div>
 
-      <p class="role">Danfoss &amp; Caterpillar Inc. (2010–2019)</p>
-      <p class="role-line muted">Engineering Roles – Controls, Systems, Product Strategy · USA</p>
-      <ul class="bullets">
-        <li>Led engineering initiatives that secured $1M+ in new customer contracts across advanced electrified platforms.</li>
-        <li>Optimized validation cycles and compliance processes, improving product reliability and accelerating market entry for energy-intensive equipment.</li>
-      </ul>
-    </section>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Engineering Roles — Controls, Systems, Product Strategy</div>
+        <div class="exp-org">Danfoss &amp; Caterpillar Inc.</div>
+        <ul class="bullets">
+          <li>Led engineering initiatives that secured $1M+ in new customer contracts across advanced electrified platforms.</li>
+          <li>Optimized validation cycles and compliance processes, improving product reliability and accelerating market entry for energy-intensive equipment.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">USA<br>2010 — 2019</div>
+    </div>
 
-    <!-- Strategic Engagements & Research -->
-    <section class="section">
-      <h2>Strategic Engagements &amp; Research</h2>
+    <!-- Strategic Engagements -->
+    <p class="section-label">Strategic Engagements &amp; Research</p>
 
-      <p class="role-line"><strong>Applied Research: Energy Markets &amp; Innovation</strong> (2026) · Fuqua School of Business, Duke University</p>
-      <ul class="bullets">
-        <li>Developed an applied framework for mitigating U.S. transmission congestion using GETs and flexible demand coordination under reliability and market constraints.</li>
-      </ul>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Applied Research — Energy Markets &amp; Innovation</div>
+        <div class="exp-org">Duke Fuqua School of Business</div>
+        <ul class="bullets">
+          <li>Developed an applied framework for mitigating U.S. transmission congestion using Grid Enhancing Technologies and flexible demand coordination under reliability and market constraints.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">2026</div>
+    </div>
 
-      <p class="role-line" style="margin-top:14px;"><strong>Student Consultant — Fuqua Client Consulting Practicum</strong> (Jan 2025 – Jun 2025) · Client: Tapestry Networks</p>
-      <ul class="bullets">
-        <li>Led go-to-market strategy development for executive education initiatives, delivering pricing and positioning recommendations using structured competitive frameworks.</li>
-      </ul>
-    </section>
+    <div class="exp-item">
+      <div>
+        <div class="exp-role">Student Consultant — Client Consulting Practicum</div>
+        <div class="exp-org">Fuqua School of Business · Client: Tapestry Networks</div>
+        <ul class="bullets">
+          <li>Led go-to-market strategy development for executive education initiatives, delivering pricing and positioning recommendations using structured competitive frameworks.</li>
+        </ul>
+      </div>
+      <div class="exp-meta">Jan–Jun 2025</div>
+    </div>
 
     <!-- Awards -->
-    <section class="section">
-      <h2>Awards &amp; Recognition</h2>
-      <ul class="bullets">
-        <li>Technical and Service Excellence Award (2017)</li>
-        <li>Certificate of Appreciation for cross-functional leadership (2016)</li>
-        <li>Secured $1M+ in new customer contracts</li>
-        <li>Delivered $10M+ cost savings through simulation-driven optimization</li>
-      </ul>
-    </section>
-
-    <!-- Patents -->
-    <section class="section">
-      <h2>Patents &amp; Technical Contributions</h2>
-      <ul class="bullets">
-        <li>Holder of 5+ granted and pending patents across electric vehicle systems, control architectures, and fluid power technologies.</li>
-        <li>Author of technical publications in nonlinear and multi-agent control systems with 4,000+ academic citations.</li>
-        <li>Full list of patents and publications: <a href="https://abhijitdas.info/publications" target="_blank" rel="noopener noreferrer">abhijitdas.info/publications</a></li>
-      </ul>
-    </section>
+    <p class="section-label">Awards &amp; Recognition</p>
+    <div class="exp-item">
+      <div>
+        <ul class="bullets">
+          <li>CERAWeek 2026 NextGen Cohort — selected for Innovators Row poster presentation</li>
+          <li>Technical and Service Excellence Award (2017)</li>
+          <li>Certificate of Appreciation for cross-functional leadership (2016)</li>
+          <li>Dean Dissertation Fellowship &amp; STEM Doctoral Fellowship — UT Arlington</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Affiliations -->
-    <section class="section">
-      <h2>Affiliations</h2>
-      <ul class="bullets">
-        <li>Co-chair, SAE Heavy Duty Charging Consortium</li>
-        <li>Senior Member, IEEE</li>
-      </ul>
-    </section>
+    <p class="section-label">Affiliations</p>
+    <div class="exp-item">
+      <div>
+        <ul class="bullets">
+          <li>Co-chair, SAE Heavy Duty Charging Consortium</li>
+          <li>Senior Member, IEEE</li>
+        </ul>
+      </div>
+    </div>
 
-    <hr />
-    <p class="muted">
-      Source: Resume PDF content used to create this HTML version. :contentReference[oaicite:1]{index=1}
-    </p>
-
-  </main>
-
+  </div>
 </body>
 </html>
