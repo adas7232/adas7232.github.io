@@ -223,7 +223,7 @@ const PHASES = [
       {col:'#007a6b', speed:.0018, interval:26, width:2.8, glow:'teal', virtual:true},
     ],
     showRC:true, hyperCol:'#007a6b', curtShow:false, showCFE:true,
-    transferUtil:100, renewableUtil:100
+    transferUtil:85, renewableUtil:100
   }
 ];
 
@@ -432,25 +432,24 @@ function updateSvgPhase(phase, ts){
   panel.appendChild(create('text', {x:panelX+16, y:panelY+22, class:'badge-text-strong', fill:'rgba(13,24,41,.70)'})).textContent = 'USABLE TRANSFER + RENEWABLE ABSORPTION';
 
   function donut(cx, cy, r, pct, col, label, sublabel){
-    const start = -Math.PI/2;
-    const end = start + (Math.PI*2)*(pct/100);
-    const x1 = cx + r*Math.cos(start), y1 = cy + r*Math.sin(start);
-    const x2 = cx + r*Math.cos(end), y2 = cy + r*Math.sin(end);
-    const large = pct > 50 ? 1 : 0;
-    const d = `M ${cx} ${cy-r} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
+    const c = 2 * Math.PI * r;
     panel.appendChild(create('circle', {cx, cy, r, fill:'none', stroke:'rgba(0,48,135,.08)', 'stroke-width':12}));
-    if(pct > 0){
-      panel.appendChild(create('path', {d, fill:'none', stroke:col, 'stroke-width':12, 'stroke-linecap':'round'}));
-    }
+    const prog = create('circle', {
+      cx, cy, r, fill:'none', stroke:col, 'stroke-width':12,
+      'stroke-linecap':'round',
+      transform:`rotate(-90 ${cx} ${cy})`,
+      'stroke-dasharray':`${(pct/100)*c} ${c}`
+    });
+    panel.appendChild(prog);
     panel.appendChild(create('text', {x:cx, y:cy-2, 'text-anchor':'middle', class:'badge-text-strong', fill:col})).textContent = `${pct}%`;
-    panel.appendChild(create('text', {x:cx, y:cy+18, 'text-anchor':'middle', class:'badge-text', fill:'rgba(13,24,41,.62)'})).textContent = label;
-    panel.appendChild(create('text', {x:cx, y:cy+r+22, 'text-anchor':'middle', class:'badge-text', fill:'rgba(13,24,41,.56)'})).textContent = sublabel;
+    panel.appendChild(create('text', {x:cx, y:cy+18, 'text-anchor':'middle', class:'badge-text', fill:'rgba(13,24,41,.68)'})).textContent = label;
+    panel.appendChild(create('text', {x:cx, y:cy+r+20, 'text-anchor':'middle', class:'badge-text', fill:'rgba(13,24,41,.56)'})).textContent = sublabel;
   }
 
-  donut(panelX+110, panelY+88, 42, pd.transferUtil, pd.col, 'A–B transfer', phase===0 ? 'Corridor partly used' : phase===1 ? 'GET unlocks headroom' : 'Corridor fully used');
-  donut(panelX+285, panelY+88, 42, pd.renewableUtil, '#1a7a4a', 'Renewable use', phase===0 ? 'Clean energy curtailed' : phase===1 ? 'Curtailment reduced' : 'All clean energy absorbed');
+  donut(panelX+125, panelY+88, 42, pd.transferUtil, pd.col, 'A–B transfer', phase===0 ? 'Corridor partly used' : phase===1 ? 'GET unlocks headroom' : 'Higher corridor use');
+  donut(panelX+315, panelY+88, 42, pd.renewableUtil, '#1a7a4a', 'Renewable use', phase===0 ? 'Clean energy curtailed' : phase===1 ? 'Curtailment reduced' : 'All clean energy absorbed');
 
-  panel.appendChild(create('text', {x:panelX+16, y:panelY+152, class:'badge-text', fill:'rgba(13,24,41,.62)'})).textContent = `Bottom metrics match this phase: transfer ${pd.transferUtil}% and renewable absorption ${pd.renewableUtil}%.`;
+  panel.appendChild(create('text', {x:panelX+16, y:panelY+150, class:'badge-text', fill:'rgba(13,24,41,.62)'})).textContent = `Phase values: transfer ${pd.transferUtil}% · renewable absorption ${pd.renewableUtil}%.`;
   badgeLayer.appendChild(panel);
 
   if(pd.showCFE){
