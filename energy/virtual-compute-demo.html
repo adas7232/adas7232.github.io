@@ -1,512 +1,579 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compute as Virtual Transmission - Interactive Demo</title>
-  <style>
-    :root{
-      --bg:#0b1220;
-      --panel:#111a2e;
-      --card:#16213a;
-      --text:#e8eefc;
-      --muted:#a8b3cf;
-      --green:#27c281;
-      --yellow:#f3b63f;
-      --red:#e05a5a;
-      --blue:#4da3ff;
-      --purple:#a66cff;
-      --line:#7d8bb0;
-      --white:#ffffff;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Compute as Virtual Transmission — CERAWeek 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#eceae3}
+:root{
+  --bg:#eceae3;
+  --ink:#0d1829;
+  --blue:#003087;
+  --green:#1a7a4a;
+  --wind:#1a5fa0;
+  --red:#b83232;
+  --gold:#b07a10;
+  --teal:#007a6b;
+  --brown:#5d4637;
+}
+#app{position:relative;width:100vw;height:100vh;background:var(--bg)}
+#staticSvg,#fx,#ui{position:absolute;inset:0}
+#staticSvg{width:100%;height:100%;display:block}
+#fx{pointer-events:none}
+#ui{pointer-events:none;font-family:'Barlow Condensed',sans-serif;color:var(--ink)}
 
-    * { box-sizing: border-box; }
+/* cleaner type + less blur */
+text, .mono, .condensed {
+  text-rendering:geometricPrecision;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
 
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:linear-gradient(180deg, #09111d 0%, #0d1730 100%);
-      color:var(--text);
-    }
+/* header */
+#hdr{
+  position:absolute;top:0;left:0;right:0;height:60px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 40px;background:rgba(236,234,227,.96);
+  border-bottom:1px solid rgba(0,48,135,.10)
+}
+#htitle{font-size:21px;font-weight:700;letter-spacing:2.4px;text-transform:uppercase;color:var(--blue)}
+#htitle em{font-style:normal;color:var(--teal)}
+#hsub{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:1.4px;color:rgba(13,24,41,.35);text-transform:uppercase;margin-top:3px}
+#hright{display:flex;align-items:center;gap:18px}
+#pdots{display:flex;gap:7px}
+.pd{width:9px;height:9px;border-radius:50%;background:rgba(0,48,135,.14);transition:background .35s,box-shadow .35s}
+.pd.on{background:var(--blue);box-shadow:0 0 0 3px rgba(0,48,135,.18)}
+#ptag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;font-weight:600}
+#attr{position:absolute;top:68px;right:34px;font-family:'IBM Plex Mono',monospace;font-size:8.5px;color:rgba(13,24,41,.22);text-align:right;line-height:1.9}
+#pbanner{position:absolute;top:68px;left:50%;transform:translateX(-50%);font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;padding:5px 22px;border-radius:4px;border:1.2px solid;white-space:nowrap;background:rgba(236,234,227,.9);transition:all .35s}
+#mbar{position:absolute;bottom:50px;left:28px;right:28px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.mc{background:rgba(255,255,255,.92);border:1px solid rgba(0,48,135,.10);border-radius:8px;padding:11px 14px;box-shadow:0 1px 5px rgba(0,48,135,.04)}
+.mlabel{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:2px;color:rgba(13,24,41,.32);margin-bottom:5px;text-transform:uppercase}
+.mval{font-family:'IBM Plex Mono',monospace;font-size:26px;font-weight:500;line-height:1;transition:color .35s}
+.msub{font-size:11px;color:rgba(13,24,41,.38);margin-top:3px}
+#narr{position:absolute;bottom:14px;left:28px;right:28px;text-align:center;font-size:13px;color:rgba(13,24,41,.46);line-height:1.55;letter-spacing:.2px}
+#prog{position:absolute;bottom:0;left:0;height:2.5px;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .08s linear}
 
-    .wrap{
-      max-width:1400px;
-      margin:0 auto;
-      padding:20px;
-    }
-
-    .top{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:flex-start;
-      margin-bottom:18px;
-    }
-
-    .hero{
-      flex:2;
-      min-width:320px;
-      background:rgba(17,26,46,0.92);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:18px;
-      padding:18px 20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .hero h1{
-      margin:0 0 8px 0;
-      font-size:28px;
-      line-height:1.2;
-    }
-
-    .hero p{
-      margin:8px 0 0 0;
-      color:var(--muted);
-      line-height:1.45;
-      font-size:15px;
-    }
-
-    .controls{
-      flex:1;
-      min-width:300px;
-      background:rgba(17,26,46,0.92);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:18px;
-      padding:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-    }
-
-    .controls h2{
-      margin:0 0 12px 0;
-      font-size:18px;
-    }
-
-    .btns{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-bottom:14px;
-    }
-
-    button{
-      border:none;
-      border-radius:12px;
-      padding:10px 14px;
-      font-weight:700;
-      cursor:pointer;
-      color:#08101d;
-      transition:transform 0.15s ease, opacity 0.15s ease;
-    }
-
-    button:hover{ transform:translateY(-1px); }
-    button:active{ transform:translateY(1px); }
-
-    .b1{ background:var(--yellow); }
-    .b2{ background:var(--green); }
-    .b3{ background:var(--blue); }
-    .b4{ background:#d8dde8; }
-
-    .legend{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(120px,1fr));
-      gap:8px 12px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    .legend-item{
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-
-    .swatch{
-      width:14px;
-      height:14px;
-      border-radius:4px;
-      display:inline-block;
-    }
-
-    .board{
-      background:rgba(17,26,46,0.92);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:18px;
-      padding:14px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.25);
-      overflow:hidden;
-    }
-
-    svg{
-      width:100%;
-      height:auto;
-      display:block;
-      background:linear-gradient(180deg, rgba(22,33,58,0.6) 0%, rgba(13,23,48,0.8) 100%);
-      border-radius:16px;
-    }
-
-    .kpi-grid{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(180px,1fr));
-      gap:14px;
-      margin-top:16px;
-    }
-
-    .kpi{
-      background:rgba(17,26,46,0.92);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px;
-      padding:16px;
-    }
-
-    .kpi .label{
-      font-size:13px;
-      color:var(--muted);
-      margin-bottom:8px;
-    }
-
-    .kpi .value{
-      font-size:28px;
-      font-weight:800;
-    }
-
-    .status{
-      margin-top:16px;
-      background:rgba(17,26,46,0.92);
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:16px;
-      padding:16px;
-    }
-
-    .status h3{
-      margin:0 0 8px 0;
-      font-size:18px;
-    }
-
-    .status p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.5;
-    }
-
-    .foot{
-      margin-top:12px;
-      color:var(--muted);
-      font-size:12px;
-    }
-
-    .small{
-      font-size:12px;
-      color:var(--muted);
-    }
-
-    @media (max-width: 950px){
-      .kpi-grid{
-        grid-template-columns:repeat(2,minmax(180px,1fr));
-      }
-    }
-
-    @media (max-width: 640px){
-      .kpi-grid{
-        grid-template-columns:1fr;
-      }
-      .hero h1{
-        font-size:22px;
-      }
-    }
-  </style>
+/* svg nodes */
+.node-rect{fill:rgba(255,255,255,.96);stroke-width:1;shape-rendering:geometricPrecision}
+.node-accent{shape-rendering:crispEdges}
+.section-label{font:600 10px 'IBM Plex Mono', monospace;fill:rgba(0,48,135,.26);letter-spacing:1px}
+.node-title{font:700 15px 'Barlow Condensed', sans-serif;fill:var(--ink)}
+.node-sub{font:400 12px 'Barlow Condensed', sans-serif;fill:rgba(13,24,41,.42)}
+.badge-text{font:500 10.5px 'IBM Plex Mono', monospace}
+.badge-text-strong{font:600 11px 'IBM Plex Mono', monospace}
+.path-track{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.path-main{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.connector{fill:none;vector-effect:non-scaling-stroke}
+.hidden{display:none}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="top">
-      <div class="hero">
-        <h1>Compute as Virtual Transmission</h1>
-        <p>
-          This interactive demo shows a simple system-level idea:
-          renewable energy is available, but one transmission corridor is congested.
-          First, <strong>Grid Enhancing Technologies (GET)</strong> relieve that bottleneck.
-          Then the system calculates how much <strong>virtual compute</strong> can be moved into the region
-          to absorb clean energy without recreating congestion.
-        </p>
+<div id="app">
+  <svg id="staticSvg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet" aria-label="Grid simulator diagram">
+    <defs>
+      <filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%">
+        <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#003087" flood-opacity="0.08"/>
+      </filter>
+      <filter id="glowRed" x="-20%" y="-60%" width="140%" height="220%">
+        <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#b83232" flood-opacity="0.30"/>
+      </filter>
+      <filter id="glowGold" x="-20%" y="-60%" width="140%" height="220%">
+        <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#b07a10" flood-opacity="0.20"/>
+      </filter>
+      <filter id="glowTeal" x="-20%" y="-60%" width="140%" height="220%">
+        <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#007a6b" flood-opacity="0.22"/>
+      </filter>
+    </defs>
+
+    <!-- dot grid -->
+    <g id="grid"></g>
+
+    <!-- labels -->
+    <g id="sectionLabels">
+      <text class="section-label" x="151" y="162" text-anchor="middle">GENERATION</text>
+      <text class="section-label" x="404" y="162" text-anchor="middle">POINT A</text>
+      <text class="section-label" x="960" y="162" text-anchor="middle">PARALLEL TRANSMISSION LINES</text>
+      <text class="section-label" x="1516" y="162" text-anchor="middle">POINT B</text>
+      <text class="section-label" x="1797" y="162" text-anchor="middle">LOAD REGION B</text>
+    </g>
+
+    <!-- connectors -->
+    <g id="connectors"></g>
+
+    <!-- line tracks and active lines -->
+    <g id="lineLayer"></g>
+
+    <!-- dynamic badges -->
+    <g id="badgeLayer"></g>
+
+    <!-- nodes -->
+    <g id="nodeLayer"></g>
+
+    <!-- GET layer -->
+    <g id="getLayer"></g>
+
+    <!-- CFE badge -->
+    <g id="cfeLayer"></g>
+  </svg>
+
+  <canvas id="fx"></canvas>
+
+  <div id="ui">
+    <div id="hdr">
+      <div>
+        <div id="htitle">Compute as <em>Virtual Transmission</em></div>
+        <div id="hsub">Grid Enhancing Technologies · Parallel Line Redistribution · Renewable-Aware Demand Coordination</div>
       </div>
-
-      <div class="controls">
-        <h2>Demo Controls</h2>
-        <div class="btns">
-          <button class="b1" onclick="applyGET()">1. Apply GET</button>
-          <button class="b2" onclick="addVirtualCompute()">2. Add Virtual Compute</button>
-          <button class="b3" onclick="showFlowExplanation()">Explain Flow</button>
-          <button class="b4" onclick="resetDemo()">Reset</button>
-        </div>
-
-        <div class="legend">
-          <div class="legend-item"><span class="swatch" style="background:var(--green)"></span> Renewable generation</div>
-          <div class="legend-item"><span class="swatch" style="background:var(--red)"></span> Congested line</div>
-          <div class="legend-item"><span class="swatch" style="background:var(--yellow)"></span> GET-enabled line</div>
-          <div class="legend-item"><span class="swatch" style="background:var(--blue)"></span> Virtual compute load</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="board">
-      <svg viewBox="0 0 1300 720" aria-label="Interactive energy system diagram">
-        <!-- Title row -->
-        <text x="24" y="36" fill="white" font-size="24" font-weight="700">Value Chain + Grid Coordination Demo</text>
-        <text x="24" y="60" fill="#a8b3cf" font-size="13">Generation → Transmission Owners → Grid Operator → Utilities / Load Serving Entities → End Loads</text>
-
-        <!-- Left column: generation -->
-        <rect x="30" y="110" rx="18" ry="18" width="190" height="110" fill="#14362a" stroke="#27c281" stroke-width="2"/>
-        <text x="50" y="145" fill="white" font-size="20" font-weight="700">Solar Farm</text>
-        <text x="50" y="173" fill="#b9e9d5" font-size="14">High midday output</text>
-        <text x="50" y="198" fill="#b9e9d5" font-size="14">Surplus available</text>
-
-        <rect x="30" y="270" rx="18" ry="18" width="190" height="110" fill="#163347" stroke="#4da3ff" stroke-width="2"/>
-        <text x="50" y="305" fill="white" font-size="20" font-weight="700">Wind Farm</text>
-        <text x="50" y="333" fill="#c9defd" font-size="14">Additional clean supply</text>
-        <text x="50" y="358" fill="#c9defd" font-size="14">Supports regional balance</text>
-
-        <!-- Transmission owners -->
-        <rect x="300" y="155" rx="20" ry="20" width="210" height="180" fill="#1a2440" stroke="#7d8bb0" stroke-width="2"/>
-        <text x="332" y="195" fill="white" font-size="22" font-weight="700">Transmission</text>
-        <text x="356" y="223" fill="white" font-size="22" font-weight="700">Owners</text>
-        <text x="330" y="265" fill="#a8b3cf" font-size="14">Own / maintain lines</text>
-        <text x="330" y="290" fill="#a8b3cf" font-size="14">Can deploy GET devices</text>
-
-        <!-- Grid operator -->
-        <rect x="585" y="155" rx="20" ry="20" width="200" height="180" fill="#221a40" stroke="#a66cff" stroke-width="2"/>
-        <text x="625" y="200" fill="white" font-size="22" font-weight="700">ISO / RTO</text>
-        <text x="618" y="235" fill="#d7c8ff" font-size="14">Sees congestion</text>
-        <text x="618" y="260" fill="#d7c8ff" font-size="14">Sends signals</text>
-        <text x="618" y="285" fill="#d7c8ff" font-size="14">Coordinates flows</text>
-
-        <!-- Utilities -->
-        <rect x="860" y="100" rx="18" ry="18" width="180" height="110" fill="#1a2d3d" stroke="#7ec8ff" stroke-width="2"/>
-        <text x="890" y="140" fill="white" font-size="21" font-weight="700">Utility A</text>
-        <text x="885" y="170" fill="#c9defd" font-size="14">Region with local load</text>
-
-        <rect x="860" y="260" rx="18" ry="18" width="180" height="110" fill="#1a2d3d" stroke="#7ec8ff" stroke-width="2"/>
-        <text x="890" y="300" fill="white" font-size="21" font-weight="700">Utility B</text>
-        <text x="880" y="330" fill="#c9defd" font-size="14">Potential compute sink</text>
-
-        <!-- End customers -->
-        <rect x="1105" y="70" rx="18" ry="18" width="160" height="90" fill="#203a29" stroke="#27c281" stroke-width="2"/>
-        <text x="1130" y="108" fill="white" font-size="19" font-weight="700">EV / Truck</text>
-        <text x="1140" y="132" fill="white" font-size="19" font-weight="700">Charging</text>
-
-        <rect x="1105" y="195" rx="18" ry="18" width="160" height="90" fill="#1c314f" stroke="#4da3ff" stroke-width="2"/>
-        <text x="1138" y="235" fill="white" font-size="19" font-weight="700">Data Center</text>
-
-        <rect x="1105" y="320" rx="18" ry="18" width="160" height="90" fill="#3a2a1e" stroke="#f3b63f" stroke-width="2"/>
-        <text x="1148" y="360" fill="white" font-size="19" font-weight="700">Industry</text>
-
-        <!-- Transmission lines -->
-        <line x1="220" y1="165" x2="300" y2="165" stroke="#27c281" stroke-width="8"/>
-        <line x1="220" y1="325" x2="300" y2="325" stroke="#4da3ff" stroke-width="8"/>
-
-        <!-- TO to ISO -->
-        <line x1="510" y1="210" x2="585" y2="210" stroke="#7d8bb0" stroke-width="7"/>
-        <line x1="510" y1="280" x2="585" y2="280" stroke="#7d8bb0" stroke-width="7"/>
-
-        <!-- ISO to utilities -->
-        <line id="lineA" x1="785" y1="180" x2="860" y2="155" stroke="#e05a5a" stroke-width="12" stroke-linecap="round"/>
-        <line id="lineB" x1="785" y1="245" x2="860" y2="315" stroke="#7d8bb0" stroke-width="10" stroke-linecap="round"/>
-
-        <!-- Utility to loads -->
-        <line x1="1040" y1="145" x2="1105" y2="115" stroke="#7ec8ff" stroke-width="6"/>
-        <line x1="1040" y1="155" x2="1105" y2="240" stroke="#7ec8ff" stroke-width="6"/>
-        <line x1="1040" y1="315" x2="1105" y2="365" stroke="#7ec8ff" stroke-width="6"/>
-
-        <!-- Congestion label -->
-        <g id="congestionLabel">
-          <rect x="760" y="105" rx="12" ry="12" width="180" height="48" fill="#4a1f1f" stroke="#e05a5a" stroke-width="2"/>
-          <text x="785" y="135" fill="white" font-size="18" font-weight="700">Congested corridor</text>
-        </g>
-
-        <!-- GET device -->
-        <g id="getGroup" opacity="0">
-          <rect x="805" y="165" rx="12" ry="12" width="90" height="46" fill="#5a4714" stroke="#f3b63f" stroke-width="2"/>
-          <text x="833" y="193" fill="white" font-size="18" font-weight="700">GET</text>
-          <text x="745" y="235" fill="#f6d78a" font-size="14">Flow rerouted / capacity unlocked</text>
-        </g>
-
-        <!-- Virtual compute request source -->
-        <rect x="875" y="500" rx="18" ry="18" width="220" height="90" fill="#162f4d" stroke="#4da3ff" stroke-width="2"/>
-        <text x="910" y="535" fill="white" font-size="19" font-weight="700">Remote Compute Pool</text>
-        <text x="905" y="560" fill="#c9defd" font-size="14">Flexible AI training workload</text>
-
-        <!-- Arrow to Utility B / DC -->
-        <line id="computeArrow" x1="985" y1="500" x2="985" y2="370" stroke="#4da3ff" stroke-width="8" stroke-dasharray="12 8" opacity="0.25"/>
-        <polygon id="computeArrowHead" points="975,382 995,382 985,360" fill="#4da3ff" opacity="0.25"/>
-
-        <!-- Virtual compute admitted label -->
-        <g id="computeLabel" opacity="0">
-          <rect x="1080" y="495" rx="12" ry="12" width="170" height="52" fill="#15385b" stroke="#4da3ff" stroke-width="2"/>
-          <text x="1110" y="527" fill="white" font-size="18" font-weight="700">+ Virtual Compute</text>
-        </g>
-
-        <!-- Curtailed energy block -->
-        <g id="curtailmentBlock">
-          <rect x="45" y="430" rx="18" ry="18" width="250" height="92" fill="#4a1f1f" stroke="#e05a5a" stroke-width="2"/>
-          <text x="70" y="467" fill="white" font-size="21" font-weight="700">Curtailment risk</text>
-          <text x="70" y="495" fill="#ffc7c7" font-size="14">Energy is available but cannot</text>
-          <text x="70" y="515" fill="#ffc7c7" font-size="14">fully reach useful load</text>
-        </g>
-
-        <!-- Relief block -->
-        <g id="reliefBlock" opacity="0">
-          <rect x="335" y="430" rx="18" ry="18" width="285" height="92" fill="#4c3a10" stroke="#f3b63f" stroke-width="2"/>
-          <text x="360" y="467" fill="white" font-size="21" font-weight="700">GET relieves bottleneck</text>
-          <text x="360" y="495" fill="#f6d78a" font-size="14">Some trapped renewable energy can now flow</text>
-          <text x="360" y="515" fill="#f6d78a" font-size="14">through existing transmission assets</text>
-        </g>
-
-        <!-- Optimization block -->
-        <g id="optBlock" opacity="0">
-          <rect x="650" y="430" rx="18" ry="18" width="360" height="110" fill="#17324d" stroke="#4da3ff" stroke-width="2"/>
-          <text x="675" y="465" fill="white" font-size="21" font-weight="700">Optimization step</text>
-          <text x="675" y="493" fill="#c9defd" font-size="14">How much flexible compute can be moved here</text>
-          <text x="675" y="513" fill="#c9defd" font-size="14">without re-creating congestion?</text>
-          <text x="675" y="533" fill="#c9defd" font-size="14">Answer: admit only the spare unlocked capacity</text>
-        </g>
-      </svg>
-    </div>
-
-    <div class="kpi-grid">
-      <div class="kpi">
-        <div class="label">Corridor loading</div>
-        <div class="value" id="corridorLoad">120%</div>
-        <div class="small">Before GET, the line is overloaded.</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Renewable curtailment risk</div>
-        <div class="value" id="curtailmentValue">High</div>
-        <div class="small">Surplus clean power cannot be fully used.</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Unlocked transfer capacity</div>
-        <div class="value" id="capacityValue">0 GWh</div>
-        <div class="small">Available after GET is applied.</div>
-      </div>
-      <div class="kpi">
-        <div class="label">Virtual compute admitted</div>
-        <div class="value" id="computeValue">0 GWh</div>
-        <div class="small">Flexible load moved into the region.</div>
+      <div id="hright">
+        <div id="pdots"><div class="pd on" id="pd0"></div><div class="pd" id="pd1"></div><div class="pd" id="pd2"></div></div>
+        <div id="ptag">Phase 1 of 3</div>
       </div>
     </div>
-
-    <div class="status">
-      <h3>What is happening?</h3>
-      <p id="statusText">
-        Initial state: solar and wind are producing, but one key transmission corridor is congested.
-        That means some renewable energy is at risk of curtailment because the grid cannot move enough power to load centers.
-      </p>
+    <div id="attr">DUKE FUQUA · ABHIJIT DAS<br>CERAWEEK 2026 — NEXTGEN</div>
+    <div id="pbanner">⚠ PHASE 1 — GRID CONGESTION</div>
+    <div id="mbar">
+      <div class="mc"><div class="mlabel">Line 1 Loading</div><div class="mval" id="mv0">128%</div><div class="msub" id="ms0">Critically overloaded</div></div>
+      <div class="mc"><div class="mlabel">Line 2 Loading</div><div class="mval" id="mv1">63%</div><div class="msub" id="ms1">Underutilized capacity</div></div>
+      <div class="mc"><div class="mlabel">Line 3 Loading</div><div class="mval" id="mv2">41%</div><div class="msub" id="ms2">Significantly underused</div></div>
+      <div class="mc"><div class="mlabel">Clean Energy Absorbed</div><div class="mval" id="mv3">61%</div><div class="msub" id="ms3">Of available renewable supply</div></div>
     </div>
-
-    <div class="foot">
-      Concept demo only. This is not a power flow model or ISO dispatch model. It is a visual explanation of the coordination logic behind GET + virtual compute.
-    </div>
+    <div id="narr">Hyperscaler at Load B draws heavy AI training load — concentrating current on Line 1. Lines 2 and 3 are underutilized. Surplus solar is curtailed. GET is not deployed.</div>
+    <div id="prog" style="width:0%"></div>
   </div>
+</div>
 
-  <script>
-    let state = {
-      getApplied: false,
-      computeAdded: false
-    };
+<script>
+const svg = document.getElementById('staticSvg');
+const fx = document.getElementById('fx');
+const g = fx.getContext('2d');
+const DPR = window.devicePixelRatio || 1;
+const NS = 'http://www.w3.org/2000/svg';
+const LW = 1920, LH = 1080;
 
-    function applyGET() {
-      if (state.getApplied) return;
+const GEN = [
+  {id:'solar', x:55,  y:194, w:192, h:104, label:['Solar Farm'], sub:['High midday','surplus available'], col:'#1a7a4a'},
+  {id:'wind',  x:55,  y:388, w:192, h:104, label:['Wind Farm'], sub:['Additional','clean supply'], col:'#1a5fa0'},
+  {id:'curt',  x:55,  y:582, w:192, h:88,  label:['Curtailment'], sub:['Surplus energy','being wasted'], col:'#b83232', phase0only:true},
+];
+const PA = {x:328, y:338, w:152, h:108, label:['Point A'], sub:['Generation Hub','+ GET Substation'], col:'#003087'};
+const PB = {x:1440,y:338, w:152, h:108, label:['Point B'], sub:['Load Region'], col:'#003087'};
+const LOADS = [
+  {id:'hyper', x:1700, y:148, w:194, h:130, label:['Hyperscaler','/ Data Center'], sub:['Heavy AI training','load — 24/7 CFE goal'], col:'#b83232'},
+  {id:'ev', x:1700, y:370, w:194, h:100, label:['EV / Truck','Charging'], sub:['Flexible demand'], col:'#c07a10'},
+  {id:'ind', x:1700, y:560, w:194, h:100, label:['Industry'], sub:['Baseline load'], col:'#5d4637'},
+];
+const RC = {x:1430, y:680, w:210, h:100, label:['Remote Compute','Pool'], sub:['AI training shifted','to clean-energy region'], col:'#007a6b'};
+const LAX = PA.x + PA.w;
+const LBX = PB.x;
+const LINES = [
+  {id:'L1', ay:280, by:280, arc:-22},
+  {id:'L2', ay:392, by:392, arc:0},
+  {id:'L3', ay:504, by:504, arc:22},
+];
 
-      state.getApplied = true;
+/* Support both substation-mounted and line-mounted GET */
+const GET_DEVICES = [
+  {id:'getA', type:'substation', x:PA.x + PA.w/2, y:PA.y - 36, label:['GET'], sub:['Flow Controller','Point A Substation'], col:'#b07a10', showFromPhase:1},
+  {id:'getL2', type:'line', lineIndex:1, t:0.57, label:['GET'], sub:['Series device','on line'], col:'#b07a10', showFromPhase:2}
+];
 
-      const lineA = document.getElementById("lineA");
-      const getGroup = document.getElementById("getGroup");
-      const reliefBlock = document.getElementById("reliefBlock");
-      const optBlock = document.getElementById("optBlock");
-      const congestionLabel = document.getElementById("congestionLabel");
+const PHASES = [
+  {
+    id:0, tag:'⚠ PHASE 1 — GRID CONGESTION', col:'#b83232',
+    metrics:['128%','63%','41%','61%'],
+    mcols:['#b83232','#c07a10','#4a8a3a','#b83232'],
+    msubs:['Critically overloaded','Underutilized capacity','Significantly underused','Of available renewable supply'],
+    narr:'The hyperscaler at Load B concentrates current on Line 1, which exceeds rated capacity. Lines 2 and 3 are underutilized. GET is not deployed at Point A. Surplus solar is curtailed.',
+    lines:[
+      {col:'#b83232', speed:.00095, interval:18, width:4.0, glow:'red'},
+      {col:'#a8bdd0', speed:.0019, interval:72, width:1.8},
+      {col:'#a8bdd0', speed:.0019, interval:95, width:1.8},
+    ],
+    showRC:false, hyperCol:'#b83232', curtShow:true, showCFE:false
+  },
+  {
+    id:1, tag:'✦ PHASE 2 — GET DEPLOYED AT POINT A', col:'#b07a10',
+    metrics:['85%','88%','83%','96%'],
+    mcols:['#b07a10','#b07a10','#b07a10','#1a7a4a'],
+    msubs:['Redistributed by GET','Redistributed by GET','Redistributed by GET','Curtailment eliminated'],
+    narr:'GET at Point A steers current more evenly across the parallel corridors. Same wires, better utilization, lower overload risk, and higher renewable absorption.',
+    lines:[
+      {col:'#b07a10', speed:.0022, interval:38, width:2.4, glow:'gold'},
+      {col:'#b07a10', speed:.0022, interval:35, width:2.4, glow:'gold'},
+      {col:'#b07a10', speed:.0022, interval:40, width:2.4, glow:'gold'},
+    ],
+    showRC:false, hyperCol:'#1a7a4a', curtShow:false, showCFE:true
+  },
+  {
+    id:2, tag:'◈ PHASE 3 — VIRTUAL COMPUTE ABSORBED', col:'#007a6b',
+    metrics:['86%','90%','94%','100%'],
+    mcols:['#b07a10','#b07a10','#007a6b','#007a6b'],
+    msubs:['Sustained by GET','Sustained by GET','Virtual load added','All renewable supply used'],
+    narr:'Once clean power access is available, flexible AI training can shift into this region. Compute moves like virtual transmission, using existing grid capacity more effectively.',
+    lines:[
+      {col:'#b07a10', speed:.0022, interval:36, width:2.4, glow:'gold'},
+      {col:'#b07a10', speed:.0022, interval:33, width:2.4, glow:'gold'},
+      {col:'#007a6b', speed:.0018, interval:26, width:2.8, glow:'teal', virtual:true},
+    ],
+    showRC:true, hyperCol:'#007a6b', curtShow:false, showCFE:true
+  }
+];
 
-      lineA.setAttribute("stroke", "#f3b63f");
-      lineA.setAttribute("stroke-width", "10");
+let particles = [];
+const timers = {L0:0,L1:0,L2:0,sg:0,wg:0,rc:0};
+let startT = null, lastT = null, currentPhase = 0;
+const PHASE_DUR = 9500;
+const CYCLE = PHASE_DUR * 3;
 
-      getGroup.setAttribute("opacity", "1");
-      reliefBlock.setAttribute("opacity", "1");
-      optBlock.setAttribute("opacity", "1");
-      congestionLabel.setAttribute("opacity", "0.45");
+function rgba(hex,a){
+  const r=parseInt(hex.slice(1,3),16), g=parseInt(hex.slice(3,5),16), b=parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${a})`;
+}
+function pathForLine(li){
+  const l = LINES[li];
+  const cpx = (LAX + LBX)/2, cpy = (l.ay + l.by)/2 + l.arc;
+  return `M ${LAX} ${l.ay} Q ${cpx} ${cpy} ${LBX} ${l.by}`;
+}
+function quadPt(t, x1,y1, cpx,cpy, x2,y2){
+  const u = 1 - t;
+  return {x:u*u*x1 + 2*u*t*cpx + t*t*x2, y:u*u*y1 + 2*u*t*cpy + t*t*y2};
+}
+function linePt(li,t){
+  const l = LINES[li];
+  const cpx = (LAX + LBX)/2, cpy = (l.ay + l.by)/2 + l.arc;
+  return quadPt(t, LAX,l.ay, cpx,cpy, LBX,l.by);
+}
+function create(tag, attrs={}){
+  const el = document.createElementNS(NS, tag);
+  Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k, v));
+  return el;
+}
 
-      document.getElementById("corridorLoad").textContent = "82%";
-      document.getElementById("curtailmentValue").textContent = "Reduced";
-      document.getElementById("capacityValue").textContent = "18 GWh";
-      document.getElementById("statusText").textContent =
-        "GET has been applied on the congested corridor. The line is no longer overloaded, some renewable energy can now flow, and the system has created spare transfer capacity. Now the operator can evaluate whether flexible demand can be brought in without causing congestion again.";
+function drawGrid(){
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  for(let cx=0; cx<LW; cx+=72){
+    for(let cy=100; cy<LH-80; cy+=72){
+      grid.appendChild(create('circle', {cx, cy, r:0.9, fill:'rgba(0,48,135,0.055)'}));
     }
+  }
+}
 
-    function addVirtualCompute() {
-      if (!state.getApplied) {
-        document.getElementById("statusText").textContent =
-          "First apply GET. The idea is: relieve the bottleneck first, then calculate how much flexible compute can be safely admitted into the region.";
-        return;
-      }
+function buildNode(group, n, opts={}){
+  const color = opts.col || n.col;
+  const g = create('g', {filter:'url(#softShadow)'});
+  const rect = create('rect', {x:n.x, y:n.y, width:n.w, height:n.h, rx:10, class:'node-rect', fill:'rgba(255,255,255,.96)', stroke:rgba(color,.28)});
+  const accent = create('rect', {x:n.x, y:n.y, width:5, height:n.h, rx:2.5, class:'node-accent', fill:color});
+  g.appendChild(rect);
+  g.appendChild(accent);
 
-      if (state.computeAdded) return;
+  const cx = n.x + n.w/2;
+  let ty = n.y + n.h/2 - ((n.label.length*18 + (n.sub?.length ? 4 + n.sub.length*13.5 : 0))/2) + 14;
+  n.label.forEach(line => {
+    const t = create('text', {x:cx, y:ty, 'text-anchor':'middle', class:'node-title'});
+    t.textContent = line;
+    g.appendChild(t);
+    ty += 18;
+  });
+  if(n.sub && n.sub.length){
+    ty += 4;
+    n.sub.forEach(line => {
+      const t = create('text', {x:cx, y:ty, 'text-anchor':'middle', class:'node-sub'});
+      t.textContent = line;
+      g.appendChild(t);
+      ty += 13.5;
+    });
+  }
+  group.appendChild(g);
+}
 
-      state.computeAdded = true;
+function buildStaticScene(){
+  drawGrid();
+  const connectors = document.getElementById('connectors');
+  const lineLayer = document.getElementById('lineLayer');
+  const nodeLayer = document.getElementById('nodeLayer');
+  connectors.innerHTML = '';
+  lineLayer.innerHTML = '';
+  nodeLayer.innerHTML = '';
 
-      const computeArrow = document.getElementById("computeArrow");
-      const computeArrowHead = document.getElementById("computeArrowHead");
-      const computeLabel = document.getElementById("computeLabel");
-      const lineB = document.getElementById("lineB");
+  GEN.forEach(n => {
+    const p = create('path', {
+      d:`M ${n.x+n.w} ${n.y+n.h/2} L ${PA.x} ${PA.y+PA.h/2}`,
+      class:'connector',
+      stroke:rgba(n.col,.32), 'stroke-width':1.5, 'stroke-dasharray':'5 4'
+    });
+    p.dataset.gen = n.id;
+    connectors.appendChild(p);
+  });
 
-      computeArrow.setAttribute("opacity", "1");
-      computeArrowHead.setAttribute("opacity", "1");
-      computeLabel.setAttribute("opacity", "1");
-      lineB.setAttribute("stroke", "#4da3ff");
-      lineB.setAttribute("stroke-width", "12");
+  LOADS.forEach(n => {
+    const p = create('path', {
+      d:`M ${PB.x+PB.w} ${PB.y+PB.h/2} L ${n.x} ${n.y+n.h/2}`,
+      class:'connector',
+      stroke:rgba(n.col,.22), 'stroke-width':1.5
+    });
+    connectors.appendChild(p);
+  });
 
-      document.getElementById("computeValue").textContent = "12 GWh";
-      document.getElementById("capacityValue").textContent = "6 GWh";
-      document.getElementById("statusText").textContent =
-        "Virtual compute has been admitted into the region. The system does not move unlimited load. It only allows the amount that fits within the spare capacity unlocked by GET. This is the optimization logic: use renewable surplus without recreating congestion.";
+  const rcPath = create('path', {
+    id:'rcConnector',
+    d:`M ${RC.x+RC.w/2} ${RC.y} L ${PB.x+PB.w/2} ${PB.y+PB.h}`,
+    class:'connector hidden',
+    stroke:rgba('#007a6b',.55), 'stroke-width':2, 'stroke-dasharray':'7 5'
+  });
+  connectors.appendChild(rcPath);
+
+  LINES.forEach((line, i) => {
+    const group = create('g', {id:`lineGroup${i}`});
+    const d = pathForLine(i);
+    const track = create('path', {d, class:'path-track', stroke:i===0 ? rgba('#b83232',.08) : rgba('#003087',.055), 'stroke-width':14});
+    const main = create('path', {d, class:'path-main', id:`lineMain${i}`, stroke:'#a8bdd0', 'stroke-width':2});
+    group.appendChild(track);
+    group.appendChild(main);
+    lineLayer.appendChild(group);
+  });
+
+  GEN.forEach(n => buildNode(nodeLayer, n));
+  buildNode(nodeLayer, PA);
+  buildNode(nodeLayer, PB);
+  LOADS.forEach(n => buildNode(nodeLayer, n));
+  buildNode(nodeLayer, RC);
+}
+
+function updateSvgPhase(phase, ts){
+  const pd = PHASES[phase];
+  const nodeLayer = document.getElementById('nodeLayer');
+  const badgeLayer = document.getElementById('badgeLayer');
+  const getLayer = document.getElementById('getLayer');
+  const cfeLayer = document.getElementById('cfeLayer');
+  badgeLayer.innerHTML = '';
+  getLayer.innerHTML = '';
+  cfeLayer.innerHTML = '';
+  nodeLayer.innerHTML = '';
+
+  GEN.forEach(n => {
+    if(n.phase0only && phase !== 0) return;
+    buildNode(nodeLayer, n);
+  });
+  buildNode(nodeLayer, PA);
+  buildNode(nodeLayer, PB);
+  LOADS.forEach(n => buildNode(nodeLayer, {...n, col:n.id === 'hyper' ? pd.hyperCol : n.col}, {col:n.id === 'hyper' ? pd.hyperCol : n.col}));
+  if(pd.showRC) buildNode(nodeLayer, RC);
+
+  document.getElementById('rcConnector').classList.toggle('hidden', !pd.showRC);
+  document.querySelector('[data-gen="curt"]')?.classList.toggle('hidden', phase !== 0);
+
+  LINES.forEach((line, i) => {
+    const main = document.getElementById(`lineMain${i}`);
+    const spec = pd.lines[i];
+    main.setAttribute('stroke', spec.col);
+    main.setAttribute('stroke-width', spec.width);
+    main.setAttribute('filter', spec.glow === 'red' ? 'url(#glowRed)' : spec.glow === 'gold' ? 'url(#glowGold)' : spec.glow === 'teal' ? 'url(#glowTeal)' : '');
+
+    const mid = linePt(i, 0.5);
+    const by = mid.y + (i===0 ? -30 : i===1 ? -26 : -30);
+    const bx = mid.x - 38;
+    const badge = create('g');
+    const isCongested = i === 0 && phase === 0;
+    badge.appendChild(create('rect', {
+      x:bx, y:by-11, width:76, height:22, rx:4,
+      fill:isCongested ? rgba('#b83232',.92) : rgba(spec.col,.10),
+      stroke:isCongested ? 'rgba(184,50,50,.4)' : rgba(spec.col,.28), 'stroke-width':0.8
+    }));
+    const t = create('text', {x:mid.x, y:by+4, 'text-anchor':'middle', class:isCongested ? 'badge-text-strong' : 'badge-text', fill:isCongested ? '#fff' : spec.col});
+    t.textContent = `Line ${i+1} · ${pd.metrics[i]}`;
+    badge.appendChild(t);
+    if(isCongested){
+      const c = create('text', {x:mid.x, y:by-18, 'text-anchor':'middle', class:'badge-text-strong', fill:'#b83232'});
+      c.textContent = '⚠ CONGESTED';
+      c.setAttribute('opacity', 0.70 + 0.30*Math.sin(ts*0.003));
+      badge.appendChild(c);
     }
+    badgeLayer.appendChild(badge);
+  });
 
-    function showFlowExplanation() {
-      let text = "";
-
-      if (!state.getApplied && !state.computeAdded) {
-        text =
-          "Step 1: renewable energy is available, but one corridor is congested. Some clean energy is trapped behind the constraint. Step 2: GET can redirect or increase usable flow on existing assets. Step 3: after congestion is reduced, the operator can admit flexible load such as AI training jobs or managed charging.";
-      } else if (state.getApplied && !state.computeAdded) {
-        text =
-          "GET has created spare grid capacity. The next practical question is not 'Can we shift all compute here?' The real question is 'How much can we shift here without violating line limits again?' That is the optimization problem.";
-      } else {
-        text =
-          "Now both layers are working together. GET improves physical transfer capability. Virtual compute uses that newly available room to absorb clean energy. This is why the concept is systemic: grid assets, operators, utilities, and flexible customers are coordinated together.";
-      }
-
-      document.getElementById("statusText").textContent = text;
+  GET_DEVICES.forEach(dev => {
+    if(phase < dev.showFromPhase) return;
+    const group = create('g');
+    if(dev.type === 'substation'){
+      group.appendChild(create('line', {x1:dev.x, y1:dev.y+24, x2:dev.x, y2:PA.y, stroke:rgba(dev.col,.28), 'stroke-width':1, 'stroke-dasharray':'4 3'}));
+      group.appendChild(create('circle', {cx:dev.x, cy:dev.y, r:40, fill:'none', stroke:rgba(dev.col,.12 + 0.04*Math.sin(ts*0.004)), 'stroke-width':1.5}));
+      group.appendChild(create('polygon', {points:`${dev.x},${dev.y-22} ${dev.x+13},${dev.y} ${dev.x},${dev.y+22} ${dev.x-13},${dev.y}`, fill:rgba(dev.col,.15), stroke:dev.col, 'stroke-width':1.8}));
+      const tt = create('text', {x:dev.x, y:dev.y+4, 'text-anchor':'middle', class:'badge-text-strong', fill:dev.col});
+      tt.textContent = 'GET';
+      group.appendChild(tt);
+      const l1 = create('text', {x:dev.x, y:dev.y+36, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.75)}); l1.textContent = 'Flow Controller'; group.appendChild(l1);
+      const l2 = create('text', {x:dev.x, y:dev.y+49, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.75)}); l2.textContent = 'Point A Substation'; group.appendChild(l2);
+    } else if(dev.type === 'line'){
+      const p = linePt(dev.lineIndex, dev.t);
+      group.appendChild(create('circle', {cx:p.x, cy:p.y, r:18, fill:'rgba(255,255,255,.96)', stroke:dev.col, 'stroke-width':1.5}));
+      group.appendChild(create('rect', {x:p.x-14, y:p.y-10, width:28, height:20, rx:4, fill:'rgba(255,255,255,.96)', stroke:dev.col, 'stroke-width':1.2}));
+      const t = create('text', {x:p.x, y:p.y+4, 'text-anchor':'middle', class:'badge-text-strong', fill:dev.col});
+      t.textContent = 'GET';
+      group.appendChild(t);
+      const l = create('text', {x:p.x, y:p.y-22, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.8)});
+      l.textContent = 'Series device';
+      group.appendChild(l);
     }
+    getLayer.appendChild(group);
+  });
 
-    function resetDemo() {
-      state.getApplied = false;
-      state.computeAdded = false;
+  if(pd.showCFE){
+    const hn = LOADS[0];
+    const bx = hn.x + hn.w - 68, by = hn.y - 16;
+    cfeLayer.appendChild(create('rect', {x:bx, y:by, width:70, height:20, rx:4, fill:rgba('#007a6b',.16), stroke:'#007a6b', 'stroke-width':1, opacity:0.88 + 0.12*Math.sin(ts*0.0032)}));
+    const t = create('text', {x:bx+35, y:by+13.5, 'text-anchor':'middle', class:'badge-text-strong', fill:'#007a6b'});
+    t.textContent = '24/7 CFE ✓';
+    cfeLayer.appendChild(t);
+  }
+}
 
-      document.getElementById("lineA").setAttribute("stroke", "#e05a5a");
-      document.getElementById("lineA").setAttribute("stroke-width", "12");
-      document.getElementById("lineB").setAttribute("stroke", "#7d8bb0");
-      document.getElementById("lineB").setAttribute("stroke-width", "10");
+function resizeFx(){
+  const w = window.innerWidth, h = window.innerHeight;
+  fx.style.width = w + 'px';
+  fx.style.height = h + 'px';
+  fx.width = Math.round(w * DPR);
+  fx.height = Math.round(h * DPR);
+  g.setTransform(DPR,0,0,DPR,0,0);
+}
+window.addEventListener('resize', resizeFx);
+resizeFx();
 
-      document.getElementById("getGroup").setAttribute("opacity", "0");
-      document.getElementById("computeArrow").setAttribute("opacity", "0.25");
-      document.getElementById("computeArrowHead").setAttribute("opacity", "0.25");
-      document.getElementById("computeLabel").setAttribute("opacity", "0");
-      document.getElementById("reliefBlock").setAttribute("opacity", "0");
-      document.getElementById("optBlock").setAttribute("opacity", "0");
-      document.getElementById("congestionLabel").setAttribute("opacity", "1");
+function svgToCanvas(x,y){
+  const rect = svg.getBoundingClientRect();
+  const scale = Math.min(rect.width / LW, rect.height / LH);
+  const ox = rect.left + (rect.width - LW*scale)/2;
+  const oy = rect.top + (rect.height - LH*scale)/2;
+  return {x:ox + x*scale, y:oy + y*scale, scale};
+}
 
-      document.getElementById("corridorLoad").textContent = "120%";
-      document.getElementById("curtailmentValue").textContent = "High";
-      document.getElementById("capacityValue").textContent = "0 GWh";
-      document.getElementById("computeValue").textContent = "0 GWh";
-      document.getElementById("statusText").textContent =
-        "Initial state: solar and wind are producing, but one key transmission corridor is congested. That means some renewable energy is at risk of curtailment because the grid cannot move enough power to load centers.";
+function spawnParticles(dt, phase){
+  const pd = PHASES[phase];
+  pd.lines.forEach((l,i) => {
+    const key = `L${i}`;
+    timers[key] -= dt;
+    if(timers[key] <= 0){
+      timers[key] = l.interval*(0.75 + Math.random()*0.5);
+      particles.push({type:'line', li:i, t:0, speed:l.speed*(0.8+Math.random()*0.4), col:l.col, r:l.width*1.3, virtual:!!l.virtual});
     }
-  </script>
+  });
+  timers.sg -= dt;
+  if(timers.sg <= 0){
+    timers.sg = 52 + Math.random()*28;
+    particles.push({type:'gen', src:'solar', t:0, speed:.0024*(.8+.4*Math.random()), col:'#1a7a4a', r:3.2});
+  }
+  timers.wg -= dt;
+  if(timers.wg <= 0){
+    timers.wg = 62 + Math.random()*32;
+    particles.push({type:'gen', src:'wind', t:0, speed:.0022*(.8+.4*Math.random()), col:'#1a5fa0', r:3.2});
+  }
+  if(phase === 2){
+    timers.rc -= dt;
+    if(timers.rc <= 0){
+      timers.rc = 40 + Math.random()*26;
+      particles.push({type:'rc', t:0, speed:.0017*(.8+.4*Math.random()), col:'#007a6b', r:4.0, virtual:true});
+    }
+  }
+}
+
+function updateParticles(dt){
+  for(let i=particles.length-1;i>=0;i--){
+    particles[i].t += particles[i].speed * dt;
+    if(particles[i].t >= 1) particles.splice(i,1);
+  }
+}
+
+function drawParticles(){
+  g.clearRect(0,0,fx.width,fx.height);
+  particles.forEach(p => {
+    let pos;
+    if(p.type === 'line') pos = linePt(p.li, p.t);
+    else if(p.type === 'gen'){
+      const n = GEN.find(x => x.id === p.src);
+      pos = {x:n.x+n.w+(PA.x-(n.x+n.w))*p.t, y:(n.y+n.h/2)+(PA.y+PA.h/2-(n.y+n.h/2))*p.t};
+    } else if(p.type === 'rc') {
+      pos = {x:RC.x+RC.w/2, y:RC.y+(PB.y+PB.h-RC.y)*p.t};
+    }
+    if(!pos) return;
+    const s = svgToCanvas(pos.x, pos.y);
+    let alpha = 1;
+    if(p.t < .08) alpha = p.t/.08;
+    else if(p.t > .84) alpha = (1-p.t)/.16;
+    g.save();
+    g.globalAlpha = alpha;
+    g.shadowColor = p.col;
+    g.shadowBlur = p.virtual ? 14 : 8;
+    g.fillStyle = p.col;
+    g.beginPath();
+    g.arc(s.x, s.y, p.r * s.scale, 0, Math.PI*2);
+    g.fill();
+    g.restore();
+  });
+}
+
+const UI = {
+  pds:[0,1,2].map(i=>document.getElementById(`pd${i}`)),
+  ptag:document.getElementById('ptag'),
+  ban:document.getElementById('pbanner'),
+  mvs:[0,1,2,3].map(i=>document.getElementById(`mv${i}`)),
+  mss:[0,1,2,3].map(i=>document.getElementById(`ms${i}`)),
+  narr:document.getElementById('narr'),
+  prog:document.getElementById('prog')
+};
+
+function updateUI(phase, progress){
+  const pd = PHASES[phase];
+  UI.pds.forEach((d,i)=>d.classList.toggle('on', i===phase));
+  UI.ptag.textContent = `Phase ${phase+1} of 3`;
+  UI.ban.textContent = pd.tag;
+  UI.ban.style.color = pd.col;
+  UI.ban.style.borderColor = pd.col;
+  UI.ban.style.background = rgba(pd.col,.07);
+  pd.metrics.forEach((m,i)=>{
+    UI.mvs[i].textContent = m;
+    UI.mvs[i].style.color = pd.mcols[i];
+    UI.mss[i].textContent = pd.msubs[i] || '';
+  });
+  UI.narr.textContent = pd.narr;
+  UI.prog.style.width = ((phase + progress) / 3 * 100) + '%';
+}
+
+function frame(ts){
+  if(!startT) startT = ts;
+  const dt = lastT ? Math.min(ts-lastT, 48) : 16;
+  lastT = ts;
+  const cycle = (ts - startT) % CYCLE;
+  const phase = Math.min(2, Math.floor(cycle / PHASE_DUR));
+  const progress = (cycle % PHASE_DUR) / PHASE_DUR;
+
+  if(phase !== currentPhase){
+    currentPhase = phase;
+    particles.length = 0;
+    Object.keys(timers).forEach(k => timers[k] = 0);
+  }
+
+  spawnParticles(dt, phase);
+  updateParticles(dt);
+  updateSvgPhase(phase, ts);
+  updateUI(phase, progress);
+  drawParticles();
+  requestAnimationFrame(frame);
+}
+
+buildStaticScene();
+requestAnimationFrame(frame);
+
+svg.addEventListener('click', () => {
+  const elapsed = performance.now() - startT;
+  startT = performance.now() - ((Math.floor(elapsed / PHASE_DUR) + 1) * PHASE_DUR);
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'ArrowRight' || e.key === ' ') svg.click();
+});
+</script>
 </body>
 </html>
