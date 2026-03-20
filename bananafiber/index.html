@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Banana Fiber — Abhijit Das</title>
-  <meta name="description" content="Sustainable banana fiber product venture by Abhijit Das.">
+  <meta name="description" content="A sustainable goods venture exploring banana fiber products — turning agricultural waste into durable, natural goods.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -16,71 +16,522 @@
       --text-secondary: #3a3a37;
       --text-muted: #666661;
       --border: rgba(13,13,12,0.15);
+      --border-strong: rgba(13,13,12,0.28);
+      --warm: #f0ebe2;
+      --warm-border: rgba(13,13,12,0.10);
     }
-    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px; min-height: 100vh; }
-    .topnav { padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
-    .topnav-back { font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
-    .topnav-back:hover { color: var(--text-primary); }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    .topnav {
+      padding: 1.5rem 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .topnav-back {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .topnav-back:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }
+    .topnav-right { display: flex; gap: 2.5rem; flex-wrap: wrap; }
+    .topnav-right a {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .topnav-right a:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }
+
+    /* ── Layout ── */
     .wrap { max-width: 1080px; margin: 0 auto; padding: 6rem 4rem 8rem; }
-    .page-label { font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
-    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(56px, 7vw, 84px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.75rem; }
-    .tagline { font-size: 20px; font-weight: 400; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin-bottom: 4rem; }
-    hr { border: none; border-top: 1px solid var(--border); margin-bottom: 2.75rem; }
-    .status { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 3.5rem; }
-    .status-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--text-muted); flex-shrink: 0; margin-top: 10px; }
-    .status-text { font-size: 19px; font-weight: 400; color: var(--text-secondary); line-height: 1.75; }
+    .page-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(56px, 7vw, 84px);
+      font-weight: 400;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+    .tagline {
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 680px;
+      margin-bottom: 0.75rem;
+    }
+    .sub-tagline {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: 4rem;
+    }
+
+    /* ── Status pill ── */
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 7px 16px;
+      margin-bottom: 4rem;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #8a8a60;
+    }
+
+    hr { border: none; border-top: 1px solid var(--border); margin-bottom: 0; }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 3rem 0 1.75rem;
+    }
+
+    /* ── The idea block ── */
+    .idea-text {
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      max-width: 760px;
+      margin-bottom: 1.5rem;
+    }
+    .energy-link-block {
+      border-left: 2px solid var(--border);
+      padding: 0.25rem 0 0.25rem 2rem;
+      margin: 2.5rem 0 0;
+    }
+    .energy-link-label {
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+    .energy-link-text {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+    .energy-link-text a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── Product illustrations grid ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .product-card {
+      background: var(--warm);
+      border: 1px solid var(--warm-border);
+      border-radius: 6px;
+      padding: 2rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .product-card svg { width: 100%; max-width: 160px; height: auto; }
+    .product-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .product-note {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.55;
+    }
+
+    /* ── Field illustration ── */
+    .field-block {
+      margin-top: 2rem;
+      background: var(--warm);
+      border: 1px solid var(--warm-border);
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .field-block svg { flex-shrink: 0; }
+    .field-text-block { flex: 1; }
+    .field-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+    }
+    .field-desc {
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── Team ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 0.5rem;
+    }
+    .team-card {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .team-photo {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: var(--warm);
+      border: 1px solid var(--warm-border);
+      /* fallback if photo not yet uploaded */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .team-initials {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+    .team-info { flex: 1; }
+    .team-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 3px;
+      line-height: 1.2;
+    }
+    .team-role {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .team-bio {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ── Detail rows ── */
     .detail-rows { display: flex; flex-direction: column; }
-    .detail-row { display: grid; grid-template-columns: 150px 1fr; gap: 8px; padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+    .detail-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 8px;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
     .detail-row:first-child { border-top: 1px solid var(--border); }
-    .detail-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding-top: 3px; }
-    .detail-value { font-size: 18px; font-weight: 400; color: var(--text-secondary); line-height: 1.65; }
+    .detail-label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding-top: 3px;
+    }
+    .detail-value {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
     .detail-value a { color: var(--text-primary); text-decoration: underline; text-underline-offset: 3px; }
+
     @media (max-width: 768px) {
       .topnav { padding: 1.1rem 1.5rem; }
       .wrap { padding: 3.5rem 1.5rem 5rem; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .field-block { flex-direction: column; gap: 1.5rem; }
       .detail-row { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .products-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
   <nav class="topnav">
     <a class="topnav-back" href="/">← Abhijit Das</a>
+    <div class="topnav-right">
+      <a href="/energy/">Energy Research</a>
+      <a href="mailto:abhijit.d80@gmail.com">Contact</a>
+    </div>
   </nav>
 
   <div class="wrap">
-    <p class="page-label">Venture</p>
+
+    <p class="page-label">Venture — Early Stage</p>
     <h1>Banana Fiber</h1>
-    <p class="tagline">Exploring sustainable, natural fiber products derived from banana plant waste — turning agricultural byproduct into durable goods.</p>
+    <p class="tagline">Turning agricultural waste into durable, sustainable goods.</p>
+    <p class="sub-tagline">Banana plants produce fiber as a byproduct of every harvest. We are exploring how that material becomes something useful, lasting, and worth making.</p>
+
+    <div class="status-pill">
+      <span class="status-dot"></span>
+      Sample production in progress
+    </div>
 
     <hr>
 
-    <div class="status">
-      <div class="status-dot"></div>
-      <p class="status-text">This venture is in early development. Evaluating product-market fit, sourcing, and sample production before committing further.</p>
+    <!-- The Idea -->
+    <p class="section-label">The Idea</p>
+    <p class="idea-text">Every banana harvest leaves behind the plant's stem — a dense, strong fiber that is typically discarded or burned. In communities where bananas are a primary crop, this waste is enormous and constant. Banana fiber is naturally strong, biodegradable, and requires no additional land or water to produce. The raw material already exists. The question is what to make from it.</p>
+    <p class="idea-text">We are starting with everyday carry goods — bags, totes, and accessories — where the material's texture and durability are an advantage, not a compromise.</p>
+
+    <div class="energy-link-block">
+      <p class="energy-link-label">Connection to energy work</p>
+      <p class="energy-link-text">The energy transition is about more than how we power things — it is also about what we make them from. Banana fiber is part of the same shift: using what already exists, wasting less, and building systems that do not require new extraction to function. The logic is identical to what drives the <a href="/energy/">grid research</a> — find the resource that is already there and use it better.</p>
     </div>
 
+    <!-- Products -->
+    <p class="section-label">Product Direction</p>
+    <div class="products-grid">
+
+      <!-- Tote bag SVG -->
+      <div class="product-card">
+        <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- handles -->
+          <path d="M52 55 Q50 28 60 22 Q70 16 80 16 Q90 16 100 22 Q110 28 108 55" fill="none" stroke="#8a7a60" stroke-width="5" stroke-linecap="round"/>
+          <!-- bag body -->
+          <rect x="28" y="54" width="104" height="108" rx="6" fill="#c8b89a" stroke="#8a7a60" stroke-width="1.5"/>
+          <!-- texture lines -->
+          <line x1="28" y1="80" x2="132" y2="80" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="28" y1="96" x2="132" y2="96" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="28" y1="112" x2="132" y2="112" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="28" y1="128" x2="132" y2="128" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="28" y1="144" x2="132" y2="144" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <!-- vertical texture -->
+          <line x1="60" y1="54" x2="60" y2="162" stroke="#8a7a60" stroke-width="0.8" opacity="0.25"/>
+          <line x1="80" y1="54" x2="80" y2="162" stroke="#8a7a60" stroke-width="0.8" opacity="0.25"/>
+          <line x1="100" y1="54" x2="100" y2="162" stroke="#8a7a60" stroke-width="0.8" opacity="0.25"/>
+        </svg>
+        <span class="product-name">Tote Bag</span>
+        <span class="product-note">Woven banana fiber · natural texture · everyday carry</span>
+      </div>
+
+      <!-- Clutch / pouch SVG -->
+      <div class="product-card">
+        <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- body -->
+          <rect x="20" y="55" width="120" height="80" rx="8" fill="#c8b89a" stroke="#8a7a60" stroke-width="1.5"/>
+          <!-- flap -->
+          <path d="M20 95 Q20 55 80 55 Q140 55 140 95" fill="#b0a080" stroke="#8a7a60" stroke-width="1.5"/>
+          <!-- clasp -->
+          <rect x="70" y="90" width="20" height="12" rx="3" fill="#8a7a60"/>
+          <rect x="76" y="93" width="8" height="6" rx="2" fill="#c8b89a"/>
+          <!-- texture -->
+          <line x1="20" y1="108" x2="140" y2="108" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="20" y1="120" x2="140" y2="120" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <line x1="20" y1="132" x2="140" y2="132" stroke="#8a7a60" stroke-width="0.8" opacity="0.4"/>
+          <!-- strap -->
+          <path d="M50 135 Q50 155 80 155 Q110 155 110 135" fill="none" stroke="#8a7a60" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <span class="product-name">Clutch</span>
+        <span class="product-note">Structured banana fiber · natural clasp · handcrafted</span>
+      </div>
+
+      <!-- Basket / storage SVG -->
+      <div class="product-card">
+        <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- handles -->
+          <path d="M45 68 Q42 44 55 38 Q68 34 80 34 Q92 34 105 38 Q118 44 115 68" fill="none" stroke="#8a7a60" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- basket body -->
+          <path d="M22 68 Q24 150 80 155 Q136 150 138 68 Z" fill="#c8b89a" stroke="#8a7a60" stroke-width="1.5"/>
+          <!-- weave texture horizontal -->
+          <path d="M28 90 Q80 86 132 90" fill="none" stroke="#8a7a60" stroke-width="0.8" opacity="0.5"/>
+          <path d="M26 108 Q80 103 134 108" fill="none" stroke="#8a7a60" stroke-width="0.8" opacity="0.5"/>
+          <path d="M25 126 Q80 120 135 126" fill="none" stroke="#8a7a60" stroke-width="0.8" opacity="0.5"/>
+          <path d="M25 144 Q80 138 135 144" fill="none" stroke="#8a7a60" stroke-width="0.8" opacity="0.5"/>
+          <!-- weave vertical -->
+          <line x1="55" y1="68" x2="50" y2="154" stroke="#8a7a60" stroke-width="0.8" opacity="0.3"/>
+          <line x1="80" y1="68" x2="80" y2="155" stroke="#8a7a60" stroke-width="0.8" opacity="0.3"/>
+          <line x1="105" y1="68" x2="110" y2="154" stroke="#8a7a60" stroke-width="0.8" opacity="0.3"/>
+        </svg>
+        <span class="product-name">Storage Basket</span>
+        <span class="product-note">Traditional weave · strong and lightweight · home use</span>
+      </div>
+
+    </div>
+
+    <!-- Banana field illustration -->
+    <p class="section-label">Where It Comes From</p>
+    <div class="field-block">
+      <svg width="200" height="160" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- sky -->
+        <rect width="200" height="160" fill="#e8e0d0" rx="4"/>
+        <!-- ground -->
+        <rect y="110" width="200" height="50" fill="#c4b896" rx="0"/>
+        <!-- sun -->
+        <circle cx="170" cy="30" r="18" fill="#d4a84b" opacity="0.6"/>
+        <!-- banana plant 1 - center -->
+        <rect x="92" y="60" width="10" height="55" rx="3" fill="#7a8c5a"/>
+        <path d="M97 65 Q130 50 145 65 Q130 72 97 72 Z" fill="#8aaa5a"/>
+        <path d="M97 75 Q60 60 45 75 Q60 82 97 82 Z" fill="#7a9a4a"/>
+        <path d="M97 85 Q128 78 140 88 Q128 94 97 92 Z" fill="#8aaa5a"/>
+        <!-- banana plant 2 - left -->
+        <rect x="38" y="75" width="8" height="40" rx="2" fill="#7a8c5a"/>
+        <path d="M42 80 Q68 68 78 78 Q68 84 42 86 Z" fill="#8aaa5a"/>
+        <path d="M42 90 Q18 80 10 88 Q18 94 42 96 Z" fill="#7a9a4a"/>
+        <!-- banana plant 3 - right -->
+        <rect x="148" y="72" width="8" height="42" rx="2" fill="#7a8c5a"/>
+        <path d="M152 77 Q176 65 185 74 Q176 80 152 83 Z" fill="#8aaa5a"/>
+        <path d="M152 88 Q128 78 118 86 Q128 93 152 95 Z" fill="#7a9a4a"/>
+        <!-- small plants background -->
+        <rect x="15" y="88" width="5" height="26" rx="2" fill="#6a7c4a" opacity="0.6"/>
+        <rect x="178" y="85" width="5" height="28" rx="2" fill="#6a7c4a" opacity="0.6"/>
+      </svg>
+      <div class="field-text-block">
+        <p class="field-title">Banana plant waste — a material hiding in plain sight</p>
+        <p class="field-desc">After every harvest, banana plants are cut down. The stems and stalks — full of long, strong natural fibers — are typically left to decompose or burned. Globally, this represents millions of tons of unused material each year. Our work is in learning how to turn that into something people want to own.</p>
+      </div>
+    </div>
+
+    <!-- Core Team -->
+    <p class="section-label">Core Team</p>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <div class="team-photo" id="photo-abhijit">
+          <!-- Replace with: <img src="/bananafiber/team-abhijit.jpg" alt="Abhijit Das"> -->
+          <!-- Shows initials until photo is uploaded to /bananafiber/team-abhijit.jpg -->
+          <span class="team-initials">AD</span>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Abhijit Das</div>
+          <div class="team-role">Co-lead · Strategy &amp; Market</div>
+          <div class="team-bio">Engineering and systems leader. Brings product thinking, market analysis, and execution discipline to the venture. Based in Houston, TX.</div>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo" id="photo-partner">
+          <!-- Replace with: <img src="/bananafiber/team-partner.jpg" alt="[Partner name]"> -->
+          <!-- Shows initials until photo is uploaded to /bananafiber/team-partner.jpg -->
+          <span class="team-initials">—</span>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Add Name</div>
+          <div class="team-role">Co-lead · Production &amp; Sourcing</div>
+          <div class="team-bio">Add a short bio for your partner here — background, location, and what they bring to the venture.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Status details -->
+    <p class="section-label">Current Status</p>
     <div class="detail-rows">
       <div class="detail-row">
         <span class="detail-label">Stage</span>
-        <span class="detail-value">Concept validation · Sample production in progress</span>
+        <span class="detail-value">Concept validation · sample production underway</span>
       </div>
       <div class="detail-row">
-        <span class="detail-label">Focus</span>
-        <span class="detail-value">Sustainable accessories and goods from banana fiber</span>
+        <span class="detail-label">Products</span>
+        <span class="detail-value">Bags, totes, and accessories · first samples targeting 50 units per product type</span>
       </div>
       <div class="detail-row">
         <span class="detail-label">Market</span>
-        <span class="detail-value">U.S. — sustainable goods and materials</span>
+        <span class="detail-value">U.S. — sustainable goods, natural materials, conscious consumption</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Next step</span>
+        <span class="detail-value">Sample delivery and quality review before committing further</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Interest</span>
+        <span class="detail-value">Reach out at <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a> — wholesale, partnerships, or feedback welcome</span>
       </div>
       <div class="detail-row">
         <span class="detail-label">Updates</span>
-        <span class="detail-value">Check back here or follow on <a href="https://soundsofmind.substack.com/?no_cover=true" target="_blank" rel="noopener">Substack</a></span>
-      </div>
-      <div class="detail-row">
-        <span class="detail-label">Contact</span>
-        <span class="detail-value"><a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a></span>
+        <span class="detail-value">Follow on <a href="https://soundsofmind.substack.com/?no_cover=true" target="_blank" rel="noopener">Substack</a></span>
       </div>
     </div>
+
   </div>
 </body>
 </html>
