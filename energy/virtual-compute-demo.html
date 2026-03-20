@@ -178,48 +178,51 @@ const LINES = [
 /* Support both substation-mounted and line-mounted GET */
 const GET_DEVICES = [
   {id:'getA', type:'substation', x:PA.x + PA.w/2, y:PA.y - 36, label:['GET'], sub:['Flow Controller','Point A Substation'], col:'#b07a10', showFromPhase:1},
-  {id:'getL2', type:'line', lineIndex:1, t:0.57, label:['GET'], sub:['Series device','on line'], col:'#b07a10', showFromPhase:2}
+  {id:'getL1', type:'line', lineIndex:0, t:0.28, label:['GET'], sub:['Series device','on line'], col:'#b07a10', showFromPhase:1}
 ];
 
 const PHASES = [
   {
     id:0, tag:'⚠ PHASE 1 — GRID CONGESTION', col:'#b83232',
-    metrics:['128%','63%','41%','61%'],
+    metrics:['99%','52%','38%','61%'],
     mcols:['#b83232','#c07a10','#4a8a3a','#b83232'],
-    msubs:['Critically overloaded','Underutilized capacity','Significantly underused','Of available renewable supply'],
-    narr:'The hyperscaler at Load B concentrates current on Line 1, which exceeds rated capacity. Lines 2 and 3 are underutilized. GET is not deployed at Point A. Surplus solar is curtailed.',
+    msubs:['Near thermal limit','Spare capacity','Spare capacity','Of available renewable supply'],
+    narr:'The hyperscaler at Load B pulls most of the demand through Line 1, pushing that corridor close to its limit while Lines 2 and 3 remain underused. Renewable energy is available, but the corridor is not being used efficiently.',
     lines:[
       {col:'#b83232', speed:.00095, interval:18, width:4.0, glow:'red'},
       {col:'#a8bdd0', speed:.0019, interval:72, width:1.8},
       {col:'#a8bdd0', speed:.0019, interval:95, width:1.8},
     ],
-    showRC:false, hyperCol:'#b83232', curtShow:true, showCFE:false
+    showRC:false, hyperCol:'#b83232', curtShow:true, showCFE:false,
+    totalCap:300, totalUsed:189, totalLabel:'63% corridor utilization'
   },
   {
-    id:1, tag:'✦ PHASE 2 — GET DEPLOYED AT POINT A', col:'#b07a10',
-    metrics:['85%','88%','83%','96%'],
+    id:1, tag:'✦ PHASE 2 — GET DEPLOYED ON BUS + LINE', col:'#b07a10',
+    metrics:['70%','61%','58%','96%'],
     mcols:['#b07a10','#b07a10','#b07a10','#1a7a4a'],
-    msubs:['Redistributed by GET','Redistributed by GET','Redistributed by GET','Curtailment eliminated'],
-    narr:'GET at Point A steers current more evenly across the parallel corridors. Same wires, better utilization, lower overload risk, and higher renewable absorption.',
+    msubs:['Flow relieved by GET','Balanced corridor use','Balanced corridor use','Curtailment largely removed'],
+    narr:'GET devices at Point A and on the upper corridor rebalance the same hyperscaler demand across the parallel paths. The hyperscaler load does not change, but corridor headroom improves and more conventional load can be served between Point A and Point B.',
     lines:[
       {col:'#b07a10', speed:.0022, interval:38, width:2.4, glow:'gold'},
       {col:'#b07a10', speed:.0022, interval:35, width:2.4, glow:'gold'},
       {col:'#b07a10', speed:.0022, interval:40, width:2.4, glow:'gold'},
     ],
-    showRC:false, hyperCol:'#1a7a4a', curtShow:false, showCFE:true
+    showRC:false, hyperCol:'#1a7a4a', curtShow:false, showCFE:true,
+    totalCap:300, totalUsed:210, totalLabel:'70% corridor utilization'
   },
   {
-    id:2, tag:'◈ PHASE 3 — VIRTUAL COMPUTE ABSORBED', col:'#007a6b',
-    metrics:['86%','90%','94%','100%'],
+    id:2, tag:'◈ PHASE 3 — GET + VIRTUAL COMPUTE MAXIMIZE USE', col:'#007a6b',
+    metrics:['74%','73%','78%','100%'],
     mcols:['#b07a10','#b07a10','#007a6b','#007a6b'],
-    msubs:['Sustained by GET','Sustained by GET','Virtual load added','All renewable supply used'],
-    narr:'Once clean power access is available, flexible AI training can shift into this region. Compute moves like virtual transmission, using existing grid capacity more effectively.',
+    msubs:['Stable with GET','Stable with GET','Virtual demand absorbed','All renewable supply used'],
+    narr:'With the corridor balanced by GET, flexible AI training is directed into the hyperscaler where clean power is available. Virtual compute increases useful load without overloading any one line, pushing the Point A to Point B corridor closer to its optimal total utilization.',
     lines:[
       {col:'#b07a10', speed:.0022, interval:36, width:2.4, glow:'gold'},
       {col:'#b07a10', speed:.0022, interval:33, width:2.4, glow:'gold'},
       {col:'#007a6b', speed:.0018, interval:26, width:2.8, glow:'teal', virtual:true},
     ],
-    showRC:true, hyperCol:'#007a6b', curtShow:false, showCFE:true
+    showRC:true, hyperCol:'#007a6b', curtShow:false, showCFE:true,
+    totalCap:300, totalUsed:225, totalLabel:'75% corridor utilization'
   }
 ];
 
@@ -321,7 +324,7 @@ function buildStaticScene(){
 
   const rcPath = create('path', {
     id:'rcConnector',
-    d:`M ${RC.x+RC.w/2} ${RC.y} L ${PB.x+PB.w/2} ${PB.y+PB.h}`,
+    d:`M ${RC.x+RC.w/2} ${RC.y} L ${LOADS[0].x+LOADS[0].w/2} ${LOADS[0].y+LOADS[0].h}`,
     class:'connector hidden',
     stroke:rgba('#007a6b',.55), 'stroke-width':2, 'stroke-dasharray':'7 5'
   });
@@ -407,7 +410,7 @@ function updateSvgPhase(phase, ts){
       tt.textContent = 'GET';
       group.appendChild(tt);
       const l1 = create('text', {x:dev.x, y:dev.y+36, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.75)}); l1.textContent = 'Flow Controller'; group.appendChild(l1);
-      const l2 = create('text', {x:dev.x, y:dev.y+49, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.75)}); l2.textContent = 'Point A Substation'; group.appendChild(l2);
+      const l2 = create('text', {x:dev.x, y:dev.y+49, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.75)}); l2.textContent = 'Point A'; group.appendChild(l2);
     } else if(dev.type === 'line'){
       const p = linePt(dev.lineIndex, dev.t);
       group.appendChild(create('circle', {cx:p.x, cy:p.y, r:18, fill:'rgba(255,255,255,.96)', stroke:dev.col, 'stroke-width':1.5}));
@@ -415,12 +418,24 @@ function updateSvgPhase(phase, ts){
       const t = create('text', {x:p.x, y:p.y+4, 'text-anchor':'middle', class:'badge-text-strong', fill:dev.col});
       t.textContent = 'GET';
       group.appendChild(t);
-      const l = create('text', {x:p.x, y:p.y-22, 'text-anchor':'middle', class:'badge-text', fill:rgba(dev.col,.8)});
+      const l = create('text', {x:p.x-34, y:p.y-10, 'text-anchor':'end', class:'badge-text', fill:rgba(dev.col,.8)});
       l.textContent = 'Series device';
       group.appendChild(l);
     }
     getLayer.appendChild(group);
   });
+
+  const chartX = 1160, chartY = 720, chartW = 250, chartH = 92;
+  const chart = create('g');
+  chart.appendChild(create('rect', {x:chartX, y:chartY, width:chartW, height:chartH, rx:8, fill:'rgba(255,255,255,.92)', stroke:'rgba(0,48,135,.10)', 'stroke-width':1}));
+  chart.appendChild(create('text', {x:chartX+14, y:chartY+16, class:'badge-text', fill:'rgba(13,24,41,.55)'})).textContent = 'TOTAL CORRIDOR USE';
+  const barX = chartX + 14, barY = chartY + 34, barW = chartW - 28, barH = 16;
+  chart.appendChild(create('rect', {x:barX, y:barY, width:barW, height:barH, rx:4, fill:'rgba(0,48,135,.08)'}));
+  chart.appendChild(create('rect', {x:barX, y:barY, width:barW*(pd.totalUsed/pd.totalCap), height:barH, rx:4, fill:pd.col}));
+  chart.appendChild(create('text', {x:barX, y:barY+34, class:'badge-text', fill:'rgba(13,24,41,.60)'})).textContent = `Used: ${pd.totalUsed}`;
+  chart.appendChild(create('text', {x:barX+92, y:barY+34, class:'badge-text', fill:'rgba(13,24,41,.60)'})).textContent = `Cap: ${pd.totalCap}`;
+  chart.appendChild(create('text', {x:barX, y:barY+52, class:'badge-text-strong', fill:pd.col})).textContent = pd.totalLabel;
+  badgeLayer.appendChild(chart);
 
   if(pd.showCFE){
     const hn = LOADS[0];
@@ -496,7 +511,9 @@ function drawParticles(){
       const n = GEN.find(x => x.id === p.src);
       pos = {x:n.x+n.w+(PA.x-(n.x+n.w))*p.t, y:(n.y+n.h/2)+(PA.y+PA.h/2-(n.y+n.h/2))*p.t};
     } else if(p.type === 'rc') {
-      pos = {x:RC.x+RC.w/2, y:RC.y+(PB.y+PB.h-RC.y)*p.t};
+      const hx = LOADS[0].x + LOADS[0].w/2;
+      const hy = LOADS[0].y + LOADS[0].h;
+      pos = {x:RC.x+RC.w/2 + (hx-(RC.x+RC.w/2))*p.t, y:RC.y + (hy-RC.y)*p.t};
     }
     if(!pos) return;
     const s = svgToCanvas(pos.x, pos.y);
