@@ -4,23 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhijit Das</title>
-  <meta
-    name="description"
-    content="Engineering leader working at the intersection of electrification, energy systems, and execution."
-  />
+  <meta name="description" content="Engineering leader working at the intersection of electrification, energy systems, and execution." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --bg: #f9f9f7;
       --text-primary: #0d0d0c;
@@ -29,11 +18,7 @@
       --border: rgba(13, 13, 12, 0.15);
       --border-strong: rgba(13, 13, 12, 0.28);
     }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       background: var(--bg);
       color: var(--text-primary);
@@ -44,8 +29,6 @@
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
-
-    /* ── Top nav ── */
     .topnav {
       padding: 1.5rem 4rem;
       display: flex;
@@ -54,7 +37,6 @@
       border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
-
     .topnav a {
       font-size: 14px;
       font-weight: 500;
@@ -64,25 +46,10 @@
       text-decoration: none;
       padding-bottom: 2px;
       border-bottom: 1px solid transparent;
-      transition: color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+      transition: color 0.15s ease, border-color 0.15s ease;
     }
-
-    .topnav a:hover,
-    .topnav a:focus-visible {
-      color: var(--text-primary);
-      border-bottom-color: var(--text-primary);
-      opacity: 1;
-      outline: none;
-    }
-
-    /* ── Wrap ── */
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 6rem 4rem 8rem;
-    }
-
-    /* ── Hero ── */
+    .topnav a:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 6rem 4rem 8rem; }
     h1 {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: clamp(64px, 9vw, 96px);
@@ -92,7 +59,6 @@
       color: var(--text-primary);
       margin-bottom: 1.1rem;
     }
-
     .tagline {
       font-size: 22px;
       font-weight: 400;
@@ -101,7 +67,6 @@
       max-width: 760px;
       margin-bottom: 0.85rem;
     }
-
     .sub-tagline {
       font-size: 17px;
       font-weight: 400;
@@ -110,15 +75,7 @@
       max-width: 700px;
       margin-bottom: 2.5rem;
     }
-
-    /* ── Creds ── */
-    .creds {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 3rem;
-    }
-
+    .creds { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 3rem; }
     .cred {
       font-size: 13px;
       font-weight: 500;
@@ -129,58 +86,13 @@
       border-radius: 4px;
       padding: 7px 16px;
     }
-
-    /* ── Proof strip ── */
-    .proof-strip {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      margin-bottom: 4.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .proof-row {
-      display: flex;
-      align-items: baseline;
-      gap: 1.25rem;
-      padding: 0.95rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .proof-marker {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-      flex-shrink: 0;
-      min-width: 10px;
-    }
-
-    .proof-text {
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    .proof-text strong {
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    /* ── Divider ── */
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin-bottom: 0;
-    }
-
-    /* ── Nav links ── */
-    .nav-links {
-      list-style: none;
-      margin-bottom: 5.5rem;
-    }
-
+    .proof-strip { display: flex; flex-direction: column; gap: 0; margin-bottom: 4.5rem; border-top: 1px solid var(--border); }
+    .proof-row { display: flex; align-items: baseline; gap: 1.25rem; padding: 0.95rem 0; border-bottom: 1px solid var(--border); }
+    .proof-marker { font-size: 13px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.05em; flex-shrink: 0; min-width: 10px; }
+    .proof-text { font-size: 17px; font-weight: 400; color: var(--text-secondary); line-height: 1.55; }
+    .proof-text strong { font-weight: 500; color: var(--text-primary); }
+    hr { border: none; border-top: 1px solid var(--border); margin-bottom: 0; }
+    .nav-links { list-style: none; margin-bottom: 5.5rem; }
     .nav-links a {
       display: flex;
       align-items: center;
@@ -191,20 +103,8 @@
       gap: 1rem;
       transition: border-color 0.15s ease, transform 0.15s ease;
     }
-
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
-      border-bottom-color: var(--border-strong);
-      transform: translateX(2px);
-      outline: none;
-    }
-
-    .link-left {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
+    .nav-links a:hover { border-bottom-color: var(--border-strong); transform: translateX(2px); }
+    .link-left { display: flex; flex-direction: column; gap: 7px; }
     .link-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 38px;
@@ -212,20 +112,8 @@
       color: var(--text-primary);
       line-height: 1.1;
     }
-
-    .link-desc {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-
-    .link-arrow {
-      font-size: 24px;
-      color: var(--text-muted);
-      flex-shrink: 0;
-    }
-
-    /* ── About ── */
+    .link-desc { font-size: 18px; font-weight: 400; color: var(--text-muted); }
+    .link-arrow { font-size: 24px; color: var(--text-muted); flex-shrink: 0; }
     .section-label {
       font-size: 13px;
       font-weight: 500;
@@ -235,7 +123,6 @@
       margin-bottom: 1.5rem;
       margin-top: 0.25rem;
     }
-
     .about-text {
       font-size: 20px;
       font-weight: 400;
@@ -244,12 +131,7 @@
       max-width: 780px;
       margin-bottom: 3rem;
     }
-
-    .about-cards {
-      display: flex;
-      flex-direction: column;
-    }
-
+    .about-cards { display: flex; flex-direction: column; }
     .about-card {
       padding: 1.4rem 0;
       border-bottom: 1px solid var(--border);
@@ -257,100 +139,27 @@
       grid-template-columns: 1fr auto;
       gap: 6px 1.5rem;
     }
-
-    .about-card:first-child {
-      border-top: 1px solid var(--border);
-    }
-
-    .card-title {
-      font-size: 17px;
-      font-weight: 500;
-      color: var(--text-primary);
-      margin-bottom: 5px;
-    }
-
-    .card-body {
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--text-secondary);
-      line-height: 1.65;
-      grid-column: 1;
-    }
-
-    .card-meta {
-      font-size: 14px;
-      font-weight: 400;
-      color: var(--text-muted);
-      white-space: nowrap;
-      padding-top: 2px;
-    }
-
+    .about-card:first-child { border-top: 1px solid var(--border); }
+    .card-title { font-size: 17px; font-weight: 500; color: var(--text-primary); margin-bottom: 5px; }
+    .card-body { font-size: 17px; font-weight: 400; color: var(--text-secondary); line-height: 1.65; grid-column: 1; }
+    .card-meta { font-size: 14px; font-weight: 400; color: var(--text-muted); white-space: nowrap; padding-top: 2px; }
     @media (max-width: 768px) {
-      .topnav {
-        padding: 1.1rem 1.5rem;
-        gap: 1rem 1.4rem;
-        justify-content: flex-start;
-      }
-
-      .wrap {
-        padding: 3.5rem 1.5rem 5rem;
-      }
-
-      .tagline {
-        font-size: 18px;
-      }
-
-      .sub-tagline {
-        font-size: 16px;
-      }
-
-      .link-title {
-        font-size: 30px;
-      }
-
-      .link-desc {
-        font-size: 16px;
-      }
-
-      .proof-row {
-        gap: 0.9rem;
-      }
-
-      .proof-text {
-        font-size: 15px;
-      }
-
-      .about-text {
-        font-size: 18px;
-      }
-
-      .about-card {
-        grid-template-columns: 1fr;
-      }
-
-      .card-meta {
-        white-space: normal;
-        padding-top: 0;
-      }
+      .topnav { padding: 1.1rem 1.5rem; gap: 1rem 1.4rem; justify-content: flex-start; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
+      .tagline { font-size: 18px; }
+      .sub-tagline { font-size: 16px; }
+      .link-title { font-size: 30px; }
+      .link-desc { font-size: 16px; }
+      .proof-text { font-size: 15px; }
+      .about-text { font-size: 18px; }
+      .about-card { grid-template-columns: 1fr; }
+      .card-meta { white-space: normal; padding-top: 0; }
     }
-
     @media (max-width: 480px) {
-      h1 {
-        font-size: 52px;
-      }
-
-      .link-title {
-        font-size: 26px;
-      }
-
-      .topnav a {
-        font-size: 12px;
-      }
-
-      .cred {
-        font-size: 12px;
-        padding: 6px 12px;
-      }
+      h1 { font-size: 52px; }
+      .link-title { font-size: 26px; }
+      .topnav a { font-size: 12px; }
+      .cred { font-size: 12px; padding: 6px 12px; }
     }
   </style>
 </head>
@@ -364,14 +173,8 @@
 
   <div class="wrap">
     <h1>Abhijit Das</h1>
-
-    <p class="tagline">
-      I build and deliver large-scale electrification systems, with a growing focus on grid and energy systems
-    </p>
-    <p class="sub-tagline">
-      PhD · Duke Executive MBA · System Architect at Volvo Trucks · 15+ years across energy,
-      electrification, and complex systems.
-    </p>
+    <p class="tagline">I build and deliver large-scale electrification systems, with a growing focus on grid and energy systems</p>
+    <p class="sub-tagline">PhD · Duke Executive MBA · System Architect at Volvo Trucks · 15+ years across energy, electrification, and complex systems.</p>
 
     <div class="creds">
       <span class="cred">PhD</span>
@@ -383,36 +186,23 @@
     <div class="proof-strip">
       <div class="proof-row">
         <span class="proof-marker">—</span>
-      <span class="proof-text">
-      <strong>Hundreds of system concepts driven from concept to integration</strong> · leading cross-functional execution across BEV and ICE programs at Volvo Trucks
-        </span>
+        <span class="proof-text"><strong>Hundreds of system concepts driven from concept to integration</strong> · leading cross-functional execution across BEV and ICE programs at Volvo Trucks</span>
       </div>
       <div class="proof-row">
         <span class="proof-marker">—</span>
-        <span class="proof-text">
-          <strong>$10M+ capital efficiency opportunity</strong> · simulation-based testing
-          platform, Halliburton
-        </span>
+        <span class="proof-text"><strong>$10M+ capital efficiency opportunity</strong> · simulation-based testing platform, Halliburton</span>
       </div>
       <div class="proof-row">
         <span class="proof-marker">—</span>
-        <span class="proof-text">
-          <strong>Co-chair, SAE Heavy Duty Charging Consortium</strong> · helped shape
-          international standards discussions for commercial vehicle charging
-        </span>
+        <span class="proof-text"><strong>Co-chair, SAE Heavy Duty Charging Consortium</strong> · helped shape international standards discussions for commercial vehicle charging</span>
       </div>
       <div class="proof-row">
         <span class="proof-marker">—</span>
-        <span class="proof-text">
-          <strong>Built cross-functional delivery structure</strong> · aligned architecture,
-          process, and execution across complex electrification programs
-        </span>
+        <span class="proof-text"><strong>Built cross-functional delivery structure</strong> · aligned architecture, process, and execution across complex electrification programs</span>
       </div>
       <div class="proof-row">
         <span class="proof-marker">—</span>
-        <span class="proof-text">
-          Expanding into grid-scale systems, flexible load, and energy infrastructure through applied research and system-level analysis
-        </span>
+        <span class="proof-text">Expanding into grid-scale systems, flexible load, and energy infrastructure through applied research and system-level analysis</span>
       </div>
     </div>
 
@@ -446,39 +236,35 @@
           <span class="link-arrow">↗</span>
         </a>
       </li>
+      <li>
+        <a href="/bananafiber/">
+          <span class="link-left">
+            <span class="link-title">Banana Fiber</span>
+            <span class="link-desc">Sustainable goods from agricultural waste</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+      </li>
     </ul>
 
     <p class="section-label">About</p>
-    <p class="about-text">
-      Abhijit leads cross-functional work across vehicle electrification, systems architecture,
-      and energy infrastructure. His focus is turning complex technical problems into practical
-      execution systems — with clear interfaces, delivery discipline, and an eye on risk, cost,
-      and timing.
-    </p>
+    <p class="about-text">Abhijit leads cross-functional work across vehicle electrification, systems architecture, and energy infrastructure. His focus is turning complex technical problems into practical execution systems — with clear interfaces, delivery discipline, and an eye on risk, cost, and timing.</p>
 
     <div class="about-cards">
       <div class="about-card">
         <span class="card-title">Core themes</span>
         <span class="card-meta">Now</span>
-        <span class="card-body">
-          Electrification programs · Grid integration constraints · Systems architecture ·
-          Execution governance
-        </span>
+        <span class="card-body">Electrification programs · Grid integration constraints · Systems architecture · Execution governance</span>
       </div>
       <div class="about-card">
         <span class="card-title">Strength</span>
         <span class="card-meta">Style</span>
-        <span class="card-body">
-          Simplifying complex problems into concrete plans, crisp interfaces, and clear
-          execution paths.
-        </span>
+        <span class="card-body">Simplifying complex problems into concrete plans, crisp interfaces, and clear execution paths.</span>
       </div>
       <div class="about-card">
         <span class="card-title">Duke EMBA focus</span>
         <span class="card-meta">2024–2026</span>
-        <span class="card-body">
-          Finance (capital allocation) · Energy markets &amp; innovation · Value chain strategy
-        </span>
+        <span class="card-body">Finance (capital allocation) · Energy markets &amp; innovation · Value chain strategy</span>
       </div>
     </div>
   </div>
