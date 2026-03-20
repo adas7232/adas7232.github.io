@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compute as Virtual Transmission - Interactive Demo</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:#111a2e;
+      --card:#16213a;
+      --text:#e8eefc;
+      --muted:#a8b3cf;
+      --green:#27c281;
+      --yellow:#f3b63f;
+      --red:#e05a5a;
+      --blue:#4da3ff;
+      --purple:#a66cff;
+      --line:#7d8bb0;
+      --white:#ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:linear-gradient(180deg, #09111d 0%, #0d1730 100%);
+      color:var(--text);
+    }
+
+    .wrap{
+      max-width:1400px;
+      margin:0 auto;
+      padding:20px;
+    }
+
+    .top{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:flex-start;
+      margin-bottom:18px;
+    }
+
+    .hero{
+      flex:2;
+      min-width:320px;
+      background:rgba(17,26,46,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px 20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .hero h1{
+      margin:0 0 8px 0;
+      font-size:28px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:15px;
+    }
+
+    .controls{
+      flex:1;
+      min-width:300px;
+      background:rgba(17,26,46,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .controls h2{
+      margin:0 0 12px 0;
+      font-size:18px;
+    }
+
+    .btns{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-bottom:14px;
+    }
+
+    button{
+      border:none;
+      border-radius:12px;
+      padding:10px 14px;
+      font-weight:700;
+      cursor:pointer;
+      color:#08101d;
+      transition:transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    button:hover{ transform:translateY(-1px); }
+    button:active{ transform:translateY(1px); }
+
+    .b1{ background:var(--yellow); }
+    .b2{ background:var(--green); }
+    .b3{ background:var(--blue); }
+    .b4{ background:#d8dde8; }
+
+    .legend{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(120px,1fr));
+      gap:8px 12px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .legend-item{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .swatch{
+      width:14px;
+      height:14px;
+      border-radius:4px;
+      display:inline-block;
+    }
+
+    .board{
+      background:rgba(17,26,46,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.25);
+      overflow:hidden;
+    }
+
+    svg{
+      width:100%;
+      height:auto;
+      display:block;
+      background:linear-gradient(180deg, rgba(22,33,58,0.6) 0%, rgba(13,23,48,0.8) 100%);
+      border-radius:16px;
+    }
+
+    .kpi-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(180px,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .kpi{
+      background:rgba(17,26,46,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:16px;
+    }
+
+    .kpi .label{
+      font-size:13px;
+      color:var(--muted);
+      margin-bottom:8px;
+    }
+
+    .kpi .value{
+      font-size:28px;
+      font-weight:800;
+    }
+
+    .status{
+      margin-top:16px;
+      background:rgba(17,26,46,0.92);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:16px;
+      padding:16px;
+    }
+
+    .status h3{
+      margin:0 0 8px 0;
+      font-size:18px;
+    }
+
+    .status p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.5;
+    }
+
+    .foot{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .small{
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    @media (max-width: 950px){
+      .kpi-grid{
+        grid-template-columns:repeat(2,minmax(180px,1fr));
+      }
+    }
+
+    @media (max-width: 640px){
+      .kpi-grid{
+        grid-template-columns:1fr;
+      }
+      .hero h1{
+        font-size:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="hero">
+        <h1>Compute as Virtual Transmission</h1>
+        <p>
+          This interactive demo shows a simple system-level idea:
+          renewable energy is available, but one transmission corridor is congested.
+          First, <strong>Grid Enhancing Technologies (GET)</strong> relieve that bottleneck.
+          Then the system calculates how much <strong>virtual compute</strong> can be moved into the region
+          to absorb clean energy without recreating congestion.
+        </p>
+      </div>
+
+      <div class="controls">
+        <h2>Demo Controls</h2>
+        <div class="btns">
+          <button class="b1" onclick="applyGET()">1. Apply GET</button>
+          <button class="b2" onclick="addVirtualCompute()">2. Add Virtual Compute</button>
+          <button class="b3" onclick="showFlowExplanation()">Explain Flow</button>
+          <button class="b4" onclick="resetDemo()">Reset</button>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item"><span class="swatch" style="background:var(--green)"></span> Renewable generation</div>
+          <div class="legend-item"><span class="swatch" style="background:var(--red)"></span> Congested line</div>
+          <div class="legend-item"><span class="swatch" style="background:var(--yellow)"></span> GET-enabled line</div>
+          <div class="legend-item"><span class="swatch" style="background:var(--blue)"></span> Virtual compute load</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="board">
+      <svg viewBox="0 0 1300 720" aria-label="Interactive energy system diagram">
+        <!-- Title row -->
+        <text x="24" y="36" fill="white" font-size="24" font-weight="700">Value Chain + Grid Coordination Demo</text>
+        <text x="24" y="60" fill="#a8b3cf" font-size="13">Generation → Transmission Owners → Grid Operator → Utilities / Load Serving Entities → End Loads</text>
+
+        <!-- Left column: generation -->
+        <rect x="30" y="110" rx="18" ry="18" width="190" height="110" fill="#14362a" stroke="#27c281" stroke-width="2"/>
+        <text x="50" y="145" fill="white" font-size="20" font-weight="700">Solar Farm</text>
+        <text x="50" y="173" fill="#b9e9d5" font-size="14">High midday output</text>
+        <text x="50" y="198" fill="#b9e9d5" font-size="14">Surplus available</text>
+
+        <rect x="30" y="270" rx="18" ry="18" width="190" height="110" fill="#163347" stroke="#4da3ff" stroke-width="2"/>
+        <text x="50" y="305" fill="white" font-size="20" font-weight="700">Wind Farm</text>
+        <text x="50" y="333" fill="#c9defd" font-size="14">Additional clean supply</text>
+        <text x="50" y="358" fill="#c9defd" font-size="14">Supports regional balance</text>
+
+        <!-- Transmission owners -->
+        <rect x="300" y="155" rx="20" ry="20" width="210" height="180" fill="#1a2440" stroke="#7d8bb0" stroke-width="2"/>
+        <text x="332" y="195" fill="white" font-size="22" font-weight="700">Transmission</text>
+        <text x="356" y="223" fill="white" font-size="22" font-weight="700">Owners</text>
+        <text x="330" y="265" fill="#a8b3cf" font-size="14">Own / maintain lines</text>
+        <text x="330" y="290" fill="#a8b3cf" font-size="14">Can deploy GET devices</text>
+
+        <!-- Grid operator -->
+        <rect x="585" y="155" rx="20" ry="20" width="200" height="180" fill="#221a40" stroke="#a66cff" stroke-width="2"/>
+        <text x="625" y="200" fill="white" font-size="22" font-weight="700">ISO / RTO</text>
+        <text x="618" y="235" fill="#d7c8ff" font-size="14">Sees congestion</text>
+        <text x="618" y="260" fill="#d7c8ff" font-size="14">Sends signals</text>
+        <text x="618" y="285" fill="#d7c8ff" font-size="14">Coordinates flows</text>
+
+        <!-- Utilities -->
+        <rect x="860" y="100" rx="18" ry="18" width="180" height="110" fill="#1a2d3d" stroke="#7ec8ff" stroke-width="2"/>
+        <text x="890" y="140" fill="white" font-size="21" font-weight="700">Utility A</text>
+        <text x="885" y="170" fill="#c9defd" font-size="14">Region with local load</text>
+
+        <rect x="860" y="260" rx="18" ry="18" width="180" height="110" fill="#1a2d3d" stroke="#7ec8ff" stroke-width="2"/>
+        <text x="890" y="300" fill="white" font-size="21" font-weight="700">Utility B</text>
+        <text x="880" y="330" fill="#c9defd" font-size="14">Potential compute sink</text>
+
+        <!-- End customers -->
+        <rect x="1105" y="70" rx="18" ry="18" width="160" height="90" fill="#203a29" stroke="#27c281" stroke-width="2"/>
+        <text x="1130" y="108" fill="white" font-size="19" font-weight="700">EV / Truck</text>
+        <text x="1140" y="132" fill="white" font-size="19" font-weight="700">Charging</text>
+
+        <rect x="1105" y="195" rx="18" ry="18" width="160" height="90" fill="#1c314f" stroke="#4da3ff" stroke-width="2"/>
+        <text x="1138" y="235" fill="white" font-size="19" font-weight="700">Data Center</text>
+
+        <rect x="1105" y="320" rx="18" ry="18" width="160" height="90" fill="#3a2a1e" stroke="#f3b63f" stroke-width="2"/>
+        <text x="1148" y="360" fill="white" font-size="19" font-weight="700">Industry</text>
+
+        <!-- Transmission lines -->
+        <line x1="220" y1="165" x2="300" y2="165" stroke="#27c281" stroke-width="8"/>
+        <line x1="220" y1="325" x2="300" y2="325" stroke="#4da3ff" stroke-width="8"/>
+
+        <!-- TO to ISO -->
+        <line x1="510" y1="210" x2="585" y2="210" stroke="#7d8bb0" stroke-width="7"/>
+        <line x1="510" y1="280" x2="585" y2="280" stroke="#7d8bb0" stroke-width="7"/>
+
+        <!-- ISO to utilities -->
+        <line id="lineA" x1="785" y1="180" x2="860" y2="155" stroke="#e05a5a" stroke-width="12" stroke-linecap="round"/>
+        <line id="lineB" x1="785" y1="245" x2="860" y2="315" stroke="#7d8bb0" stroke-width="10" stroke-linecap="round"/>
+
+        <!-- Utility to loads -->
+        <line x1="1040" y1="145" x2="1105" y2="115" stroke="#7ec8ff" stroke-width="6"/>
+        <line x1="1040" y1="155" x2="1105" y2="240" stroke="#7ec8ff" stroke-width="6"/>
+        <line x1="1040" y1="315" x2="1105" y2="365" stroke="#7ec8ff" stroke-width="6"/>
+
+        <!-- Congestion label -->
+        <g id="congestionLabel">
+          <rect x="760" y="105" rx="12" ry="12" width="180" height="48" fill="#4a1f1f" stroke="#e05a5a" stroke-width="2"/>
+          <text x="785" y="135" fill="white" font-size="18" font-weight="700">Congested corridor</text>
+        </g>
+
+        <!-- GET device -->
+        <g id="getGroup" opacity="0">
+          <rect x="805" y="165" rx="12" ry="12" width="90" height="46" fill="#5a4714" stroke="#f3b63f" stroke-width="2"/>
+          <text x="833" y="193" fill="white" font-size="18" font-weight="700">GET</text>
+          <text x="745" y="235" fill="#f6d78a" font-size="14">Flow rerouted / capacity unlocked</text>
+        </g>
+
+        <!-- Virtual compute request source -->
+        <rect x="875" y="500" rx="18" ry="18" width="220" height="90" fill="#162f4d" stroke="#4da3ff" stroke-width="2"/>
+        <text x="910" y="535" fill="white" font-size="19" font-weight="700">Remote Compute Pool</text>
+        <text x="905" y="560" fill="#c9defd" font-size="14">Flexible AI training workload</text>
+
+        <!-- Arrow to Utility B / DC -->
+        <line id="computeArrow" x1="985" y1="500" x2="985" y2="370" stroke="#4da3ff" stroke-width="8" stroke-dasharray="12 8" opacity="0.25"/>
+        <polygon id="computeArrowHead" points="975,382 995,382 985,360" fill="#4da3ff" opacity="0.25"/>
+
+        <!-- Virtual compute admitted label -->
+        <g id="computeLabel" opacity="0">
+          <rect x="1080" y="495" rx="12" ry="12" width="170" height="52" fill="#15385b" stroke="#4da3ff" stroke-width="2"/>
+          <text x="1110" y="527" fill="white" font-size="18" font-weight="700">+ Virtual Compute</text>
+        </g>
+
+        <!-- Curtailed energy block -->
+        <g id="curtailmentBlock">
+          <rect x="45" y="430" rx="18" ry="18" width="250" height="92" fill="#4a1f1f" stroke="#e05a5a" stroke-width="2"/>
+          <text x="70" y="467" fill="white" font-size="21" font-weight="700">Curtailment risk</text>
+          <text x="70" y="495" fill="#ffc7c7" font-size="14">Energy is available but cannot</text>
+          <text x="70" y="515" fill="#ffc7c7" font-size="14">fully reach useful load</text>
+        </g>
+
+        <!-- Relief block -->
+        <g id="reliefBlock" opacity="0">
+          <rect x="335" y="430" rx="18" ry="18" width="285" height="92" fill="#4c3a10" stroke="#f3b63f" stroke-width="2"/>
+          <text x="360" y="467" fill="white" font-size="21" font-weight="700">GET relieves bottleneck</text>
+          <text x="360" y="495" fill="#f6d78a" font-size="14">Some trapped renewable energy can now flow</text>
+          <text x="360" y="515" fill="#f6d78a" font-size="14">through existing transmission assets</text>
+        </g>
+
+        <!-- Optimization block -->
+        <g id="optBlock" opacity="0">
+          <rect x="650" y="430" rx="18" ry="18" width="360" height="110" fill="#17324d" stroke="#4da3ff" stroke-width="2"/>
+          <text x="675" y="465" fill="white" font-size="21" font-weight="700">Optimization step</text>
+          <text x="675" y="493" fill="#c9defd" font-size="14">How much flexible compute can be moved here</text>
+          <text x="675" y="513" fill="#c9defd" font-size="14">without re-creating congestion?</text>
+          <text x="675" y="533" fill="#c9defd" font-size="14">Answer: admit only the spare unlocked capacity</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="label">Corridor loading</div>
+        <div class="value" id="corridorLoad">120%</div>
+        <div class="small">Before GET, the line is overloaded.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Renewable curtailment risk</div>
+        <div class="value" id="curtailmentValue">High</div>
+        <div class="small">Surplus clean power cannot be fully used.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Unlocked transfer capacity</div>
+        <div class="value" id="capacityValue">0 GWh</div>
+        <div class="small">Available after GET is applied.</div>
+      </div>
+      <div class="kpi">
+        <div class="label">Virtual compute admitted</div>
+        <div class="value" id="computeValue">0 GWh</div>
+        <div class="small">Flexible load moved into the region.</div>
+      </div>
+    </div>
+
+    <div class="status">
+      <h3>What is happening?</h3>
+      <p id="statusText">
+        Initial state: solar and wind are producing, but one key transmission corridor is congested.
+        That means some renewable energy is at risk of curtailment because the grid cannot move enough power to load centers.
+      </p>
+    </div>
+
+    <div class="foot">
+      Concept demo only. This is not a power flow model or ISO dispatch model. It is a visual explanation of the coordination logic behind GET + virtual compute.
+    </div>
+  </div>
+
+  <script>
+    let state = {
+      getApplied: false,
+      computeAdded: false
+    };
+
+    function applyGET() {
+      if (state.getApplied) return;
+
+      state.getApplied = true;
+
+      const lineA = document.getElementById("lineA");
+      const getGroup = document.getElementById("getGroup");
+      const reliefBlock = document.getElementById("reliefBlock");
+      const optBlock = document.getElementById("optBlock");
+      const congestionLabel = document.getElementById("congestionLabel");
+
+      lineA.setAttribute("stroke", "#f3b63f");
+      lineA.setAttribute("stroke-width", "10");
+
+      getGroup.setAttribute("opacity", "1");
+      reliefBlock.setAttribute("opacity", "1");
+      optBlock.setAttribute("opacity", "1");
+      congestionLabel.setAttribute("opacity", "0.45");
+
+      document.getElementById("corridorLoad").textContent = "82%";
+      document.getElementById("curtailmentValue").textContent = "Reduced";
+      document.getElementById("capacityValue").textContent = "18 GWh";
+      document.getElementById("statusText").textContent =
+        "GET has been applied on the congested corridor. The line is no longer overloaded, some renewable energy can now flow, and the system has created spare transfer capacity. Now the operator can evaluate whether flexible demand can be brought in without causing congestion again.";
+    }
+
+    function addVirtualCompute() {
+      if (!state.getApplied) {
+        document.getElementById("statusText").textContent =
+          "First apply GET. The idea is: relieve the bottleneck first, then calculate how much flexible compute can be safely admitted into the region.";
+        return;
+      }
+
+      if (state.computeAdded) return;
+
+      state.computeAdded = true;
+
+      const computeArrow = document.getElementById("computeArrow");
+      const computeArrowHead = document.getElementById("computeArrowHead");
+      const computeLabel = document.getElementById("computeLabel");
+      const lineB = document.getElementById("lineB");
+
+      computeArrow.setAttribute("opacity", "1");
+      computeArrowHead.setAttribute("opacity", "1");
+      computeLabel.setAttribute("opacity", "1");
+      lineB.setAttribute("stroke", "#4da3ff");
+      lineB.setAttribute("stroke-width", "12");
+
+      document.getElementById("computeValue").textContent = "12 GWh";
+      document.getElementById("capacityValue").textContent = "6 GWh";
+      document.getElementById("statusText").textContent =
+        "Virtual compute has been admitted into the region. The system does not move unlimited load. It only allows the amount that fits within the spare capacity unlocked by GET. This is the optimization logic: use renewable surplus without recreating congestion.";
+    }
+
+    function showFlowExplanation() {
+      let text = "";
+
+      if (!state.getApplied && !state.computeAdded) {
+        text =
+          "Step 1: renewable energy is available, but one corridor is congested. Some clean energy is trapped behind the constraint. Step 2: GET can redirect or increase usable flow on existing assets. Step 3: after congestion is reduced, the operator can admit flexible load such as AI training jobs or managed charging.";
+      } else if (state.getApplied && !state.computeAdded) {
+        text =
+          "GET has created spare grid capacity. The next practical question is not 'Can we shift all compute here?' The real question is 'How much can we shift here without violating line limits again?' That is the optimization problem.";
+      } else {
+        text =
+          "Now both layers are working together. GET improves physical transfer capability. Virtual compute uses that newly available room to absorb clean energy. This is why the concept is systemic: grid assets, operators, utilities, and flexible customers are coordinated together.";
+      }
+
+      document.getElementById("statusText").textContent = text;
+    }
+
+    function resetDemo() {
+      state.getApplied = false;
+      state.computeAdded = false;
+
+      document.getElementById("lineA").setAttribute("stroke", "#e05a5a");
+      document.getElementById("lineA").setAttribute("stroke-width", "12");
+      document.getElementById("lineB").setAttribute("stroke", "#7d8bb0");
+      document.getElementById("lineB").setAttribute("stroke-width", "10");
+
+      document.getElementById("getGroup").setAttribute("opacity", "0");
+      document.getElementById("computeArrow").setAttribute("opacity", "0.25");
+      document.getElementById("computeArrowHead").setAttribute("opacity", "0.25");
+      document.getElementById("computeLabel").setAttribute("opacity", "0");
+      document.getElementById("reliefBlock").setAttribute("opacity", "0");
+      document.getElementById("optBlock").setAttribute("opacity", "0");
+      document.getElementById("congestionLabel").setAttribute("opacity", "1");
+
+      document.getElementById("corridorLoad").textContent = "120%";
+      document.getElementById("curtailmentValue").textContent = "High";
+      document.getElementById("capacityValue").textContent = "0 GWh";
+      document.getElementById("computeValue").textContent = "0 GWh";
+      document.getElementById("statusText").textContent =
+        "Initial state: solar and wind are producing, but one key transmission corridor is congested. That means some renewable energy is at risk of curtailment because the grid cannot move enough power to load centers.";
+    }
+  </script>
+</body>
+</html>
