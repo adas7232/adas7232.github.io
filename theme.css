@@ -1,0 +1,51 @@
+/* Shared theme: white background with RKMS Innovation blue accents.
+   Loaded after each page's own <style>, so it overrides colors only. */
+:root {
+  --bg: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --blue-light: #eff6ff;
+  --blue-line: #bfdbfe;
+}
+body { background: var(--bg); }
+
+/* Top navigation */
+.topnav { background: rgba(255,255,255,.92); }
+.topnav a:hover, .topnav-right a:hover, .topnav-back:hover { color: var(--blue); border-bottom-color: var(--blue); }
+.topnav a[href^="mailto"] {
+  background: var(--blue); color: #fff; border: none; border-radius: 8px;
+  padding: 7px 16px; margin: -7px 0;
+}
+.topnav a[href^="mailto"]:hover { background: var(--blue-dark); color: #fff; }
+
+/* Labels and markers */
+.section-label, .page-label, .thesis-label, .energy-link-label, .detail-label { color: var(--blue); }
+.proof-marker { color: var(--blue); }
+
+/* Chips and tags */
+.cred, .highlight, .pub-tag, .work-tag, .topic, .status-pill {
+  background: var(--blue-light); color: var(--blue-dark); border-color: var(--blue-line);
+}
+.case-metric, .card-meta { color: var(--blue); }
+
+/* Buttons */
+.pdf-link {
+  background: var(--blue); color: #fff; border-color: var(--blue); border-radius: 8px;
+}
+.pdf-link:hover { background: var(--blue-dark); border-color: var(--blue-dark); color: #fff; }
+.quick-link { background: #fff; color: var(--blue); border-color: var(--blue); border-radius: 8px; }
+.quick-link:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* Home page link list */
+.link-arrow { color: var(--blue); }
+.nav-links a:hover .link-title { color: var(--blue); }
+.nav-links a:hover { border-bottom-color: var(--blue); }
+.work-item:hover .work-title { color: var(--blue); }
+
+/* Links inside text */
+.wrap p a, .bullets a, .resume-meta a, .row-value a, .detail-value a, .energy-link-text a, .pub-venue a { color: var(--blue); }
