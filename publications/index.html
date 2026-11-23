@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publications — Abhijit Das</title>
+   <link rel="icon" href="/favicon.png?v=2">
+  <meta name="description" content="Research publications, patents, and technical reports by Abhijit Das.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f9f9f7;
+      --text-primary: #0d0d0c;
+      --text-secondary: #3a3a37;
+      --text-muted: #666661;
+      --border: rgba(13,13,12,0.15);
+    }
+    body { background: var(--bg); color: var(--text-primary); font-family: 'DM Sans', system-ui, sans-serif; font-size: 20px; min-height: 100vh; }
+    .topnav { padding: 1.5rem 4rem; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); }
+    .topnav-back { font-size: 14px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-back:hover { color: var(--text-primary); }
+    .topnav-right { display: flex; gap: 2.5rem; }
+    .topnav-right a { font-size: 14px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-secondary); text-decoration: none; transition: color 0.15s; }
+    .topnav-right a:hover { color: var(--text-primary); }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 6rem 4rem 8rem; }
+    .page-label { font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(56px, 7vw, 84px); font-weight: 400; letter-spacing: -1px; line-height: 1.05; color: var(--text-primary); margin-bottom: 0.75rem; }
+    .intro { font-size: 20px; font-weight: 400; color: var(--text-secondary); line-height: 1.7; max-width: 760px; margin-bottom: 4rem; }
+    hr { border: none; border-top: 1px solid var(--border); }
+    .section-label { font-size: 13px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin: 3rem 0 0; }
+    .pub-list { display: flex; flex-direction: column; }
+    .pub-item { padding: 1.75rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; gap: 6px 2.5rem; }
+    .pub-item:first-child { border-top: 1px solid var(--border); }
+    .pub-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; font-weight: 400; color: var(--text-primary); line-height: 1.25; margin-bottom: 6px; }
+    .pub-title em { font-style: italic; }
+    .pub-title a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--border); }
+    .pub-title a:hover { border-bottom-color: var(--text-primary); }
+    .pub-venue { font-size: 17px; font-weight: 400; color: var(--text-secondary); margin-bottom: 5px; }
+    .pub-desc { font-size: 16px; font-weight: 400; color: var(--text-muted); line-height: 1.65; grid-column: 1; }
+    .pub-meta { font-size: 15px; font-weight: 400; color: var(--text-muted); white-space: nowrap; text-align: right; line-height: 1.6; padding-top: 4px; }
+    .pub-tag { display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border); border-radius: 3px; padding: 2px 9px; margin-left: 10px; vertical-align: middle; }
+    .footer-note { font-size: 17px; font-weight: 400; color: var(--text-muted); margin-top: 3.5rem; line-height: 1.6; }
+    .footer-note a { color: var(--text-muted); text-decoration: underline; text-underline-offset: 3px; }
+    @media (max-width: 768px) {
+      .topnav { padding: 1.1rem 1.5rem; }
+      .wrap { padding: 3.5rem 1.5rem 5rem; }
+      .pub-item { grid-template-columns: 1fr; }
+      .pub-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="topnav">
+    <a class="topnav-back" href="/">← Abhijit Das</a>
+    <div class="topnav-right">
+      <a href="/resume.html">Resume</a>
+      <a href="https://www.linkedin.com/in/adas7232/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:abhijit.d80@gmail.com">Contact</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <p class="page-label">Publications</p>
+    <h1>Publications</h1>
+    <p class="intro">Research, strategy papers, patents, and technical contributions spanning control systems, distributed networks, electrification, and energy systems.</p>
+
+    <hr>
+
+    <p class="section-label">Featured Research &amp; Strategy Papers</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><a href="https://ssrn.com/abstract=6492318" target="_blank" rel="noopener">Solving the Renewable Integration Trilemma: Grid Enhancing Technologies and Virtual Transmission Through Flexible Compute</a> <span class="pub-tag">SSRN</span></div>
+          <div class="pub-venue">SSRN Working Paper</div>
+          <div class="pub-desc">Combines Grid Enhancing Technologies with renewable-aware workload migration (AI training, EV charging, hydrogen electrolysis) to reduce curtailment and transmission congestion without new infrastructure. Selected for the CERAWeek 2026 NextGen cohort and poster presentation.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><a href="https://ssrn.com/abstract=6823640" target="_blank" rel="noopener">Follow the Curtailment: Data Center Location as a Grid Coordination Strategy</a> <span class="pub-tag">SSRN</span></div>
+          <div class="pub-venue">SSRN Working Paper — companion to the paper above</div>
+          <div class="pub-desc">Extends the Trilemma framework into a two-tier data-center siting strategy, separating latency-bound inference from location-flexible training.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">GridSite Pro: A Two-Layer, Grid-Aware Screening Framework for Data Center and Green Hydrogen Siting <span class="pub-tag">Working Paper</span></div>
+          <div class="pub-venue">RKMS Innovation LLC</div>
+          <div class="pub-desc">Live software tool for data center and green hydrogen site selection: state-level screening across eight weighted factors plus a node-level locational-pricing and congestion module, with real-time grid-pricing API integration and data-provenance tagging.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Distributed Consensus Control for Proportional Power Sharing in Microgrids: A Comprehensive Theoretical and Numerical Study <span class="pub-tag">Working Paper</span></div>
+          <div class="pub-venue">Independent Research</div>
+          <div class="pub-desc">Applies distributed consensus control theory to microgrid power sharing across heterogeneous resources, with graph-theoretic modeling and a Lyapunov stability proof, validated through numerical simulation.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Bell 429 Grip Forging Value Chain Risk Analysis <span class="pub-tag">Paper</span></div>
+          <div class="pub-venue">Duke Fuqua — Value Chain Innovation</div>
+          <div class="pub-desc">Upstream sourcing analysis of aerospace aluminum supply chains, including geopolitical and capacity constraints.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">U.S. Heavy-Duty EV Industrial Competitiveness <span class="pub-tag">Paper</span></div>
+          <div class="pub-venue">Independent Research / Duke EMBA</div>
+          <div class="pub-desc">Comparative battery chemistry, policy, and manufacturing ecosystem analysis across U.S., China, and EU.</div>
+        </div>
+        <div class="pub-meta">2025</div>
+      </div>
+    </div>
+
+    <p class="section-label">Books</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Cooperative Control of Multi-Agent Systems: Optimal and Adaptive Design Approaches</em></div>
+          <div class="pub-venue">Springer-Verlag</div>
+          <div class="pub-desc">F.L. Lewis, H. Zhang, K. Hengster-Movric and A. Das.</div>
+        </div>
+        <div class="pub-meta">2014</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Nonlinear Autopilot Design for Aerospace Vehicles</em></div>
+          <div class="pub-venue">VDM Verlag</div>
+          <div class="pub-desc">A. Das and S. Mukhopadhyay. Nonlinear design of 3-axes autopilot for short range skid-to-turn homing missiles.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+    </div>
+
+    <p class="section-label">Journal Articles</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Optimal Design for Synchronization of Cooperative Systems</div>
+          <div class="pub-venue"><em>IEEE Transactions on Automatic Control</em>, 56.8</div>
+          <div class="pub-desc">H. Zhang, A. Das, and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2011</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Distributed Adaptive Control for Synchronization of Unknown Nonlinear Networked Systems</div>
+          <div class="pub-venue"><em>Automatica</em>, 46.12</div>
+          <div class="pub-desc">A. Das and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Distributed Adaptive Control for Synchronization of Second Order Systems with Unknown Nonlinearities</div>
+          <div class="pub-venue"><em>International Journal of Robust and Nonlinear Control</em>, 21.3</div>
+          <div class="pub-desc">A. Das and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Dynamic Inversion with Zero-Dynamics Stabilization for Quadrotor Control</div>
+          <div class="pub-venue"><em>IET Control Theory &amp; Applications</em>, 3.3, pp. 303–314</div>
+          <div class="pub-desc">A. Das, S. Subbarao, and F. Lewis.</div>
+        </div>
+        <div class="pub-meta">2009</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Backstepping Approach for Controlling a Quadrotor using Neural Network</div>
+          <div class="pub-venue"><em>Journal of Intelligent and Robotics Systems</em>, 56.1, p. 127</div>
+          <div class="pub-desc">A. Das, F. Lewis, and S. Subbarao.</div>
+        </div>
+        <div class="pub-meta">2009</div>
+      </div>
+    </div>
+
+    <p class="section-label">Patents</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">A Novel Design of Windshield Wiper Motor with Integrated Dynamic Braking and Overcurrent Protection <span class="pub-tag">Pending</span></div>
+          <div class="pub-venue">Volvo Trucks — EP 25180847.3, US 19/697,693</div>
+          <div class="pub-desc">A. Das, Matthew Riddle, Nimish Patel.</div>
+        </div>
+        <div class="pub-meta">2026</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">One Action Smart Switch for Safe Electric Vehicle Maintenance <span class="pub-tag">Allowed (US)</span></div>
+          <div class="pub-venue">Volvo Trucks — CN 202510733904.3, EP 24180132.3 (published), US 19/229,182 (allowed)</div>
+          <div class="pub-desc">A. Das, Nimish Patel.</div>
+        </div>
+        <div class="pub-meta">2025</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Load Dependent Electronic Valve Actuator Regulation and Pressure Compensation</div>
+          <div class="pub-venue">US Patent 10,183,852</div>
+          <div class="pub-desc">A. Das et al.</div>
+        </div>
+        <div class="pub-meta">2019</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title">Variable Load Sense Spring Setting for Axial Piston Open Circuit Pump</div>
+          <div class="pub-venue">US Patent 9,879,667</div>
+          <div class="pub-desc">A. Das.</div>
+        </div>
+        <div class="pub-meta">2018</div>
+      </div>
+    </div>
+
+    <p class="section-label">Theses</p>
+    <div class="pub-list">
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Neuro Adaptive Control for Aerospace and Distributed Systems</em></div>
+          <div class="pub-venue">PhD Thesis — University of Texas at Arlington</div>
+        </div>
+        <div class="pub-meta">2010</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Nonlinear Design of 3-Axes Autopilot for Short Range Skid-to-Turn Homing Missiles</em></div>
+          <div class="pub-venue">MS Thesis — IIT Kharagpur</div>
+        </div>
+        <div class="pub-meta">2006</div>
+      </div>
+      <div class="pub-item">
+        <div>
+          <div class="pub-title"><em>Fuzzy Logic Control of Inverted Pendulum</em></div>
+          <div class="pub-venue">BE Thesis — Bengal Engineering College</div>
+        </div>
+        <div class="pub-meta">2003</div>
+      </div>
+    </div>
+
+    <p class="footer-note">Full conference paper list available upon request &nbsp;·&nbsp; <a href="mailto:abhijit.d80@gmail.com">abhijit.d80@gmail.com</a></p>
+
+  </div>
+</body>
+</html>
